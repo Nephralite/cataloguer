@@ -1,0 +1,21 @@
+<form 
+    class="max-w-md"
+    hx-post="/api/search"
+    hx-target="#cards"
+    hx-swap="innerHTML"
+>
+    <div class="mt-2 inline-flex flex-row space-x-2">
+        <input
+                type="text"
+                name="search"
+                id="search"
+                placeholder="Search for Netrunner Cards"
+        />
+        <button
+                type="submit"
+        >
+            Find cards
+        </button>
+    </div>
+</form>
+<div class="grid grid-cols-4 gap-4" id="cards"/>
