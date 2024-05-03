@@ -58,7 +58,8 @@ async fn main() -> anyhow::Result<()> {
         .with_state(backend);
     let assets_path = std::env::current_dir().unwrap();
     let router = Router::new()
-        .route("/", get(hello))
+        .route("/", get(index))
+        .route("/syntax", get(syntax))
         .nest("/api", api_router)
         .nest_service(
             "/assets",
@@ -75,8 +76,13 @@ async fn main() -> anyhow::Result<()> {
     Ok(())
 }
 
-async fn hello() -> impl IntoResponse {
-    let template = HelloTemplate {};
+async fn index() -> impl IntoResponse {
+    let template = IndexTemplate {};
+    HtmlTemplate(template)
+}
+
+async fn syntax() -> impl IntoResponse {
+    let template = SyntaxTemplate {};
     HtmlTemplate(template)
 }
 
@@ -104,12 +110,17 @@ where
 }
 
 #[derive(Template)]
-#[template(path = "hello.html")]
-struct HelloTemplate;
+#[template(path = "index.html")]
+struct IndexTemplate;
+
+#[derive(Template)]
+#[template(path = "syntax.html")]
+struct SyntaxTemplate;
 
 #[derive(Template)]
 #[template(path = "cards.html")]
 struct CardsList {
+    query: String,
     cards: Vec<String>,
 }
 
@@ -153,20 +164,19 @@ async fn search(
             temp.push(code.unwrap());
         }
     }
-    let response = CardsList { cards: temp };
+    let response = CardsList { query:query.search, cards: temp };
     HtmlTemplate(response)
 }
 
 fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option<Vec<Value>> {
     let mut remaining: Vec<Value> = card_pool.clone();
-    //currently ignoring regex, and ors are currently shallow so or in brackets doesn't work
-    //or doesnt currently work dummie
-    let mut bracket_flag = false;
-    let mut or_flag = false;
-    let mut resolving_bracket = false;
-    let mut back_looking = card_pool.clone();
-    let mut or_buffer: Vec<Value> = vec![];
-    let mut buffer = "".to_owned();
+    //currently ignoring regex
+    let mut bracket_flag = false; //whether reading a bracketed set of info
+    let mut or_flag = false; //whether last instruction was an or
+    let mut resolving_bracket = false; // used to skip instructions on brackets
+    let mut back_looking = card_pool.clone(); //used to resolve or
+    let mut or_buffer: Vec<Value> = vec![]; //stores result of instruction before an or
+    let mut buffer = "".to_owned(); //part is added into this, used for quotation marks and brackets
     let mut buffering = false; //needs to exist to allow quotation marks to function
 
     for part in query.split(" ") {
@@ -198,7 +208,6 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
             buffer.push_str(" ");
             continue;
         }
-
         if part == "or" {
             or_buffer = remaining;
             remaining = back_looking.clone();
@@ -210,36 +219,31 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
             back_looking = remaining.clone();
         }
         let pre_query = remaining.clone(); //here for inverse, get rid of this later
-
         if buffer.starts_with('-') {
             println!("inverting statement");
             inverse = true;
             buffer = buffer.replace("-", "")
         } //the ! probably needs to be removed from buffer?
-        //then find the operator with code that looks really stupid, yet to think of a smarter
-        //answer
+        
+        //then find the operator with code that looks really bad, I'm yet to think of a smarter answer
         if !resolving_bracket {
         let operator = match &buffer {
             x if x.contains(":") => ":",
+            x if x.contains("=") => ":",
             x if x.contains("<=") => "<=",
             x if x.contains("<") => "<",
             x if x.contains(">=") => ">=",
             x if x.contains(">") => ">",
             x if x.contains("!=") => "!=",
-            _ => {
+            _ => { //if none then must be name:
                 buffer = "_:".to_owned() + &buffer;
                 ":"
             }
         };
 
-        //if not given an operator, convert to name:
         let value = buffer.split(operator).nth(1)?;
-        println!(
-            "{} {} {}",
-            buffer.split(operator).next()?,
-            &operator,
-            &value
-        );
+        
+        println!( "{} {} {}", buffer.split(operator).next()?, &operator, &value); //debug print
         part_results = match buffer.split(operator).next()? {
             "a" | "artist" => remaining.into_iter().filter(
                     |x| if x["illustrator"].is_array() {
@@ -260,13 +264,14 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
             },
             "cy" | "cyc" | "cycle" => {
                 if value.parse::<u64>().is_err() {
-                    let code = &backend.sets.iter().find(|x| x["cycle"] == value).unwrap()["start_num"].as_str().unwrap()[0..2];
-                    remaining.into_iter().filter(|x| x["code"].as_array().unwrap().into_iter().find(|x| &x.as_str().unwrap()[0..2] == code      ).is_some()).collect()
+                    if backend.sets.iter().find(|x| x["cycle"] == value).is_none() {vec!()} else {
+                        let code = &backend.sets.iter().find(|x| x["cycle"] == value).unwrap()["start_num"].as_str().unwrap()[0..2];
+                        remaining.into_iter().filter(|x| x["code"].as_array().unwrap().into_iter().find(|x| &x.as_str().unwrap()[0..2] == code      ).is_some()).collect()
+                    }
                 }
                 else {
                     remaining.into_iter().filter(|x| x["code"].as_array().unwrap().into_iter().find(|x| &x.as_str().unwrap()[0..2] == value).is_some()).collect()
-                } //clean this up a bit, shouldn't need 2 filter statements, also crashes on
-                  //invalid set codes
+                } //clean this up a bit, shouldn't need 2 filter statements
             },
             "d" | "date" | "year" => { 
                 let sets: Vec<&Value> = match value {
@@ -276,7 +281,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
                     _ => continue,
                 };
                 if sets.len() == 0 {
-                    continue;//fails on years like 2025, or 2001, then currently shows all cards
+                    return None//fails on years like 2025, or 2001, then currently shows no cards
                 }
                 println!("{:?}", sets);
                 match operator {
@@ -308,7 +313,20 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
                 if value.parse::<u64>().is_err() {println!("{} was an invalid search term", buffer); continue;}
                 remaining.into_iter().filter(|x| as_operator(operator, x["eternal_points"].as_u64(), value.parse::<u64>().ok())).collect()
         },
-            "f" | "faction" => remaining.into_iter().filter(|x| x["faction_code"].as_str() == Some(value)).collect(), //allow shorthand
+            "f" | "faction" => {
+                let temp = match value {
+                    "a" => "anarch",
+                    "c" | "crim" => "criminal",
+                    "s" => "shaper",
+                    "h" | "hb" => "haas-bioroid",
+                    "j" | "jin" => "jinteki",
+                    "n" => "nbn",
+                    "w" | "wey" | "weyland" => "weyland-consortium",
+                    _ => value
+                }; //probably could be smarter but this is simple
+                if temp == "neutral" {search_cards("f:neutral-runner or f:neutral-corp", backend, remaining)?} else {
+                    remaining.into_iter().filter(|x| x["faction_code"].as_str() == Some(temp)).collect()
+                }},
             "fmt" | "format" | "z" => match value {
                 "startup" => search_cards("cy:lib or cy:sg or cy:su21 -banned:startup", backend, remaining)?,
                 "neo" => search_cards("is:nsg -banned:neo", backend, remaining)?,
@@ -316,12 +334,12 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
                 "sunset" => search_cards("cy:kit or cy:rs or is:nsg or cy:mor -banned:sunset", backend, remaining)?,
                 "eternal" => search_cards("-banned:eternal", backend, remaining)?,
                 _ => vec!(),
-            }, //requires cy, set
+            },
             "ft" | "flavor" | "flavour" => remaining.into_iter().filter(
                 |x| if x["flavor"].is_array() {
                     x["flavor"].as_array().unwrap().into_iter().find(|x| x.as_str().unwrap().to_lowercase().contains(value)).is_some()
                 } else {false}
-            ).collect(), //also should maybe show that printing but eh
+            ).collect(),
             "i" | "inf" | "influence" => {
                 if value.parse::<u64>().is_err() {println!("{} was an invalid search term", buffer); continue;}
                 remaining.into_iter().filter(|x| as_operator(operator, x["faction_cost"].as_u64(), value.parse::<u64>().ok())).collect()
@@ -340,7 +358,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
                 "nearprinted" => remaining.into_iter().filter(|x| x["nearprint"].as_str().is_some()).collect(),
                 "reprint" => remaining.into_iter().filter(|x| x["code"].as_array().unwrap().len() > 1).collect(),
                 "runner" => search_cards("f:anarch or f:shaper or f:criminal or f:adam or f:sunny-lebeau or f:apex or f:neutral-runner", backend, remaining)?,
-                "trap" => search_cards("o:when the runner accesses this", backend, remaining)?,
+                "trap" => search_cards("o:\"when the runner accesses this\"", backend, remaining)?,
                 "unique" => remaining.into_iter().filter(|x| if x["uniqueness"].is_boolean() {x["uniqueness"].as_bool().unwrap()} else {false}).collect(),
                 _ => vec!()
             },
@@ -359,8 +377,9 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
             //"n" | "number" =>
             //"new" =>
             "not" => search_cards(&("-is:".to_owned() + value), backend, remaining)?,
-            "nrdb" => { //nrdb mutates remaining so that cards that have reprints don't get double
-                        //counted with multiple nrdb terms
+            "nrdb" => { //mutates remaining so that cards that have reprints don't get double
+                        //counted with multiple nrdb terms (eg. su21 cards tend to be both sides of
+                        //n < 20003 n > 20003 )
                 let mut temp: Vec<Value> = vec!();
                 for mut x in remaining {
                     x["code"] = serde_json::json!(
@@ -375,7 +394,6 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
                 .filter(|x| x["code"].as_array().unwrap().len() > 0)
                 .collect()
             },
-            //remaining.into_iter().filter(|x| x["code"].as_array().unwrap().into_iter().find(|&n| as_operator(operator, n.as_str().unwrap().parse::<u64>().ok(), value.parse::<u64>().ok())).is_some()).collect(), //seems a little buggy when chained together
             // "n" | "number" => 
             "o" | "x" | "text" | "oracle" => remaining.into_iter().filter(|x| 
                     if x["stripped_text"].is_string() {x["stripped_text"].as_str().unwrap().to_lowercase().contains(&value)} else {false}
@@ -392,7 +410,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
                 let start = set["start_num"].as_str().unwrap();
                 let end = set["end_num"].as_str().unwrap();
                 search_cards(&format!("nrdb<={end} nrdb>={start}"), backend, remaining)?
-            }, //doesn't work
+            },
             //"st" =>
             "str" | "strength" => {
                 if value.parse::<u64>().is_err() {println!("{} was an invalid search term", buffer); continue;}
@@ -429,8 +447,8 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
                 .filter(|x| !remaining.contains(x))
                 .collect();
             remaining.extend(to_add);
-        } //or logic here
+        }
     }
-    println!("finished search");
+    println!("finished search"); //another debug print line
     Some(remaining)
 }
