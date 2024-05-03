@@ -4,6 +4,31 @@
 {% block title %}Cataloguer Netrunner Search{% endblock %}
 
 {% block content %}
-{% include "search-bar.html" %} 
-<h1 class="text-stone-100">Welcome to Cataloguer! type in a search to begin!</h1>
+{% include "search-bar.html" %}
+<div class="text-centre top-64 px-20">
+    <h1 class="text-xl text-stone-700">Welcome to Cataloguer, a Netrunner search engine. type in a search to begin!</h1><br>
+    <p class="italic text-sm"> 
+        want the clearance card series? 
+        <code class="not-italic bg-stone-100">clearance or (corporate hospitality)</code><br>
+        want the newest set? 
+        <code class="not-italic bg-stone-100">set:rwr</code><br>
+        want the newest cycle? 
+        <code class="not-italic bg-stone-100">cy:lib</code><br>
+        need some startup tools for merc? 
+        <code class="not-italic bg-stone-100">fmt:startup o:bypass</code><br>
+        but those are simple searches, nrdb can do those, so lets go one step further... <br>
+        need some things for your prav deck to advance? 
+        <code class="not-italic bg-stone-100">fmt:standard is:advanceable or (t:agenda f:nbn)</code>
+        <br>trying to spend your last couple eternal points? 
+        <code class="not-italic bg-stone-100">ep>0 ep<3</code><br>
+        wanna know what reprints have been banned out of standard? 
+        <code class="not-italic bg-stone-100">is:reprint banned:standard</code><br>
+        do you refuse to acknowledge old cards exist? just add 
+        <code class="not-italic bg-stone-100">is:nsg</code> 
+        to the end of your search! <br></p>
+    <br><p>
+        for a full list of search options read the <a href="/syntax" class="text-blue-400">syntax guide</a><br>
+        Cataloguer is a netrunner search engine that aims to make hard searches simple to achieve! If you have any suggestions or find any bugs, let me know over on
+        <a href="https://github.com/Nephralite/cataloguer" class="text-blue-400">github</a> </p>
+</div>
 {% endblock %}
