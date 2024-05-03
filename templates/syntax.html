@@ -1,0 +1,95 @@
+<!-- prettier-ignore -->
+{% extends "base.html" %}
+
+{% block title %}Cataloguer Syntax Guide{% endblock %}
+
+{% block content %}
+{% include "search-bar.html" %}
+<div class="relative left-20 top-5 w-5/6">
+<h1 class="text-lg font-bold">Cataloguer Syntax Guide</h1><br>
+<p>Cataloguer is in beta, and this syntax guide includes features that aren't yet implemented; such features and sections are in <code class="text-red-600">red</code>.</p><br><br>
+<br>
+<h2 class="text-lg font-bold">Sets and Blocks</h2><br>
+<p>Use <code>e:</code>, <code>set:</code>, or <code>edition:</code> to find cards using their set codes (which can be found on the set list, but are generally the acronym (eg. tai for the automata initiative), or the first 3 letters for single word sets (eg. ash or bor).<br>
+Use <code class="text-red-600">n:</code> or <code class="text-red-600">number:</code> to find cards by collector number within a set. Combine this with set: to find specific card editions. Searching by ranges with syntax like <code>n>50</code> is also possible. You can also search by nrdb codes with <code>nrdb:</code>, which are the block numbers followed by the set number.<br>
+Use <code>c:</code> or <code>cy:</code> or <code>cycle:</code> to find cards in a Magic block by providing the three-letter code for any set in that block.<br>
+You can search for cards based on the type of product they appear in. This includes the primary product types (<code class="text-red-600">pt:core</code>, <code class="text-red-600">pt:expansion</code>, <code class="text-red-600">pt:base</code> or <code class="text-red-600">pt:draft</code>, or <code class="text-red-600">pt:fanmade</code>, or <code class="text-red-600">pt:supplemental</code>), as well as series of products (<code class="text-red-600">pt:gnk</code>, <code class="text-red-600">pt:worlds</code>, <code class="text-red-600">pt:cbi</code>, <code class="text-red-600">pt:co</code>, <code class="text-red-600">pt:continentals</code class="text-red-600">, <code class="text-red-600">pt:nats</code>). Searches default to <code class="text-red-600">pt:base</code>, which is all core and expansion cards</p><br><br>
+<h2 class="text-lg font-bold">Card Types and Subtypes</h2><br>
+<p>Find cards of a certain card type with the <code>t:</code> or <code>type:</code> keywords. Subtypes are separately under <code>s:</code>, <code>sub:</code> or <code>subtype:</code>.<br>
+Using only partial words is allowed.</p><br><br>
+<h2 class="text-lg font-bold">Card Text</h2><br>
+<p>Use the <code>o:</code> or <code>oracle:</code> or <code>x:</code> or <code>text:</code> keywords to find cards that have specific phrases in their text box. It searches the latest ruled text, not necessarily what is printed on the card. (eg. any brain damage cards have been errataed to core damage)<br>
+You can put quotes <code>" "</code> around text with punctuation or spaces. (this is true on all queries but most relevant here)<br>
+All text symbols have equivalent text as per the comprehensive rules eg. <code>-></code>, <code>[credit]</code>, <code>[click]</code>, <code>[recurring-credit]</code>, <code>[interrupt]</code>, <code>[mu]</code>, <code>[link]</code>, <code>[trash]</code> ect.<br>
+All cards should refer to themselves as this {type} (eg. this asset on snare!) in their oracle text as a placeholder for the card’s name.</p><br><br>
+<h2 class="text-lg font-bold">Factions and Sides</h2><br>
+<p>You can find cards that are a certain faction using the <code>f:</code> or <code>faction:</code> keywords.<br>
+Both keywords accept full faction names like <code>haas-bioroid</code> or abbreviations for base factions: <code>w</code>, <code>h</code> or <code>hb</code>, <code>n</code>, <code>j</code> or <code>jin</code> for corp and <code>s</code>, <code>a</code>, <code>c</code> or <code>crim</code> for runner.The special factions are under <code>adam</code>, <code>apex</code> and <code>sunny-lebeau</code>, who doesn’t get an abbreviation because she’s a cop.<br>
+<code>neutral</code>, <code>neutral-runner</code> and <code>neutral-corp</code> are also valid search terms.<br>
+The side a card belongs to can be found under <code>is:corp</code> and <code>is:runner</code></p><br><br>
+<h2 class="text-lg font-bold">Costs</h2><br>
+<p>Use the <code>c:</code> or <code>cost:</code> keywords to search for cards by their play or rez costs.<br>
+Use the <code>t:</code> or <code>trash:</code> keywords to search for cards by their trash costs.<br>
+These fields can be compared with a numeric expression (<code>></code>, <code><</code>, <code>=</code>, <code>>=</code>, <code><=</code>, and <code>!=</code>).<br>
+You can filter for cards that have additional costs with <code code="red">is:additional.</code><br>
+You can also find cards that produce specific resources, with <code code="red">produces:</code></p><br><br>
+<h2 class="text-lg font-bold">Agendas</h2><br>
+<p>Use the <code>adv:</code> or <code>advancement:</code> keywords to search for agendas by their advancement costs.<br>
+These fields can be compared with a numeric expression (<code>></code>, <code><</code>, <code>=</code>, <code>>=</code>, <code><=</code>, and <code>!=</code>).<br>
+Similarly, <code>p:</code> or <code>points:</code> searches by the points an agenda is worth</p><br><br>
+<h2 class="text-lg font-bold">Strength, Memory, and Influence</h2><br>
+<p>You can use numeric expressions (<code>></code>, <code><</code>, <code>=</code>, <code>>=</code>, <code><=</code>, and <code>!=</code>) to find cards with certain strength, <code>str:</code>/<code>strength:</code>, influence, <code>influence:</code>/<code>inf:</code>/<code>i:</code>, or memory, <code>memory:</code>/<code>mem:</code>/<code>m:</code>.</p><br><br>
+<h2 class="text-lg font-bold">Identities</h2><br>
+<p>Use the <code>l:</code> or <code>link:</code> keywords to search for runners by their base link.<br>
+Use the <code>il:</code> or <code>inf_lim:</code> keyword to search by the maximum influence of an identity, (<code>null</code> for IDs with infinite influence)<br>
+Use the <code>md:</code> or <code>min_deck:</code> keyword to search by the minimum deck size of an identity<br>
+These fields can be compared with a numeric expression (<code>></code>, <code><</code>, <code>=</code>, <code>>=</code>, <code><=</code>, and <code>!=</code>).</p><br><br>
+<h2 class="text-lg font-bold">Artist, Flavor Text</h2><br>
+<p>Search for cards illustrated by a certain artist with the <code>a:</code>, or <code>artist:</code> keywords.You can compare how many different illustrations a given card has with things like <code>illustrations>1</code>.<br>
+ Search for words in a card’s flavour text using the <code>ft:</code> or <code>flavour:</code> keywords. Cataloguer also begrudginly supports the american spelling of <code>flavor:</code>.<br>
+ For any of these, you can wrap statements with spaces or punctuation in quotes <code>" "</code>.<br>
+ You can find cards being printed with new illustrations using new:art, being illustrated by a particular artist for the first time with new:artist, and with brand-new flavour text using new:flavour.</p><br><br>
+<h2 class="text-lg font-bold">Date</h2><br>
+<p>You can use numeric expressions (<code>></code>, <code><</code>, <code>=</code>, <code>>=</code>, <code><=</code>, and <code>!=</code>) to find cards that were released relative to a certain year as <code>yyyy</code> or a <code class="text-red-600">yyyy-mm-dd</code> date. You can also use any set code to stand in for the set’s release date.<br>
+(KNOWN ISSUE): As of current version, searching by a year where no sets released (eg 2026 or 1990) doesn't work.</p></br>
+<h2 class="text-lg font-bold">Format Legality</h2><br>
+<p>Use the <code>z:</code>, <code>fmt:</code>, <code>legal:</code> or <code>format:</code> keywords to find cards that are legal in a given format.<br>
+You can also find cards that are explicitly banned in a format with the <code>banned:</code> keyword.<br>
+Cataloguer also has <code>ep:</code> for searching cards worth eternal points.<br>
+The current supported formats are: <code>startup</code>, <code>standard</code>, <code>eternal</code>, <code>neo</code>, and <code>sunset</code>.</p><br><br>
+<h2 class="text-lg font-bold">Misc.</h2><br>
+<p>A bunch of small useful functions are under is:<br></p><ul class="list-disc relative left-5">
+    <li><code>is:unique</code> gives whether a card is unique (as in the little diamond in the top left).</li>
+    <li><code>is:advancable</code> gives all non-agenda cards that can be advanced.</li>
+    <li><code>is:dfc</code> shows double sided cards, though there are only 3 in netrunner.</li>
+    <li><code>is:reprint</code> gives cards that have been printed more than once, with <code>not:reprint</code> giving unique printings</li>
+    <li><code>is:nearprinted</code> probably needs some cards added but lists cards that have near identical replacements in nsg sets (eg. Jackson Howard has Spin Doctor). <code class="text-red-600">is:nearprint</code> gives the opposite list (ngs cards like Spin doctor that have similar ffg cards)</li>
+    <li><code>is:guest</code> is a list of all the cards with design credits in flavour text</li>
+    <li><code>is:trap</code> are cards that have penalties when the runner accesses them</li>
+    <li><code>pronouns:</code> will exist at some point after release, because i think it's fun, but it requires some manual data entry on my part so will leave it till after release</li>
+    <li><code>is:nsg</code> lists all cards printed by Null Signal Games (excluding sc19, sm and mor which were either never printed or direct reprints of ffg sets). Similarly <code>is:ffg</code> lists all cards printed by Fantasy Flight Games</li></ul><br>
+<h2 class="text-lg font-bold">Negating Conditions</h2><br>
+<p>All keywords except for include can be negated by prefixing them with a hyphen (<code>-</code>). This inverts the meaning of the keyword to reject cards that matched what you’ve searched for.<br>
+The <code>is:</code> keyword has a convenient inverted mode <code>not:</code> which is the same as <code>-is:</code>. Conversely, <code>-not:</code> is the same as is:.<br>
+Loose name words can also be inverted with <code>-</code></p><br><br>
+<h2 class="text-lg font-bold text-red-600">Regular Expressions </h2><br>
+<p class="text-red-600">You can use forward slashes // instead of quotes with the <code>type:</code>, <code>text:</code>, <code>flavour:</code>, and <code>name:</code> keywords and their alternatives to match those parts of a card with a regular expression.<br>
+Cataloguer plans to support many regex features such as <code>.*?</code>, option groups <code>(a|b)</code>, brackets <code>[ab]</code>, character classes <code>\d</code>, <code>\w</code>, and anchors <code>(?!)</code>, <code>\b</code>, <code>^</code>, and <code>$</code>.<br>
+Forward slashes inside your regex must be escaped with <code>\/</code>.</p><br><br>
+<h2 class="text-lg font-bold text-red-600">Exact Names</h2><br>
+<p class="text-red-600">If you prefix words or quoted phrases with <code>!</code> you will find cards with that exact name only.<br>
+This is still case-insensitive.</p><br><br>
+<h2 class="text-lg font-bold">Using “OR”</h2><br>
+<p>By default every search term you enter is combined. All of them must match to find a card.<br>
+If you want to search over a set of options or choices, you can put the special word <code>or</code>/<code>OR</code> between terms.</p><br><br>
+<h2 class="text-lg font-bold">Nesting Conditions</h2><br>
+<p>You may nest conditions inside parentheses <code>( )</code> to group them together. This is most useful when combined with the <code>OR</code> keyword.<br>
+Remember that terms that are not separated by OR are still combined.</p><br><br>
+<h2 class="text-lg font-bold text-red-600">Display Keywords</h2><br>
+<p class="text-red-600">You can enter your display options for searches as keywords rather than using the controls on the page.<br>
+Select how duplicate results are eliminated with <code>unique:cards</code>, <code>unique:prints</code>, or <code>unique:art</code>.<br>
+Change how results are shown with <code>display:grid</code>, <code>display:checklist</code>, <code>display:full</code>, or <code>display:text</code>.<br>
+Change how results are sorted with <code>order:artist</code>, <code>order:type</code>, <code>order:cost,</code> <code>order:strength</code>, <code>order:set</code>, <code>order:name</code>, <code>order:faction</code>, <code>order:released</code>.Select what printings of cards to preferentially show with <code>prefer:oldest</code>, <code>prefer:newest</code>, <br>
+Change the order of the sorted data with <code>direction:asc</code> or <code>direction:desc</code>.</p><br><br>
+</div>
+{% endblock %}<br>
