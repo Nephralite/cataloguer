@@ -9,6 +9,7 @@ use axum::{
 };
 use regex::Regex;
 use serde_json::Value;
+use std::env;
 use tokio::net::TcpListener;
 use tower_http::services::ServeDir;
 use tracing::info;
@@ -65,9 +66,13 @@ async fn main() -> anyhow::Result<()> {
             "/assets",
             ServeDir::new(format!("{}/assets", assets_path.to_str().unwrap())),
         );
-    let listener = TcpListener::bind("0.0.0.0:8000").await.unwrap();
+    let port = match env::var("PORT"){
+        Ok(port) => port,
+        Err(_) => "8080".to_owned()
+    };
+    let listener = TcpListener::bind(format!("0.0.0.0:{port}")).await.unwrap();
 
-    info!("router initialized, listening on localhost:8000");
+    info!("router initialized, listening on localhost:{port}");
 
     axum::serve(listener, router)
         .await
