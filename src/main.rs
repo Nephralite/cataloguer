@@ -173,6 +173,36 @@ async fn search(
     HtmlTemplate(response)
 }
 
+#[derive(serde::Deserialize)]
+struct Printing {
+    artist: String,
+    flavor: String, 
+    code: String,
+}
+
+#[derive(serde::Deserialize)]
+struct Card {
+    printings: Vec<Printing>,
+    faction: String,
+    type_code: String,
+    subtypes: String,
+    title: String,
+    stripped_title: String,
+    text: String,
+    stripped_text: String,
+    uniqueness: bool,
+    influence: Option<u8>,
+    influence_limit: Option<u8>,
+    minimum_deck_size: Option<u8>,
+    strength: Option<u8>,
+    base_link: Option<u8>,
+    cost: Option<u8>,
+    trash_cost: Option<u8>,
+    memory_cost: Option<u8>,
+    advancement_cost: Option<u8>,
+    agenda_points: Option<u8>,
+}
+
 fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option<Vec<Value>> {
     let mut remaining: Vec<Value> = card_pool.clone();
     //currently ignoring regex
@@ -234,7 +264,6 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
         if !resolving_bracket {
         let operator = match &buffer {
             x if x.contains(":") => ":",
-            x if x.contains("=") => ":",
             x if x.contains("<=") => "<=",
             x if x.contains("<") => "<",
             x if x.contains(">=") => ">=",
@@ -385,6 +414,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
             "nrdb" => { //mutates remaining so that cards that have reprints don't get double
                         //counted with multiple nrdb terms (eg. su21 cards tend to be both sides of
                         //n < 20003 n > 20003 )
+                println!("starting nrdb");
                 let mut temp: Vec<Value> = vec!();
                 for mut x in remaining {
                     x["code"] = serde_json::json!(
@@ -414,6 +444,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
                 let set = backend.sets.iter().find(|x| x["code"] == value)?;
                 let start = set["start_num"].as_str().unwrap();
                 let end = set["end_num"].as_str().unwrap();
+                println!("attempting recustive search for {}<nrdb<{}", start, end);
                 search_cards(&format!("nrdb<={end} nrdb>={start}"), backend, remaining)?
             },
             //"st" =>
