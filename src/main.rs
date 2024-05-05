@@ -1,11 +1,9 @@
 use anyhow::Context;
 use askama::Template;
 use axum::{
-    extract::{Form, State},
-    http::StatusCode,
-    response::{Html, IntoResponse, Response},
-    routing::{get, post},
-    Router,
+    extract::{Query, State}, http::StatusCode, response::{Html, IntoResponse, Response}, 
+    routing::get,
+    Router
 };
 use regex::Regex;
 use serde_json::Value;
@@ -54,14 +52,11 @@ async fn main() -> anyhow::Result<()> {
 
     info!("initializing router...");
     let backend = init_backend()?;
-    let api_router = Router::new()
-        .route("/search", post(search))
-        .with_state(backend);
     let assets_path = std::env::current_dir().unwrap();
     let router = Router::new()
-        .route("/", get(index))
+        .route("/", get(search))
         .route("/syntax", get(syntax))
-        .nest("/api", api_router)
+        .with_state(backend)
         .nest_service(
             "/assets",
             ServeDir::new(format!("{}/assets", assets_path.to_str().unwrap())),
@@ -81,37 +76,8 @@ async fn main() -> anyhow::Result<()> {
     Ok(())
 }
 
-async fn index() -> impl IntoResponse {
-    let template = IndexTemplate {};
-    HtmlTemplate(template)
-}
-
 async fn syntax() -> impl IntoResponse {
-    let template = SyntaxTemplate {};
-    HtmlTemplate(template)
-}
-
-/// A wrapper type that we'll use to encapsulate HTML parsed by askama into valid HTML for axum to serve.
-struct HtmlTemplate<T>(T);
-
-/// Allows us to convert Askama HTML templates into valid HTML for axum to serve in the response.
-impl<T> IntoResponse for HtmlTemplate<T>
-where
-    T: Template,
-{
-    fn into_response(self) -> Response {
-        // Attempt to render the template with askama
-        match self.0.render() {
-            // If we're able to successfully parse and aggregate the template, serve it
-            Ok(html) => Html(html).into_response(),
-            // If we're not, return an error or some bit of fallback HTML
-            Err(err) => (
-                StatusCode::INTERNAL_SERVER_ERROR,
-                format!("Failed to render template. Error: {}", err),
-            )
-                .into_response(),
-        }
-    }
+    Templates::SyntaxTemplate(SyntaxTemplate {})
 }
 
 #[derive(Template)]
@@ -129,9 +95,9 @@ struct CardsList {
     cards: Vec<String>,
 }
 
-#[derive(serde::Deserialize)]
+#[derive(serde::Deserialize, Debug)]
 struct SearchForm {
-    search: String,
+    search: Option<String>,
 }
 
 fn as_operator<T: std::cmp::PartialEq + std::cmp::PartialOrd + std::fmt::Debug>(
@@ -151,28 +117,58 @@ fn as_operator<T: std::cmp::PartialEq + std::cmp::PartialOrd + std::fmt::Debug>(
     }
 }
 
-async fn search(
-    State(backend): State<Backend>,
-    Form(query): Form<SearchForm>,
-) -> impl IntoResponse {
-    let mut temp: Vec<String> = vec![];
-    let results: Option<Vec<Value>> = search_cards(&query.search, &backend, backend.cards.clone());
-    if results.is_some() {
-        for card in results.unwrap() {
-            let code: Option<String> = Some(
-                card["code"]
-                    .as_array().unwrap()
-                    .last().unwrap()
-                    .as_str().unwrap()
-                    .to_owned(),
-            );
-            temp.push(code.unwrap());
-        }
-    }
-    let response = CardsList { query:query.search, cards: temp };
-    HtmlTemplate(response)
+enum Templates {
+    CardsList(CardsList),
+    SyntaxTemplate(SyntaxTemplate),
+    IndexTemplate(IndexTemplate)
 }
 
+impl IntoResponse for Templates {
+    fn into_response(self) -> Response {
+        // Attempt to render the template with askama
+        let inner = match self {
+            Templates::CardsList(c) => c.render(),
+            Templates::IndexTemplate(c) => c.render(),
+            Templates::SyntaxTemplate(c) => c.render(),
+        }; 
+        match inner {
+       // If we're able to successfully parse and aggregate the template, serve it
+        Ok(html) => Html(html).into_response(),
+       // If we're not, return an error or some bit of fallback HTML
+        Err(err) => (
+            StatusCode::INTERNAL_SERVER_ERROR,
+            format!("Failed to render template. Error: {}", err),
+        ).into_response(),
+        }
+    }
+}
+
+async fn search(
+    State(backend): State<Backend>,
+    Query(params): Query<SearchForm>,
+) -> impl IntoResponse {
+    if let Some(query) = params.search {
+        let mut temp: Vec<String> = vec![];
+        let results: Option<Vec<Value>> = search_cards(&query, &backend, backend.cards.clone());
+        if results.is_some() {
+            for card in results.unwrap() {
+                let code: Option<String> = Some(
+                    card["code"]
+                        .as_array().unwrap()
+                        .last().unwrap()
+                        .as_str().unwrap()
+                        .to_owned(),
+                );
+                temp.push(code.unwrap());
+            }
+        }
+        Templates::CardsList(CardsList { query, cards: temp })
+    } else {
+        Templates::IndexTemplate(IndexTemplate {})
+    }
+}
+
+/*
 #[derive(serde::Deserialize)]
 struct Printing {
     artist: String,
@@ -201,7 +197,7 @@ struct Card {
     memory_cost: Option<u8>,
     advancement_cost: Option<u8>,
     agenda_points: Option<u8>,
-}
+}*/
 
 fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option<Vec<Value>> {
     let mut remaining: Vec<Value> = card_pool.clone();
@@ -414,7 +410,6 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
             "nrdb" => { //mutates remaining so that cards that have reprints don't get double
                         //counted with multiple nrdb terms (eg. su21 cards tend to be both sides of
                         //n < 20003 n > 20003 )
-                println!("starting nrdb");
                 let mut temp: Vec<Value> = vec!();
                 for mut x in remaining {
                     x["code"] = serde_json::json!(
@@ -444,7 +439,6 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
                 let set = backend.sets.iter().find(|x| x["code"] == value)?;
                 let start = set["start_num"].as_str().unwrap();
                 let end = set["end_num"].as_str().unwrap();
-                println!("attempting recustive search for {}<nrdb<{}", start, end);
                 search_cards(&format!("nrdb<={end} nrdb>={start}"), backend, remaining)?
             },
             //"st" =>

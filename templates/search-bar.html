@@ -1,8 +1,9 @@
 <form 
     class="w-screen"
-    hx-post="/api/search"
-    hx-target="#cards"
-    hx-swap="innerHTML"
+    hx-boost="true"
+    hx-push-url="true"
+    action="/"
+    method="get"
 >
     <div class="z-50 fixed top-0 left-0 w-full h-12 flex bg-green-900">
         <div class="flex basis-1/2">
