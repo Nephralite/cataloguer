@@ -5,7 +5,8 @@
     "cycle": "lib",
     "date": "18/03/24",
     "start_num": "34066",
-    "end_num": "34130"
+    "end_num": "34130",
+    "pt":"expansion"
   },
   {
     "code": "tai",
@@ -13,7 +14,8 @@
     "cycle": "lib",
     "date": "31/07/23",
     "start_num": "34001",
-    "end_num": "34065"
+    "end_num": "34065",
+    "pt":"expansion"
   },
   {
     "code": "ph",
@@ -21,7 +23,8 @@
     "cycle": "bor",
     "date": "09/12/22",
     "start_num": "33066",
-    "end_num": "33128"
+    "end_num": "33128",
+    "pt":"expansion"
   },
   {
     "code": "ms",
@@ -29,7 +32,8 @@
     "cycle": "bor",
     "date": "22/07/22",
     "start_num": "33001",
-    "end_num": "33065"
+    "end_num": "33065",
+    "pt":"expansion"
   },
   {
     "code": "msbp",
@@ -37,7 +41,8 @@
     "cycle": "bor",
     "date": "18/03/22",
     "start_num": "32001",
-    "end_num": "32007"
+    "end_num": "32007",
+    "pt":"supplemental"
   },
   {
     "code": "su21",
@@ -45,7 +50,8 @@
     "cycle": "su21",
     "date": "28/03/21",
     "start_num": "31001",
-    "end_num": "31082"
+    "end_num": "31082",
+    "pt":"core"
   },
   {
     "code": "sg",
@@ -53,7 +59,8 @@
     "cycle": "sg",
     "date": "28/03/21",
     "start_num": "30001",
-    "end_num": "30077"
+    "end_num": "30077",
+    "pt":"core"
   },
   {
     "code": "sm",
@@ -61,7 +68,8 @@
     "cycle": "sm",
     "date": "18/12/20",
     "start_num": "29001",
-    "end_num": "29018"
+    "end_num": "29018",
+    "pt":"supplemental"
   },
   {
     "code": "ur",
@@ -69,7 +77,8 @@
     "cycle": "ash",
     "date": "31/12/19",
     "start_num": "26066",
-    "end_num": "26130"
+    "end_num": "26130",
+    "pt":"expansion"
   },
   {
     "code": "urbp",
@@ -77,7 +86,8 @@
     "cycle": "ash",
     "date": "09/09/19",
     "start_num": "27001",
-    "end_num": "27007"
+    "end_num": "27007",
+    "pt":"supplemental"
   },
   {
     "code": "mor",
@@ -85,7 +95,8 @@
     "cycle": "mor",
     "date": "24/07/19",
     "start_num": "28001",
-    "end_num": "28006"
+    "end_num": "28006",
+    "pt":"supplemental"
   },
   {
     "code": "df",
@@ -93,7 +104,8 @@
     "cycle": "ash",
     "date": "18/03/19",
     "start_num": "26001",
-    "end_num": "26065"
+    "end_num": "26065",
+    "pt":"expansion"
   },
   {
     "code": "sc19",
@@ -101,7 +113,8 @@
     "cycle": "sc19",
     "date": "21/12/18",
     "start_num": "25001",
-    "end_num": "25147"
+    "end_num": "25147",
+    "pt":"supplemental"
   },
   {
     "code": "napd",
@@ -109,7 +122,8 @@
     "cycle": "napd",
     "date": "07/09/18",
     "start_num": "24001",
-    "end_num": "24001"
+    "end_num": "24001",
+    "pt":"supplemental"
   },
   {
     "code": "mo",
@@ -117,7 +131,8 @@
     "cycle": "mo",
     "date": "07/09/18",
     "start_num": "23001",
-    "end_num": "23101"
+    "end_num": "23101",
+    "pt":"expansion"
   },
   {
     "code": "rar",
@@ -125,7 +140,8 @@
     "cycle": "rar",
     "date": "28/06/18",
     "start_num": "22001",
-    "end_num": "22058"
+    "end_num": "22058",
+    "pt":"expansion"
   },
   {
     "code": "ka",
@@ -133,7 +149,8 @@
     "cycle": "kit",
     "date": "31/05/18",
     "start_num": "21100",
-    "end_num": "21120"
+    "end_num": "21120",
+    "pt":"expansion"
   },
   {
     "code": "win",
@@ -141,7 +158,8 @@
     "cycle": "kit",
     "date": "03/05/18",
     "start_num": "21081",
-    "end_num": "21100"
+    "end_num": "21100",
+    "pt":"expansion"
   },
   {
     "code": "tdatd",
@@ -149,7 +167,8 @@
     "cycle": "kit",
     "date": "05/04/18",
     "start_num": "21061",
-    "end_num": "21080"
+    "end_num": "21080",
+    "pt":"expansion"
   },
   {
     "code": "cotc",
@@ -157,7 +176,8 @@
     "cycle": "kit",
     "date": "01/03/18",
     "start_num": "21041",
-    "end_num": "21060"
+    "end_num": "21060",
+    "pt":"expansion"
   },
   {
     "code": "dtwn",
@@ -165,7 +185,8 @@
     "cycle": "kit",
     "date": "01/02/18",
     "start_num": "21021",
-    "end_num": "21040"
+    "end_num": "21040",
+    "pt":"expansion"
   },
   {
     "code": "ss",
@@ -173,7 +194,8 @@
     "cycle": "kit",
     "date": "28/12/17",
     "start_num": "21001",
-    "end_num": "21020"
+    "end_num": "21020",
+    "pt":"expansion"
   },
   {
     "code": "core2",
@@ -181,7 +203,8 @@
     "cycle": "core2",
     "date": "14/12/17",
     "start_num": "20001",
-    "end_num": "20132"
+    "end_num": "20132",
+    "pt":"old-core"
   },
   {
     "code": "cd",
@@ -189,7 +212,8 @@
     "cycle": "rs",
     "date": "17/08/17",
     "start_num": "12101",
-    "end_num": "12120"
+    "end_num": "12120",
+    "pt":"expansion"
   },
   {
     "code": "fm",
@@ -197,7 +221,8 @@
     "cycle": "rs",
     "date": "20/07/17",
     "start_num": "12081",
-    "end_num": "12100"
+    "end_num": "12100",
+    "pt":"expansion"
   },
   {
     "code": "baw",
@@ -205,7 +230,8 @@
     "cycle": "rs",
     "date": "22/06/17",
     "start_num": "12061",
-    "end_num": "12080"
+    "end_num": "12080",
+    "pt":"expansion"
   },
   {
     "code": "eas",
@@ -213,7 +239,8 @@
     "cycle": "rs",
     "date": "25/05/17",
     "start_num": "12041",
-    "end_num": "12060"
+    "end_num": "12060",
+    "pt":"expansion"
   },
   {
     "code": "tdc",
@@ -221,7 +248,8 @@
     "cycle": "td",
     "date": "27/04/17",
     "start_num": "14001",
-    "end_num": "14028"
+    "end_num": "14028",
+    "pt":"supplemental"
   },
   {
     "code": "td",
@@ -229,7 +257,8 @@
     "cycle": "td",
     "date": "27/04/17",
     "start_num": "13001",
-    "end_num": "13057"
+    "end_num": "13057",
+    "pt":"expansion"
   },
   {
     "code": "so",
@@ -237,7 +266,8 @@
     "cycle": "rs",
     "date": "23/03/17",
     "start_num": "12021",
-    "end_num": "12040"
+    "end_num": "12040",
+    "pt":"expansion"
   },
   {
     "code": "dc",
@@ -245,7 +275,8 @@
     "cycle": "rs",
     "date": "23/02/17",
     "start_num": "12001",
-    "end_num": "12020"
+    "end_num": "12020",
+    "pt":"expansion"
   },
   {
     "code": "qu",
@@ -253,7 +284,8 @@
     "cycle": "fla",
     "date": "12/01/17",
     "start_num": "11101",
-    "end_num": "11120"
+    "end_num": "11120",
+    "pt":"expansion"
   },
   {
     "code": "ml",
@@ -261,7 +293,8 @@
     "cycle": "fla",
     "date": "08/12/16",
     "start_num": "11081",
-    "end_num": "11100"
+    "end_num": "11100",
+    "pt":"expansion"
   },
   {
     "code": "in",
@@ -269,7 +302,8 @@
     "cycle": "fla",
     "date": "03/11/16",
     "start_num": "11061",
-    "end_num": "11080"
+    "end_num": "11080",
+    "pt":"expansion"
   },
   {
     "code": "es",
@@ -278,6 +312,7 @@
     "date": "06/10/16",
     "start_num": "11041",
     "end_num": "11060"
+  ,"pt":"expansion"
   },
   {
     "code": "bm",
@@ -285,7 +320,8 @@
     "cycle": "fla",
     "date": "11/08/16",
     "start_num": "11021",
-    "end_num": "11040"
+    "end_num": "11040",
+    "pt":"expansion"
   },
   {
     "code": "23s",
@@ -293,7 +329,8 @@
     "cycle": "fla",
     "date": "14/07/16",
     "start_num": "11001",
-    "end_num": "11020"
+    "end_num": "11020",
+    "pt":"expansion"
   },
   {
     "code": "ftm",
@@ -301,7 +338,8 @@
     "cycle": "mum",
     "date": "16/06/16",
     "start_num": "10096",
-    "end_num": "10114"
+    "end_num": "10114",
+    "pt":"expansion"
   },
   {
     "code": "tlm",
@@ -309,7 +347,8 @@
     "cycle": "mum",
     "date": "26/05/16",
     "start_num": "10077",
-    "end_num": "10095"
+    "end_num": "10095",
+    "pt":"expansion"
   },
   {
     "code": "si",
@@ -317,7 +356,8 @@
     "cycle": "mum",
     "date": "28/04/16",
     "start_num": "10058",
-    "end_num": "10076"
+    "end_num": "10076",
+    "pt":"expansion"
   },
   {
     "code": "dag",
@@ -325,7 +365,8 @@
     "cycle": "mum",
     "date": "01/04/16",
     "start_num": "10039",
-    "end_num": "10057"
+    "end_num": "10057",
+    "pt":"expansion"
   },
   {
     "code": "bf",
@@ -333,7 +374,8 @@
     "cycle": "mum",
     "date": "11/03/16",
     "start_num": "10020",
-    "end_num": "10038"
+    "end_num": "10038",
+    "pt":"expansion"
   },
   {
     "code": "kg",
@@ -341,7 +383,8 @@
     "cycle": "mum",
     "date": "29/01/16",
     "start_num": "10001",
-    "end_num": "10019"
+    "end_num": "10019",
+    "pt":"expansion"
   },
   {
     "code": "dad",
@@ -349,7 +392,8 @@
     "cycle": "dad",
     "date": "29/10/15",
     "start_num": "09001",
-    "end_num": "09055"
+    "end_num": "09055",
+    "pt":"expansion"
   },
   {
     "code": "uot",
@@ -357,7 +401,8 @@
     "cycle": "san",
     "date": "03/09/15",
     "start_num": "08101",
-    "end_num": "08120"
+    "end_num": "08120",
+    "pt":"expansion"
   },
   {
     "code": "oh",
@@ -365,7 +410,8 @@
     "cycle": "san",
     "date": "06/08/15",
     "start_num": "08081",
-    "end_num": "08100"
+    "end_num": "08100",
+    "pt":"expansion"
   },
   {
     "code": "uw",
@@ -374,6 +420,7 @@
     "date": "02/07/15",
     "start_num": "08061",
     "end_num": "08080"
+  ,"pt":"expansion"
   },
   {
     "code": "cc",
@@ -381,7 +428,8 @@
     "cycle": "san",
     "date": "29/05/15",
     "start_num": "08041",
-    "end_num": "08060"
+    "end_num": "08060",
+    "pt":"expansion"
   },
   {
     "code": "bb",
@@ -389,7 +437,8 @@
     "cycle": "san",
     "date": "24/04/15",
     "start_num": "08021",
-    "end_num": "08040"
+    "end_num": "08040",
+    "pt":"expansion"
   },
   {
     "code": "val",
@@ -397,7 +446,8 @@
     "cycle": "san",
     "date": "03/04/15",
     "start_num": "08001",
-    "end_num": "08020"
+    "end_num": "08020",
+    "pt":"expansion"
   },
   {
     "code": "oac",
@@ -405,7 +455,8 @@
     "cycle": "oac",
     "date": "28/01/15",
     "start_num": "07001",
-    "end_num": "07055"
+    "end_num": "07055",
+    "pt":"expansion"
   },
   {
     "code": "ts",
@@ -413,7 +464,8 @@
     "cycle": "lun",
     "date": "18/12/14",
     "start_num": "06101",
-    "end_num": "06120"
+    "end_num": "06120",
+    "pt":"expansion"
   },
   {
     "code": "atr",
@@ -421,7 +473,8 @@
     "cycle": "lun",
     "date": "13/11/14",
     "start_num": "06081",
-    "end_num": "06100"
+    "end_num": "06100",
+    "pt":"expansion"
   },
   {
     "code": "uao",
@@ -429,7 +482,8 @@
     "cycle": "lun",
     "date": "16/10/14",
     "start_num": "06061",
-    "end_num": "06080"
+    "end_num": "06080",
+    "pt":"expansion"
   },
   {
     "code": "fc",
@@ -437,7 +491,8 @@
     "cycle": "lun",
     "date": "15/09/14",
     "start_num": "06041",
-    "end_num": "06060"
+    "end_num": "06060",
+    "pt":"expansion"
   },
   {
     "code": "tsb",
@@ -445,7 +500,8 @@
     "cycle": "lun",
     "date": "15/08/14",
     "start_num": "06021",
-    "end_num": "06040"
+    "end_num": "06040",
+    "pt":"expansion"
   },
   {
     "code": "up",
@@ -453,7 +509,8 @@
     "cycle": "lun",
     "date": "25/07/14",
     "start_num": "06001",
-    "end_num": "06020"
+    "end_num": "06020",
+    "pt":"expansion"
   },
   {
     "code": "hap",
@@ -461,7 +518,8 @@
     "cycle": "hap",
     "date": "02/05/14",
     "start_num": "05001",
-    "end_num": "05055"
+    "end_num": "05055",
+    "pt":"expansion"
   },
   {
     "code": "dt",
@@ -469,7 +527,8 @@
     "cycle": "spn",
     "date": "28/03/14",
     "start_num": "04101",
-    "end_num": "04120"
+    "end_num": "04120",
+    "pt":"expansion"
   },
   {
     "code": "fal",
@@ -477,7 +536,8 @@
     "cycle": "spn",
     "date": "21/02/14",
     "start_num": "04081",
-    "end_num": "04100"
+    "end_num": "04100",
+    "pt":"expansion"
   },
   {
     "code": "tc",
@@ -485,7 +545,8 @@
     "cycle": "spn",
     "date": "17/01/14",
     "start_num": "04061",
-    "end_num": "04080"
+    "end_num": "04080",
+    "pt":"expansion"
   },
   {
     "code": "mt",
@@ -493,7 +554,8 @@
     "cycle": "spn",
     "date": "13/12/13",
     "start_num": "04041",
-    "end_num": "04060"
+    "end_num": "04060",
+    "pt":"expansion"
   },
   {
     "code": "st",
@@ -501,7 +563,8 @@
     "cycle": "spn",
     "date": "07/11/13",
     "start_num": "04021",
-    "end_num": "04040"
+    "end_num": "04040",
+    "pt":"expansion"
   },
   {
     "code": "om",
@@ -509,7 +572,8 @@
     "cycle": "spn",
     "date": "27/09/13",
     "start_num": "04001",
-    "end_num": "04020"
+    "end_num": "04020",
+    "pt":"expansion"
   },
   {
     "code": "cac",
@@ -517,7 +581,8 @@
     "cycle": "cac",
     "date": "29/07/13",
     "start_num": "03001",
-    "end_num": "03055"
+    "end_num": "03055",
+    "pt":"expansion"
   },
   {
     "code": "fp",
@@ -526,6 +591,7 @@
     "date": "30/05/13",
     "start_num": "02101",
     "end_num": "02120"
+  ,"pt":"expansion"
   },
   {
     "code": "hs",
@@ -533,7 +599,8 @@
     "cycle": "gen",
     "date": "02/05/13",
     "start_num": "02081",
-    "end_num": "02100"
+    "end_num": "02100",
+    "pt":"expansion"
   },
   {
     "code": "asis",
@@ -541,7 +608,8 @@
     "cycle": "gen",
     "date": "21/03/13",
     "start_num": "02061",
-    "end_num": "02080"
+    "end_num": "02080",
+    "pt":"expansion"
   },
   {
     "code": "ce",
@@ -549,7 +617,8 @@
     "cycle": "gen",
     "date": "14/02/13",
     "start_num": "02041",
-    "end_num": "02060"
+    "end_num": "02060",
+    "pt":"expansion"
   },
   {
     "code": "ta",
@@ -557,7 +626,8 @@
     "cycle": "gen",
     "date": "09/01/13",
     "start_num": "02021",
-    "end_num": "02040"
+    "end_num": "02040",
+    "pt":"expansion"
   },
   {
     "code": "wla",
@@ -565,7 +635,8 @@
     "cycle": "gen",
     "date": "14/12/12",
     "start_num": "02001",
-    "end_num": "02020"
+    "end_num": "02020",
+    "pt":"expansion"
   },
   {
     "code": "core",
@@ -573,7 +644,8 @@
     "cycle": "core",
     "date": "06/09/12",
     "start_num": "01001",
-    "end_num": "01113"
+    "end_num": "01113",
+    "pt":"core"
   },
   {
     "code": "draft",
@@ -581,6 +653,7 @@
     "cycle": "draft",
     "date": "01/01/01",
     "start_num": "00005",
-    "end_num": "00013"
+    "end_num": "00013",
+    "pt": "draft"
   }
 ]

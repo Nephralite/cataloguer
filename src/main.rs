@@ -6,7 +6,7 @@ use axum::{
     Router
 };
 use regex::Regex;
-use serde_json::Value;
+use serde_json::{Map, Value, json};
 use std::env;
 use tokio::net::TcpListener;
 use tower_http::services::ServeDir;
@@ -15,28 +15,16 @@ use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
 
 #[derive(Clone)]
 struct Backend {
-    cards: Vec<Value>,
-    banlist: Value,
+    cards: Vec<Card>,
+    banlist: Map<String, Value>,
     sets: Vec<Value>,
-}
-
-fn import_json(file: &str) -> anyhow::Result<Value> {
-    Ok(serde_json::from_str::<Value>(&std::fs::read_to_string(
-        file,
-    )?)?)
 }
 
 fn init_backend() -> anyhow::Result<Backend> {
     Ok(Backend {
-        cards: import_json("assets/cards.json")?
-            .as_array()
-            .unwrap()
-            .to_vec(),
-        banlist: import_json("assets/banned.json")?,
-        sets: import_json("assets/sets.json")?
-            .as_array()
-            .unwrap()
-            .to_vec(),
+        cards: serde_json::from_str::<Vec<Card>>(&std::fs::read_to_string("assets/cards.json")?)?,
+        banlist: serde_json::from_str::<Map<String, Value>>(&std::fs::read_to_string("assets/banned.json")?)?,
+        sets: serde_json::from_str::<Vec<Value>>(&std::fs::read_to_string("assets/sets.json")?)?,
     })
 }
 
@@ -149,17 +137,10 @@ async fn search(
 ) -> impl IntoResponse {
     if let Some(query) = params.search {
         let mut temp: Vec<String> = vec![];
-        let results: Option<Vec<Value>> = search_cards(&query, &backend, backend.cards.clone());
+        let results: Option<Vec<Card>> = search_cards(&query, &backend, backend.cards.clone());
         if results.is_some() {
             for card in results.unwrap() {
-                let code: Option<String> = Some(
-                    card["code"]
-                        .as_array().unwrap()
-                        .last().unwrap()
-                        .as_str().unwrap()
-                        .to_owned(),
-                );
-                temp.push(code.unwrap());
+                temp.push(card.printings.last().unwrap().code.clone());
             }
         }
         Templates::CardsList(CardsList { query, cards: temp })
@@ -168,24 +149,25 @@ async fn search(
     }
 }
 
-/*
-#[derive(serde::Deserialize)]
+
+#[derive(serde::Deserialize, Clone)]
 struct Printing {
-    artist: String,
-    flavor: String, 
+    artist: Option<String>,
+    flavour: Option<String>, 
     code: String,
+    img_type: String,
 }
 
-#[derive(serde::Deserialize)]
+#[derive(serde::Deserialize, Clone)]
 struct Card {
     printings: Vec<Printing>,
     faction: String,
     type_code: String,
-    subtypes: String,
+    subtypes: Option<String>,
     title: String,
     stripped_title: String,
-    text: String,
-    stripped_text: String,
+    text: Option<String>,
+    stripped_text: Option<String>,
     uniqueness: bool,
     influence: Option<u8>,
     influence_limit: Option<u8>,
@@ -197,23 +179,35 @@ struct Card {
     memory_cost: Option<u8>,
     advancement_cost: Option<u8>,
     agenda_points: Option<u8>,
-}*/
+    eternal_points: Option<u8>,
+    nearprint: Option<String>,
+}
 
-fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option<Vec<Value>> {
-    let mut remaining: Vec<Value> = card_pool.clone();
+impl PartialEq for Card {
+    fn eq(&self, other: &Card) -> bool {
+        self.title == other.title
+    }
+
+    fn ne(&self, other: &Card) -> bool {
+        self.title != other.title
+    }
+}
+
+fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<Vec<Card>> {
+    let mut remaining: Vec<Card> = card_pool.clone();
     //currently ignoring regex
     let mut bracket_flag = false; //whether reading a bracketed set of info
     let mut or_flag = false; //whether last instruction was an or
     let mut resolving_bracket = false; // used to skip instructions on brackets
     let mut back_looking = card_pool.clone(); //used to resolve or
-    let mut or_buffer: Vec<Value> = vec![]; //stores result of instruction before an or
+    let mut or_buffer: Vec<Card> = vec![]; //stores result of instruction before an or
     let mut buffer = "".to_owned(); //part is added into this, used for quotation marks and brackets
     let mut buffering = false; //needs to exist to allow quotation marks to function
 
     for part in query.split(" ") {
         let part = part.to_lowercase();
         // (!)-term-operator-value
-        let part_results: Vec<Value>;
+        let part_results: Vec<Card>;
         let mut inverse = false;
 
         buffer.push_str(&part);
@@ -276,31 +270,32 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
         println!( "{} {} {}", buffer.split(operator).next()?, &operator, &value); //debug print
         part_results = match buffer.split(operator).next()? {
             "a" | "artist" => remaining.into_iter().filter(
-                    |x| if x["illustrator"].is_array() {
-                        x["illustrator"].as_array().unwrap().into_iter().find(|x| x.as_str().unwrap().to_lowercase().contains(value)).is_some()
+                |x| x.printings.iter().find(
+                    |y| if y.artist.is_some() {
+                        y.artist.clone().unwrap().to_lowercase().contains(value)
                     } else {false}
-                ).collect(), //show that printing?, currently no preference
+                ).is_some()).collect(), //show that printing?, currently no preference
             "adv"| "g" | "advancement" => {
                 if value.parse::<u64>().is_err() {println!("{} was an invalid search term", buffer); continue;}
-                remaining.into_iter().filter(|x| as_operator(operator, x["advancement_cost"].as_u64(), value.parse::<u64>().ok())).collect()
+                remaining.into_iter().filter(|x| as_operator(operator, x.advancement_cost, value.parse::<u8>().ok())).collect()
             },
             "b" | "banned" => {
                 if !backend.banlist[value].is_array() {continue;}
-                remaining.into_iter().filter(|x| backend.banlist[value].as_array().unwrap().contains(&x["stripped_title"])).collect() //maybe shouldn't panic on invalid formats, otherwise fine
+                remaining.into_iter().filter(|x| backend.banlist[value].as_array().unwrap().contains(&json!(x.stripped_title))).collect() //maybe shouldn't panic on invalid formats, otherwise fine
             },
             "c" | "cost" | "rez" => {
-                if value.parse::<u64>().is_err() {println!("{} was an invalid search term", buffer); continue;}
-                remaining.into_iter().filter(|x| as_operator(operator, x["cost"].as_u64(), value.parse::<u64>().ok())).collect()
+                if value.parse::<u8>().is_err() {println!("{} was an invalid search term", buffer); continue;}
+                remaining.into_iter().filter(|x| as_operator(operator, x.cost, value.parse::<u8>().ok())).collect()
             },
             "cy" | "cyc" | "cycle" => {
                 if value.parse::<u64>().is_err() {
                     if backend.sets.iter().find(|x| x["cycle"] == value).is_none() {vec!()} else {
                         let code = &backend.sets.iter().find(|x| x["cycle"] == value).unwrap()["start_num"].as_str().unwrap()[0..2];
-                        remaining.into_iter().filter(|x| x["code"].as_array().unwrap().into_iter().find(|x| &x.as_str().unwrap()[0..2] == code      ).is_some()).collect()
+                        remaining.into_iter().filter(|x| x.printings.iter().find(|y| &y.code[0..2] == code).is_some()).collect()
                     }
                 }
                 else {
-                    remaining.into_iter().filter(|x| x["code"].as_array().unwrap().into_iter().find(|x| &x.as_str().unwrap()[0..2] == value).is_some()).collect()
+                    remaining.into_iter().filter(|x| x.printings.iter().find(|y| &y.code[0..2] == value).is_some()).collect()
                 } //clean this up a bit, shouldn't need 2 filter statements
             },
             "d" | "date" | "year" => { 
@@ -340,8 +335,8 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
                 }
             },
             "ep" => {
-                if value.parse::<u64>().is_err() {println!("{} was an invalid search term", buffer); continue;}
-                remaining.into_iter().filter(|x| as_operator(operator, x["eternal_points"].as_u64(), value.parse::<u64>().ok())).collect()
+                if value.parse::<u8>().is_err() {println!("{} was an invalid search term", buffer); continue;}
+                remaining.into_iter().filter(|x| as_operator(operator, x.eternal_points, value.parse::<u8>().ok())).collect()
         },
             "f" | "faction" => {
                 let temp = match value {
@@ -355,7 +350,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
                     _ => value
                 }; //probably could be smarter but this is simple
                 if temp == "neutral" {search_cards("f:neutral-runner or f:neutral-corp", backend, remaining)?} else {
-                    remaining.into_iter().filter(|x| x["faction_code"].as_str() == Some(temp)).collect()
+                    remaining.into_iter().filter(|x| x.faction == temp).collect()
                 }},
             "fmt" | "format" | "z" => match value {
                 "startup" => search_cards("cy:lib or cy:sg or cy:su21 -banned:startup", backend, remaining)?,
@@ -366,17 +361,14 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
                 _ => vec!(),
             },
             "ft" | "flavor" | "flavour" => remaining.into_iter().filter(
-                |x| if x["flavor"].is_array() {
-                    x["flavor"].as_array().unwrap().into_iter().find(|x| x.as_str().unwrap().to_lowercase().contains(value)).is_some()
-                } else {false}
-            ).collect(),
+                |x| x.printings.iter().find(|y| if y.flavour.is_some() {y.flavour.clone().unwrap().to_lowercase().contains(value)} else {false}).is_some()).collect(),
             "i" | "inf" | "influence" => {
-                if value.parse::<u64>().is_err() {println!("{} was an invalid search term", buffer); continue;}
-                remaining.into_iter().filter(|x| as_operator(operator, x["faction_cost"].as_u64(), value.parse::<u64>().ok())).collect()
+                if value.parse::<u8>().is_err() {println!("{} was an invalid search term", buffer); continue;}
+                remaining.into_iter().filter(|x| as_operator(operator, x.influence, value.parse::<u8>().ok())).collect()
             },
             "inf_lim" | "il" => {
-                if value.parse::<u64>().is_err() {println!("{} was an invalid search term", buffer); continue;}
-                remaining.into_iter().filter(|x| as_operator(operator, x["influence_limit"].as_u64(), value.parse::<u64>().ok())).collect()
+                if value.parse::<u8>().is_err() {println!("{} was an invalid search term", buffer); continue;}
+                remaining.into_iter().filter(|x| as_operator(operator, x.influence_limit, value.parse::<u8>().ok())).collect()
             }, //currently nulls can be found with il<0 t:identity
             "is" => match value {
                 "advanceable" => search_cards("o:\"you can advance this\"", backend, remaining)?,
@@ -385,24 +377,24 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
                 "ffg" => search_cards("nrdb<24002", backend, remaining)?,
                 "guest" => search_cards("ft:\"Designed by\" -pavilion", backend, remaining)?,
                 "nsg" => search_cards("nrdb>26000 (-cy:mor -cy:sm) or (sansan city grid) or (subliminal messaging)", backend, remaining)?,
-                "nearprinted" => remaining.into_iter().filter(|x| x["nearprint"].as_str().is_some()).collect(),
-                "reprint" => remaining.into_iter().filter(|x| x["code"].as_array().unwrap().len() > 1).collect(),
+                "nearprinted" => remaining.into_iter().filter(|x| x.nearprint.is_some()).collect(),
+                "reprint" => remaining.into_iter().filter(|x| x.printings.len() > 1).collect(), //needs to change
                 "runner" => search_cards("f:anarch or f:shaper or f:criminal or f:adam or f:sunny-lebeau or f:apex or f:neutral-runner", backend, remaining)?,
                 "trap" => search_cards("o:\"when the runner accesses this\"", backend, remaining)?,
-                "unique" => remaining.into_iter().filter(|x| if x["uniqueness"].is_boolean() {x["uniqueness"].as_bool().unwrap()} else {false}).collect(),
+                "unique" => remaining.into_iter().filter(|x| x.uniqueness).collect(),
                 _ => vec!()
             },
             "l" | "link" => {
-                if value.parse::<u64>().is_err() {println!("{} was an invalid search term", buffer); continue;}    
-                remaining.into_iter().filter(|x| as_operator(operator, x["base_link"].as_u64(), value.parse::<u64>().ok())).collect()
+                if value.parse::<u8>().is_err() {println!("{} was an invalid search term", buffer); continue;}    
+                remaining.into_iter().filter(|x| as_operator(operator, x.base_link, value.parse::<u8>().ok())).collect()
             },
             "m" | "mem" | "memory" => { 
-                if value.parse::<u64>().is_err() {println!("{} was an invalid search term", buffer); continue;}
-                remaining.into_iter().filter(|x| as_operator(operator, x["memory_cost"].as_u64(), value.parse::<u64>().ok())).collect()
+                if value.parse::<u8>().is_err() {println!("{} was an invalid search term", buffer); continue;}
+                remaining.into_iter().filter(|x| as_operator(operator, x.memory_cost, value.parse::<u8>().ok())).collect()
             },
             "md" | "min_deck" => {
-                if value.parse::<u64>().is_err() {println!("{} was an invalid search term", buffer); continue;}
-                remaining.into_iter().filter(|x| as_operator(operator, x["minimum_deck_size"].as_u64(), value.parse::<u64>().ok())).collect()
+                if value.parse::<u8>().is_err() {println!("{} was an invalid search term", buffer); continue;}
+                remaining.into_iter().filter(|x| as_operator(operator, x.minimum_deck_size, value.parse::<u8>().ok())).collect()
             },
             //"n" | "number" =>
             //"new" =>
@@ -410,31 +402,28 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
             "nrdb" => { //mutates remaining so that cards that have reprints don't get double
                         //counted with multiple nrdb terms (eg. su21 cards tend to be both sides of
                         //n < 20003 n > 20003 )
-                let mut temp: Vec<Value> = vec!();
+                let mut temp: Vec<Card> = vec!();
                 for mut x in remaining {
-                    x["code"] = serde_json::json!(
-                        x["code"].as_array().unwrap().into_iter()
-                        .filter(|y| as_operator(operator,
-                                y.as_str().unwrap().parse::<u64>().ok(),
-                                value.parse::<u64>().ok())
-                    ).collect::<Vec<&Value>>());
+                    x.printings = x.printings.into_iter().filter(|y| as_operator(operator,
+                                y.code.parse::<u64>().ok(), value.parse::<u64>().ok())
+                    ).collect::<Vec<Printing>>();
                 temp.push(x);
                 };
                 temp.into_iter()
-                .filter(|x| x["code"].as_array().unwrap().len() > 0)
+                .filter(|x| x.printings.len() > 0)
                 .collect()
             },
             // "n" | "number" => 
             "o" | "x" | "text" | "oracle" => remaining.into_iter().filter(|x| 
-                    if x["stripped_text"].is_string() {x["stripped_text"].as_str().unwrap().to_lowercase().contains(&value)} else {false}
+                    if x.text.is_some() {x.stripped_text.clone().unwrap().to_lowercase().contains(&value)} else {false}
                 ).collect(),
             //"order" =>
             "p" | "v" | "points" => {
-                if value.parse::<u64>().is_err() {println!("{} was an invalid search term", buffer); continue;}
-                remaining.into_iter().filter(|x| as_operator(operator, x["agenda_points"].as_u64(), value.parse::<u64>().ok())).collect()
+                if value.parse::<u8>().is_err() {println!("{} was an invalid search term", buffer); continue;}
+                remaining.into_iter().filter(|x| as_operator(operator, x.agenda_points, value.parse::<u8>().ok())).collect()
             },
             //"pro" | "pronouns" =>, //needs some cards.json edits
-            "s" | "sub" | "subtype" => remaining.into_iter().filter(|x| x["keywords"].as_str().unwrap().to_lowercase().contains(&value)).collect(),
+            "s" | "sub" | "subtype" => remaining.into_iter().filter(|x| if x.subtypes.is_some() {x.subtypes.clone().unwrap().to_lowercase().contains(&value)} else {false}).collect(),
             "set" | "e" | "edition" => {
                 let set = backend.sets.iter().find(|x| x["code"] == value)?;
                 let start = set["start_num"].as_str().unwrap();
@@ -443,15 +432,15 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
             },
             //"st" =>
             "str" | "strength" => {
-                if value.parse::<u64>().is_err() {println!("{} was an invalid search term", buffer); continue;}
-                remaining.into_iter().filter(|x| as_operator(operator, x["strength"].as_u64(), value.parse::<u64>().ok())).collect()
+                if value.parse::<u8>().is_err() {println!("{} was an invalid search term", buffer); continue;}
+                remaining.into_iter().filter(|x| as_operator(operator, x.strength, value.parse::<u8>().ok())).collect()
             },
-            "t" | "type" => remaining.into_iter().filter(|x| x["type_code"].as_str().unwrap() == value).collect(),
+            "t" | "type" => remaining.into_iter().filter(|x| x.type_code.contains(value)).collect(),
             "trash" | "bin" | "h" => {
                 if value.parse::<u64>().is_err() {println!("{} was an invalid search term", buffer); continue;}
-                remaining.into_iter().filter(|x| as_operator(operator, x["trash_cost"].as_u64(), value.parse::<u64>().ok())).collect()
+                remaining.into_iter().filter(|x| as_operator(operator, x.trash_cost, value.parse::<u8>().ok())).collect()
             },
-            "_" | "name" => remaining.into_iter().filter(|x: &Value| {x["stripped_title"].as_str().unwrap().to_lowercase().contains(&part)}).collect(),
+            "_" | "name" => remaining.into_iter().filter(|x: &Card| {x.stripped_title.to_lowercase().contains(&part)}).collect(),
             _ => vec!(), //skip if invalid mode
         };
         } else {
@@ -471,7 +460,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Value>) -> Option
         //println!("{:?}", &remaining);
         buffer = "".to_owned();
         if or_flag {
-            let to_add: Vec<Value> = or_buffer
+            let to_add: Vec<Card> = or_buffer
                 .clone()
                 .into_iter()
                 .filter(|x| !remaining.contains(x))
