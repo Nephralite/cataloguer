@@ -183,6 +183,13 @@ struct Card {
     nearprint: Option<String>,
 }
 
+//struct SearchContext {
+//    prefer: String,
+//    ignored: String,
+//    pretty: String,
+//    format: String,
+//}
+
 impl PartialEq for Card {
     fn eq(&self, other: &Card) -> bool {
         self.title == other.title
@@ -203,7 +210,10 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
     let mut or_buffer: Vec<Card> = vec![]; //stores result of instruction before an or
     let mut buffer = "".to_owned(); //part is added into this, used for quotation marks and brackets
     let mut buffering = false; //needs to exist to allow quotation marks to function
+    let mut order = "released".to_owned();
+    let mut order_dir = "asc".to_owned();
 
+        
     for part in query.split(" ") {
         let part = part.to_lowercase();
         // (!)-term-operator-value
@@ -334,6 +344,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                     _ => continue,
                 }
             },
+            "dir" | "direction" => {order_dir=value.to_owned(); remaining}
             "ep" => {
                 if value.parse::<u8>().is_err() {println!("{} was an invalid search term", buffer); continue;}
                 remaining.into_iter().filter(|x| as_operator(operator, x.eternal_points, value.parse::<u8>().ok())).collect()
@@ -417,7 +428,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
             "o" | "x" | "text" | "oracle" => remaining.into_iter().filter(|x| 
                     if x.text.is_some() {x.stripped_text.clone().unwrap().to_lowercase().contains(&value)} else {false}
                 ).collect(),
-            //"order" =>
+            "order" => {order = value.to_owned(); remaining}
             "p" | "v" | "points" => {
                 if value.parse::<u8>().is_err() {println!("{} was an invalid search term", buffer); continue;}
                 remaining.into_iter().filter(|x| as_operator(operator, x.agenda_points, value.parse::<u8>().ok())).collect()
@@ -468,6 +479,18 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
             remaining.extend(to_add);
         }
     }
+    remaining.sort_by_key(|card| card.title.clone()); //break alphabetical in ties for now
+    match order.as_str() {
+            "artist" => remaining.sort_by_key(|card| card.printings.last()?.artist.clone()),
+            "cost" => remaining.sort_by_key(|card| card.cost),
+            "faction" => remaining.sort_by_key(|card| card.faction.clone()),
+            "released" => remaining.sort_by_key(|card| card.printings.first().unwrap().code.clone()),
+            //"set" => ,
+            "strength" => remaining.sort_by_key(|card| card.strength),
+            "type" => remaining.sort_by_key(|card| card.type_code.clone()),
+            _ => {},
+    }
+    if order_dir == "desc" {remaining.reverse()}
     println!("finished search"); //another debug print line
     Some(remaining)
 }
