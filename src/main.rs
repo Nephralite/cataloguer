@@ -200,6 +200,12 @@ impl PartialEq for Card {
     }
 }
 
+fn faction_order(faction:&str) -> usize {
+    let order = ["anarch", "criminal", "shaper", "neutral-runner", "apex", "adam", "sunny-lebeau", "haas-bioroid", "jinteki", "nbn", "weyland-consortium", "neutral-corp"];
+    let answer = order.iter().position(|&r| r == faction);
+    if answer.is_some() {answer.unwrap()} else {255}
+}
+
 fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<Vec<Card>> {
     let mut remaining: Vec<Card> = card_pool.clone();
     //currently ignoring regex
@@ -363,12 +369,12 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                 if temp == "neutral" {search_cards("f:neutral-runner or f:neutral-corp", backend, remaining)?} else {
                     remaining.into_iter().filter(|x| x.faction == temp).collect()
                 }},
-            "fmt" | "format" | "z" => match value {
-                "startup" => search_cards("cy:lib or cy:sg or cy:su21 -banned:startup", backend, remaining)?,
-                "neo" => search_cards("is:nsg -banned:neo", backend, remaining)?,
-                "standard" => search_cards("cy:kit or cy:rs or is:nsg or cy:mor -banned:standard", backend, remaining)?,
-                "sunset" => search_cards("cy:kit or cy:rs or is:nsg or cy:mor -banned:sunset", backend, remaining)?,
-                "eternal" => search_cards("-banned:eternal", backend, remaining)?,
+            "fmt" | "format" | "z" | "legal" => match value {
+                "startup" => search_cards("(cy:lib or cy:sg or cy:su21) -banned:startup -o:\"starter game only\"", backend, remaining)?,
+                "neo" => search_cards("is:nsg -banned:neo -o:\"starter game only\"", backend, remaining)?,
+                "standard" => search_cards("(cy:kit or cy:rs or is:nsg or cy:mor) -banned:standard -o:\"starter game only\"", backend, remaining)?,
+                "sunset" => search_cards("(cy:kit or cy:rs or is:nsg or cy:mor) -banned:sunset -o:\"starter game only\"", backend, remaining)?,
+                "eternal" => search_cards("-banned:eternal -o:\"starter game only\" -cy:00 -cy:24", backend, remaining)?,
                 _ => vec!(),
             },
             "ft" | "flavor" | "flavour" => remaining.into_iter().filter(
@@ -483,7 +489,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
     match order.as_str() {
             "artist" => remaining.sort_by_key(|card| card.printings.last()?.artist.clone()),
             "cost" => remaining.sort_by_key(|card| card.cost),
-            "faction" => remaining.sort_by_key(|card| card.faction.clone()),
+            "faction" => remaining.sort_by_key(|card| faction_order(&card.faction)),
             "released" => remaining.sort_by_key(|card| card.printings.first().unwrap().code.clone()),
             //"set" => ,
             "strength" => remaining.sort_by_key(|card| card.strength),
