@@ -65,16 +65,16 @@ async fn main() -> anyhow::Result<()> {
 }
 
 async fn syntax() -> impl IntoResponse {
-    Templates::SyntaxTemplate(SyntaxTemplate {})
+    Templates::SyntaxTemplate(SyntaxTemplate {query:"".to_owned()})
 }
 
 #[derive(Template)]
 #[template(path = "index.html")]
-struct IndexTemplate;
+struct IndexTemplate {query: String}
 
 #[derive(Template)]
 #[template(path = "syntax.html")]
-struct SyntaxTemplate;
+struct SyntaxTemplate {query: String}
 
 #[derive(Template)]
 #[template(path = "cards.html")]
@@ -145,7 +145,7 @@ async fn search(
         }
         Templates::CardsList(CardsList { query, cards: temp })
     } else {
-        Templates::IndexTemplate(IndexTemplate {})
+        Templates::IndexTemplate(IndexTemplate {query:"".to_owned()})
     }
 }
 
