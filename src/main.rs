@@ -372,7 +372,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
             "fmt" | "format" | "z" | "legal" => match value {
                 "startup" => search_cards("(cy:lib or cy:sg or cy:su21) -banned:startup -o:\"starter game only\"", backend, remaining)?,
                 "neo" => search_cards("is:nsg -banned:neo -o:\"starter game only\"", backend, remaining)?,
-                "rig" | "startup+" | "post-gateway" => search_cards("date>=sg -banned:rig -o:\"starter game only\"", backend, remaining)?,
+                "rig" | "postgateway" | "librealis" | "twocycle" => search_cards("date>=sg -banned:rig -o:\"starter game only\"", backend, remaining)?,
                 "standard" => search_cards("(cy:kit or cy:rs or is:nsg or cy:mor) -banned:standard -o:\"starter game only\"", backend, remaining)?,
                 "sunset" => search_cards("(cy:kit or cy:rs or is:nsg or cy:mor) -banned:sunset -o:\"starter game only\"", backend, remaining)?,
                 "eternal" => search_cards("-banned:eternal -o:\"starter game only\" -cy:00 -cy:24", backend, remaining)?,
@@ -385,9 +385,10 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                 remaining.into_iter().filter(|x| as_operator(operator, x.influence, value.parse::<u8>().ok())).collect()
             },
             "inf_lim" | "il" => {
+                if value == "null" || value == "inf" { return search_cards("il<0 t:identity", backend, remaining);}
                 if value.parse::<u8>().is_err() {println!("{} was an invalid search term", buffer); continue;}
                 remaining.into_iter().filter(|x| as_operator(operator, x.influence_limit, value.parse::<u8>().ok())).collect()
-            }, //currently nulls can be found with il<0 t:identity
+            },
             "is" => match value {
                 "advanceable" => search_cards("o:\"you can advance this\"", backend, remaining)?,
                 "corp" => search_cards("f:neutral-corp or f:n or f:j or f:h or f:w", backend, remaining)?,
