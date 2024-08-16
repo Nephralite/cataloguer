@@ -373,7 +373,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                 "startup" => search_cards("(cy:lib or cy:sg or cy:su21) -banned:startup -o:\"starter game only\"", backend, remaining)?,
                 "neo" => search_cards("is:nsg -banned:neo -o:\"starter game only\"", backend, remaining)?,
                 "rig" | "postgateway" | "librealis" | "twocycle" => search_cards("date>=sg -banned:rig -o:\"starter game only\"", backend, remaining)?,
-                "standard" => search_cards("(cy:kit or cy:rs or is:nsg or cy:mor) -banned:standard -o:\"starter game only\"", backend, remaining)?,
+                "standard" => search_cards("(cy:kit or cy:rs or is:nsg or cy:mor or set:rar) -banned:standard -o:\"starter game only\"", backend, remaining)?,
                 "sunset" => search_cards("(cy:kit or cy:rs or is:nsg or cy:mor) -banned:sunset -o:\"starter game only\"", backend, remaining)?,
                 "eternal" => search_cards("-banned:eternal -o:\"starter game only\" -cy:00 -cy:24", backend, remaining)?,
                 _ => vec!(),
@@ -390,7 +390,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                 remaining.into_iter().filter(|x| as_operator(operator, x.influence_limit, value.parse::<u8>().ok())).collect()
             },
             "is" => match value {
-                "advanceable" => search_cards("o:\"you can advance this\"", backend, remaining)?,
+                "advanceable" => search_cards("o:\"you can advance this\" or o:\"can be advanced\" -o:\"that can be advanced\"", backend, remaining)?,
                 "corp" => search_cards("f:neutral-corp or f:n or f:j or f:h or f:w", backend, remaining)?,
                 "dfc" => search_cards("hoshiko or (sync ev) or (jinteki biotech)", backend, remaining)?,
                 "ffg" => search_cards("nrdb<24002", backend, remaining)?,
