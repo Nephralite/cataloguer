@@ -1,0 +1,63 @@
+<!-- prettier-ignore -->
+{% extends "base.html" %}
+
+{% block title %}{{card.title}} - Cataloguer{% endblock %}
+
+{% block content %}
+{% include "search-bar.html" %}
+
+<div id="cardpage" class="grid grid-cols-3 gap-4 relative top-16 left-8 content-center">
+    <div id="image" class="flex justify-center">
+    {% if card.printings[x].img_type == "nrdb" -%}
+        <img class="w-3/5" src="https://card-images.netrunnerdb.com/v2/large/{{card.printings[x].code}}.jpg">
+    {% endif -%}
+    </div>
+    <div id="card-info" class="flex items-center"><div>
+        <h1 id="top-bar">{{card.title}}  
+            {% if card.type_code == "agenda" -%}
+                {{card.advancement_cost.unwrap()}}/{{card.agenda_points.unwrap()}}
+            {% else if card.type_code != "identity" -%}
+                {{card.cost.unwrap()}}[credit]
+            {% endif -%}
+        </h1>
+        <span><strong>{{card.type_code}}{% if card.subtypes.is_some() -%}:</strong> {{card.subtypes.clone().unwrap()}}{% else -%}</strong>{% endif -%}<br>
+        {% if card.strength.is_some() && card.memory_cost.is_none() -%}
+            Strength: {{card.strength.unwrap()}} <br>
+        {% else if card.strength.is_none() && card.memory_cost.is_some() -%}
+            Memory: {{card.memory_cost.unwrap()}}<br>
+        {% else if card.memory_cost.is_some() && card.strength.is_some() -%}          
+            Strength: {{card.strength.unwrap()}}, Memory: {{card.memory_cost.unwrap()}}<br>
+        {% endif -%}</span>
+            {% if card.text.is_some() -%}
+            <span class="block text-wrap">{{card.text.clone().unwrap()|safe}}</span>
+            {% endif -%}
+            {% if card.printings[x].flavour.is_some() -%}
+            <span class="block italic text-wrap">{{card.printings[x].flavour.clone().unwrap()|safe}}</span>
+            {% endif -%}
+        {% if card.printings[x].artist.is_some() -%}
+        <span>Illustrated by <a href="https://cataloguer.web.app/?search=a%3A&quot;{{card.printings[x].artist.clone().unwrap()}}&quot;">{{card.printings[x].artist.clone().unwrap()}}</a></span><br>
+        {% endif -%}
+        {% if card.influence.is_some() -%}
+        <span> Influence: {{card.influence.unwrap()}} {{card.faction}}<span></br>
+        {% endif -%} <br>
+        <span>
+            Startup: {{legality.startup}}<br>
+            Standard: {{legality.standard}}<br>
+            Eternal: {{legality.eternal}}<br>
+        </span>
+    </div>
+    </div>
+    <div id="printing-list" class="inline-block mb-4 relative top-16">
+        <div id="selected-printing">
+        <span>current card: {{card.printings[x].set}}</span><br>
+        </div>
+        <div id="printings">
+            {% for i in 0..card.printings.len() -%}
+            <a href="https://cataloguer.web.app/cards/{{card.stripped_title|lower}}/{{i}}">{{card.printings[i].set}}</a><br>
+            {% endfor -%}
+        </div>
+    </div>
+</div>
+<div id="rulings"></div>
+
+{% endblock %}

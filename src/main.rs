@@ -91,7 +91,6 @@ struct CardPageTemplate {
     card: Card,
     x: usize,
     legality: Legality,
-    backend: Backend,
 }
 
 struct Legality {
