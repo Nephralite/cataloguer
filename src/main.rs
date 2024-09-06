@@ -160,7 +160,7 @@ async fn cardpage(Path(params): Path<HashMap<String, String>>, State(backend): S
     let standard= if search_cards("z:standard", &backend, vec!(card.clone())) == Some(vec!(card.clone())) {"legal"} else if search_cards("banned:standard", &backend, vec!(card.clone())) == Some(vec!(card.clone())) {"banned"} else {"not legal"};
     let eternal = if search_cards("ep>0", &backend, vec!(card.clone())) == Some(vec!(card.clone())) {format!("{} Points", card.eternal_points.unwrap())} else if search_cards("z:eternal", &backend, vec!(card.clone())) == Some(vec!(card.clone())) {"legal".to_owned()} else {"not legal".to_owned()};
     
-    Templates::CardPageTemplate(CardPageTemplate{ query:"".to_owned(), card: card.clone(), x: printing, legality: Legality {startup, standard, eternal}, backend:backend.clone() })
+    Templates::CardPageTemplate(CardPageTemplate{ query:"".to_owned(), card: card.clone(), x: printing, legality: Legality {startup, standard, eternal}})
 }
 
 async fn search(
