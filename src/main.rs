@@ -1,13 +1,13 @@
 use anyhow::Context;
 use askama::Template;
 use axum::{
-    extract::{Query, State}, http::StatusCode, response::{Html, IntoResponse, Response}, 
+    extract::{Query, State, Path}, http::StatusCode, response::{Html, IntoResponse, Response}, 
     routing::get,
     Router
 };
 use regex::Regex;
 use serde_json::{Map, Value, json};
-use std::env;
+use std::{env, collections::HashMap};
 use tokio::net::TcpListener;
 use tower_http::services::ServeDir;
 use tracing::info;
@@ -43,6 +43,7 @@ async fn main() -> anyhow::Result<()> {
     let assets_path = std::env::current_dir().unwrap();
     let router = Router::new()
         .route("/", get(search))
+        .route("/cards/:id/:printing", get(cardpage))
         .route("/syntax", get(syntax))
         .with_state(backend)
         .nest_service(
@@ -83,6 +84,22 @@ struct CardsList {
     cards: Vec<String>,
 }
 
+#[derive(Template)]
+#[template(path = "cardpage.html")]
+struct CardPageTemplate {
+    query: String,
+    card: Card,
+    x: usize,
+    legality: Legality,
+    backend: Backend,
+}
+
+struct Legality {
+    startup: &'static str,
+    standard: &'static str,
+    eternal: String,
+}
+
 #[derive(serde::Deserialize, Debug)]
 struct SearchForm {
     search: Option<String>,
@@ -108,7 +125,8 @@ fn as_operator<T: std::cmp::PartialEq + std::cmp::PartialOrd + std::fmt::Debug>(
 enum Templates {
     CardsList(CardsList),
     SyntaxTemplate(SyntaxTemplate),
-    IndexTemplate(IndexTemplate)
+    IndexTemplate(IndexTemplate),
+    CardPageTemplate(CardPageTemplate)
 }
 
 impl IntoResponse for Templates {
@@ -118,6 +136,7 @@ impl IntoResponse for Templates {
             Templates::CardsList(c) => c.render(),
             Templates::IndexTemplate(c) => c.render(),
             Templates::SyntaxTemplate(c) => c.render(),
+            Templates::CardPageTemplate(c) => c.render(),
         }; 
         match inner {
        // If we're able to successfully parse and aggregate the template, serve it
@@ -131,6 +150,20 @@ impl IntoResponse for Templates {
     }
 }
 
+async fn cardpage(Path(params): Path<HashMap<String, String>>, State(backend): State<Backend>) -> impl IntoResponse {
+    println!("testing that we get here");
+    let printing = params.get("printing").unwrap().parse().unwrap();
+    let id = params.get("id").unwrap();
+    println!("{}, {}", id, printing);
+    let card = backend.cards.iter().find(|x| x.stripped_title.to_lowercase() == *id).unwrap();
+    
+    let startup = if search_cards("z:startup", &backend, vec!(card.clone())) == Some(vec!(card.clone())) {"legal"} else if search_cards("banned:startup", &backend, vec!(card.clone())) == Some(vec!(card.clone())) {"banned"} else {"not legal"};
+    let standard= if search_cards("z:standard", &backend, vec!(card.clone())) == Some(vec!(card.clone())) {"legal"} else if search_cards("banned:standard", &backend, vec!(card.clone())) == Some(vec!(card.clone())) {"banned"} else {"not legal"};
+    let eternal = if search_cards("ep>0", &backend, vec!(card.clone())) == Some(vec!(card.clone())) {format!("{} Points", card.eternal_points.unwrap())} else if search_cards("z:eternal", &backend, vec!(card.clone())) == Some(vec!(card.clone())) {"legal".to_owned()} else {"not legal".to_owned()};
+    
+    Templates::CardPageTemplate(CardPageTemplate{ query:"".to_owned(), card: card.clone(), x: printing, legality: Legality {startup, standard, eternal}, backend:backend.clone() })
+}
+
 async fn search(
     State(backend): State<Backend>,
     Query(params): Query<SearchForm>,
@@ -139,8 +172,15 @@ async fn search(
         let mut temp: Vec<String> = vec![];
         let results: Option<Vec<Card>> = search_cards(&query, &backend, backend.cards.clone());
         if results.is_some() {
-            for card in results.unwrap() {
-                temp.push(card.printings.last().unwrap().code.clone());
+            if query.contains("prefer:oldest") {
+                for card in results.unwrap() {
+                    temp.push(card.printings.first().unwrap().code.clone());
+                }
+            } else { //prefer:newest is just the default
+                for card in results.unwrap() {
+                    temp.push(card.printings.last().unwrap().code.clone());
+            
+                }
             }
         }
         Templates::CardsList(CardsList { query, cards: temp })
@@ -156,6 +196,7 @@ struct Printing {
     flavour: Option<String>, 
     code: String,
     img_type: String,
+    set: String,
 }
 
 #[derive(serde::Deserialize, Clone)]
@@ -264,7 +305,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
             println!("inverting statement");
             inverse = true;
             buffer = buffer.replace("-", "")
-        } //the ! probably needs to be removed from buffer?
+        }
         
         //then find the operator with code that looks really bad, I'm yet to think of a smarter answer
         if !resolving_bracket {
@@ -375,7 +416,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                 "rig" | "postgateway" | "librealis" | "twocycle" => search_cards("date>=sg -banned:rig -o:\"starter game only\"", backend, remaining)?,
                 "standard" => search_cards("(cy:kit or cy:rs or is:nsg or cy:mor or set:rar) -banned:standard -o:\"starter game only\"", backend, remaining)?,
                 "sunset" => search_cards("(cy:kit or cy:rs or is:nsg or cy:mor) -banned:sunset -o:\"starter game only\"", backend, remaining)?,
-                "eternal" => search_cards("-banned:eternal -o:\"starter game only\" -cy:00 -cy:24", backend, remaining)?,
+                "eternal" => search_cards("-banned:eternal -o:\"starter game only\" -set:tdc -cy:00 -cy:24", backend, remaining)?,
                 _ => vec!(),
             },
             "ft" | "flavor" | "flavour" => remaining.into_iter().filter(
@@ -460,7 +501,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                 remaining.into_iter().filter(|x| as_operator(operator, x.trash_cost, value.parse::<u8>().ok())).collect()
             },
             "_" | "name" => remaining.into_iter().filter(|x: &Card| {x.stripped_title.to_lowercase().contains(&part)}).collect(),
-            _ => vec!(), //skip if invalid mode
+            _ => remaining, //skip if invalid mode
         };
         } else {
             println!("resolving a bracket of {}", buffer);
