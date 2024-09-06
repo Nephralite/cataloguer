@@ -9,7 +9,7 @@
 <div id="cardpage" class="grid grid-cols-3 gap-4 relative top-16 left-8 content-center">
     <div id="image" class="flex justify-center">
     {% if card.printings[x].img_type == "nrdb" -%}
-        <img class="w-3/5" src="https://card-images.netrunnerdb.com/v2/large/{{card.printings[x].code}}.jpg">
+        <img class="w-3/5 h-auto" src="https://card-images.netrunnerdb.com/v2/large/{{card.printings[x].code}}.jpg">
     {% endif -%}
     </div>
     <div id="card-info" class="flex items-center"><div>
