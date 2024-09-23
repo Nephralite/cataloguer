@@ -1,7 +1,9 @@
 use anyhow::Context;
 use askama::Template;
 use axum::{
-    extract::{Query, State, Path}, http::StatusCode, response::{Html, IntoResponse, Response}, 
+    extract::{Query, State, Path}, 
+    http::StatusCode, 
+    response::{Html, IntoResponse, Response}, 
     routing::get,
     Router
 };
@@ -40,7 +42,6 @@ async fn main() -> anyhow::Result<()> {
 
     info!("initializing router...");
     let backend = init_backend()?;
-    let assets_path = std::env::current_dir().unwrap();
     let router = Router::new()
         .route("/", get(search))
         .route("/cards/:id/:printing", get(cardpage))
@@ -48,7 +49,7 @@ async fn main() -> anyhow::Result<()> {
         .with_state(backend)
         .nest_service(
             "/assets",
-            ServeDir::new(format!("{}/assets", assets_path.to_str().unwrap())),
+            ServeDir::new(format!("{}/assets", env::current_dir().unwrap().to_str().unwrap())),
         );
     let port = match env::var("PORT"){
         Ok(port) => port,
@@ -60,7 +61,7 @@ async fn main() -> anyhow::Result<()> {
 
     axum::serve(listener, router)
         .await
-        .context("error while staring server")?;
+        .context("error while starting server")?;
 
     Ok(())
 }
