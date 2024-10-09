@@ -1,656 +1,755 @@
 [
   {
+    "code": "lib",
+    "name": "Liberation",
+    "type": "cycle",
+    "date": "18/03/24",
+    "start_num": "34001",
+    "end_num": "34130",
+    "pt": "expansion"
+  },
+  {
     "code": "rwr",
     "name": "Rebellion Without Rehearsal",
-    "cycle": "lib",
+    "type": "set",
     "date": "18/03/24",
     "start_num": "34066",
     "end_num": "34130",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "tai",
     "name": "The Automata Initiative",
-    "cycle": "lib",
+    "type": "set",
     "date": "31/07/23",
     "start_num": "34001",
     "end_num": "34065",
-    "pt":"expansion"
+    "pt": "expansion"
+  },
+  {
+    "code": "bor",
+    "name": "Borealis",
+    "type": "cycle",
+    "date": "09/12/22",
+    "start_num": "33001",
+    "end_num": "33128",
+    "pt": "expansion"
   },
   {
     "code": "ph",
     "name": "Parhelion",
-    "cycle": "bor",
+    "type": "set",
     "date": "09/12/22",
     "start_num": "33066",
     "end_num": "33128",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "ms",
     "name": "Midnight Sun",
-    "cycle": "bor",
+    "type": "set",
     "date": "22/07/22",
     "start_num": "33001",
     "end_num": "33065",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "msbp",
     "name": "Midnight Sun Booster Pack",
-    "cycle": "bor",
+    "type": "set",
     "date": "18/03/22",
     "start_num": "32001",
     "end_num": "32007",
-    "pt":"supplemental"
+    "pt": "supplemental"
   },
   {
     "code": "su21",
     "name": "System Update 2021",
-    "cycle": "su21",
+    "type": "cycle",
     "date": "28/03/21",
     "start_num": "31001",
     "end_num": "31082",
-    "pt":"core"
+    "pt": "core"
   },
   {
     "code": "sg",
     "name": "System Gateway",
-    "cycle": "sg",
+    "type": "cycle",
     "date": "28/03/21",
     "start_num": "30001",
     "end_num": "30077",
-    "pt":"core"
+    "pt": "core"
   },
   {
     "code": "sm",
     "name": "Salvaged Memories",
-    "cycle": "sm",
+    "type": "cycle",
     "date": "18/12/20",
     "start_num": "29001",
     "end_num": "29018",
-    "pt":"supplemental"
-  },
-  {
-    "code": "ur",
-    "name": "Uprising",
-    "cycle": "ash",
-    "date": "31/12/19",
-    "start_num": "26066",
-    "end_num": "26130",
-    "pt":"expansion"
-  },
-  {
-    "code": "urbp",
-    "name": "Uprising Booster Pack",
-    "cycle": "ash",
-    "date": "09/09/19",
-    "start_num": "27001",
-    "end_num": "27007",
-    "pt":"supplemental"
+    "pt": "supplemental"
   },
   {
     "code": "mor",
     "name": "Magnum Opus Reprint",
-    "cycle": "mor",
+    "type": "cycle",
     "date": "24/07/19",
     "start_num": "28001",
     "end_num": "28006",
-    "pt":"supplemental"
+    "pt": "supplemental"
+  },
+  {
+    "code": "ash",
+    "name": "Ashes",
+    "type": "cycle",
+    "date": "31/12/19",
+    "start_num": "26001",
+    "end_num": "26130",
+    "pt": "expansion"
+  },
+  {
+    "code": "ur",
+    "name": "Uprising",
+    "type": "set",
+    "date": "31/12/19",
+    "start_num": "26066",
+    "end_num": "26130",
+    "pt": "expansion"
+  },
+  {
+    "code": "urbp",
+    "name": "Uprising Booster Pack",
+    "type": "set",
+    "date": "09/09/19",
+    "start_num": "27001",
+    "end_num": "27007",
+    "pt": "supplemental"
   },
   {
     "code": "df",
     "name": "Downfall",
-    "cycle": "ash",
+    "type": "set",
     "date": "18/03/19",
     "start_num": "26001",
     "end_num": "26065",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "sc19",
     "name": "System Core 2019",
-    "cycle": "sc19",
+    "type": "cycle",
     "date": "21/12/18",
     "start_num": "25001",
     "end_num": "25147",
-    "pt":"supplemental"
+    "pt": "supplemental"
   },
   {
     "code": "napd",
     "name": "NAPD Multiplayer",
-    "cycle": "napd",
+    "type": "cycle",
     "date": "07/09/18",
     "start_num": "24001",
     "end_num": "24001",
-    "pt":"supplemental"
+    "pt": "supplemental"
   },
   {
     "code": "mo",
     "name": "Magnum Opus",
-    "cycle": "mo",
+    "type": "set",
     "date": "07/09/18",
     "start_num": "23001",
     "end_num": "23101",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "rar",
     "name": "Reign and Reverie",
-    "cycle": "rar",
+    "type": "cycle",
     "date": "28/06/18",
     "start_num": "22001",
     "end_num": "22058",
-    "pt":"expansion"
+    "pt": "expansion"
+  },
+  {
+    "code": "kit",
+    "name": "Kitara",
+    "type": "cycle",
+    "date": "31/05/18",
+    "start_num": "21001",
+    "end_num": "21120",
+    "pt": "expansion"
   },
   {
     "code": "ka",
     "name": "Kampala Ascendent",
-    "cycle": "kit",
+    "type": "set",
     "date": "31/05/18",
     "start_num": "21100",
     "end_num": "21120",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "win",
     "name": "Whispers in Nalubaale",
-    "cycle": "kit",
+    "type": "set",
     "date": "03/05/18",
     "start_num": "21081",
     "end_num": "21100",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "tdatd",
     "name": "The Devil and the Dragon",
-    "cycle": "kit",
+    "type": "set",
     "date": "05/04/18",
     "start_num": "21061",
     "end_num": "21080",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "cotc",
     "name": "Council of the Crest",
-    "cycle": "kit",
+    "type": "set",
     "date": "01/03/18",
     "start_num": "21041",
     "end_num": "21060",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "dtwn",
     "name": "Down the White Nile",
-    "cycle": "kit",
+    "type": "set",
     "date": "01/02/18",
     "start_num": "21021",
     "end_num": "21040",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "ss",
     "name": "Sovereign Sight",
-    "cycle": "kit",
+    "type": "set",
     "date": "28/12/17",
     "start_num": "21001",
     "end_num": "21020",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "core2",
     "name": "Revised Core Set",
-    "cycle": "core2",
+    "type": "cycle",
     "date": "14/12/17",
     "start_num": "20001",
     "end_num": "20132",
-    "pt":"old-core"
-  },
-  {
-    "code": "cd",
-    "name": "Crimson Dust",
-    "cycle": "rs",
-    "date": "17/08/17",
-    "start_num": "12101",
-    "end_num": "12120",
-    "pt":"expansion"
-  },
-  {
-    "code": "fm",
-    "name": "Free Mars",
-    "cycle": "rs",
-    "date": "20/07/17",
-    "start_num": "12081",
-    "end_num": "12100",
-    "pt":"expansion"
-  },
-  {
-    "code": "baw",
-    "name": "Blood and Water",
-    "cycle": "rs",
-    "date": "22/06/17",
-    "start_num": "12061",
-    "end_num": "12080",
-    "pt":"expansion"
-  },
-  {
-    "code": "eas",
-    "name": "Earth's Scion",
-    "cycle": "rs",
-    "date": "25/05/17",
-    "start_num": "12041",
-    "end_num": "12060",
-    "pt":"expansion"
+    "pt": "old-core"
   },
   {
     "code": "tdc",
     "name": "Terminal Directive Campaign",
-    "cycle": "td",
+    "type": "set",
     "date": "27/04/17",
     "start_num": "14000",
     "end_num": "14028",
-    "pt":"supplemental"
+    "pt": "supplemental"
   },
   {
     "code": "td",
     "name": "Terminal Directive Cards",
-    "cycle": "td",
+    "type": "set",
     "date": "27/04/17",
     "start_num": "13001",
     "end_num": "13057",
-    "pt":"expansion"
+    "pt": "expansion"
+  },
+  {
+    "code": "rs",
+    "name": "Red Sand",
+    "type": "cycle",
+    "date": "17/08/17",
+    "start_num": "12001",
+    "end_num": "12120",
+    "pt": "expansion"
+  },
+  {
+    "code": "cd",
+    "name": "Crimson Dust",
+    "type": "set",
+    "date": "17/08/17",
+    "start_num": "12101",
+    "end_num": "12120",
+    "pt": "expansion"
+  },
+  {
+    "code": "fm",
+    "name": "Free Mars",
+    "type": "set",
+    "date": "20/07/17",
+    "start_num": "12081",
+    "end_num": "12100",
+    "pt": "expansion"
+  },
+  {
+    "code": "baw",
+    "name": "Blood and Water",
+    "type": "set",
+    "date": "22/06/17",
+    "start_num": "12061",
+    "end_num": "12080",
+    "pt": "expansion"
+  },
+  {
+    "code": "eas",
+    "name": "Earth's Scion",
+    "type": "set",
+    "date": "25/05/17",
+    "start_num": "12041",
+    "end_num": "12060",
+    "pt": "expansion"
   },
   {
     "code": "so",
     "name": "Station One",
-    "cycle": "rs",
+    "type": "set",
     "date": "23/03/17",
     "start_num": "12021",
     "end_num": "12040",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "dc",
     "name": "Daedalus Complex",
-    "cycle": "rs",
+    "type": "set",
     "date": "23/02/17",
     "start_num": "12001",
     "end_num": "12020",
-    "pt":"expansion"
+    "pt": "expansion"
+  },
+  {
+    "code": "fla",
+    "name": "Flashpoint",
+    "type": "cycle",
+    "date": "12/01/17",
+    "start_num": "11001",
+    "end_num": "11120",
+    "pt": "expansion"
   },
   {
     "code": "qu",
     "name": "Quorum",
-    "cycle": "fla",
+    "type": "set",
     "date": "12/01/17",
     "start_num": "11101",
     "end_num": "11120",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "ml",
     "name": "Martial Law",
-    "cycle": "fla",
+    "type": "set",
     "date": "08/12/16",
     "start_num": "11081",
     "end_num": "11100",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "in",
     "name": "Intervention",
-    "cycle": "fla",
+    "type": "set",
     "date": "03/11/16",
     "start_num": "11061",
     "end_num": "11080",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "es",
     "name": "Escalation",
-    "cycle": "fla",
+    "type": "set",
     "date": "06/10/16",
     "start_num": "11041",
     "end_num": "11060"
-  ,"pt":"expansion"
+  ,"pt": "expansion"
   },
   {
     "code": "bm",
     "name": "Blood Money",
-    "cycle": "fla",
+    "type": "set",
     "date": "11/08/16",
     "start_num": "11021",
     "end_num": "11040",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "23s",
     "name": "23 Seconds",
-    "cycle": "fla",
+    "type": "set",
     "date": "14/07/16",
     "start_num": "11001",
     "end_num": "11020",
-    "pt":"expansion"
+    "pt": "expansion"
+  },
+  {
+    "code": "mum",
+    "name": "Mumbad",
+    "type":"cycle",
+    "date": "16/06/16",
+    "start_num": "10001",
+    "end_num": "10114",
+    "pt": "expansion"
   },
   {
     "code": "ftm",
     "name": "Fear the Masses",
-    "cycle": "mum",
+    "type": "set",
     "date": "16/06/16",
     "start_num": "10096",
     "end_num": "10114",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "tlm",
     "name": "The Liberated Mind",
-    "cycle": "mum",
+    "type": "set",
     "date": "26/05/16",
     "start_num": "10077",
     "end_num": "10095",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "si",
     "name": "Salsette Island",
-    "cycle": "mum",
+    "type": "set",
     "date": "28/04/16",
     "start_num": "10058",
     "end_num": "10076",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "dag",
     "name": "Democracy and Dogma",
-    "cycle": "mum",
+    "type": "set",
     "date": "01/04/16",
     "start_num": "10039",
     "end_num": "10057",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "bf",
     "name": "Business First",
-    "cycle": "mum",
+    "type": "set",
     "date": "11/03/16",
     "start_num": "10020",
     "end_num": "10038",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "kg",
     "name": "Kala Ghoda",
-    "cycle": "mum",
+    "type": "set",
     "date": "29/01/16",
     "start_num": "10001",
     "end_num": "10019",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "dad",
     "name": "Data and Destiny",
-    "cycle": "dad",
+    "type": "cycle",
     "date": "29/10/15",
     "start_num": "09001",
     "end_num": "09055",
-    "pt":"expansion"
+    "pt": "expansion"
+  },
+  {
+    "code": "san",
+    "name": "SanSan",
+    "type": "cycle",
+    "date": "03/09/15",
+    "start_num": "08001",
+    "end_num": "08120",
+    "pt": "expansion"
   },
   {
     "code": "uot",
     "name": "The Universe of Tomorrow",
-    "cycle": "san",
+    "type": "set",
     "date": "03/09/15",
     "start_num": "08101",
     "end_num": "08120",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "oh",
     "name": "Old Hollywood",
-    "cycle": "san",
+    "type": "set",
     "date": "06/08/15",
     "start_num": "08081",
     "end_num": "08100",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "uw",
     "name": "The Underway",
-    "cycle": "san",
+    "type": "set",
     "date": "02/07/15",
     "start_num": "08061",
     "end_num": "08080"
-  ,"pt":"expansion"
+  ,"pt": "expansion"
   },
   {
     "code": "cc",
     "name": "Chrome City",
-    "cycle": "san",
+    "type": "set",
     "date": "29/05/15",
     "start_num": "08041",
     "end_num": "08060",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "bb",
     "name": "Breaker Bay",
-    "cycle": "san",
+    "type": "set",
     "date": "24/04/15",
     "start_num": "08021",
     "end_num": "08040",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "val",
     "name": "The Valley",
-    "cycle": "san",
+    "type": "set",
     "date": "03/04/15",
     "start_num": "08001",
     "end_num": "08020",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "oac",
     "name": "Order and Chaos",
-    "cycle": "oac",
+    "type": "cycle",
     "date": "28/01/15",
     "start_num": "07001",
     "end_num": "07055",
-    "pt":"expansion"
+    "pt": "expansion"
+  },
+  {
+    "code": "lun",
+    "name": "Lunar",
+    "type": "cycle",
+    "date": "18/12/14",
+    "start_num": "06001",
+    "end_num": "06120",
+    "pt": "expansion"
   },
   {
     "code": "ts",
     "name": "The Source",
-    "cycle": "lun",
+    "type": "set",
     "date": "18/12/14",
     "start_num": "06101",
     "end_num": "06120",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "atr",
     "name": "All That Remains",
-    "cycle": "lun",
+    "type": "set",
     "date": "13/11/14",
     "start_num": "06081",
     "end_num": "06100",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "uao",
     "name": "Up and Over",
-    "cycle": "lun",
+    "type": "set",
     "date": "16/10/14",
     "start_num": "06061",
     "end_num": "06080",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "fc",
     "name": "First Contact",
-    "cycle": "lun",
+    "type": "set",
     "date": "15/09/14",
     "start_num": "06041",
     "end_num": "06060",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "tsb",
     "name": "The Spaces Between",
-    "cycle": "lun",
+    "type": "set",
     "date": "15/08/14",
     "start_num": "06021",
     "end_num": "06040",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "up",
     "name": "Upstalk",
-    "cycle": "lun",
+    "type": "set",
     "date": "25/07/14",
     "start_num": "06001",
     "end_num": "06020",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "hap",
     "name": "Honor and Profit",
-    "cycle": "hap",
+    "type": "cycle",
     "date": "02/05/14",
     "start_num": "05001",
     "end_num": "05055",
-    "pt":"expansion"
+    "pt": "expansion"
+  },
+  {
+    "code": "spin",
+    "name": "Spin",
+    "type": "cycle",
+    "date": "28/03/14",
+    "start_num": "04001",
+    "end_num": "04120",
+    "pt": "expansion"
   },
   {
     "code": "dt",
     "name": "Double Time",
-    "cycle": "spn",
+    "type": "set",
     "date": "28/03/14",
     "start_num": "04101",
     "end_num": "04120",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "fal",
     "name": "Fear and Loathing",
-    "cycle": "spn",
+    "type": "set",
     "date": "21/02/14",
     "start_num": "04081",
     "end_num": "04100",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "tc",
     "name": "True Colors",
-    "cycle": "spn",
+    "type": "set",
     "date": "17/01/14",
     "start_num": "04061",
     "end_num": "04080",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "mt",
     "name": "Mala Tempora",
-    "cycle": "spn",
+    "type": "set",
     "date": "13/12/13",
     "start_num": "04041",
     "end_num": "04060",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "st",
     "name": "Second Thoughts",
-    "cycle": "spn",
+    "type": "set",
     "date": "07/11/13",
     "start_num": "04021",
     "end_num": "04040",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "om",
     "name": "Opening Moves",
-    "cycle": "spn",
+    "type": "set",
     "date": "27/09/13",
     "start_num": "04001",
     "end_num": "04020",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "cac",
     "name": "Creation and Control",
-    "cycle": "cac",
+    "type": "cycle",
     "date": "29/07/13",
     "start_num": "03001",
     "end_num": "03055",
-    "pt":"expansion"
+    "pt": "expansion"
+  },
+  {
+    "code": "gen",
+    "name": "Genesis",
+    "type": "cycle",
+    "date": "30/05/13",
+    "start_num": "02001",
+    "end_num": "02120",
+    "pt": "expansion"
   },
   {
     "code": "fp",
     "name": "Future Proof",
-    "cycle": "gen",
+    "type": "set",
     "date": "30/05/13",
     "start_num": "02101",
     "end_num": "02120"
-  ,"pt":"expansion"
+  ,"pt": "expansion"
   },
   {
     "code": "hs",
     "name": "Humanity's Shadow",
-    "cycle": "gen",
+    "type": "set",
     "date": "02/05/13",
     "start_num": "02081",
     "end_num": "02100",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "asis",
     "name": "A Study in Static",
-    "cycle": "gen",
+    "type": "set",
     "date": "21/03/13",
     "start_num": "02061",
     "end_num": "02080",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "ce",
     "name": "Cyber Exodus",
-    "cycle": "gen",
+    "type": "set",
     "date": "14/02/13",
     "start_num": "02041",
     "end_num": "02060",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "ta",
     "name": "Trace Amount",
-    "cycle": "gen",
+    "type": "set",
     "date": "09/01/13",
     "start_num": "02021",
     "end_num": "02040",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "wla",
     "name": "What Lies Ahead",
-    "cycle": "gen",
+    "type": "set",
     "date": "14/12/12",
     "start_num": "02001",
     "end_num": "02020",
-    "pt":"expansion"
+    "pt": "expansion"
   },
   {
     "code": "core",
     "name": "Core Set",
-    "cycle": "core",
+    "type": "cycle",
     "date": "06/09/12",
     "start_num": "01001",
     "end_num": "01113",
-    "pt":"core"
+    "pt": "old-core"
   },
   {
     "code": "draft",
     "name": "Draft",
-    "cycle": "draft",
+    "type": "cycle",
     "date": "01/01/01",
     "start_num": "00005",
     "end_num": "00013",
