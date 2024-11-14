@@ -10,6 +10,8 @@ use axum::{
 use regex::Regex;
 use serde_json::{Map, Value, json};
 use std::{env, collections::HashMap};
+use rand::thread_rng;
+use rand::seq::SliceRandom;
 use tokio::net::TcpListener;
 use tower_http::services::ServeDir;
 use tracing::info;
@@ -93,6 +95,8 @@ struct CardPageTemplate {
     x: usize,
     legality: Legality,
 }
+
+
 
 struct Legality {
     startup: &'static str,
@@ -197,15 +201,6 @@ struct Printing {
     code: String,
     img_type: String,
     set: String,
-}
-
-impl PartialEq for Printing {
-    fn eq(&self, other: &Printing) -> bool {
-        self.code == other.code
-    }
-    fn ne(&self, other: &Printing) -> bool {
-        self.code != other.code
-    }
 }
 
 #[derive(serde::Deserialize, Clone)]
@@ -404,10 +399,10 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
             "fmt" | "format" | "z" | "legal" => match value {
                 "startup" => search_cards("(cy:lib or cy:sg or cy:su21) -banned:startup -o:\"starter game only\"", backend, remaining)?,
                 "neo" => search_cards("is:nsg -banned:neo -o:\"starter game only\"", backend, remaining)?,
-                //"rig" | "postgateway" | "librealis" | "twocycle" => search_cards("date>=sg -banned:rig -o:\"starter game only\"", backend, remaining)?,
-                "standard" => search_cards("-banned:standard -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm) or set:rar", backend, remaining)?,
-                "sunset" => search_cards("-banned:sunset -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm) or cy:mor", backend, remaining)?,
-                "eternal" => search_cards("-banned:eternal -o:\"starter game only\" -set:tdc -cy:draft -cy:napd", backend, remaining)?,
+                "rig" | "postgateway" | "librealis" | "twocycle" => search_cards("date>=sg -banned:rig -o:\"starter game only\"", backend, remaining)?,
+                "standard" => search_cards("(cy:kit or cy:rs or is:nsg or cy:mor or set:rar) -banned:standard -o:\"starter game only\"", backend, remaining)?,
+                "sunset" => search_cards("(cy:kit or cy:rs or is:nsg or cy:mor) -banned:sunset -o:\"starter game only\"", backend, remaining)?,
+                "eternal" => search_cards("-banned:eternal -o:\"starter game only\" -set:tdc -cy:00 -cy:24", backend, remaining)?,
                 _ => vec!(),
             },
             "ft" | "flavor" | "flavour" => remaining.into_iter().filter(
@@ -427,7 +422,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                 "dfc" => search_cards("hoshiko or (sync ev) or (jinteki biotech)", backend, remaining)?,
                 "ffg" => search_cards("nrdb<24002", backend, remaining)?,
                 "guest" => search_cards("ft:\"Designed by\" -pavilion", backend, remaining)?,
-                "nsg" => search_cards("nrdb>26000 -cy:mor -cy:sm", backend, remaining)?,
+                "nsg" => search_cards("nrdb>26000 (-cy:mor -cy:sm) or (sansan city grid) or (subliminal messaging)", backend, remaining)?,
                 "nearprinted" => remaining.into_iter().filter(|x| x.nearprint.is_some()).collect(),
                 "reprint" => remaining.into_iter().filter(|x| x.printings.len() > 1).collect(), //needs to change
                 "runner" => search_cards("f:anarch or f:shaper or f:criminal or f:adam or f:sunny-lebeau or f:apex or f:neutral-runner", backend, remaining)?,
@@ -500,13 +495,11 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
             resolving_bracket = false;
         }
         remaining = if inverse {
-            pre_query.into_iter()
-                .map( |x| { let mut temp = x.clone(); temp.printings = x.printings.into_iter().filter(
-                    |y| match part_results.iter().find(|&z| z.title == x.title) {
-                        Some(k) => !k.printings.contains(y),
-                        None => true,
-                    }).collect(); temp}
-                ).filter(|x| x.printings.len() > 0).collect()
+            pre_query
+                .clone()
+                .into_iter()
+                .filter(|x| !part_results.contains(x))
+                .collect()
         } else {
             part_results
         };
@@ -527,6 +520,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
             "cost" => remaining.sort_by_key(|card| card.cost),
             "faction" => remaining.sort_by_key(|card| faction_order(&card.faction)),
             "released" => remaining.sort_by_key(|card| card.printings.first().unwrap().code.clone()),
+            "random" => remaining.shuffle(&mut thread_rng()),
             //"set" => ,
             "strength" => remaining.sort_by_key(|card| card.strength),
             "type" => remaining.sort_by_key(|card| card.type_code.clone()),
