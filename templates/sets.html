@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Sets | Cataloguer Search{% endblock %}
+
+{% block content %}
+{% include "search-bar.html" %}
+<table>     
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Cards</th>
+            <th>Release Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for set in sets %}
+        <tr>
+            <th>{{set.name}}</th>
+            <th>{{set.end_num - set.start_num + 1}}</th>
+            <th>{{set.release_date}}</th>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
