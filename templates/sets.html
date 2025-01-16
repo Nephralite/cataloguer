@@ -7,6 +7,7 @@
     <thead>
         <tr>
             <th>Name</th>
+            <th>Code</th>
             <th>Cards</th>
             <th>Release Date</th>
         </tr>
@@ -14,9 +15,10 @@
     <tbody>
         {% for set in sets %}
         <tr>
-            <th>{{set.name}}</th>
-            <th>{{set.end_num - set.start_num + 1}}</th>
-            <th>{{set.release_date}}</th>
+            <th><a href="/?search=set:{{set["code"].as_str().unwrap()}}">{{set["name"].as_str().unwrap()}}</a></th>
+            <th>{{set["code"].as_str().unwrap()}}</th>
+            <th>{{set["cards"].to_string()}}</th>
+            <th>{{set["date"].as_str().unwrap()}}</th>
         </tr>
         {% endfor %}
     </tbody>

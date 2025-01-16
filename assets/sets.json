@@ -4,6 +4,7 @@
     "name": "Liberation",
     "type": "cycle",
     "date": "18/03/24",
+    "cards": 130,
     "start_num": "34001",
     "end_num": "34130",
     "pt": "expansion"
@@ -13,6 +14,7 @@
     "name": "Rebellion Without Rehearsal",
     "type": "set",
     "date": "18/03/24",
+    "cards": 65,
     "start_num": "34066",
     "end_num": "34130",
     "pt": "expansion"
@@ -22,6 +24,7 @@
     "name": "The Automata Initiative",
     "type": "set",
     "date": "31/07/23",
+    "cards": 65,
     "start_num": "34001",
     "end_num": "34065",
     "pt": "expansion"
@@ -31,6 +34,7 @@
     "name": "Borealis",
     "type": "cycle",
     "date": "09/12/22",
+    "cards": 128,
     "start_num": "33001",
     "end_num": "33128",
     "pt": "expansion"
@@ -40,6 +44,7 @@
     "name": "Parhelion",
     "type": "set",
     "date": "09/12/22",
+    "cards": 65,
     "start_num": "33066",
     "end_num": "33128",
     "pt": "expansion"
@@ -49,6 +54,7 @@
     "name": "Midnight Sun",
     "type": "set",
     "date": "22/07/22",
+    "cards": 63,
     "start_num": "33001",
     "end_num": "33065",
     "pt": "expansion"
@@ -58,6 +64,7 @@
     "name": "Midnight Sun Booster Pack",
     "type": "set",
     "date": "18/03/22",
+    "cards": 7,
     "start_num": "32001",
     "end_num": "32007",
     "pt": "supplemental"
@@ -67,6 +74,7 @@
     "name": "System Update 2021",
     "type": "cycle",
     "date": "28/03/21",
+    "cards": 82,
     "start_num": "31001",
     "end_num": "31082",
     "pt": "core"
@@ -76,6 +84,7 @@
     "name": "System Gateway",
     "type": "cycle",
     "date": "28/03/21",
+    "cards": 77,
     "start_num": "30001",
     "end_num": "30077",
     "pt": "core"
@@ -85,6 +94,7 @@
     "name": "Salvaged Memories",
     "type": "cycle",
     "date": "18/12/20",
+    "cards": 18,
     "start_num": "29001",
     "end_num": "29018",
     "pt": "supplemental"
@@ -94,6 +104,7 @@
     "name": "Magnum Opus Reprint",
     "type": "cycle",
     "date": "24/07/19",
+    "cards": 6,
     "start_num": "28001",
     "end_num": "28006",
     "pt": "supplemental"
@@ -103,6 +114,7 @@
     "name": "Ashes",
     "type": "cycle",
     "date": "31/12/19",
+    "cards": 130,
     "start_num": "26001",
     "end_num": "26130",
     "pt": "expansion"
@@ -112,6 +124,7 @@
     "name": "Uprising",
     "type": "set",
     "date": "31/12/19",
+    "cards": 65,
     "start_num": "26066",
     "end_num": "26130",
     "pt": "expansion"
@@ -121,6 +134,7 @@
     "name": "Uprising Booster Pack",
     "type": "set",
     "date": "09/09/19",
+    "cards": 7,
     "start_num": "27001",
     "end_num": "27007",
     "pt": "supplemental"
@@ -132,6 +146,7 @@
     "date": "18/03/19",
     "start_num": "26001",
     "end_num": "26065",
+    "cards": 65,
     "pt": "expansion"
   },
   {
@@ -139,6 +154,7 @@
     "name": "System Core 2019",
     "type": "cycle",
     "date": "21/12/18",
+    "cards": 147,
     "start_num": "25001",
     "end_num": "25147",
     "pt": "supplemental"
@@ -148,6 +164,7 @@
     "name": "NAPD Multiplayer",
     "type": "cycle",
     "date": "07/09/18",
+    "cards": 1,
     "start_num": "24001",
     "end_num": "24001",
     "pt": "supplemental"
@@ -157,6 +174,7 @@
     "name": "Magnum Opus",
     "type": "set",
     "date": "07/09/18",
+    "cards": 8,
     "start_num": "23001",
     "end_num": "23101",
     "pt": "expansion"
@@ -166,6 +184,7 @@
     "name": "Reign and Reverie",
     "type": "cycle",
     "date": "28/06/18",
+    "cards": 58,
     "start_num": "22001",
     "end_num": "22058",
     "pt": "expansion"
@@ -175,6 +194,7 @@
     "name": "Kitara",
     "type": "cycle",
     "date": "31/05/18",
+    "cards": 20,
     "start_num": "21001",
     "end_num": "21120",
     "pt": "expansion"
@@ -184,6 +204,7 @@
     "name": "Kampala Ascendent",
     "type": "set",
     "date": "31/05/18",
+    "cards": 20,
     "start_num": "21100",
     "end_num": "21120",
     "pt": "expansion"
@@ -193,6 +214,7 @@
     "name": "Whispers in Nalubaale",
     "type": "set",
     "date": "03/05/18",
+    "cards": 20,
     "start_num": "21081",
     "end_num": "21100",
     "pt": "expansion"
@@ -202,6 +224,7 @@
     "name": "The Devil and the Dragon",
     "type": "set",
     "date": "05/04/18",
+    "cards": 20,
     "start_num": "21061",
     "end_num": "21080",
     "pt": "expansion"
@@ -211,6 +234,7 @@
     "name": "Council of the Crest",
     "type": "set",
     "date": "01/03/18",
+    "cards": 20,
     "start_num": "21041",
     "end_num": "21060",
     "pt": "expansion"
@@ -220,6 +244,7 @@
     "name": "Down the White Nile",
     "type": "set",
     "date": "01/02/18",
+    "cards": 20,
     "start_num": "21021",
     "end_num": "21040",
     "pt": "expansion"
@@ -229,6 +254,7 @@
     "name": "Sovereign Sight",
     "type": "set",
     "date": "28/12/17",
+    "cards": 20,
     "start_num": "21001",
     "end_num": "21020",
     "pt": "expansion"
@@ -238,6 +264,7 @@
     "name": "Revised Core Set",
     "type": "cycle",
     "date": "14/12/17",
+    "cards": 132,
     "start_num": "20001",
     "end_num": "20132",
     "pt": "old-core"
@@ -247,6 +274,7 @@
     "name": "Terminal Directive Campaign",
     "type": "set",
     "date": "27/04/17",
+    "cards": 28,
     "start_num": "14000",
     "end_num": "14028",
     "pt": "supplemental"
@@ -256,6 +284,7 @@
     "name": "Terminal Directive Cards",
     "type": "set",
     "date": "27/04/17",
+    "cards": 57,
     "start_num": "13001",
     "end_num": "13057",
     "pt": "expansion"
@@ -265,6 +294,7 @@
     "name": "Red Sand",
     "type": "cycle",
     "date": "17/08/17",
+    "cards": 120,
     "start_num": "12001",
     "end_num": "12120",
     "pt": "expansion"
@@ -274,6 +304,7 @@
     "name": "Crimson Dust",
     "type": "set",
     "date": "17/08/17",
+    "cards": 20,
     "start_num": "12101",
     "end_num": "12120",
     "pt": "expansion"
@@ -283,6 +314,7 @@
     "name": "Free Mars",
     "type": "set",
     "date": "20/07/17",
+    "cards": 20,
     "start_num": "12081",
     "end_num": "12100",
     "pt": "expansion"
@@ -292,6 +324,7 @@
     "name": "Blood and Water",
     "type": "set",
     "date": "22/06/17",
+    "cards": 20,
     "start_num": "12061",
     "end_num": "12080",
     "pt": "expansion"
@@ -301,6 +334,7 @@
     "name": "Earth's Scion",
     "type": "set",
     "date": "25/05/17",
+    "cards": 20,
     "start_num": "12041",
     "end_num": "12060",
     "pt": "expansion"
@@ -310,6 +344,7 @@
     "name": "Station One",
     "type": "set",
     "date": "23/03/17",
+    "cards": 20,
     "start_num": "12021",
     "end_num": "12040",
     "pt": "expansion"
@@ -319,6 +354,7 @@
     "name": "Daedalus Complex",
     "type": "set",
     "date": "23/02/17",
+    "cards": 20,
     "start_num": "12001",
     "end_num": "12020",
     "pt": "expansion"
@@ -328,6 +364,7 @@
     "name": "Flashpoint",
     "type": "cycle",
     "date": "12/01/17",
+    "cards": 120,
     "start_num": "11001",
     "end_num": "11120",
     "pt": "expansion"
@@ -337,6 +374,7 @@
     "name": "Quorum",
     "type": "set",
     "date": "12/01/17",
+    "cards": 20,
     "start_num": "11101",
     "end_num": "11120",
     "pt": "expansion"
@@ -348,6 +386,7 @@
     "date": "08/12/16",
     "start_num": "11081",
     "end_num": "11100",
+    "cards": 20,
     "pt": "expansion"
   },
   {
@@ -355,6 +394,7 @@
     "name": "Intervention",
     "type": "set",
     "date": "03/11/16",
+    "cards": 20,
     "start_num": "11061",
     "end_num": "11080",
     "pt": "expansion"
@@ -364,6 +404,7 @@
     "name": "Escalation",
     "type": "set",
     "date": "06/10/16",
+    "cards": 20,
     "start_num": "11041",
     "end_num": "11060"
   ,"pt": "expansion"
@@ -373,6 +414,7 @@
     "name": "Blood Money",
     "type": "set",
     "date": "11/08/16",
+    "cards": 20,
     "start_num": "11021",
     "end_num": "11040",
     "pt": "expansion"
@@ -382,6 +424,7 @@
     "name": "23 Seconds",
     "type": "set",
     "date": "14/07/16",
+    "cards": 20,
     "start_num": "11001",
     "end_num": "11020",
     "pt": "expansion"
@@ -391,6 +434,7 @@
     "name": "Mumbad",
     "type":"cycle",
     "date": "16/06/16",
+    "cards": 114,
     "start_num": "10001",
     "end_num": "10114",
     "pt": "expansion"
@@ -400,6 +444,7 @@
     "name": "Fear the Masses",
     "type": "set",
     "date": "16/06/16",
+    "cards": 19,
     "start_num": "10096",
     "end_num": "10114",
     "pt": "expansion"
@@ -409,6 +454,7 @@
     "name": "The Liberated Mind",
     "type": "set",
     "date": "26/05/16",
+    "cards": 19,
     "start_num": "10077",
     "end_num": "10095",
     "pt": "expansion"
@@ -418,6 +464,7 @@
     "name": "Salsette Island",
     "type": "set",
     "date": "28/04/16",
+    "cards": 19,
     "start_num": "10058",
     "end_num": "10076",
     "pt": "expansion"
@@ -427,6 +474,7 @@
     "name": "Democracy and Dogma",
     "type": "set",
     "date": "01/04/16",
+    "cards": 19,
     "start_num": "10039",
     "end_num": "10057",
     "pt": "expansion"
@@ -436,6 +484,7 @@
     "name": "Business First",
     "type": "set",
     "date": "11/03/16",
+    "cards": 19,
     "start_num": "10020",
     "end_num": "10038",
     "pt": "expansion"
@@ -445,6 +494,7 @@
     "name": "Kala Ghoda",
     "type": "set",
     "date": "29/01/16",
+    "cards": 19,
     "start_num": "10001",
     "end_num": "10019",
     "pt": "expansion"
@@ -454,6 +504,7 @@
     "name": "Data and Destiny",
     "type": "cycle",
     "date": "29/10/15",
+    "cards": 55,
     "start_num": "09001",
     "end_num": "09055",
     "pt": "expansion"
@@ -463,6 +514,7 @@
     "name": "SanSan",
     "type": "cycle",
     "date": "03/09/15",
+    "cards": 20,
     "start_num": "08001",
     "end_num": "08120",
     "pt": "expansion"
@@ -472,6 +524,7 @@
     "name": "The Universe of Tomorrow",
     "type": "set",
     "date": "03/09/15",
+    "cards": 20,
     "start_num": "08101",
     "end_num": "08120",
     "pt": "expansion"
@@ -481,6 +534,7 @@
     "name": "Old Hollywood",
     "type": "set",
     "date": "06/08/15",
+    "cards": 20,
     "start_num": "08081",
     "end_num": "08100",
     "pt": "expansion"
@@ -490,6 +544,7 @@
     "name": "The Underway",
     "type": "set",
     "date": "02/07/15",
+    "cards": 20,
     "start_num": "08061",
     "end_num": "08080"
   ,"pt": "expansion"
@@ -499,6 +554,7 @@
     "name": "Chrome City",
     "type": "set",
     "date": "29/05/15",
+    "cards": 20,
     "start_num": "08041",
     "end_num": "08060",
     "pt": "expansion"
@@ -508,6 +564,7 @@
     "name": "Breaker Bay",
     "type": "set",
     "date": "24/04/15",
+    "cards": 20,
     "start_num": "08021",
     "end_num": "08040",
     "pt": "expansion"
@@ -517,6 +574,7 @@
     "name": "The Valley",
     "type": "set",
     "date": "03/04/15",
+    "cards": 20,
     "start_num": "08001",
     "end_num": "08020",
     "pt": "expansion"
@@ -526,6 +584,7 @@
     "name": "Order and Chaos",
     "type": "cycle",
     "date": "28/01/15",
+    "cards": 55,
     "start_num": "07001",
     "end_num": "07055",
     "pt": "expansion"
@@ -535,6 +594,7 @@
     "name": "Lunar",
     "type": "cycle",
     "date": "18/12/14",
+    "cards": 120,
     "start_num": "06001",
     "end_num": "06120",
     "pt": "expansion"
@@ -544,6 +604,7 @@
     "name": "The Source",
     "type": "set",
     "date": "18/12/14",
+    "cards": 20,
     "start_num": "06101",
     "end_num": "06120",
     "pt": "expansion"
@@ -553,6 +614,7 @@
     "name": "All That Remains",
     "type": "set",
     "date": "13/11/14",
+    "cards": 20,
     "start_num": "06081",
     "end_num": "06100",
     "pt": "expansion"
@@ -562,6 +624,7 @@
     "name": "Up and Over",
     "type": "set",
     "date": "16/10/14",
+    "cards": 20,
     "start_num": "06061",
     "end_num": "06080",
     "pt": "expansion"
@@ -571,6 +634,7 @@
     "name": "First Contact",
     "type": "set",
     "date": "15/09/14",
+    "cards": 20,
     "start_num": "06041",
     "end_num": "06060",
     "pt": "expansion"
@@ -580,6 +644,7 @@
     "name": "The Spaces Between",
     "type": "set",
     "date": "15/08/14",
+    "cards": 20,
     "start_num": "06021",
     "end_num": "06040",
     "pt": "expansion"
@@ -589,6 +654,7 @@
     "name": "Upstalk",
     "type": "set",
     "date": "25/07/14",
+    "cards": 20,
     "start_num": "06001",
     "end_num": "06020",
     "pt": "expansion"
@@ -598,6 +664,7 @@
     "name": "Honor and Profit",
     "type": "cycle",
     "date": "02/05/14",
+    "cards": 55,
     "start_num": "05001",
     "end_num": "05055",
     "pt": "expansion"
@@ -607,6 +674,7 @@
     "name": "Spin",
     "type": "cycle",
     "date": "28/03/14",
+    "cards": 120,
     "start_num": "04001",
     "end_num": "04120",
     "pt": "expansion"
@@ -616,6 +684,7 @@
     "name": "Double Time",
     "type": "set",
     "date": "28/03/14",
+    "cards": 20,
     "start_num": "04101",
     "end_num": "04120",
     "pt": "expansion"
@@ -625,6 +694,7 @@
     "name": "Fear and Loathing",
     "type": "set",
     "date": "21/02/14",
+    "cards": 20,
     "start_num": "04081",
     "end_num": "04100",
     "pt": "expansion"
@@ -634,6 +704,7 @@
     "name": "True Colors",
     "type": "set",
     "date": "17/01/14",
+    "cards": 20,
     "start_num": "04061",
     "end_num": "04080",
     "pt": "expansion"
@@ -643,6 +714,7 @@
     "name": "Mala Tempora",
     "type": "set",
     "date": "13/12/13",
+    "cards": 20,
     "start_num": "04041",
     "end_num": "04060",
     "pt": "expansion"
@@ -652,6 +724,7 @@
     "name": "Second Thoughts",
     "type": "set",
     "date": "07/11/13",
+    "cards": 20,
     "start_num": "04021",
     "end_num": "04040",
     "pt": "expansion"
@@ -661,6 +734,7 @@
     "name": "Opening Moves",
     "type": "set",
     "date": "27/09/13",
+    "cards": 20,
     "start_num": "04001",
     "end_num": "04020",
     "pt": "expansion"
@@ -670,6 +744,7 @@
     "name": "Creation and Control",
     "type": "cycle",
     "date": "29/07/13",
+    "cards": 55,
     "start_num": "03001",
     "end_num": "03055",
     "pt": "expansion"
@@ -679,6 +754,7 @@
     "name": "Genesis",
     "type": "cycle",
     "date": "30/05/13",
+    "cards": 120,
     "start_num": "02001",
     "end_num": "02120",
     "pt": "expansion"
@@ -688,15 +764,17 @@
     "name": "Future Proof",
     "type": "set",
     "date": "30/05/13",
+    "cards": 20,
     "start_num": "02101",
-    "end_num": "02120"
-  ,"pt": "expansion"
+    "end_num": "02120",
+    "pt": "expansion"
   },
   {
     "code": "hs",
     "name": "Humanity's Shadow",
     "type": "set",
     "date": "02/05/13",
+    "cards": 20,
     "start_num": "02081",
     "end_num": "02100",
     "pt": "expansion"
@@ -706,6 +784,7 @@
     "name": "A Study in Static",
     "type": "set",
     "date": "21/03/13",
+    "cards": 20,
     "start_num": "02061",
     "end_num": "02080",
     "pt": "expansion"
@@ -715,6 +794,7 @@
     "name": "Cyber Exodus",
     "type": "set",
     "date": "14/02/13",
+    "cards": 20,
     "start_num": "02041",
     "end_num": "02060",
     "pt": "expansion"
@@ -724,6 +804,7 @@
     "name": "Trace Amount",
     "type": "set",
     "date": "09/01/13",
+    "cards": 20,
     "start_num": "02021",
     "end_num": "02040",
     "pt": "expansion"
@@ -733,6 +814,7 @@
     "name": "What Lies Ahead",
     "type": "set",
     "date": "14/12/12",
+    "cards": 20,
     "start_num": "02001",
     "end_num": "02020",
     "pt": "expansion"
@@ -742,6 +824,7 @@
     "name": "Core Set",
     "type": "cycle",
     "date": "06/09/12",
+    "cards": 113,
     "start_num": "01001",
     "end_num": "01113",
     "pt": "old-core"
@@ -750,7 +833,8 @@
     "code": "draft",
     "name": "Draft",
     "type": "cycle",
-    "date": "01/01/01",
+    "cards": 9,
+    "date": "",
     "start_num": "00005",
     "end_num": "00013",
     "pt": "draft"

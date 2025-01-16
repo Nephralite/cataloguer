@@ -1,5 +1,4 @@
-use anyhow::Context;
-use askama::Template;
+use anyhow::Context; use askama::Template;
 use axum::{
     extract::{Query, State, Path}, 
     http::StatusCode, 
@@ -17,6 +16,8 @@ use tower_http::services::ServeDir;
 use tracing::info;
 use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
 
+//the backend is a static pile of jsons because cards.json was our existing input
+//realistically a database would probably be better, but I'd rather hit release first
 #[derive(Clone)]
 struct Backend {
     cards: Vec<Card>,
@@ -24,6 +25,7 @@ struct Backend {
     sets: Vec<Value>,
 }
 
+//initalize a backend from our jsons
 fn init_backend() -> anyhow::Result<Backend> {
     Ok(Backend {
         cards: serde_json::from_str::<Vec<Card>>(&std::fs::read_to_string("assets/cards.json")?)?,
@@ -32,8 +34,10 @@ fn init_backend() -> anyhow::Result<Backend> {
     })
 }
 
+//creates a router and hosts several pages on 0.0.0.0:PORT
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
+    //add tracing for some console logs from doing all this
     tracing_subscriber::registry()
         .with(
             tracing_subscriber::EnvFilter::try_from_default_env()
@@ -48,10 +52,11 @@ async fn main() -> anyhow::Result<()> {
         .route("/", get(search))
         .route("/cards/:id/:printing", get(cardpage))
         .route("/syntax", get(syntax))
+        .route("/sets", get(setspage))
         .with_state(backend)
         .nest_service(
             "/assets",
-            ServeDir::new(format!("{}/assets", env::current_dir().unwrap().to_str().unwrap())),
+            ServeDir::new(format!("{}/assets", env::current_dir()?.to_str().unwrap())),
         );
     let port = match env::var("PORT"){
         Ok(port) => port,
@@ -85,6 +90,17 @@ struct SyntaxTemplate {query: String}
 struct CardsList {
     query: String,
     cards: Vec<String>,
+}
+
+#[derive(Template)]
+#[template(path = "sets.html")]
+struct SetsPageTemplate {
+    query: String,
+    sets: Vec<Value>
+}
+
+async fn setspage(State(backend): State<Backend>) -> impl IntoResponse {
+     Templates::SetsPageTemplate(SetsPageTemplate {query:"".to_owned(), sets:backend.sets})
 }
 
 #[derive(Template)]
@@ -128,7 +144,8 @@ enum Templates {
     CardsList(CardsList),
     SyntaxTemplate(SyntaxTemplate),
     IndexTemplate(IndexTemplate),
-    CardPageTemplate(CardPageTemplate)
+    CardPageTemplate(CardPageTemplate),
+    SetsPageTemplate(SetsPageTemplate)
 }
 
 impl IntoResponse for Templates {
@@ -139,6 +156,7 @@ impl IntoResponse for Templates {
             Templates::IndexTemplate(c) => c.render(),
             Templates::SyntaxTemplate(c) => c.render(),
             Templates::CardPageTemplate(c) => c.render(),
+            Templates::SetsPageTemplate(c) => c.render(),
         }; 
         match inner {
        // If we're able to successfully parse and aggregate the template, serve it
