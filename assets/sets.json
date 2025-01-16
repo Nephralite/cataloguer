@@ -2,7 +2,7 @@
   {
     "code": "lib",
     "name": "Liberation",
-    "type": "cycle",
+    "cycle": true,
     "date": "18/03/24",
     "cards": 130,
     "start_num": "34001",
@@ -12,7 +12,7 @@
   {
     "code": "rwr",
     "name": "Rebellion Without Rehearsal",
-    "type": "set",
+    "cycle": false,
     "date": "18/03/24",
     "cards": 65,
     "start_num": "34066",
@@ -22,7 +22,7 @@
   {
     "code": "tai",
     "name": "The Automata Initiative",
-    "type": "set",
+    "cycle": false,
     "date": "31/07/23",
     "cards": 65,
     "start_num": "34001",
@@ -32,7 +32,7 @@
   {
     "code": "bor",
     "name": "Borealis",
-    "type": "cycle",
+    "cycle": true,
     "date": "09/12/22",
     "cards": 128,
     "start_num": "33001",
@@ -42,7 +42,7 @@
   {
     "code": "ph",
     "name": "Parhelion",
-    "type": "set",
+    "cycle": false,
     "date": "09/12/22",
     "cards": 65,
     "start_num": "33066",
@@ -52,7 +52,7 @@
   {
     "code": "ms",
     "name": "Midnight Sun",
-    "type": "set",
+    "cycle": false,
     "date": "22/07/22",
     "cards": 63,
     "start_num": "33001",
@@ -62,7 +62,7 @@
   {
     "code": "msbp",
     "name": "Midnight Sun Booster Pack",
-    "type": "set",
+    "cycle": false,
     "date": "18/03/22",
     "cards": 7,
     "start_num": "32001",
@@ -72,7 +72,7 @@
   {
     "code": "su21",
     "name": "System Update 2021",
-    "type": "cycle",
+    "cycle": true,
     "date": "28/03/21",
     "cards": 82,
     "start_num": "31001",
@@ -82,7 +82,7 @@
   {
     "code": "sg",
     "name": "System Gateway",
-    "type": "cycle",
+    "cycle": true,
     "date": "28/03/21",
     "cards": 77,
     "start_num": "30001",
@@ -92,7 +92,7 @@
   {
     "code": "sm",
     "name": "Salvaged Memories",
-    "type": "cycle",
+    "cycle": true,
     "date": "18/12/20",
     "cards": 18,
     "start_num": "29001",
@@ -102,7 +102,7 @@
   {
     "code": "mor",
     "name": "Magnum Opus Reprint",
-    "type": "cycle",
+    "cycle": true,
     "date": "24/07/19",
     "cards": 6,
     "start_num": "28001",
@@ -112,7 +112,7 @@
   {
     "code": "ash",
     "name": "Ashes",
-    "type": "cycle",
+    "cycle": true,
     "date": "31/12/19",
     "cards": 130,
     "start_num": "26001",
@@ -122,7 +122,7 @@
   {
     "code": "ur",
     "name": "Uprising",
-    "type": "set",
+    "cycle": false,
     "date": "31/12/19",
     "cards": 65,
     "start_num": "26066",
@@ -132,7 +132,7 @@
   {
     "code": "urbp",
     "name": "Uprising Booster Pack",
-    "type": "set",
+    "cycle": false,
     "date": "09/09/19",
     "cards": 7,
     "start_num": "27001",
@@ -142,7 +142,7 @@
   {
     "code": "df",
     "name": "Downfall",
-    "type": "set",
+    "cycle": false,
     "date": "18/03/19",
     "start_num": "26001",
     "end_num": "26065",
@@ -152,7 +152,7 @@
   {
     "code": "sc19",
     "name": "System Core 2019",
-    "type": "cycle",
+    "cycle": true,
     "date": "21/12/18",
     "cards": 147,
     "start_num": "25001",
@@ -162,7 +162,7 @@
   {
     "code": "napd",
     "name": "NAPD Multiplayer",
-    "type": "cycle",
+    "cycle": true,
     "date": "07/09/18",
     "cards": 1,
     "start_num": "24001",
@@ -172,7 +172,7 @@
   {
     "code": "mo",
     "name": "Magnum Opus",
-    "type": "set",
+    "cycle": false,
     "date": "07/09/18",
     "cards": 8,
     "start_num": "23001",
@@ -182,7 +182,7 @@
   {
     "code": "rar",
     "name": "Reign and Reverie",
-    "type": "cycle",
+    "cycle": true,
     "date": "28/06/18",
     "cards": 58,
     "start_num": "22001",
@@ -192,7 +192,7 @@
   {
     "code": "kit",
     "name": "Kitara",
-    "type": "cycle",
+    "cycle": true,
     "date": "31/05/18",
     "cards": 20,
     "start_num": "21001",
@@ -202,7 +202,7 @@
   {
     "code": "ka",
     "name": "Kampala Ascendent",
-    "type": "set",
+    "cycle": false,
     "date": "31/05/18",
     "cards": 20,
     "start_num": "21100",
@@ -212,7 +212,7 @@
   {
     "code": "win",
     "name": "Whispers in Nalubaale",
-    "type": "set",
+    "cycle": false,
     "date": "03/05/18",
     "cards": 20,
     "start_num": "21081",
@@ -222,7 +222,7 @@
   {
     "code": "tdatd",
     "name": "The Devil and the Dragon",
-    "type": "set",
+    "cycle": false,
     "date": "05/04/18",
     "cards": 20,
     "start_num": "21061",
@@ -232,7 +232,7 @@
   {
     "code": "cotc",
     "name": "Council of the Crest",
-    "type": "set",
+    "cycle": false,
     "date": "01/03/18",
     "cards": 20,
     "start_num": "21041",
@@ -242,7 +242,7 @@
   {
     "code": "dtwn",
     "name": "Down the White Nile",
-    "type": "set",
+    "cycle": false,
     "date": "01/02/18",
     "cards": 20,
     "start_num": "21021",
@@ -252,7 +252,7 @@
   {
     "code": "ss",
     "name": "Sovereign Sight",
-    "type": "set",
+    "cycle": false,
     "date": "28/12/17",
     "cards": 20,
     "start_num": "21001",
@@ -262,7 +262,7 @@
   {
     "code": "core2",
     "name": "Revised Core Set",
-    "type": "cycle",
+    "cycle": true,
     "date": "14/12/17",
     "cards": 132,
     "start_num": "20001",
@@ -272,7 +272,7 @@
   {
     "code": "tdc",
     "name": "Terminal Directive Campaign",
-    "type": "set",
+    "cycle": false,
     "date": "27/04/17",
     "cards": 28,
     "start_num": "14000",
@@ -282,7 +282,7 @@
   {
     "code": "td",
     "name": "Terminal Directive Cards",
-    "type": "set",
+    "cycle": false,
     "date": "27/04/17",
     "cards": 57,
     "start_num": "13001",
@@ -292,7 +292,7 @@
   {
     "code": "rs",
     "name": "Red Sand",
-    "type": "cycle",
+    "cycle": true,
     "date": "17/08/17",
     "cards": 120,
     "start_num": "12001",
@@ -302,7 +302,7 @@
   {
     "code": "cd",
     "name": "Crimson Dust",
-    "type": "set",
+    "cycle": false,
     "date": "17/08/17",
     "cards": 20,
     "start_num": "12101",
@@ -312,7 +312,7 @@
   {
     "code": "fm",
     "name": "Free Mars",
-    "type": "set",
+    "cycle": false,
     "date": "20/07/17",
     "cards": 20,
     "start_num": "12081",
@@ -322,7 +322,7 @@
   {
     "code": "baw",
     "name": "Blood and Water",
-    "type": "set",
+    "cycle": false,
     "date": "22/06/17",
     "cards": 20,
     "start_num": "12061",
@@ -332,7 +332,7 @@
   {
     "code": "eas",
     "name": "Earth's Scion",
-    "type": "set",
+    "cycle": false,
     "date": "25/05/17",
     "cards": 20,
     "start_num": "12041",
@@ -342,7 +342,7 @@
   {
     "code": "so",
     "name": "Station One",
-    "type": "set",
+    "cycle": false,
     "date": "23/03/17",
     "cards": 20,
     "start_num": "12021",
@@ -352,7 +352,7 @@
   {
     "code": "dc",
     "name": "Daedalus Complex",
-    "type": "set",
+    "cycle": false,
     "date": "23/02/17",
     "cards": 20,
     "start_num": "12001",
@@ -362,7 +362,7 @@
   {
     "code": "fla",
     "name": "Flashpoint",
-    "type": "cycle",
+    "cycle": true,
     "date": "12/01/17",
     "cards": 120,
     "start_num": "11001",
@@ -372,7 +372,7 @@
   {
     "code": "qu",
     "name": "Quorum",
-    "type": "set",
+    "cycle": false,
     "date": "12/01/17",
     "cards": 20,
     "start_num": "11101",
@@ -382,7 +382,7 @@
   {
     "code": "ml",
     "name": "Martial Law",
-    "type": "set",
+    "cycle": false,
     "date": "08/12/16",
     "start_num": "11081",
     "end_num": "11100",
@@ -392,7 +392,7 @@
   {
     "code": "in",
     "name": "Intervention",
-    "type": "set",
+    "cycle": false,
     "date": "03/11/16",
     "cards": 20,
     "start_num": "11061",
@@ -402,7 +402,7 @@
   {
     "code": "es",
     "name": "Escalation",
-    "type": "set",
+    "cycle": false,
     "date": "06/10/16",
     "cards": 20,
     "start_num": "11041",
@@ -412,7 +412,7 @@
   {
     "code": "bm",
     "name": "Blood Money",
-    "type": "set",
+    "cycle": false,
     "date": "11/08/16",
     "cards": 20,
     "start_num": "11021",
@@ -422,7 +422,7 @@
   {
     "code": "23s",
     "name": "23 Seconds",
-    "type": "set",
+    "cycle": false,
     "date": "14/07/16",
     "cards": 20,
     "start_num": "11001",
@@ -432,7 +432,7 @@
   {
     "code": "mum",
     "name": "Mumbad",
-    "type":"cycle",
+    "cycle": true,
     "date": "16/06/16",
     "cards": 114,
     "start_num": "10001",
@@ -442,7 +442,7 @@
   {
     "code": "ftm",
     "name": "Fear the Masses",
-    "type": "set",
+    "cycle": false,
     "date": "16/06/16",
     "cards": 19,
     "start_num": "10096",
@@ -452,7 +452,7 @@
   {
     "code": "tlm",
     "name": "The Liberated Mind",
-    "type": "set",
+    "cycle": false,
     "date": "26/05/16",
     "cards": 19,
     "start_num": "10077",
@@ -462,7 +462,7 @@
   {
     "code": "si",
     "name": "Salsette Island",
-    "type": "set",
+    "cycle": false,
     "date": "28/04/16",
     "cards": 19,
     "start_num": "10058",
@@ -472,7 +472,7 @@
   {
     "code": "dag",
     "name": "Democracy and Dogma",
-    "type": "set",
+    "cycle": false,
     "date": "01/04/16",
     "cards": 19,
     "start_num": "10039",
@@ -482,7 +482,7 @@
   {
     "code": "bf",
     "name": "Business First",
-    "type": "set",
+    "cycle": false,
     "date": "11/03/16",
     "cards": 19,
     "start_num": "10020",
@@ -492,7 +492,7 @@
   {
     "code": "kg",
     "name": "Kala Ghoda",
-    "type": "set",
+    "cycle": false,
     "date": "29/01/16",
     "cards": 19,
     "start_num": "10001",
@@ -502,7 +502,7 @@
   {
     "code": "dad",
     "name": "Data and Destiny",
-    "type": "cycle",
+    "cycle": true,
     "date": "29/10/15",
     "cards": 55,
     "start_num": "09001",
@@ -512,7 +512,7 @@
   {
     "code": "san",
     "name": "SanSan",
-    "type": "cycle",
+    "cycle": true,
     "date": "03/09/15",
     "cards": 20,
     "start_num": "08001",
@@ -522,7 +522,7 @@
   {
     "code": "uot",
     "name": "The Universe of Tomorrow",
-    "type": "set",
+    "cycle": false,
     "date": "03/09/15",
     "cards": 20,
     "start_num": "08101",
@@ -532,7 +532,7 @@
   {
     "code": "oh",
     "name": "Old Hollywood",
-    "type": "set",
+    "cycle": false,
     "date": "06/08/15",
     "cards": 20,
     "start_num": "08081",
@@ -542,7 +542,7 @@
   {
     "code": "uw",
     "name": "The Underway",
-    "type": "set",
+    "cycle": false,
     "date": "02/07/15",
     "cards": 20,
     "start_num": "08061",
@@ -552,7 +552,7 @@
   {
     "code": "cc",
     "name": "Chrome City",
-    "type": "set",
+    "cycle": false,
     "date": "29/05/15",
     "cards": 20,
     "start_num": "08041",
@@ -562,7 +562,7 @@
   {
     "code": "bb",
     "name": "Breaker Bay",
-    "type": "set",
+    "cycle": false,
     "date": "24/04/15",
     "cards": 20,
     "start_num": "08021",
@@ -572,7 +572,7 @@
   {
     "code": "val",
     "name": "The Valley",
-    "type": "set",
+    "cycle": false,
     "date": "03/04/15",
     "cards": 20,
     "start_num": "08001",
@@ -582,7 +582,7 @@
   {
     "code": "oac",
     "name": "Order and Chaos",
-    "type": "cycle",
+    "cycle": true,
     "date": "28/01/15",
     "cards": 55,
     "start_num": "07001",
@@ -592,7 +592,7 @@
   {
     "code": "lun",
     "name": "Lunar",
-    "type": "cycle",
+    "cycle": true,
     "date": "18/12/14",
     "cards": 120,
     "start_num": "06001",
@@ -602,7 +602,7 @@
   {
     "code": "ts",
     "name": "The Source",
-    "type": "set",
+    "cycle": false,
     "date": "18/12/14",
     "cards": 20,
     "start_num": "06101",
@@ -612,7 +612,7 @@
   {
     "code": "atr",
     "name": "All That Remains",
-    "type": "set",
+    "cycle": false,
     "date": "13/11/14",
     "cards": 20,
     "start_num": "06081",
@@ -622,7 +622,7 @@
   {
     "code": "uao",
     "name": "Up and Over",
-    "type": "set",
+    "cycle": false,
     "date": "16/10/14",
     "cards": 20,
     "start_num": "06061",
@@ -632,7 +632,7 @@
   {
     "code": "fc",
     "name": "First Contact",
-    "type": "set",
+    "cycle": false,
     "date": "15/09/14",
     "cards": 20,
     "start_num": "06041",
@@ -642,7 +642,7 @@
   {
     "code": "tsb",
     "name": "The Spaces Between",
-    "type": "set",
+    "cycle": false,
     "date": "15/08/14",
     "cards": 20,
     "start_num": "06021",
@@ -652,7 +652,7 @@
   {
     "code": "up",
     "name": "Upstalk",
-    "type": "set",
+    "cycle": false,
     "date": "25/07/14",
     "cards": 20,
     "start_num": "06001",
@@ -662,7 +662,7 @@
   {
     "code": "hap",
     "name": "Honor and Profit",
-    "type": "cycle",
+    "cycle": true,
     "date": "02/05/14",
     "cards": 55,
     "start_num": "05001",
@@ -672,7 +672,7 @@
   {
     "code": "spin",
     "name": "Spin",
-    "type": "cycle",
+    "cycle": true,
     "date": "28/03/14",
     "cards": 120,
     "start_num": "04001",
@@ -682,7 +682,7 @@
   {
     "code": "dt",
     "name": "Double Time",
-    "type": "set",
+    "cycle": false,
     "date": "28/03/14",
     "cards": 20,
     "start_num": "04101",
@@ -692,7 +692,7 @@
   {
     "code": "fal",
     "name": "Fear and Loathing",
-    "type": "set",
+    "cycle": false,
     "date": "21/02/14",
     "cards": 20,
     "start_num": "04081",
@@ -702,7 +702,7 @@
   {
     "code": "tc",
     "name": "True Colors",
-    "type": "set",
+    "cycle": false,
     "date": "17/01/14",
     "cards": 20,
     "start_num": "04061",
@@ -712,7 +712,7 @@
   {
     "code": "mt",
     "name": "Mala Tempora",
-    "type": "set",
+    "cycle": false,
     "date": "13/12/13",
     "cards": 20,
     "start_num": "04041",
@@ -722,7 +722,7 @@
   {
     "code": "st",
     "name": "Second Thoughts",
-    "type": "set",
+    "cycle": false,
     "date": "07/11/13",
     "cards": 20,
     "start_num": "04021",
@@ -732,7 +732,7 @@
   {
     "code": "om",
     "name": "Opening Moves",
-    "type": "set",
+    "cycle": false,
     "date": "27/09/13",
     "cards": 20,
     "start_num": "04001",
@@ -742,7 +742,7 @@
   {
     "code": "cac",
     "name": "Creation and Control",
-    "type": "cycle",
+    "cycle": true,
     "date": "29/07/13",
     "cards": 55,
     "start_num": "03001",
@@ -752,7 +752,7 @@
   {
     "code": "gen",
     "name": "Genesis",
-    "type": "cycle",
+    "cycle": true,
     "date": "30/05/13",
     "cards": 120,
     "start_num": "02001",
@@ -762,7 +762,7 @@
   {
     "code": "fp",
     "name": "Future Proof",
-    "type": "set",
+    "cycle": false,
     "date": "30/05/13",
     "cards": 20,
     "start_num": "02101",
@@ -772,7 +772,7 @@
   {
     "code": "hs",
     "name": "Humanity's Shadow",
-    "type": "set",
+    "cycle": false,
     "date": "02/05/13",
     "cards": 20,
     "start_num": "02081",
@@ -782,7 +782,7 @@
   {
     "code": "asis",
     "name": "A Study in Static",
-    "type": "set",
+    "cycle": false,
     "date": "21/03/13",
     "cards": 20,
     "start_num": "02061",
@@ -792,7 +792,7 @@
   {
     "code": "ce",
     "name": "Cyber Exodus",
-    "type": "set",
+    "cycle": false,
     "date": "14/02/13",
     "cards": 20,
     "start_num": "02041",
@@ -802,7 +802,7 @@
   {
     "code": "ta",
     "name": "Trace Amount",
-    "type": "set",
+    "cycle": false,
     "date": "09/01/13",
     "cards": 20,
     "start_num": "02021",
@@ -812,7 +812,7 @@
   {
     "code": "wla",
     "name": "What Lies Ahead",
-    "type": "set",
+    "cycle": false,
     "date": "14/12/12",
     "cards": 20,
     "start_num": "02001",
@@ -822,7 +822,7 @@
   {
     "code": "core",
     "name": "Core Set",
-    "type": "cycle",
+    "cycle": true,
     "date": "06/09/12",
     "cards": 113,
     "start_num": "01001",
@@ -832,7 +832,7 @@
   {
     "code": "draft",
     "name": "Draft",
-    "type": "cycle",
+    "cycle": true,
     "cards": 9,
     "date": "",
     "start_num": "00005",

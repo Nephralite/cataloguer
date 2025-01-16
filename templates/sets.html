@@ -3,7 +3,7 @@
 
 {% block content %}
 {% include "search-bar.html" %}
-<table>     
+<table class="place-content-center justify-center">     
     <thead>
         <tr>
             <th>Name</th>
@@ -15,10 +15,15 @@
     <tbody>
         {% for set in sets %}
         <tr>
-            <th><a href="/?search=set:{{set["code"].as_str().unwrap()}}">{{set["name"].as_str().unwrap()}}</a></th>
-            <th>{{set["code"].as_str().unwrap()}}</th>
-            <th>{{set["cards"].to_string()}}</th>
-            <th>{{set["date"].as_str().unwrap()}}</th>
+            <th class="text-left"><a href="/?search=set:{{set.code}}">
+                {% if !set.cycle -%}
+                    {{">"}}
+                {%- endif %}
+                {{set.name}}
+                </a></th>
+            <th>{{set.code}}</th>
+            <th>{{set.cards}}</th>
+            <th>{{set.date}}</th>
         </tr>
         {% endfor %}
     </tbody>

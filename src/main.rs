@@ -22,7 +22,7 @@ use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
 struct Backend {
     cards: Vec<Card>,
     banlist: Map<String, Value>,
-    sets: Vec<Value>,
+    sets: Vec<Set>,
 }
 
 //initalize a backend from our jsons
@@ -30,7 +30,7 @@ fn init_backend() -> anyhow::Result<Backend> {
     Ok(Backend {
         cards: serde_json::from_str::<Vec<Card>>(&std::fs::read_to_string("assets/cards.json")?)?,
         banlist: serde_json::from_str::<Map<String, Value>>(&std::fs::read_to_string("assets/banned.json")?)?,
-        sets: serde_json::from_str::<Vec<Value>>(&std::fs::read_to_string("assets/sets.json")?)?,
+        sets: serde_json::from_str::<Vec<Set>>(&std::fs::read_to_string("assets/sets.json")?)?,
     })
 }
 
@@ -96,7 +96,19 @@ struct CardsList {
 #[template(path = "sets.html")]
 struct SetsPageTemplate {
     query: String,
-    sets: Vec<Value>
+    sets: Vec<Set>
+}
+
+//had to restructure out of Vec<Value> due to askama referencing issues
+#[derive(serde::Deserialize, Debug, Clone)]
+struct Set {
+    code: String,
+    name: String,
+    cycle: bool,
+    date: String,
+    cards: u32,
+    start_num: String,
+    end_num: String,
 }
 
 async fn setspage(State(backend): State<Backend>) -> impl IntoResponse {
@@ -368,10 +380,10 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                 remaining.into_iter().filter(|x| as_operator(operator, x.cost, value.parse::<u8>().ok())).collect()
             },
             "d" | "date" | "year" => { 
-                let sets: Vec<&Value> = match value {
+                let sets: Vec<&Set> = match value {
                     x if Regex::new(r"\d{2}/\d{2}/\d{2}").unwrap().is_match(x) => continue, //think aboutthis one
-                    x if Regex::new(r"\d{4}").unwrap().is_match(x) => backend.sets.iter().filter(|x| &x["date"].as_str().unwrap().to_owned()[6..8]==&value.to_owned()[2..4]).collect(),
-                    x if Regex::new(r"\w{2,4}").unwrap().is_match(x) => backend.sets.iter().filter(|x| x["code"].as_str().unwrap()==value || x["cycle"].as_str().unwrap()==value).collect(), //works
+                    x if Regex::new(r"\d{4}").unwrap().is_match(x) => backend.sets.iter().filter(|x| &x.date[6..8]==&value.to_owned()[2..4]).collect(),
+                    x if Regex::new(r"\w{2,4}").unwrap().is_match(x) => backend.sets.iter().filter(|x| &x.code==value).collect(), //works
                     _ => continue,
                 };
                 if sets.len() == 0 {
@@ -382,22 +394,22 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                 //if a cycle and equal just grab that cycle
                     x if sets.len() == 1 && x==":" => search_cards(&format!("set:{value}"),backend, remaining)?,
                     ":" => {
-                        let start = sets.iter().fold("99999", |acc, x| if acc.parse::<u64>().ok() > x["start_num"].as_str().unwrap().parse::<u64>().ok() {x["start_num"].as_str().unwrap()} else {acc});
-                        let end = sets.iter().fold("00000", |acc, x| if acc.parse::<u64>().ok() < x["end_num"].as_str().unwrap().parse::<u64>().ok() {x["end_num"].as_str().unwrap()} else {acc});
+                        let start = sets.iter().fold("99999", |acc, x| if acc.parse::<u64>().ok() > x.start_num.parse::<u64>().ok() {&x.start_num} else {acc});
+                        let end = sets.iter().fold("00000", |acc, x| if acc.parse::<u64>().ok() < x.end_num.parse::<u64>().ok() {&x.end_num} else {acc});
                         search_cards(&format!("nrdb<{end} nrdb>{start}"), backend, remaining)?
                     },
                     "!=" => {
-                        let start = sets.iter().fold("99999", |acc, x| if acc.parse::<u64>().ok() > x["start_num"].as_str().unwrap().parse::<u64>().ok() {x["start_num"].as_str().unwrap()} else {acc});
-                        let end = sets.iter().fold("00000", |acc, x| if acc.parse::<u64>().ok() < x["end_num"].as_str().unwrap().parse::<u64>().ok() {x["end_num"].as_str().unwrap()} else {acc});
+                        let start = sets.iter().fold("99999", |acc, x| if acc.parse::<u64>().ok() > x.start_num.parse::<u64>().ok() {&x.start_num} else {acc});
+                        let end = sets.iter().fold("00000", |acc, x| if acc.parse::<u64>().ok() < x.end_num.parse::<u64>().ok() {&x.end_num} else {acc});
                         search_cards(&format!("!(nrdb<{end} nrdb>{start})"), backend, remaining)?
                     },
                 //otherwise grab the oldest or newest date depending on operator
                     "<=" | ">" => {
-                        let cy_end = sets.into_iter().fold("00000", |acc, x| if acc.parse::<u64>().ok() < x["end_num"].as_str().unwrap().parse::<u64>().ok() {x["end_num"].as_str().unwrap()} else {acc});
+                        let cy_end = sets.into_iter().fold("00000", |acc, x| if acc.parse::<u64>().ok() < x.end_num.parse::<u64>().ok() {&x.end_num} else {acc});
                         search_cards(&format!("nrdb{operator}{cy_end}"),backend, remaining)?
                     },
                     ">=" | "<" => {
-                        let cy_start = sets.into_iter().fold("99999", |acc, x| if acc.parse::<u64>().ok() > x["start_num"].as_str().unwrap()    .parse::<u64>().ok() {x["start_num"].as_str().unwrap()} else {acc});
+                        let cy_start = sets.into_iter().fold("99999", |acc, x| if acc.parse::<u64>().ok() > x.start_num.parse::<u64>().ok() {&x.start_num} else {acc});
                         search_cards(&format!("nrdb{operator}{cy_start}"),backend, remaining)?
                     },
                     _ => continue,
@@ -497,9 +509,9 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
             //"pro" | "pronouns" =>, //needs some cards.json edits
             "s" | "sub" | "subtype" => remaining.into_iter().filter(|x| if x.subtypes.is_some() {x.subtypes.clone().unwrap().to_lowercase().contains(&value)} else {false}).collect(),
             "set" | "e" | "edition" | "cycle" | "cyc" | "cy" => {
-                let set = backend.sets.iter().find(|x| x["code"] == value)?;
-                let start = set["start_num"].as_str().unwrap();
-                let end = set["end_num"].as_str().unwrap();
+                let set = backend.sets.iter().find(|x| x.code == value)?;
+                let start = &set.start_num;
+                let end = &set.end_num;
                 search_cards(&format!("nrdb<={end} nrdb>={start}"), backend, remaining)?
             },
             //"st" =>
