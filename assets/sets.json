@@ -1,5 +1,15 @@
 [
   {
+    "code": "ela",
+    "name": "Elevation",
+    "cycle": true,
+    "date": "24/04/25",
+    "cards": 85,
+    "start_num": "35001",
+    "end_num": "35085",
+    "pt": "core"
+  },
+  {
     "code": "lib",
     "name": "Liberation",
     "cycle": true,

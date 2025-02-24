@@ -89,7 +89,7 @@ struct SyntaxTemplate {query: String}
 #[template(path = "cards.html")]
 struct CardsList {
     query: String,
-    cards: Vec<String>,
+    cards: Vec<[String; 2]>,
 }
 
 #[derive(Template)]
@@ -201,16 +201,16 @@ async fn search(
     Query(params): Query<SearchForm>,
 ) -> impl IntoResponse {
     if let Some(query) = params.search {
-        let mut temp: Vec<String> = vec![];
+        let mut temp: Vec<[String; 2]> = vec![];
         let results: Option<Vec<Card>> = search_cards(&query, &backend, backend.cards.clone());
         if results.is_some() {
             if query.contains("prefer:oldest") {
                 for card in results.unwrap() {
-                    temp.push(card.printings.first().unwrap().code.clone());
+                    temp.push([card.printings.first().unwrap().code.clone(), card.printings.first().unwrap().img_type.clone()]);
                 }
             } else { //prefer:newest is just the default
                 for card in results.unwrap() {
-                    temp.push(card.printings.last().unwrap().code.clone());
+                    temp.push([card.printings.last().unwrap().code.clone(), card.printings.last().unwrap().img_type.clone()]);
             
                 }
             }
@@ -436,11 +436,11 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                 }},
             "fmt" | "format" | "z" | "legal" => match value {
                 "startup" => search_cards("(cy:lib or cy:sg or cy:su21) -banned:startup -o:\"starter game only\"", backend, remaining)?,
-                "neo" => search_cards("is:nsg -banned:neo -o:\"starter game only\"", backend, remaining)?,
+                "neo" => search_cards("is:nsg -set:ela -banned:neo -o:\"starter game only\"", backend, remaining)?,
                 //"rig" | "postgateway" | "librealis" | "twocycle" => search_cards("date>=sg -banned:rig -o:\"starter game only\"", backend, remaining)?,
-                "standard" => search_cards("-banned:standard -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm) or set:rar", backend, remaining)?,
-                "sunset" => search_cards("-banned:sunset -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm) or cy:mor", backend, remaining)?,
-                "eternal" => search_cards("-banned:eternal -o:\"starter game only\" -set:tdc -cy:draft -cy:napd", backend, remaining)?,
+                "standard" => search_cards("-banned:standard -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ela) or set:rar", backend, remaining)?,
+                "sunset" => search_cards("-banned:sunset -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ela) or cy:mor", backend, remaining)?,
+                "eternal" => search_cards("-banned:eternal -o:\"starter game only\" -set:tdc -cy:draft -cy:napd -cy:ela", backend, remaining)?,
                 _ => vec!(),
             },
             "ft" | "flavor" | "flavour" => remaining.into_iter().filter(

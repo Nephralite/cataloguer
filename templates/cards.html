@@ -8,9 +8,13 @@
     <p class="text-stone-300 px-10 py-4"> {{len}} results for "{{query}}": </p>
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 px-10 ">
         {% for card_code in cards %}
-            <a href="https://netrunnerdb.com/en/card/{{card_code}}">
-            <img class="rounded-lg" src="https://card-images.netrunnerdb.com/v2/large/{{card_code}}.jpg">
+            {% if card_code[1] == "nrdb" %}
+            <a href="https://netrunnerdb.com/en/card/{{card_code[0]}}">
+            <img class="rounded-lg" src="https://card-images.netrunnerdb.com/v2/large/{{card_code[0]}}.jpg">
             </a>
+            {% else %}
+            <img class="rounded-lg" src="assets/images/{{card_code[0]}}.png">
+            {% endif %}
         {% endfor %}
     </div>
 {% endblock %}
