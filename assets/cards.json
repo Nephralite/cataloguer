@@ -43324,7 +43324,7 @@
                 "code": "35077",
                 "flavour": "<strong>Designed by 2023 World Champion William Huang</strong>",
                 "img_type": "local",
-                "set": "ela"
+                "set": "ele"
             }
         ],
         "stripped_text": "Resolve two of the following in any order: Draw 1 card. Shuffle 1 card from HQ into R&D. Install 1 piece of ice from HQ, ignoring all costs. Place 1 advancement counter on an installed card you can advance. Gain 2 credits.",
@@ -43344,7 +43344,7 @@
             "code": "35072",
             "flavour": "If you lived here, you'd be at work by now! \u201d\n\u2014Weyland recruiter",
             "img_type": "local",
-            "set": "ela"
+            "set": "ele"
         }],
         "stripped_text": "When you rez this asset, load 8 credits onto it, When it is empty, trash it. When your turn begins, take 4 credits from this asset and draw 1 card.",
         "stripped_title": "Anthill Excavation Contract",
@@ -43364,7 +43364,7 @@
             "code": "35075",
             "flavour": "\u201cThe detritus of failed incursions accumulates. Instead of sweeping it all away, the parsimonious sysop should nudge this debris into defensive positions in the server’s metagravity well.\u201d\n\u2014 Moira Virtue, Ice Engineering, KKU",
             "img_type": "local",
-            "set": "ela"
+            "set": "ele"
         }],
         "stripped_text": "The Runner cannot trash this ice (while it is rezzed). End the run. End the run.",
         "stripped_title": "Kessleroid",
@@ -43383,7 +43383,7 @@
             "artist": "Scott Uminga",
             "code": "35076",
             "img_type": "local",
-            "set": "ela"
+            "set": "ele"
         }],
         "stripped_text": "You can advance this ice. When the Runner encounters this ice, if it has 3 or more hosted advancement counters, place 1 advancement counter on an installed card you can advance. Place 1 advancement counter on an installed card you can advance. The Runner loses 2 credits. Do 1 net damage.",
         "stripped_title": "Syailendra",
@@ -43403,7 +43403,7 @@
             "code": "35009",
             "flavour": "The waters begin to roil, and bit by bit they swell.",
             "img_type": "local",
-            "set": "ela"
+            "set": "ele"
         }],
         "stripped_text": "This program gets +1 strength for each fracter in your heap. Interface → 1 credit: Break 1 barrier subroutine. 1 credit: +1 strength.",
         "stripped_title": "Rising Tide",
