@@ -183,10 +183,8 @@ impl IntoResponse for Templates {
 }
 
 async fn cardpage(Path(params): Path<HashMap<String, String>>, State(backend): State<Backend>) -> impl IntoResponse {
-    println!("testing that we get here");
     let printing = params.get("printing").unwrap().parse().unwrap();
     let id = params.get("id").unwrap();
-    println!("{}, {}", id, printing);
     let card = backend.cards.iter().find(|x| x.stripped_title.to_lowercase() == *id).unwrap();
     
     let startup = if search_cards("z:startup", &backend, vec!(card.clone())) == Some(vec!(card.clone())) {"legal"} else if search_cards("banned:startup", &backend, vec!(card.clone())) == Some(vec!(card.clone())) {"banned"} else {"not legal"};
@@ -292,7 +290,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
     let mut or_buffer: Vec<Card> = vec![]; //stores result of instruction before an or
     let mut buffer = "".to_owned(); //part is added into this, used for quotation marks and brackets
     let mut buffering = false; //needs to exist to allow quotation marks to function
-    let mut order = "released".to_owned();
+    let mut order = "alphabetical".to_owned();
     let mut order_dir = "asc".to_owned();
 
         
@@ -438,9 +436,9 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                 "startup" => search_cards("(cy:lib or cy:sg or cy:su21) -banned:startup -o:\"starter game only\"", backend, remaining)?,
                 "neo" => search_cards("is:nsg -set:ela -banned:neo -o:\"starter game only\"", backend, remaining)?,
                 //"rig" | "postgateway" | "librealis" | "twocycle" => search_cards("date>=sg -banned:rig -o:\"starter game only\"", backend, remaining)?,
-                "standard" => search_cards("-banned:standard -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ela) or set:rar", backend, remaining)?,
-                "sunset" => search_cards("-banned:sunset -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ela) or cy:mor", backend, remaining)?,
-                "eternal" => search_cards("-banned:eternal -o:\"starter game only\" -set:tdc -cy:draft -cy:napd -cy:ela", backend, remaining)?,
+                "standard" => search_cards("-banned:standard -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) or set:rar", backend, remaining)?,
+                "sunset" => search_cards("-banned:sunset -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) or cy:mor", backend, remaining)?,
+                "eternal" => search_cards("-banned:eternal -o:\"starter game only\" -set:tdc -cy:draft -cy:napd -cy:ele", backend, remaining)?,
                 _ => vec!(),
             },
             "ft" | "flavor" | "flavour" => remaining.into_iter().filter(
@@ -460,7 +458,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                 "dfc" => search_cards("hoshiko or (sync ev) or (jinteki biotech)", backend, remaining)?,
                 "ffg" => search_cards("nrdb<24002", backend, remaining)?,
                 "guest" => search_cards("ft:\"Designed by\" -pavilion", backend, remaining)?,
-                "nsg" => search_cards("nrdb>26000 (-cy:mor -cy:sm)", backend, remaining)?,
+                "nsg" => search_cards("nrdb>26000 (-cy:mor -cy:sm -cy:sc19)", backend, remaining)?,
                 "nearprinted" => remaining.into_iter().filter(|x| x.nearprint.is_some()).collect(),
                 "reprint" => remaining.into_iter().filter(|x| x.printings.len() > 1).collect(), //needs to change
                 "runner" => search_cards("f:anarch or f:shaper or f:criminal or f:adam or f:sunny-lebeau or f:apex or f:neutral-runner", backend, remaining)?,
@@ -561,6 +559,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
             "faction" => remaining.sort_by_key(|card| faction_order(&card.faction)),
             "released" => remaining.sort_by_key(|card| card.printings.first().unwrap().code.clone()),
             "random" => remaining.shuffle(&mut thread_rng()),
+            "alphabetical" => remaining.sort_by_key(|card| card.stripped_title.clone()),
             //"set" => ,
             "strength" => remaining.sort_by_key(|card| card.strength),
             "type" => remaining.sort_by_key(|card| card.type_code.clone()),

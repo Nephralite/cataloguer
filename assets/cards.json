@@ -4328,6 +4328,13 @@
                 "flavour": "It's easier to spend when it's not your money.",
                 "img_type": "nrdb",
                 "set": "sc19"
+            },
+            {
+                "artist": "Zoe Cohen",
+                "code": "31010",
+                "flavour": "Money is like gravity, it accretes. Justice is like resisting gravity, it takes force.",
+                "img_type": "nrdb",
+                "set": "su21"
             }
         ],
         "stripped_text": "When you install this resource, load 16 credits onto it. When it is empty, trash it. click: Take 4 credits from this resource.",
