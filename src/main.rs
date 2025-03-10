@@ -290,7 +290,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
     let mut or_buffer: Vec<Card> = vec![]; //stores result of instruction before an or
     let mut buffer = "".to_owned(); //part is added into this, used for quotation marks and brackets
     let mut buffering = false; //needs to exist to allow quotation marks to function
-    let mut order = "alphabetical".to_owned();
+    let mut order = "faction".to_owned();
     let mut order_dir = "asc".to_owned();
 
         
@@ -433,10 +433,10 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                     remaining.into_iter().filter(|x| x.faction == temp).collect()
                 }},
             "fmt" | "format" | "z" | "legal" => match value {
-                "startup" => search_cards("(cy:lib or cy:sg or cy:su21) -banned:startup -o:\"starter game only\"", backend, remaining)?,
-                "neo" => search_cards("is:nsg -set:ela -banned:neo -o:\"starter game only\"", backend, remaining)?,
+                "startup" | "sup" => search_cards("(cy:lib or cy:sg or cy:su21) -banned:startup -o:\"starter game only\"", backend, remaining)?,
+                "neo" => search_cards("is:nsg -set:ele -banned:neo -o:\"starter game only\"", backend, remaining)?,
                 //"rig" | "postgateway" | "librealis" | "twocycle" => search_cards("date>=sg -banned:rig -o:\"starter game only\"", backend, remaining)?,
-                "standard" => search_cards("-banned:standard -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) or set:rar", backend, remaining)?,
+                "standard" | "current" | "std" => search_cards("-banned:standard -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) or set:rar", backend, remaining)?,
                 "sunset" => search_cards("-banned:sunset -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) or cy:mor", backend, remaining)?,
                 "eternal" => search_cards("-banned:eternal -o:\"starter game only\" -set:tdc -cy:draft -cy:napd -cy:ele", backend, remaining)?,
                 _ => vec!(),
@@ -458,7 +458,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                 "dfc" => search_cards("hoshiko or (sync ev) or (jinteki biotech)", backend, remaining)?,
                 "ffg" => search_cards("nrdb<24002", backend, remaining)?,
                 "guest" => search_cards("ft:\"Designed by\" -pavilion", backend, remaining)?,
-                "nsg" => search_cards("nrdb>26000 (-cy:mor -cy:sm -cy:sc19)", backend, remaining)?,
+                "nsg" => search_cards("nrdb>26000 -cy:mor -cy:sm", backend, remaining)?,
                 "nearprinted" => remaining.into_iter().filter(|x| x.nearprint.is_some()).collect(),
                 "reprint" => remaining.into_iter().filter(|x| x.printings.len() > 1).collect(), //needs to change
                 "runner" => search_cards("f:anarch or f:shaper or f:criminal or f:adam or f:sunny-lebeau or f:apex or f:neutral-runner", backend, remaining)?,
