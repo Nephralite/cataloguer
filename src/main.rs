@@ -290,7 +290,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
     let mut or_buffer: Vec<Card> = vec![]; //stores result of instruction before an or
     let mut buffer = "".to_owned(); //part is added into this, used for quotation marks and brackets
     let mut buffering = false; //needs to exist to allow quotation marks to function
-    let mut order = "faction".to_owned();
+    let mut order = "released".to_owned();
     let mut order_dir = "asc".to_owned();
 
         
@@ -455,7 +455,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
             "is" => match value {
                 "advanceable" => search_cards("o:\"you can advance this\" or o:\"can be advanced\" -o:\"that can be advanced\"", backend, remaining)?,
                 "corp" => search_cards("f:neutral-corp or f:n or f:j or f:h or f:w", backend, remaining)?,
-                "dfc" => search_cards("hoshiko or (sync ev) or (jinteki biotech)", backend, remaining)?,
+                "dfc" => search_cards("hoshiko or (sync ev) or (jinteki biotech) or (earth station)", backend, remaining)?,
                 "ffg" => search_cards("nrdb<24002", backend, remaining)?,
                 "guest" => search_cards("ft:\"Designed by\" -pavilion", backend, remaining)?,
                 "nsg" => search_cards("nrdb>26000 -cy:mor -cy:sm", backend, remaining)?,

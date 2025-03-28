@@ -7,7 +7,7 @@
         "nearprint": "The Syndicate: Profit over Principle",
         "printings": [
             {
-                "artist": "S\u0142awomir Maniak",
+                "artist": "Sawomir Maniak",
                 "code": "00005",
                 "flavour": "The Past is the Future.",
                 "img_type": "nrdb",
@@ -43426,5 +43426,25 @@
         "uniqueness": false,
         "strength": 1,
         "memory_cost": 1
+    },
+    {
+        "cost":null,
+        "faction":"nbn",
+        "influence":5,
+        "subtypes": "Gray Ops",
+        "printings": [{
+            "artist": "Rafael Monk",
+            "code": "35066",
+            "flavour": "I believe you have something of ours.",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "stripped_text":"Install 1 agenda from the Runner’s score area with a printed agenda point value equal to X. If the Runner is still tagged, place 1 advancement counter on that agenda.",
+        "stripped_title":"IP Enforcement",
+        "text":"Install 1 agenda from the Runner’s score area with a printed agenda point value equal to X. If the Runner is still tagged, place 1 advancement counter on that agenda.",
+        "title": "IP Enforcement",
+        "type_code": "operation",
+        "trash_cost": 5,
+        "uniqueness": false
     }
 ]
