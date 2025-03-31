@@ -2662,6 +2662,7 @@
     {
         "advancement_cost": 3,
         "agenda_points": 2,
+        "eternal_points": 1,
         "faction": "nbn",
         "influence": 0,
         "subtypes": "Initiative",
@@ -6922,7 +6923,7 @@
         "uniqueness": false
     },
     {
-        "eternal_points": 2,
+        "eternal_points": 3,
         "faction": "haas-bioroid",
         "influence": 0,
         "influence_limit": 15,
@@ -22834,7 +22835,7 @@
     },
     {
         "cost": 1,
-        "eternal_points": 3,
+        "eternal_points": 4,
         "faction": "anarch",
         "influence": 2,
         "subtypes": "Current",
@@ -25404,7 +25405,7 @@
     },
     {
         "cost": 3,
-        "eternal_points": 2,
+        "eternal_points": 3,
         "faction": "anarch",
         "influence": 4,
         "subtypes": "Clan",
@@ -29883,6 +29884,7 @@
         "uniqueness": true
     },
     {
+        "eternal_points": 2,
         "base_link": 1,
         "faction": "shaper",
         "influence": 0,
@@ -38960,7 +38962,7 @@
         "uniqueness": false
     },
     {
-        "eternal_points": 2,
+        "eternal_points": 3,
         "faction": "weyland-consortium",
         "influence": 0,
         "influence_limit": 15,
@@ -39698,6 +39700,7 @@
         "uniqueness": false
     },
     {
+        "eternal_points": 1,
         "cost": 6,
         "faction": "shaper",
         "influence": 4,
@@ -43445,6 +43448,24 @@
         "title": "IP Enforcement",
         "type_code": "operation",
         "trash_cost": 5,
+        "uniqueness": false
+    },
+    {
+        "cost":2,
+        "faction":"haas-bioroid",
+        "influence": 2,
+        "printings": [{
+            "artist": "Martin de Diego S\u00e1daba",
+            "code": "35044",
+            "flavour": "“The instability of human braintapes is directly proportional to the number of limbs on a given bioroid, so we’ve begun phasing them out for something better-equipped. A human braintape could be working beside an octopus for weeks and never have an inkling.”—Maía Mínervudóttir, R&D",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "stripped_text": "Draw 2 cards. Install up to 2 cards from HQ (one at a time).",
+        "stripped_title": "Top-Down Solutions",
+        "text": "Draw 2 cards. Install up to 2 cards from HQ (one at a time).",
+        "title": "Top-Down Solutions",
+        "type_code": "operation",
         "uniqueness": false
     }
 ]
