@@ -43442,9 +43442,9 @@
             "img_type": "local",
             "set": "ele"
         }],
-        "stripped_text":"Install 1 agenda from the Runner’s score area with a printed agenda point value equal to X. If the Runner is still tagged, place 1 advancement counter on that agenda.",
+        "stripped_text":"As an additional cost to play this operation, remove X tags. Install 1 agenda from the Runner’s score area with a printed agenda point value equal to X. If the Runner is still tagged, place 1 advancement counter on that agenda.",
         "stripped_title":"IP Enforcement",
-        "text":"Install 1 agenda from the Runner’s score area with a printed agenda point value equal to X. If the Runner is still tagged, place 1 advancement counter on that agenda.",
+        "text":"As an additional cost to play this operation, remove X tags.\nInstall 1 agenda from the Runner’s score area with a printed agenda point value equal to X. If the Runner is still tagged, place 1 advancement counter on that agenda.",
         "title": "IP Enforcement",
         "type_code": "operation",
         "trash_cost": 5,
@@ -43463,9 +43463,28 @@
         }],
         "stripped_text": "Draw 2 cards. Install up to 2 cards from HQ (one at a time).",
         "stripped_title": "Top-Down Solutions",
-        "text": "Draw 2 cards. Install up to 2 cards from HQ (one at a time).",
+        "text": "Draw 2 cards. Install up to 2 cards from HQ <i>(one at a time)</i>.",
         "title": "Top-Down Solutions",
         "type_code": "operation",
+        "uniqueness": false
+    },
+    {
+        "cost":2,
+        "faction": "neutral-corp",
+        "influence": 0,
+        "subtypes": "Region",
+        "printings": [{
+            "artist": "Marlon Ruiz",
+            "code": "35082",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "stripped_text": "2 recurring-credit (When you rez this upgrade and before your turn begins, refill to 2 hosted credits.) You can spend hosted credits to rez assets in the root of this server and ice protecting this server. Persistent -> The trash cost of each asset in the root of this server is increased by 2credit. Limit 1 region per server.",
+        "stripped_title": "Mahkota Langit Grid",
+        "text": "2[recurring-credit] <i>(When you install this card and before your turn begins, refill to 2 hosted credits.)</i>\nYou can spend hosted credits to rez assets in the root of this server and ice protecting this server.\nPersistent → The trash cost of each asset in the root of this server is increased by 2[credit].\nLimit 1 <em>region</em> per server.", 
+        "title":"Mahkota City Grid",
+        "type_code": "upgrade",
+        "trash_cost": 2,
         "uniqueness": false
     }
 ]
