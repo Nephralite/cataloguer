@@ -43510,6 +43510,7 @@
         "cost": 2,
         "faction": "neutral-corp",
         "influence": 0,
+        "strength": 0,
         "subtypes": "Code Gate",
         "printings":[{
             "artist":"Ed Mattinian",

@@ -7,7 +7,7 @@ use axum::{
     Router
 };
 use regex::Regex;
-use serde_json::{Map, Value, json};
+use serde_json::{json, Map, Value};
 use std::{env, collections::HashMap};
 use rand::thread_rng;
 use rand::seq::SliceRandom;
@@ -439,6 +439,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                 "standard" | "current" | "std" => search_cards("-banned:standard -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) or set:rar", backend, remaining)?,
                 "sunset" => search_cards("-banned:sunset -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) or cy:mor", backend, remaining)?,
                 "eternal" => search_cards("-banned:eternal -o:\"starter game only\" -set:tdc -cy:draft -cy:napd -cy:ele", backend, remaining)?,
+                "pawnshop" => search_cards("z:eternal (is:corp tob>509) or (is:runner tob>426)", backend, remaining)?,
                 _ => vec!(),
             },
             "ft" | "flavor" | "flavour" => remaining.into_iter().filter(
@@ -518,6 +519,19 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                 remaining.into_iter().filter(|x| as_operator(operator, x.strength, value.parse::<u8>().ok())).collect()
             },
             "t" | "type" => remaining.into_iter().filter(|x| x.type_code.contains(value)).collect(),
+            "tob" => {
+                //these are only imported as needed to minimize load on general cataloguer
+                //searches, might lower performance for this search though
+                let corp = serde_json::from_str::<Map<String, Value>>(&std::fs::read_to_string("assets/trasho_corp.json").unwrap()).unwrap();
+                let runner = serde_json::from_str::<Map<String, Value>>(&std::fs::read_to_string("assets/trasho_runner.json").unwrap()).unwrap();
+                remaining.into_iter().filter(
+                    |x| if corp.contains_key(&x.title) {
+                        as_operator(operator, corp[&x.title].as_u64(), value.parse::<u64>().ok())
+                } else if runner.contains_key(&x.title){
+                     as_operator(operator, runner[&x.title].as_u64(), value.parse::<u64>().ok())
+                } else {
+                    println!("card not in trasho: {}", &x.title); false
+                }).collect()}
             "trash" | "bin" | "h" => {
                 if value.parse::<u64>().is_err() {println!("{} was an invalid search term", buffer); continue;}
                 remaining.into_iter().filter(|x| as_operator(operator, x.trash_cost, value.parse::<u8>().ok())).collect()
