@@ -43486,5 +43486,43 @@
         "type_code": "upgrade",
         "trash_cost": 2,
         "uniqueness": false
+    },
+    {
+        "cost": 2,
+        "faction": "neutral-runner",
+        "influence":0,
+        "subtypes":"Job",
+        "printings":[{
+            "artist":"Elizaveta Sokolova",
+            "flavour": "“They were fast, friendly, and efficient. ★★★★☆.”\n—satisfied customer",
+            "code": "35034",
+            "img_type":"local",
+            "set":"ele"
+        }],
+        "stripped_text": "When you install this resource and whenever a run begins, place 1credit on this resource. When there are 6 or more hosted credits, take all credits from this resource, trash it, and draw 1 card.",
+        "stripped_title":"Side Hustle",
+        "text": "When you install this resource and whenever a run begins, place 1[credit] on this resource.\nWhen there are 6 or more hosted credits, take all credits from this resource, trash it, and draw 1 card.",
+        "title":"Side Hustle",
+        "type_code":"resource",
+        "uniqueness": false
+    },
+    {
+        "cost": 2,
+        "faction": "neutral-corp",
+        "influence": 0,
+        "subtypes": "Code Gate",
+        "printings":[{
+            "artist":"Ed Mattinian",
+            "flavour":"Stop that.",
+            "code": "35079",
+            "img_type":"local",
+            "set":"ele"
+        }],
+        "stripped_text": "When you rez this ice during a run against this server, purge virus counters. Subroutine End the run.",
+        "stripped_title": "Flyswatter",
+        "text": "When you rez this ice during a run against this server, purge virus counters.\n[subroutine]End the run.",
+        "title": "Flyswatter",
+        "type_code": "ice",
+        "uniqueness": false
     }
 ]
