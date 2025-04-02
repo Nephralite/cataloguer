@@ -21799,7 +21799,13 @@
                 "code": "10087",
                 "img_type": "nrdb",
                 "set": "tlm"
-            }
+            },
+            {
+                 "artist":"Krembler",
+                 "code":"31045",
+                 "img_type":"nrdb",
+                 "set":"su21"
+             }
         ],
         "strength": 5,
         "stripped_text": "Lose click: Break 1 subroutine on this ice. Only the Runner can use this ability. Subroutine Resolve 1 subroutine on another rezzed bioroid ice. Subroutine Resolve 1 subroutine on another rezzed bioroid ice.",
@@ -21821,12 +21827,6 @@
                 "code": "10088",
                 "img_type": "nrdb",
                 "set": "tlm"
-            },
-            {
-                "artist":"Krembler",
-                "code":"31045",
-                "img_type":"nrdb",
-                "set":"su21"
             }
         ],
         "stripped_text": "The first time there is a successful run on HQ each turn, you and the Runner secretly spend 0 credits, 1 credit, or 2 credits. Reveal spent credits. If you and the Runner spent a different number of credits, you choose which cards the Runner accesses from HQ for the remainder of this run.",
