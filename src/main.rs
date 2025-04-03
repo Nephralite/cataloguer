@@ -522,13 +522,10 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
             "tob" => {
                 //these are only imported as needed to minimize load on general cataloguer
                 //searches, might lower performance for this search though
-                let corp = serde_json::from_str::<Map<String, Value>>(&std::fs::read_to_string("assets/trasho_corp.json").unwrap()).unwrap();
-                let runner = serde_json::from_str::<Map<String, Value>>(&std::fs::read_to_string("assets/trasho_runner.json").unwrap()).unwrap();
+                let ranks = serde_json::from_str::<Map<String, Value>>(&std::fs::read_to_string("assets/trashobusto.json").unwrap()).unwrap();
                 remaining.into_iter().filter(
-                    |x| if corp.contains_key(&x.title) {
-                        as_operator(operator, corp[&x.title].as_u64(), value.parse::<u64>().ok())
-                } else if runner.contains_key(&x.title){
-                     as_operator(operator, runner[&x.title].as_u64(), value.parse::<u64>().ok())
+                    |x| if ranks.contains_key(&x.title) {
+                        as_operator(operator, ranks[&x.title].as_u64(), value.parse::<u64>().ok())
                 } else {
                     println!("card not in trasho: {}", &x.title); false
                 }).collect()}
