@@ -439,7 +439,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                 "standard" | "current" | "std" => search_cards("-banned:standard -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) or set:rar", backend, remaining)?,
                 "sunset" => search_cards("-banned:sunset -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) or cy:mor", backend, remaining)?,
                 "eternal" => search_cards("-banned:eternal -o:\"starter game only\" -set:tdc -cy:draft -cy:napd -cy:ele", backend, remaining)?,
-                "pawnshop" => search_cards("z:eternal (is:corp tob>509) or (is:runner tob>426)", backend, remaining)?,
+                "pawnshop" => search_cards("-o:\"starter game only\" -set:tdc -cy:draft -cy:napd -cy:ele (is:corp tob>509) or (is:runner tob>426)", backend, remaining)?,
                 _ => vec!(),
             },
             "ft" | "flavor" | "flavour" => remaining.into_iter().filter(
