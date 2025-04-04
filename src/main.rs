@@ -520,8 +520,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
             },
             "t" | "type" => remaining.into_iter().filter(|x| x.type_code.contains(value)).collect(),
             "tob" => {
-                //these are only imported as needed to minimize load on general cataloguer
-                //searches, might lower performance for this search though
+                //these are only imported as needed to minimize load on general cataloguer searches, might lower performance for this search though
                 let ranks = serde_json::from_str::<Map<String, Value>>(&std::fs::read_to_string("assets/trashobusto.json").unwrap()).unwrap();
                 remaining.into_iter().filter(
                     |x| if ranks.contains_key(&x.title) {

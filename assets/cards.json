@@ -43525,5 +43525,25 @@
         "title": "Flyswatter",
         "type_code": "ice",
         "uniqueness": false
+    },
+    {
+        "cost": 5,
+        "faction": "weyland-consortium",
+        "influence": 3,
+        "subtypes": "Black Ops",
+        "type_code": "operation",
+        "printings": [{
+            "artist":"Anna Butova",
+            "flavour":"“We would like to reassure our shareholders that none of the buildings damaged in the blast were owned by Weyland Consortium subsidiaries…”\n—Luana Campos, Weyland spokesperson",
+            "code": "35078",
+            "img_type":"local",
+            "set":"ele"
+        }],
+        "stripped_text": "Play only if the threat level is 4 or greater, and only if the Runner made a successful run during their last turn. Do 4 meat damage unless the Runner pays 8credit.",
+        "stripped_title": "Measured Response",
+        "title": "Measured Response",
+        "text": "Play only if the threat level is 4 or greater, and only if the Runner made a successful run during their last turn.\nDo 4 meat damage unless the Runner pays 8[credit].",
+        "trash_cost": 3,
+        "uniqueness": false
     }
 ]
