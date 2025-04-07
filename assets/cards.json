@@ -43340,6 +43340,13 @@
                 "code": "35077",
                 "flavour": "<strong>Designed by 2023 World Champion William Huang</strong>",
                 "img_type": "local",
+                "set": "misc"
+            },
+            {
+                "artist": "Wyn Lacabra",
+                "code": "35077",
+                "flavour": "<strong>Designed by 2023 World Champion William \"Sokka\" Huang</strong>",
+                "img_type": "nrdb",
                 "set": "ele"
             }
         ],
@@ -43398,12 +43405,12 @@
         "printings": [{
             "artist": "Scott Uminga",
             "code": "35076",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
-        "stripped_text": "You can advance this ice. When the Runner encounters this ice, if it has 3 or more hosted advancement counters, place 1 advancement counter on an installed card you can advance. Place 1 advancement counter on an installed card you can advance. The Runner loses 2 credits. Do 1 net damage.",
+        "stripped_text": "You can advance this ice. When the Runner encounters this ice, if it has 3 or more hosted advancement counters, you may place 1 advancement counter on an installed card you can advance. You may place 1 advancement counter on an installed card you can advance. The Runner loses 2 credits. Do 1 net damage.",
         "stripped_title": "Syailendra",
-        "text": "You can advance this ice.\nWhen the Runner encounters this ice, if it has 3 or more hosted advancement counters, place 1 advancement counter on an installed card you can advance.\n[subroutine]Place 1 advancement counter on an installed card you can advance.\n[subroutine]The Runner loses 2[credit].\n[subroutine]Do 1 net damage.",
+        "text": "You can advance this ice.\nWhen the Runner encounters this ice, if it has 3 or more hosted advancement counters, you may place 1 advancement counter on an installed card you can advance.\n[subroutine]You may place 1 advancement counter on an installed card you can advance.\n[subroutine]The Runner loses 2[credit].\n[subroutine]Do 1 net damage.",
         "title": "Syailendra",
         "type_code": "ice",
         "uniqueness": false,
@@ -43545,5 +43552,41 @@
         "text": "Play only if the threat level is 4 or greater, and only if the Runner made a successful run during their last turn.\nDo 4 meat damage unless the Runner pays 8[credit].",
         "trash_cost": 3,
         "uniqueness": false
+    },
+    {
+        "cost": 4,
+        "faction": "haas-bioroid",
+        "influence": 4,
+        "type_code": "operation",
+        "printings": [{
+            "artist": "Alecia Doyley",
+            "flavour": "“I am a very reasonable manager. I do not expect my staff to do anything I could not do.”\n—Bass CH1R180G4",
+            "code": "35043",
+            "img_type":"local",
+            "set": "ele"
+        }],
+        "stripped_text": "Gain click click.",
+        "stripped_title": "Nanomanagement",
+        "text": "Gain [click][click].",
+        "title": "Nanomanagement",
+        "uniqueness": false
+    },
+    {
+        "cost": 2,
+        "faction": "shaper",
+        "influence": 2,
+        "type_code": "hardware",
+        "subtypes": "Mod",
+        "printings": [{
+            "artist": "Elizaveta Sokolova",
+            "code": "35027",
+            "img_type": "local",
+            "set":"ele"
+        }],
+        "stripped_text": "When you install this hardware and when your turn begins, you may host this hardware on an installed non-AI icebreaker. Host icebreaker gets +1 strength. Abilities that increase its strength last for the remainder of the run (instead of any shorter duration).",
+        "stripped_title": "GAMEDRAGONTM Pro",
+        "text": "When you install this hardware and when your turn begins, you may host this hardware on an installed non-<strong>AI icebreaker</strong>.\nHost <strong>icebreaker</strong> gets +1 strength. Abilities that increase its strength last for the remainder of the run <i>(instead of any shorter duration)</i>.",
+        "title": "GAMEDRAGONTM Pro",
+        "uniqueness": true
     }
 ]
