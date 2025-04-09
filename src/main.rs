@@ -374,6 +374,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                 remaining.into_iter().filter(|x| backend.banlist[value].as_array().unwrap().contains(&json!(x.stripped_title))).collect() //maybe shouldn't panic on invalid formats, otherwise fine
             },
             "c" | "cost" | "rez" => {
+                if value == "x" {return search_cards("c<0 -t:id -t:agenda", backend, remaining);}
                 if value.parse::<u8>().is_err() {println!("{} was an invalid search term", buffer); continue;}
                 remaining.into_iter().filter(|x| as_operator(operator, x.cost, value.parse::<u8>().ok())).collect()
             },
@@ -463,6 +464,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                 "nearprinted" => remaining.into_iter().filter(|x| x.nearprint.is_some()).collect(),
                 "reprint" => remaining.into_iter().filter(|x| x.printings.len() > 1).collect(), //needs to change
                 "runner" => search_cards("f:anarch or f:shaper or f:criminal or f:adam or f:sunny-lebeau or f:apex or f:neutral-runner", backend, remaining)?,
+                "space" => search_cards("o:\"rez cost is lowered\"", backend, remaining)?,
                 "trap" => search_cards("o:\"when the runner accesses this\"", backend, remaining)?,
                 "unique" => remaining.into_iter().filter(|x| x.uniqueness).collect(),
                 _ => vec!()

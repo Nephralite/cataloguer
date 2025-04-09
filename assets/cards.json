@@ -42701,7 +42701,7 @@
         "cost": 0,
         "faction": "haas-bioroid",
         "influence": 3,
-        "flavor_text": [
+        "flavour": [
             "HB claimed their dossiers about Brazilian bioroids were only compiled from publicly available sources."
         ],
         "subtypes": "Terminal - Gray Ops",
@@ -43588,5 +43588,44 @@
         "text": "When you install this hardware and when your turn begins, you may host this hardware on an installed non-<strong>AI icebreaker</strong>.\nHost <strong>icebreaker</strong> gets +1 strength. Abilities that increase its strength last for the remainder of the run <i>(instead of any shorter duration)</i>.",
         "title": "GAMEDRAGONTM Pro",
         "uniqueness": true
+    },
+    {
+        "type_code": "identity",
+        "faction": "weyland-consortium",
+        "influence_limit": 15,
+        "minimum_deck_size": 45,
+        "subtypes": "Unsubstantiated",
+        "printings": [{
+            "artist": "Marlon Ruiz",
+            "flavour": "Action at a distance.", 
+            "code": "35069",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "stripped_title": "The Zwicky Group: Invisible Hands",
+        "title": "The Zwicky Group: Invisible Hands",
+        "stripped_text": "The first time each turn you gain credits through an ability on an agenda or operation, you may draw 1 card.",
+        "text": "The first time each turn you gain credits through an ability on an agenda or operation, you may draw 1 card.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "identity",
+        "faction": "anarch",
+        "influence_limit": 17,
+        "minimum_deck_size": 45,
+        "base_link": 0,
+        "subtypes": "G-mod",
+        "printings": [{
+            "artist": "Marlon Ruiz",
+            "flavour": "Light up, flame out, and burn it all down.",
+            "code": "35001",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Ryō “Phoenix” Ōno: Out of the Ashes",
+        "stripped_title": "Ryo Phoenix Ono: Out of the Ashes",
+        "stripped_text": "The first time each turn a run becomes successful after a subroutine resolved during that run, gain 1credit and the corp trashes 1 card from HQ.",
+        "text": "The first time each turn a run becomes successful after a subroutine resolved during that run, gain 1[credit] and the corp trashes 1 card from HQ.",
+        "uniqueness": false
     }
 ]

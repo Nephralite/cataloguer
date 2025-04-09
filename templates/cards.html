@@ -13,7 +13,9 @@
             <img class="rounded-lg" src="https://card-images.netrunnerdb.com/v2/large/{{card_code[0]}}.jpg">
             </a>
             {% else %}
+            <a href="https://netrunnerdb.com/en/card/{{card_code[0]}}">
             <img class="rounded-lg" src="assets/images/{{card_code[0]}}.png">
+            </a>
             {% endif %}
         {% endfor %}
     </div>
