@@ -7543,6 +7543,7 @@
         "stripped_title": "Rielle \"Kit\" Peddler: Transhuman",
         "text": "The first time each turn you encounter a piece of ice, it gains <strong>code gate</strong> for the remainder of this run.",
         "title": "Rielle \u201cKit\u201d Peddler: Transhuman",
+        "pronouns": "she/her",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -9191,6 +9192,7 @@
         "stripped_title": "Reina Roja: Freedom Fighter",
         "text": "The first piece of ice the Corp rezzes each turn costs 1[credit] more to rez.",
         "title": "Reina Roja: Freedom Fighter",
+        "pronouns": "she/her",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -11686,6 +11688,7 @@
         "stripped_title": "Ken \"Express\" Tenma: Disappeared Clone",
         "text": "The first time each turn you play a <strong>run</strong> event, gain 1[credit].",
         "title": "Ken \u201cExpress\u201d Tenma: Disappeared Clone",
+        "pronouns": "he/him",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -13427,6 +13430,7 @@
         "stripped_title": "Quetzal: Free Spirit",
         "text": "<strong>0[credit]:</strong> Break 1 <strong>barrier</strong> subroutine. Use this ability only once per turn.",
         "title": "Quetzal: Free Spirit",
+        "pronouns": "any/all",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -27513,6 +27517,7 @@
         "stripped_title": "Steve Cambridge: Master Grifter",
         "text": "The first time each turn you make a successful run on HQ, you may choose 2 cards in your heap. If you do, the Corp removes 1 of those cards from the game, then you add the other card to your grip.",
         "title": "Steve Cambridge: Master Grifter",
+        "pronouns": "he/him",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -27785,6 +27790,7 @@
         "stripped_title": "Ayla \"Bios\" Rahim: Simulant Specialist",
         "text": "Before drawing your starting hand, set aside the top 6 cards of your stack facedown. <em>(You may look at those cards at any time.)</em> Shuffle 2 of those cards into your stack.\n[click]<strong>:</strong> Add 1 card set aside with this identity to your grip.",
         "title": "Ayla \u201cBios\u201d Rahim: Simulant Specialist",
+        "pronouns": "she/her",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -33577,6 +33583,7 @@
         ],
         "stripped_text": "The first job resource, connection resource, or piece of hardware you install each turn costs 1 credit less to install.",
         "stripped_title": "Az McCaffrey: Mechanical Prodigy",
+        "pronouns": "he/him",
         "text": "The first <strong>job</strong> resource, <strong>connection</strong> resource, or piece of hardware you install each turn costs 1[credit] less to install.",
         "title": "Az McCaffrey: Mechanical Prodigy",
         "type_code": "identity",
@@ -33768,6 +33775,7 @@
         ],
         "stripped_text": "When your discard phase ends, if you have the same number of cards in your grip as the Corp has in HQ, you may draw 1 card.",
         "stripped_title": "Lat: Ethical Freelancer",
+        "pronouns": "he/him",
         "text": "When your discard phase ends, if you have the same number of cards in your grip as the Corp has in HQ, you may draw 1 card.",
         "title": "Lat: Ethical Freelancer",
         "type_code": "identity",
@@ -34779,6 +34787,7 @@
         "stripped_title": "Hoshiko Shiro: Untold Protagonist",
         "text": "When your turn ends, if you accessed a card this turn, gain 2[credit] and flip this identity.\nFlip side:\nWhen your turn begins, draw 1 card and lose 1[credit].\nWhen your turn ends, if you did not access any cards this turn, flip this identity.",
         "title": "Hoshiko Shiro: Untold Protagonist",
+        "pronouns": "she/her",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -36112,6 +36121,7 @@
         ],
         "stripped_text": "The first time each turn you trash a card you are accessing, gain 1 credit and draw 1 card.",
         "stripped_title": "Rene \"Loup\" Arcemont: Party Animal",
+        "pronouns": "he/him",
         "text": "The first time each turn you trash a card you are accessing, gain 1[credit] and draw 1 card.",
         "title": "Ren\u00e9 \u201cLoup\u201d Arcemont: Party Animal",
         "type_code": "identity",
@@ -36311,6 +36321,7 @@
         "stripped_title": "Zahya Sadeghi: Versatile Smuggler",
         "text": "Whenever a run on HQ or R&D ends, you may gain 1[credit] for each time you accessed a card during that run. Use this ability only once per turn.",
         "title": "Zahya Sadeghi: Versatile Smuggler",
+        "pronouns": "she/her",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -36503,6 +36514,7 @@
         ],
         "stripped_text": "Whenever an agenda is scored or stolen, you may swap 2 installed pieces of ice.",
         "stripped_title": "Tao Salonga: Telepresence Magician",
+        "pronouns": "he/him",
         "text": "Whenever an agenda is scored or stolen, you may swap 2 installed pieces of ice.",
         "title": "T\u0101o Salonga: Telepresence Magician",
         "type_code": "identity",
@@ -37692,6 +37704,7 @@
         "stripped_title": "The Catalyst: Convention Breaker",
         "text": "Starter game only.",
         "title": "The Catalyst: Convention Breaker",
+        "pronouns": "they/them",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -37737,6 +37750,7 @@
         "stripped_title": "Esa Afontov: Eco-Insurrectionist",
         "text": "The first time each turn you suffer core damage, you may draw 1 card and sabotage 2. <em>(The Corp trashes 2 cards of their choice from HQ and/or the top of R&D.)</em>",
         "title": "Es\u00e2 Afontov: Eco-Insurrectionist",
+        "pronouns": "xi/xir",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -37955,6 +37969,7 @@
         "stripped_title": "Nyusha \"Sable\" Sintashta: Symphonic Prodigy",
         "text": "When your turn begins, identify your mark. <em>(If you don\u2019t have a mark, a random central server becomes your mark for this turn.)</em>\nThe first time each turn you make a successful run on your mark, gain [click].",
         "title": "Nyusha \"Sable\" Sintashta: Symphonic Prodigy",
+        "pronouns": "she/her",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -38176,6 +38191,7 @@
         "stripped_title": "Captain Padma Isbister: Intrepid Explorer",
         "text": "The first time each turn a run on R&D begins, you may charge 1 of your installed cards. <em>(Add 1 power counter to a card that already has one.)</em>",
         "title": "Captain Padma Isbister: Intrepid Explorer",
+        "pronouns":"she/her",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -39764,7 +39780,8 @@
         "text": "Your deck cannot include more than 1 copy of any card.",
         "title": "Nova Initiumia: Catalyst & Impetus",
         "type_code": "identity",
-        "uniqueness": false
+        "uniqueness": false,
+        "pronouns": "they/them"
     },
     {
         "cost": 3,
@@ -40741,6 +40758,7 @@
         "stripped_title": "Mercury: Chrome Libertador",
         "text": "Whenever you breach HQ or R&D during a run, if you did not break any subroutines during that run, you may access 1 additional card. Use this ability only once per turn.",
         "title": "Mercury: Chrome Libertador",
+        "pronouns": "they/them",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -40955,6 +40973,7 @@
         "stripped_title": "Arissana Rocha Nahu: Street Artist",
         "text": "<strong>0[credit]:</strong> Install 1 program from your grip <em>(paying all costs)</em>. Use this ability only once per turn and only during a run. When that run ends, trash that program if it is not a <strong>trojan</strong>.",
         "title": "Arissana Rocha Nahu: Street Artist",
+        "pronouns":"she/her",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -41953,6 +41972,7 @@
         "stripped_title": "Sebastiao Souza Pessoa: Activist Organizer",
         "text": "Whenever you take 1 or more tags, if you had no tags, you may install 1 <strong>connection</strong> resource from your grip, paying 2[credit] less.\nAs an additional cost to trash a <strong>connection</strong> resource with the basic action, the Corp must trash 1 card from HQ.",
         "title": "Sebasti\u00e3o Souza Pessoa: Activist Organizer",
+        "pronouns":"he/him",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -43623,9 +43643,68 @@
             "set": "ele"
         }],
         "title": "Ryō “Phoenix” Ōno: Out of the Ashes",
-        "stripped_title": "Ryo Phoenix Ono: Out of the Ashes",
+        "stripped_title": "Ryo \"Phoenix\" Ono: Out of the Ashes",
+        "pronouns": "any/all",
         "stripped_text": "The first time each turn a run becomes successful after a subroutine resolved during that run, gain 1credit and the corp trashes 1 card from HQ.",
         "text": "The first time each turn a run becomes successful after a subroutine resolved during that run, gain 1[credit] and the corp trashes 1 card from HQ.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "identity",
+        "faction": "jinteki",
+        "influence_limit": 15,
+        "minimum_deck_size": 45,
+        "subtypes": "Division",
+        "printings": [{
+            "artist": "Marlon Ruiz",
+            "code": "35046",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "AU Co.: The Gold Standard in Clones",
+        "stripped_title": "AU Co.: The Gold Standard in Clones",
+        "stripped_text": "Whenever you do damage or trash 1 or more cards from HQ, place 1 power counter on this identity. When your turn begins, you may remove 2 hosted power counters to look at the top 3 cards of R&D. Trash 1 of those cards and add the rest to HQ.",
+        "text": "Whenever you do damage or trash 1 or more cards from HQ, place 1 power counter on this identity.\nWhen your turn begins, you may remove 2 hosted power counters to look at the top 3 cards of R&D. Trash 1 of those cards and add the rest to HQ.",
+        "uniqueness":false
+    },
+    {
+        "type_code": "identity",
+        "faction": "anarch",
+        "influence_limit": 15,
+        "minimum_deck_size": 45,
+        "subtypes": "Natural",
+        "base_link": 0,
+        "pronouns": "they/them",
+        "printings": [{
+            "artist": "Zefanya Langkan Maega",
+            "flavour": "Whatever it takes for us to survive.",
+            "code": "35002",
+            "img_type":"local",
+            "set":"ele"
+        }],
+        "title": "Topan: Ormas Leader",
+        "stripped_title": "Topan: Ormas Leader",
+        "stripped_text": "Once per turn → click: Install 1 card from your grip, paying 2 credit less. When you install that card, suffer 1 meat damage.",
+        "text": "Once per turn →[click]: Install 1 card from your grip, paying 2[credit] less. When you install that card, suffer 1 meat damage.",
+        "uniqueness":false
+    },
+    {
+        "type_code": "identity",
+        "faction": "jinteki",
+        "influence_limit": 15,
+        "minimum_deck_size": 45,
+        "subtypes": "Division",
+        "printings": [{
+            "artist": "Kira L. Nguyen",
+            "flavour": "The Looming Future.",
+            "code": "35047",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "PT Untaian: Life’s Building Blocks",
+        "stripped_title": "PT Untaian: Lifes Building Blocks",
+        "stripped_text": "When your discard phase ends, if there are 3 or fewer cards in HQ, you may pay 1 credit to place 1 advancement counter on an unrezzed card you can advance. (You cannot score that card this turn.)",
+        "text": "When your discard phase ends, if there are 3 or fewer cards in HQ, you may pay 1[credit] to place 1 advancement counter on an unrezzed card you can advance. <i>(You cannot score that card this turn.)</i>",
         "uniqueness": false
     }
 ]

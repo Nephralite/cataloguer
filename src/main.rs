@@ -262,6 +262,7 @@ struct Card {
     agenda_points: Option<u8>,
     eternal_points: Option<u8>,
     nearprint: Option<String>,
+    pronouns: Option<String>
 }
 
 impl PartialEq for Card {
@@ -456,14 +457,14 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
             },
             "is" => match value {
                 "advanceable" => search_cards("o:\"you can advance this\" or o:\"can be advanced\" -o:\"that can be advanced\"", backend, remaining)?,
-                "corp" => search_cards("f:neutral-corp or f:n or f:j or f:h or f:w", backend, remaining)?,
+                "corp" | "c" => search_cards("f:neutral-corp or f:n or f:j or f:h or f:w", backend, remaining)?,
                 "dfc" => search_cards("hoshiko or (sync ev) or (jinteki biotech) or (earth station)", backend, remaining)?,
                 "ffg" => search_cards("nrdb<24002", backend, remaining)?,
                 "guest" => search_cards("ft:\"Designed by\" -pavilion", backend, remaining)?,
                 "nsg" => search_cards("nrdb>26000 -cy:mor -cy:sm", backend, remaining)?,
                 "nearprinted" => remaining.into_iter().filter(|x| x.nearprint.is_some()).collect(),
                 "reprint" => remaining.into_iter().filter(|x| x.printings.len() > 1).collect(), //needs to change
-                "runner" => search_cards("f:anarch or f:shaper or f:criminal or f:adam or f:sunny-lebeau or f:apex or f:neutral-runner", backend, remaining)?,
+                "runner" | "r" => search_cards("f:anarch or f:shaper or f:criminal or f:adam or f:sunny-lebeau or f:apex or f:neutral-runner", backend, remaining)?,
                 "space" => search_cards("o:\"rez cost is lowered\"", backend, remaining)?,
                 "trap" => search_cards("o:\"when the runner accesses this\"", backend, remaining)?,
                 "unique" => remaining.into_iter().filter(|x| x.uniqueness).collect(),
@@ -502,7 +503,8 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
             "o" | "x" | "text" | "oracle" => remaining.into_iter().filter(|x| 
                     if x.text.is_some() {x.stripped_text.clone().unwrap().to_lowercase().contains(&value)} else {false}
                 ).collect(),
-            "order" => {order = value.to_owned(); remaining}
+            "order" | "sort" => {order = value.to_owned(); remaining}
+            "pronouns" => remaining.into_iter().filter(|c| c.pronouns.is_some() && (c.pronouns.clone().unwrap().split("/").any(|i| i==value) || c.pronouns.clone().unwrap().contains("any"))).collect(),
             "p" | "v" | "points" => {
                 if value.parse::<u8>().is_err() {println!("{} was an invalid search term", buffer); continue;}
                 remaining.into_iter().filter(|x| as_operator(operator, x.agenda_points, value.parse::<u8>().ok())).collect()
@@ -567,12 +569,18 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
     remaining.sort_by_key(|card| card.title.clone()); //break alphabetical in ties for now
     match order.as_str() {
             "artist" => remaining.sort_by_key(|card| card.printings.last()?.artist.clone()),
-            "cost" => remaining.sort_by_key(|card| card.cost),
-            "faction" => remaining.sort_by_key(|card| faction_order(&card.faction)),
+            "cost" | "c" => remaining.sort_by_key(|card| card.cost),
+            "faction" | "f" => remaining.sort_by_key(|card| faction_order(&card.faction)),
+            "inf" => remaining.sort_by_key(|card| card.influence),
             "released" => remaining.sort_by_key(|card| card.printings.first().unwrap().code.clone()),
             "random" => remaining.shuffle(&mut thread_rng()),
-            "alphabetical" => remaining.sort_by_key(|card| card.stripped_title.clone()),
+            "alphabetical" | "alph" => remaining.sort_by_key(|card| card.stripped_title.clone()),
             //"set" => ,
+            "tob" => {
+                let ranks: Map<String, Value> = serde_json::from_str::<Map<String, Value>>(&std::fs::read_to_string("assets/trashobusto.json").unwrap()).unwrap();
+                remaining = remaining.into_iter().filter(|c| ranks.contains_key(&c.title)).collect::<Vec<Card>>();
+                remaining.sort_by_key(|card| ranks.get(&card.title).unwrap().as_u64())
+            },
             "strength" => remaining.sort_by_key(|card| card.strength),
             "type" => remaining.sort_by_key(|card| card.type_code.clone()),
             _ => {},
