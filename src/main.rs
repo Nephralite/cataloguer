@@ -366,6 +366,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                         y.artist.clone().unwrap().to_lowercase().contains(value)
                     } else {false}
                 ).is_some()).collect(), //show that printing?, currently no preference
+            "agenda" => search_cards(&format!("adv:{} p:{}", value.split("/").next()?, value.split("/").last()?), backend, remaining)?,
             "adv"| "g" | "advancement" => {
                 if value.parse::<u64>().is_err() {println!("{} was an invalid search term", buffer); continue;}
                 remaining.into_iter().filter(|x| as_operator(operator, x.advancement_cost, value.parse::<u8>().ok())).collect()
@@ -438,7 +439,8 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                 "startup" | "sup" => search_cards("(cy:lib or cy:sg or cy:su21) -banned:startup -o:\"starter game only\"", backend, remaining)?,
                 "neo" => search_cards("is:nsg -set:ele -banned:neo -o:\"starter game only\"", backend, remaining)?,
                 //"rig" | "postgateway" | "librealis" | "twocycle" => search_cards("date>=sg -banned:rig -o:\"starter game only\"", backend, remaining)?,
-                "standard" | "current" | "std" => search_cards("-banned:standard -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) or set:rar", backend, remaining)?,
+                "standard" | "current" | "std" | "24.12" => search_cards("-banned:standard -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) or set:rar", backend, remaining)?,
+                "25.04" => search_cards("is:nsg -set:su21 -banned:25.04 -o:\"starter game only\"", backend, remaining)?, 
                 "sunset" => search_cards("-banned:sunset -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) or cy:mor", backend, remaining)?,
                 "eternal" => search_cards("-banned:eternal -o:\"starter game only\" -set:tdc -cy:draft -cy:napd -cy:ele", backend, remaining)?,
                 "pawnshop" => search_cards("-o:\"starter game only\" -set:tdc -cy:draft -cy:napd -cy:ele (is:corp tob>509) or (is:runner tob>426)", backend, remaining)?,

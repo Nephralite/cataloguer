@@ -43508,7 +43508,7 @@
         }],
         "stripped_text": "2 recurring-credit (When you rez this upgrade and before your turn begins, refill to 2 hosted credits.) You can spend hosted credits to rez assets in the root of this server and ice protecting this server. Persistent -> The trash cost of each asset in the root of this server is increased by 2credit. Limit 1 region per server.",
         "stripped_title": "Mahkota Langit Grid",
-        "text": "2[recurring-credit] <i>(When you install this card and before your turn begins, refill to 2 hosted credits.)</i>\nYou can spend hosted credits to rez assets in the root of this server and ice protecting this server.\nPersistent → The trash cost of each asset in the root of this server is increased by 2[credit].\nLimit 1 <em>region</em> per server.", 
+        "text": "2[recurring-credit] <i>(When you install this card and before your turn begins, refill to 2 hosted credits.)</i>\nYou can spend hosted credits to rez assets in the root of this server and ice protecting this server.\nPersistent → The trash cost of each asset in the root of this server is increased by 2[credit].\nLimit 1 <b>region</b> per server.", 
         "title":"Mahkota City Grid",
         "type_code": "upgrade",
         "trash_cost": 2,
@@ -43705,6 +43705,26 @@
         "stripped_title": "PT Untaian: Lifes Building Blocks",
         "stripped_text": "When your discard phase ends, if there are 3 or fewer cards in HQ, you may pay 1 credit to place 1 advancement counter on an unrezzed card you can advance. (You cannot score that card this turn.)",
         "text": "When your discard phase ends, if there are 3 or fewer cards in HQ, you may pay 1[credit] to place 1 advancement counter on an unrezzed card you can advance. <i>(You cannot score that card this turn.)</i>",
+        "uniqueness": false
+    },
+    {
+        "type_code": "asset",
+        "faction": "weyland-consortium",
+        "cost": 0,
+        "trash_cost": 3,
+        "influence": 3,
+        "subtypes": "Deep Net",
+        "printings":[{
+            "artist":"Adam S. Doyle",
+            "flavour": "Rejoice executives! The Net has sent unto us a profit",
+            "code": "35073",
+            "img_type":"local",
+            "set":"ele"
+        }],
+        "title": "Plutus",
+        "stripped_title": "Plutus",
+        "stripped_text": "As an additional cost to rez this asset, forfeit 1 agenda or reveal and trash 3 cards from HQ. When your turn begins, you may play 1 transaction operation from Archives. After it resolves, remove it from the game.",
+        "text": "As an additional cost to rez this asset, forfeit 1 agenda or reveal and trash 3 cards from HQ.\nWhen your turn begins, you may play 1 <b>transaction</b> operation from Archives. After it resolves, remove it from the game.",
         "uniqueness": false
     }
 ]
