@@ -460,7 +460,7 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
             "is" => match value {
                 "advanceable" => search_cards("o:\"you can advance this\" or o:\"can be advanced\" -o:\"that can be advanced\"", backend, remaining)?,
                 "corp" | "c" => search_cards("f:neutral-corp or f:n or f:j or f:h or f:w", backend, remaining)?,
-                "dfc" => search_cards("hoshiko or (sync ev) or (jinteki biotech) or (earth station)", backend, remaining)?,
+                "dfc" => search_cards("o:flip", backend, remaining)?,
                 "ffg" => search_cards("nrdb<24002", backend, remaining)?,
                 "guest" => search_cards("ft:\"Designed by\" -pavilion", backend, remaining)?,
                 "nsg" => search_cards("nrdb>26000 -cy:mor -cy:sm", backend, remaining)?,

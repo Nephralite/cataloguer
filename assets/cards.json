@@ -43747,7 +43747,7 @@
         "uniqueness": false
     },
     {
-        "type_code": "runner",
+        "type_code": "identity",
         "faction":"criminal",
         "minimum_deck_size":45,
         "influence_limit": 15,
@@ -43764,6 +43764,200 @@
         "stripped_title": "Barry \"Baz\" Wong: Tri-Maf Veteran",
         "stripped_text": "Whenever the Corp rezzes a piece of ice, you may install 1 resource or piece of hardware from your grip.",
         "text": "Whenever the Corp rezzes a piece of ice, you may install 1 resource or piece of hardware from your grip.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "asset",
+        "faction":"haas-bioroid",
+        "influence":2,
+        "cost": 1,
+        "trash_cost": 1,
+        "printings": [{
+            "artist": "Martin de Diego Sádaba",
+            "flavour": "“Deploying in T-minus 5…”",
+            "code": "35039",
+            "img_type":"local",
+            "set": "ele"
+        }],
+        "title": "Humanoid Resources",
+        "stripped_title": "Humanoid Resources",
+        "stripped_text": "click click click, trash: Gain 4 credit and draw 3 cards. Install up to 2 cards from HQ (one at a time). You may play 1 operation from HQ.",
+        "text": "[click][click][click], [trash]: Gain 4[credit] and draw 3 cards. Install up to 2 cards from HQ (one at a time). You may play 1 operation from HQ.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "asset",
+        "faction":"haas-bioroid",
+        "influence": 3,
+        "cost": 2,
+        "trash_cost": 2,
+        "printings": [{
+            "artist": "Mauricio Herrera",
+            "flavour":"“Don’t be scared of the Ottos, kiddo. They’re building our future!”",
+            "code": "35040",
+            "img_type":"local",
+            "set":"ele"
+        }],
+        "title": "Otto Campaign",
+        "stripped_title": "Otto Campaign",
+        "stripped_text": "When you rez this asset, load 6 credit onto it. When it is empty, trash it and gain click click. When your turn begins, take 2 credit from this asset.",
+        "text": "When you rez this asset, load 6[credit] onto it. When it is empty, trash it and gain [click][click].\nWhen your turn begins, take 2[credit] from this asset.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "identity",
+        "faction":"haas-bioroid",
+        "influence_limit": 15,
+        "subtypes": "Division",
+        "minimum_deck_size": 45,
+        "printings": [{
+            "artist": "Vitalii Ostaschenko",
+            "flavour": "Workers of the World, Delivered",
+            "code": "35035",
+            "img_type":"local",
+            "set":"ele"
+        }],
+        "title": "LEO Construction: Labor Solutions",
+        "stripped_title": "LEO Construction: Labor Solutions",
+        "stripped_text": "Once per turn → Trash 1 rezzed bioroid card in the root of or protecting the attacked server: End the run.",
+        "text": "Once per turn → <b>Trash 1 rezzed bioroid card in the root of or protecting the attacked server:</b> End the run.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "identity",
+        "faction": "haas-bioroid",
+        "influence_limit": 15,
+        "subtypes": "Division",
+        "minimum_deck_size": 45,
+        "printings": [{
+            "artist": "Dimik",
+            "flavour": "Fashion fades. Poétrï is eternal.",
+            "code": "35036",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Poétrï Luxury Brands: All the Rage",
+        "stripped_title": "Poetri Luxury Brands: All the Rage",
+        "stripped_text": "Whenever you score an agenda, look at the top 3 cards of R&D. You may install 1 non-agenda card from among them. Whenever an agenda is stolen, you may install 1 non-agenda card from HQ.",
+        "text": "Whenever you score an agenda, look at the top 3 cards of R&D. You may install 1 non-agenda card from among them.\nWhenever an agenda is stolen, you may install 1 non-agenda card from HQ.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "identity",
+        "faction": "shaper",
+        "influence_limit": 15,
+        "subtypes": "Natural",
+        "minimum_deck_size": 45,
+        "base_link": 0,
+        "pronouns": "she/her",
+        "printings": [{
+            "artist": "Zefanya Langkan Maega",
+            "flavour": "Who else will teach the stories of good and evil?\nWe can’t leave the corps’ dirty deeds in the shadows.",
+            "code": "35023",
+            "img_type":"local",
+            "set": "ele"
+        }],
+        "title": "Dewi Subrotoputri: Pedagogical Dhalang",
+        "stripped_title": "Dewi Subrotoputri: Pedagogical Dhalang",
+        "stripped_text": "Whenever you make a successful run, if your mu is full, you may flip this identity and gain 1 credit. Flip side: Whenever you make a successful run, if you have at least 1 unused mu, you may flip this identity and draw 1 card.",
+        "text": "Whenever you make a successful run, if your [mu] is full, you may flip this identity and gain 1[credit].\nFlip side:\nWhenever you make a successful run, if you have at least 1 unused [mu], you may flip this identity and draw 1 card.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "identity",
+        "faction": "shaper",
+        "influence_limit": 15,
+        "subtypes": "Cyborg",
+        "minimum_deck_size": 45,
+        "base_link": 0,
+        "pronouns": "they/she",
+        "printings": [{
+            "artist": "Marlon Ruiz",
+            "flavour": "Good design is invisible—but I’ll never settle for ‘good’.",
+            "code": "35024",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Magdalene Keino-Chemutai: Cryptarchitect",
+        "stripped_title": "Magdalene Keino-Chemutai: Cryptarchitect",
+        "stripped_text": "Whenever you discard cards to reach your maximum hand size, you may install 1 program or piece of hardware from among those cards.",
+        "text": "Whenever you discard cards to reach your maximum hand size, you may install 1 program or piece of hardware from among those cards.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "resource",
+        "faction": "shaper",
+        "subtypes": "Connection",
+        "influence": 3,
+        "cost": 2,
+        "printings": [{
+            "artist": "Alecia Doyley",
+            "flavour": "There are a hundred currencies in the undercity, and Knickknack takes them all. Creds and rupiah get you noodles. For his secret menu, he’ll take your burnt-out rigs, your sterilized virii. But to taste his smoked vatchicken stew, bring him what he values most: your story.",
+            "code": "35033",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "“Knickknack” O’Brian",
+        "stripped_title": "\"Knickknack\" O'Brian",
+        "stripped_text": "The first time each turn a run begins, you may trash 1 of your other installed cards. If you do, gain credits equal to its printed install cost and draw 1 card.",
+        "text": "The first time each turn a run begins, you may trash 1 of your other installed cards. If you do, gain credits equal to its printed install cost and draw 1 card.",
+        "uniqueness": true
+    },
+    {
+        "type_code": "event",
+        "faction": "shaper",
+        "subtypes": "Run",
+        "cost": 0,
+        "influence": 3,
+        "printings": [{
+            "artist": "Ismatullog (Polar Engine)",
+            "flavour": "“Won’t she get in trouble for putting that in the show? And how did she even find out?!”",
+            "code": "35025",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Illumination",
+        "stripped_title": "Illumination",
+        "stripped_text": "Run R&D. If successful, install up to 3 cards from your grip (one at a time), paying 1 credit less for each.",
+        "text": "Run R&D. If successful, install up to 3 cards from your grip <i>(one at a time)</i>, paying 1[credit] less for each.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "identity",
+        "faction": "nbn",
+        "influence_limit":15,
+        "subtypes": "Division",
+        "minimum_deck_size":45,
+        "printings": [{
+            "artist": "Emilio Rodr\u00edguez",
+            "flavour": "Every Impulse Monitored.",
+            "code": "35058",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Synapse Global: Faster than Thought",
+        "stripped_title": "Synapse Global: Faster than Thought",
+        "stripped_text": "The first time each turn a tag is removed, you may reveal and install 1 card from HQ, ignoring all costs. click, remove 1 tag: Gain 2 credit.",
+        "text": "The first time each turn a tag is removed, you may reveal and install 1 card from HQ, ignoring all costs.\n[click], <b>remove 1 tag:</b> Gain 2[credit].",
+        "uniqueness": false
+    },
+    {
+        "type_code": "identity",
+        "faction": "nbn",
+        "influence_limit": 15,
+        "minimum_deck_size": 45,
+        "subtypes": "Division",
+        "printings": [{
+            "artist": "Emilio Rodr\u00edguez",
+            "flavour": "Igniting your potential.\nNever stop shining.",
+            "code": "35057",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Nebula Talent Management: Making Stars",
+        "stripped_title": "Nebula Talent Management: Making Stars",
+        "stripped_text": "When your action phase ends, if you played an operation this turn, gain 1 credit and flip this identity. Flip side: The first time each turn you play an operation, gain click. When the Runner makes a successful run on HQ or R&D, flip this identity.",
+        "text": "When your action phase ends, if you played an operation this turn, gain 1[credit] and flip this identity.\nFlip side:\nThe first time each turn you play an operation, gain [click].\nWhen the Runner makes a successful run on HQ or R&D, flip this identity.",
         "uniqueness": false
     }
 ]
