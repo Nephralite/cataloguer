@@ -43959,5 +43959,65 @@
         "stripped_text": "When your action phase ends, if you played an operation this turn, gain 1 credit and flip this identity. Flip side: The first time each turn you play an operation, gain click. When the Runner makes a successful run on HQ or R&D, flip this identity.",
         "text": "When your action phase ends, if you played an operation this turn, gain 1[credit] and flip this identity.\nFlip side:\nThe first time each turn you play an operation, gain [click].\nWhen the Runner makes a successful run on HQ or R&D, flip this identity.",
         "uniqueness": false
+    },
+    {
+        "type_code": "upgrade",
+        "faction": "jinteki",
+        "subtypes": "Clone",
+        "influence": 2,
+        "cost": 0,
+        "trash_cost": 3,
+        "printings": [{
+            "artist": "Oliver Morit",
+            "flavour": "Spring-loaded minds, kept in suspension to be launched into the net at any incursion.",
+            "code": "35056",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Mitra Aman",
+        "stripped_title": "Mitra Aman",
+        "stripped_text": "Whenever the Runner approaches a piece of ice protecting this server, you may trash this upgrade. If you do, gain 3 credit and you may swap the ice being approached with a piece of ice from Archives or HQ.",
+        "text": "Whenever the Runner approaches a piece of ice protecting this server, you may trash this upgrade. If you do, gain 3[credit] and you may swap the ice being approached with a piece of ice from Archives or HQ.",
+        "uniqueness": true
+    },
+    {
+        "type_code": "identity",
+        "faction": "weyland-consortium",
+        "influence_limit": 15,
+        "subtypes": "Corp",
+        "minimum_deck_size": 45,
+        "printings": [{
+            "artist": "Vitalii Ostaschenko",
+            "flavour": "We'll be there",
+            "code": "35068",
+            "img_type":"local",
+            "set":"ele"
+        }],
+        "title": "BANGUN: When Disaster Strikes",
+        "stripped_title": "BANGUN: When Disaster Strikes",
+        "stripped_text": "You may install agendas faceup. (This does not make their abilities active.) Whenever the Runner accesses a faceup installed agenda, do 2 meat damage and give the Runner 1 tag.",
+        "text": "You may install agendas faceup. <i>(This does not make their abilities active.)</i>\nWhenever the Runner accesses a faceup installed agenda, do 2 meat damage and give the Runner 1 tag.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "identity",
+        "faction": "criminal",
+        "influence_limit": 15,
+        "subtypes": "Natural",
+        "minimum_deck_size": 45,
+        "base_link": 0,
+        "pronouns": "she/her",
+        "printings": [{
+            "artist": "Marlon Ruiz",
+            "flavour": "Peer pressure works.",
+            "code":"35013",
+            "img_type":"local",
+            "set":"ele"
+        }],
+        "title": "MuslihaT: Multifarious Marketeer",
+        "stripped_title": "MuslihaT: Multifarious Marketeer",
+        "stripped_text": "When your turn begins, look at the top card of your stack. If that card is an icebreaker or a run event, you may reveal it and add it to your grip.",
+        "text": "When your turn begins, look at the top card of your stack. If that card is an <b>icebreaker,</b> or a <b>run</b> event, you may reveal it and add it to your grip.",
+        "uniqueness": false
     }
 ]
