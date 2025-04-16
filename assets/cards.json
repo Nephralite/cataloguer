@@ -44039,5 +44039,23 @@
         "stripped_text": "subroutine Give the Runner 1 tag. subroutine Do 1 net damage. subroutine Do 2 net damage if the runner has at least 2 tags.",
         "text": "[subroutine]Give the Runner 1 tag.\n[subroutine]Do 1 net damage.\n[subroutine] Do 2 net damage if the runner has at least 2 tags.",
         "uniqueness":false
+    },
+    {
+        "type_code": "hardware",
+        "faction": "shaper",
+        "cost": 2,
+        "influence": 3,
+        "subtypes": "Console",
+        "printings": [{
+            "artist": "Amirul Hhf",
+            "code": "35028",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Madani",
+        "stripped_title": "Madani",
+        "stripped_text": "click: Host any number of programs on this hardware. (They are not installed.) Once per turn -> 0 credit: Install 1 hosted program (paying its install cost). Limit 1 console per player.",
+        "text": "[click]: Host any number of programs on this hardware. <i>They are not installed.)</i>\nOnce per turn → <b>0</b>[credit]: Install 1 hosted program <i>(paying its install cost)</i>.\nLimit 1 <b>console</b> per player.",
+        "uniqueness":true
     }
 ]
