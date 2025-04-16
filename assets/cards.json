@@ -44076,5 +44076,43 @@
         "stripped_text": "Run any server. If successful, gain 6 credit.",
         "text":"Run any server. If successful, gain 6[credit]",
         "uniqueness":false
+    },
+    {
+        "type_code":"agenda",
+        "faction":"nbn",
+        "points": 3,
+        "advancement_cost": 5,
+        "subtypes": "Initiative",
+        "printings": [{
+            "artist":"Matheus Calza",
+            "flavour":"That's so fifteen minutes ago.",
+            "code":"35060",
+            "img_type":"local",
+            "set":"ele"
+        }],
+        "title": "Next Big Thing",
+        "stripped_title": "Next Big Thing",
+        "stripped_text": "When this agenda is scored or stolen, place 1 agenda counter on it. click, hosted agenda counter: Draw 4 cards. Shuffle any number of cards from HQ into R&D. The corp can use this ability even if this agenda is in the Runner's score area.",
+        "text":"When this agenda is scored or stolen, place 1 agenda counter on it.\n[click], <b>hosted agenda counter:</b> Draw 4 cards. Shuffle any number of cards from HQ into R&D. The corp can use this ability even if this agenda is in the Runner's score area.",
+        "uniqueness":false
+    },
+    {
+        "type_code":"operation",
+        "faction": "nbn",
+        "cost":2,
+        "influence":3,
+        "subtypes": "Double",
+        "printings":[{
+            "artist": "Amirul Hhf",
+            "flavour": "“Your Star Power is in the toilet, kid. We need a fresh face.”",
+            "code": "35067",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Touch-ups",
+        "stripped_title": "Touch-ups",
+        "stripped_text": "As an additional cost to play this operation, spend click. Place 2 advancement counters on an installed card you can advance. If you do, choose a card type and reveal the grip. Choose up to 2 revealed cards of that type. The runner shuffles those cards into the stack.",
+        "text": "As an additional cost to play this operation, spend [click].\nPlace 2 advancement counters on an installed card you can advance. If you do, choose a card type and reveal the grip. Choose up to 2 revealed cards of that type. The runner shuffles those cards into the stack.",
+        "uniqueness": false
     }
 ]
