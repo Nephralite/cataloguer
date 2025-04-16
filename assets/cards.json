@@ -44019,5 +44019,25 @@
         "stripped_text": "When your turn begins, look at the top card of your stack. If that card is an icebreaker or a run event, you may reveal it and add it to your grip.",
         "text": "When your turn begins, look at the top card of your stack. If that card is an <b>icebreaker,</b> or a <b>run</b> event, you may reveal it and add it to your grip.",
         "uniqueness": false
+    },
+    {
+        "type_code": "ice",
+        "faction": "nbn",
+        "cost": 3,
+        "strength": 3,
+        "subtypes": "Sentry - AP - Observer",
+        "influence": 2,
+        "printings": [{
+            "artist": "J\u00falio Rocha",
+            "flavour": "They know what makes you tick.\nAnd ticked-off.",
+            "code": "35063",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Doomscroll",
+        "stripped_title": "Doomscroll",
+        "stripped_text": "subroutine Give the Runner 1 tag. subroutine Do 1 net damage. subroutine Do 2 net damage if the runner has at least 2 tags.",
+        "text": "[subroutine]Give the Runner 1 tag.\n[subroutine]Do 1 net damage.\n[subroutine] Do 2 net damage if the runner has at least 2 tags.",
+        "uniqueness":false
     }
 ]
