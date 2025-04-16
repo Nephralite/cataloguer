@@ -44057,5 +44057,24 @@
         "stripped_text": "click: Host any number of programs on this hardware. (They are not installed.) Once per turn -> 0 credit: Install 1 hosted program (paying its install cost). Limit 1 console per player.",
         "text": "[click]: Host any number of programs on this hardware. <i>They are not installed.)</i>\nOnce per turn → <b>0</b>[credit]: Install 1 hosted program <i>(paying its install cost)</i>.\nLimit 1 <b>console</b> per player.",
         "uniqueness":true
+    },
+    {
+        "type_code": "event",
+        "faction":"criminal",
+        "subtypes": "Run",
+        "cost":3,
+        "influence":2,
+        "printings": [{
+            "artist":"Amirul Hhf",
+            "flavour":"“...one hundred and twenty-seven rounds fired, and two police hoppers totalled. Miraclously no officers were hurt, though the suspect still remains at large” - Abdul el-Sattar, KKN 6",
+            "code": "35014",
+            "img_type":"local",
+            "set":"ele"
+        }],
+        "title": "Clean Getaway",
+        "stripped_title": "Clean Getaway",
+        "stripped_text": "Run any server. If successful, gain 6 credit.",
+        "text":"Run any server. If successful, gain 6[credit]",
+        "uniqueness":false
     }
 ]
