@@ -44133,5 +44133,46 @@
         "stripped_text": "Run HQ. If successful, take 1 tag and the Corp loses 3 credit. Gain 2 credit for each credit lost this way.",
         "text": "Run HQ. If successful, take 1 tag and the Corp loses 3[credit]. Gain 2[credit] for each credit lost this way.",
         "uniqueness": false
+    },
+    {
+        "type_code":"program",
+        "faction": "anarch",
+        "subtypes": "Icebreaker - Killer - Virus",
+        "cost": 3,
+        "memory_cost": 1,
+        "influence": 2,
+        "strength": 2,
+        "printings": [{
+            "artist": "J\u00falio Rocha",
+            "flavour": "“I'm on retainer for monthly purges on thirty-six different server.” - Ratu Maharani, pawang virus",
+            "code": "35008",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Hantu",
+        "stripped_title": "Hantu",
+        "stripped_text": "When you install this program, place 2 virus counters on it. Interface -> 1 credit: Break 1 sentry subroutine. Hosted virus counter: +2 strength.",
+        "text":"When you install this program, place 2 virus counters on it.\nInterface -> 1[credit]:Break 1 <b>sentry</b> subroutine.\n<b>Hosted virus counter:</b> +2 strength.",
+        "uniqueness":false
+    },
+    {
+        "type_code": "ice",
+        "faction":"haas-bioroid",
+        "cost":3,
+        "strength":0,
+        "influence":2,
+        "subtypes":"Code Gate",
+        "printings": [{
+            "artist":"Bruno Balixa",
+            "flavour": "“It is a fallacy that conscious observation can change reality. The consciousness of the observer isn’t required at all.”—The Encyclopedia Silica",
+            "code": "35042",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Scatter Field",
+        "stripped_title": "Scatter Field",
+        "stripped_text": "While this ice is the only piece of ice protecting this server, it gets +4 strength. subroutine: You may install 1 card from HQ. subroutine: End the run.",
+        "text": "While this ice is the only piece of ice protecting this server, it gets +4 strength.\n[subroutine] You may install 1 card from HQ.\n[subroutine] End the run.",
+        "uniqueness": false
     }
 ]
