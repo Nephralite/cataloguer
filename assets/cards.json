@@ -44174,5 +44174,44 @@
         "stripped_text": "While this ice is the only piece of ice protecting this server, it gets +4 strength. subroutine: You may install 1 card from HQ. subroutine: End the run.",
         "text": "While this ice is the only piece of ice protecting this server, it gets +4 strength.\n[subroutine] You may install 1 card from HQ.\n[subroutine] End the run.",
         "uniqueness": false
+    },
+    {
+        "type_code": "ice",
+        "faction": "jinteki",
+        "cost": 8,
+        "strength": 5,
+        "influence": 2,
+        "subtypes": "Code Gate",
+        "printings": [{
+            "artist": "Mla Slerglerjew",
+            "code": "35053",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Mycoweb",
+        "stripped_title": "Mycoweb",
+        "stripped_text": "subroutine You may install 1 piece of ice from Archives, ignoring all costs. subroutine You may rez 1 piece of installed ice, paying 2 credit less. subroutine Resolve 1 subroutine on a rezzed sentry. subroutine Resolve 1 subroutine on another rezzed code gate.",
+        "text": "[subroutine]You may install 1 piece of ice from Archives, ignoring all costs.\n[subroutine]You may rez 1 piece of installed ice, paying 2 credit less.\n[subroutine]Resolve 1 subroutine on a rezzed <b>sentry.</b>\n[subroutine]Resolve 1 subroutine on another rezzed <b>code gate.</b>",
+        "uniqueness": false
+    },
+    {
+        "type_code": "asset",
+        "faction": "jinteki",
+        "cost": 1,
+        "trash_cost":3,
+        "influence": 4,
+        "subtypes": "Executive",
+        "printings": [{
+            "artist": "Elliott Birt",
+            "flavour": "“I make the best company.”",
+            "code": "35051",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Phat Gioan Boatixita",
+        "stripped_title": "Phat Gioan Boatixita",
+        "stripped_text": "When your discard phase ends, place 1 power counter on this asset. The first time each turn an agenda is scored or stolen, you may remove up to 2 hosted power counters. Do 1 net damage plus 1 net damage for each power counter removed this way.",
+        "text": "When your discard phase ends, place 1 power counter on this asset.\nThe first time each turn an agenda is scored or stolen, you may remove up to 2 hosted power counters. Do 1 net damage plus 1 net damage for each power counter removed this way.",
+        "uniqueness": true
     }
 ]
