@@ -44114,5 +44114,24 @@
         "stripped_text": "As an additional cost to play this operation, spend click. Place 2 advancement counters on an installed card you can advance. If you do, choose a card type and reveal the grip. Choose up to 2 revealed cards of that type. The runner shuffles those cards into the stack.",
         "text": "As an additional cost to play this operation, spend [click].\nPlace 2 advancement counters on an installed card you can advance. If you do, choose a card type and reveal the grip. Choose up to 2 revealed cards of that type. The runner shuffles those cards into the stack.",
         "uniqueness": false
+    },
+    {
+        "type_code": "event",
+        "faction": "criminal",
+        "subtypes": "Run",
+        "cost": 0,
+        "influence": 4,
+        "printings": [{
+            "artist": "Oliver Morit",
+            "flavour": "“In KK, we say 'harimau mati karena belangnya'. It means don't tell the world how much money you have if you plan on keeping it.” - JokoR",
+            "code": "35017",
+            "img_type":"local",
+            "set":"ele"
+        }],
+        "title": "Transfer of Wealth",
+        "stripped_title": "Transfer of Wealth",
+        "stripped_text": "Run HQ. If successful, take 1 tag and the Corp loses 3 credit. Gain 2 credit for each credit lost this way.",
+        "text": "Run HQ. If successful, take 1 tag and the Corp loses 3[credit]. Gain 2[credit] for each credit lost this way.",
+        "uniqueness": false
     }
 ]
