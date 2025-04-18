@@ -43448,7 +43448,7 @@
             "img_type": "local",
             "set": "ele"
         }],
-        "stripped_text": "This program gets +1 strength for each fracter in your heap. Interface → 1 credit: Break 1 barrier subroutine. 1 credit: +1 strength.",
+        "stripped_text": "This program gets +1 strength for each fracter in your heap. Interface -> 1 credit: Break 1 barrier subroutine. 1 credit: +1 strength.",
         "stripped_title": "Rising Tide",
         "text": "This program gets +1 strength for each <strong>fracter</strong> in your heap.\nInterface \u2192 <strong>1[credit]:</strong> Break 1 <strong>barrier</strong> subroutine.\n<strong>1[credit]:</strong> +1 strength",
         "title": "Rising Tide",
@@ -43508,7 +43508,7 @@
         }],
         "stripped_text": "2 recurring-credit (When you rez this upgrade and before your turn begins, refill to 2 hosted credits.) You can spend hosted credits to rez assets in the root of this server and ice protecting this server. Persistent -> The trash cost of each asset in the root of this server is increased by 2credit. Limit 1 region per server.",
         "stripped_title": "Mahkota Langit Grid",
-        "text": "2[recurring-credit] <i>(When you install this card and before your turn begins, refill to 2 hosted credits.)</i>\nYou can spend hosted credits to rez assets in the root of this server and ice protecting this server.\nPersistent → The trash cost of each asset in the root of this server is increased by 2[credit].\nLimit 1 <b>region</b> per server.", 
+        "text": "2[recurring-credit] <i>(When you install this card and before your turn begins, refill to 2 hosted credits.)</i>\nYou can spend hosted credits to rez assets in the root of this server and ice protecting this server.\nPersistent -> The trash cost of each asset in the root of this server is increased by 2[credit].\nLimit 1 <b>region</b> per server.", 
         "title":"Mahkota City Grid",
         "type_code": "upgrade",
         "trash_cost": 2,
@@ -43684,8 +43684,8 @@
         }],
         "title": "Topan: Ormas Leader",
         "stripped_title": "Topan: Ormas Leader",
-        "stripped_text": "Once per turn → click: Install 1 card from your grip, paying 2 credit less. When you install that card, suffer 1 meat damage.",
-        "text": "Once per turn →[click]: Install 1 card from your grip, paying 2[credit] less. When you install that card, suffer 1 meat damage.",
+        "stripped_text": "Once per turn -> click: Install 1 card from your grip, paying 2 credit less. When you install that card, suffer 1 meat damage.",
+        "text": "Once per turn ->[click]: Install 1 card from your grip, paying 2[credit] less. When you install that card, suffer 1 meat damage.",
         "uniqueness":false
     },
     {
@@ -43819,8 +43819,8 @@
         }],
         "title": "LEO Construction: Labor Solutions",
         "stripped_title": "LEO Construction: Labor Solutions",
-        "stripped_text": "Once per turn → Trash 1 rezzed bioroid card in the root of or protecting the attacked server: End the run.",
-        "text": "Once per turn → <b>Trash 1 rezzed bioroid card in the root of or protecting the attacked server:</b> End the run.",
+        "stripped_text": "Once per turn -> Trash 1 rezzed bioroid card in the root of or protecting the attacked server: End the run.",
+        "text": "Once per turn -> <b>Trash 1 rezzed bioroid card in the root of or protecting the attacked server:</b> End the run.",
         "uniqueness": false
     },
     {
@@ -44055,7 +44055,7 @@
         "title": "Madani",
         "stripped_title": "Madani",
         "stripped_text": "click: Host any number of programs on this hardware. (They are not installed.) Once per turn -> 0 credit: Install 1 hosted program (paying its install cost). Limit 1 console per player.",
-        "text": "[click]: Host any number of programs on this hardware. <i>They are not installed.)</i>\nOnce per turn → <b>0</b>[credit]: Install 1 hosted program <i>(paying its install cost)</i>.\nLimit 1 <b>console</b> per player.",
+        "text": "[click]: Host any number of programs on this hardware. <i>They are not installed.)</i>\nOnce per turn -> <b>0</b>[credit]: Install 1 hosted program <i>(paying its install cost)</i>.\nLimit 1 <b>console</b> per player.",
         "uniqueness":true
     },
     {
@@ -44208,10 +44208,70 @@
             "img_type": "local",
             "set": "ele"
         }],
-        "title": "Phat Gioan Boatixita",
-        "stripped_title": "Phat Gioan Boatixita",
+        "title": "Phật Gioan Baotixita",
+        "stripped_title": "Phat Gioan Baotixita",
         "stripped_text": "When your discard phase ends, place 1 power counter on this asset. The first time each turn an agenda is scored or stolen, you may remove up to 2 hosted power counters. Do 1 net damage plus 1 net damage for each power counter removed this way.",
         "text": "When your discard phase ends, place 1 power counter on this asset.\nThe first time each turn an agenda is scored or stolen, you may remove up to 2 hosted power counters. Do 1 net damage plus 1 net damage for each power counter removed this way.",
         "uniqueness": true
+    },
+    {
+        "type_code": "asset",
+        "faction": "nbn",
+        "cost": 1,
+        "influence": 1,
+        "trash_cost": 2,
+        "printings":[{
+            "artist": "Anna Butova",
+            "flavour": "“Give me five minutes of a user's Access Plaza traffic and I'll tell you where they're having lunch tomorrow. Give me another ten, and I'll have their bibi's secret rendang recipe.”",
+            "code": "35062",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Public Access Plaza",
+        "stripped_title": "Public Access Plaza",
+        "stripped_text": "When your turn begins, gain 1 credit. Threat 2-> When the runner trashes this asset (while it is rezzed), give them 1 tag.",
+        "text": "When your turn begins, gain 1[credit].\nThreat 2-> When the runner trashes this asset <i>(while it is rezzed)</i>, give them 1 tag.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "program",
+        "faction": "shaper",
+        "cost": 1,
+        "memory_cost": 1,
+        "influence": 2,
+        "subtypes": "Trojan",
+        "printings": [{
+            "artist": "Adam S. Doyle",
+            "flavour": "“The Net operates on as much dream loagic as it does digital logic. If you believe something to be true, it often is”",
+            "code": "35030",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Chromatophores",
+        "stripped_title": "Chromatophores",
+        "stripped_text": "Install only on a piece of ice. Host ice gains barrier, code gate, and sentry.",
+        "text": "Install only on a piece of ice.\nHost ice gains <b>barrier</b>, <b>code gate</b>, and <b>sentry</b>.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "program",
+        "faction": "shaper",
+        "cost": 4,
+        "influence": 1,
+        "strength": 2,
+        "memory_cost": 1,
+        "subtypes": "Icebreaker - Fracter",
+        "printings": [{
+            "artist": "Bruno Balixa",
+            "flavour": "On the shoulder of giants.",
+            "code": "35032",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Principia",
+        "stripped_title": "Principia",
+        "stripped_text": "This program costs 1 credit less to install for each other installed icebreaker. Interface -> 1 credit: Break 1 barrier subroutine. 2 credit: +2 strength.",
+        "text": "This program costs 1[credit] less to install for each other installed <b>icebreaker.</b>\nInterface -> <b>1[credit]:</b> Break 1 <b>barrier</b> subroutine.\n<b>2[credit]:</b> +2 strength.",
+        "uniqueness": false
     }
 ]
