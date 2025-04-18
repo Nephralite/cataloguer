@@ -44273,5 +44273,25 @@
         "stripped_text": "This program costs 1 credit less to install for each other installed icebreaker. Interface -> 1 credit: Break 1 barrier subroutine. 2 credit: +2 strength.",
         "text": "This program costs 1[credit] less to install for each other installed <b>icebreaker.</b>\nInterface -> <b>1[credit]:</b> Break 1 <b>barrier</b> subroutine.\n<b>2[credit]:</b> +2 strength.",
         "uniqueness": false
+    },
+    {
+        "type_code": "ice",
+        "faction": "weyland-consortium",
+        "cost": 14,
+        "strength": 6,
+        "influence": 3,
+        "subtypes": "Sentry - Destroyer",
+        "printings": [{
+            "artist": "Anthony Hutchings",
+            "flavour": "“Dammit, Moth! Where are you? This thing is way bigger than you s-” -C0n4rd",
+            "code": "35074",
+            "img_type":"local",
+            "set":"ele"
+        }],
+        "title": "Biawak",
+        "stripped_title": "Biawak",
+        "stripped_text": "You can forfeit 1 agenda as you rez this ice to pay for 10 credit of its rez cost. subroutine Trash 1 installed program or end the run. subroutine Trash 1 installed resource or end the run. subroutine End the run.",
+        "text": "You can forfeit 1 agenda as you rez this ice to pay for 10[credit] of its rez cost.\n[subroutine]Trash 1 installed program or end the run.\n[subroutine]Trash 1 installed resource or end the run.\n[subroutine]End the run.",
+        "uniqueness": false
     }
 ]
