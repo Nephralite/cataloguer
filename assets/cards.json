@@ -44293,5 +44293,44 @@
         "stripped_text": "You can forfeit 1 agenda as you rez this ice to pay for 10 credit of its rez cost. subroutine Trash 1 installed program or end the run. subroutine Trash 1 installed resource or end the run. subroutine End the run.",
         "text": "You can forfeit 1 agenda as you rez this ice to pay for 10[credit] of its rez cost.\n[subroutine]Trash 1 installed program or end the run.\n[subroutine]Trash 1 installed resource or end the run.\n[subroutine]End the run.",
         "uniqueness": false
+    },
+    {
+        "type_code": "ice",
+        "faction": "jinteki",
+        "cost": 7,
+        "strength": 5,
+        "influence": 3,
+        "subtypes": "Sentry - AP - Observer",
+        "printings": [{
+            "artist": "Bruno Balixa",
+            "flavour": "Jinteki's most experimental ice are often their most dangerous.",
+            "code": "35052",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Empiricist",
+        "stripped_title": "Empiricist",
+        "stripped_text": "subroutine Draw 1 card. You may add 1 card from HQ to the top of R&D. subroutine Do 1 net damage. Give the Runner 1 tag. suboutine Do 2 net damage.",
+        "text": "[sub] Draw 1 card. You may add 1 card from HQ to the top of R&D.\n[subroutine] Do 1 net damage. Give the Runner 1 tag.\n[subroutine] Do 2 net damage.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "agenda",
+        "faction": "jinteki",
+        "advancement_cost": 3,
+        "points": 2,
+        "subtypes": "Expansion",
+        "printings": [{
+            "artist": "Kira L. Nguyen",
+            "code": "35049",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Sericulture Expansion",
+        "stripped_title": "Sericulture Expansion",
+        "stripped_text": "Dividends 1 (When you score this agenda, place 1 agenda counter on it for each excess advancement counter.) When your discard phase ends, you may remove 1 hosted agenda counter to place 2 advancement counters on 1 installed card. (You cannot score that card this turn.)",
+        "text": "Dividends 1 <i>(When you score this agenda, place 1 agenda counter on it for each excess advancement counter.)</i>\nWhen your discard phase ends, you may remove 1 hosted agenda counter to place 2 advancement counters on 1 installed card. <i>(You cannot score that card this turn.)",
+        "uniqueness": false
     }
+        
 ]
