@@ -44080,7 +44080,7 @@
     {
         "type_code":"agenda",
         "faction":"nbn",
-        "points": 3,
+        "agenda_points": 3,
         "advancement_cost": 5,
         "subtypes": "Initiative",
         "printings": [{
@@ -44318,7 +44318,7 @@
         "type_code": "agenda",
         "faction": "jinteki",
         "advancement_cost": 3,
-        "points": 2,
+        "agenda_points": 2,
         "subtypes": "Expansion",
         "printings": [{
             "artist": "Kira L. Nguyen",
@@ -44331,6 +44331,99 @@
         "stripped_text": "Dividends 1 (When you score this agenda, place 1 agenda counter on it for each excess advancement counter.) When your discard phase ends, you may remove 1 hosted agenda counter to place 2 advancement counters on 1 installed card. (You cannot score that card this turn.)",
         "text": "Dividends 1 <i>(When you score this agenda, place 1 agenda counter on it for each excess advancement counter.)</i>\nWhen your discard phase ends, you may remove 1 hosted agenda counter to place 2 advancement counters on 1 installed card. <i>(You cannot score that card this turn.)",
         "uniqueness": false
-    }
-        
+    },
+    {
+        "type_code": "hardware",
+        "faction": "criminal",
+        "cost": 1,
+        "influence": 2,
+        "subtypes": "Weapon",
+        "printings": [{
+            "artist": "Matheus Calza",
+            "flavour": "“You think I've finished messing with you?\nYeah, nah.”\n-Barry “Baz” Wong",
+            "code": "35019",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Magelectric Rapid (748 Mod)",
+        "stripped_title": "Magelectric Rapid (748 Mod)",
+        "stripped_text": "Whenever you make a successful run on HQ, you may trash this hardware to derez 1 installed Corp card.",
+        "text": "Whenever you make a successful run on HQ, you may trash this hardware to derez 1 installed Corp card.",
+        "uniqueness":true
+    },
+    {
+        "type_code": "program",
+        "faction": "criminal",
+        "cost": 3,
+        "memory_cost": 1,
+        "strength": 2,
+        "influence": 2,
+        "subtypes": "Icebreaker - Decoder",
+        "printings": [{
+            "artist": "Anthony Hutchings",
+            "flavour": "Consequences only matter if they catch you.",
+            "code": "35020",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Sang Kancil",
+        "stripped_title": "Sang Kancil",
+        "stripped_text": "Interface -> 1 credit: Break 1 code gate subroutine. 3 credit: +2 strength. If a run event is active, this ability costs 2 credit less to use.",
+        "text": "Interface -> <b>1[credit]:</b> Break 1 <b>code gate</b> subroutine.\n<b>3[credit]:</b> +2 strength. If a <b>run</b> event is active, this ability costs 2 credit less to use.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "event",
+        "faction": "shaper",
+        "cost": 0,
+        "influence": 2,
+        "printings": [{
+            "artist": "Alecia Doyley",
+            "flavour": "Every day starts the same: tea, news, a threedee puzzle. Then it's off to work. Magdelene won't let being fired get in the way of completing her masterpiece.",
+            "code": "35026",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Ritual",
+        "stripped_title": "Ritual",
+        "stripped_text": "Draw 1 card for each click you have remaining.",
+        "text": "Draw 1 card for each [click] you have remaining.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "agenda",
+        "faction": "haas-bioroid",
+        "agenda_points": 2,
+        "advancement_cost": 3,
+        "subtypes": "Research",
+        "printings": [{
+            "artist": "Kira L. Nguyen",
+            "code": "35038",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Project Ingatan",
+        "stripped_title": "Project Ingatan",
+        "stripped_text": "Dividends 1 (When you score this agenda, place 1 agenda counter on it for each excess advancement counter.) When your discard phase ends, you may remove 1 hosted agenda counter to install 1 card from Archives, ignoring all costs.",
+        "text": "Dividends 1 <i>(When you score this agenda, place 1 agenda counter on it for each excess advancement counter.)<i>\nWhen your discard phase ends, you may remove 1 hosted agenda counter to install 1 card from Archives, ignoring all costs.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "agenda",
+        "faction": "weyland-consortium",
+        "agenda_points": 2,
+        "advancement_cost": 3,
+        "subtypes": "Initiative",
+        "printings": [{
+            "artist": "Olie Boldador",
+            "code": "35071",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Off the Books",
+        "stripped_title": "Off the Books",
+        "stripped_text": "Dividends 1 (When you score this agenda, place 1 agenda counter on it for each excess advancement counter.) When your discard phase ends, you may remove 1 hosted agenda counter to search R&D for 1 card and reveal it. (Shuffle R&D after searching it.) You may install that card, ignoring all costs. If you do not, add it to HQ.",
+        "text": "Dividends 1 <i>(When you score this agenda, place 1 agenda counter on it for each excess advancement counter.)</i>\nWhen your discard phase ends, you may remove 1 hosted agenda counter to search R&D for 1 card and reveal it. <i>(Shuffle R&D after searching it.)</i> You may install that card, ignoring all costs. If you do not, add it to HQ.",
+        "uniqueness": false
+    }  
 ]
