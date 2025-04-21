@@ -44333,6 +44333,25 @@
         "uniqueness": false
     },
     {
+        "type_code": "event",
+        "faction": "criminal",
+        "cost": 1,
+        "influence": 1,
+        "subtypes": "Double",
+        "printings": [{
+            "artist": "Dimik",
+            "flavour": "“Pity the money's being spent here, when I could be buying hiasan for my apartment.”",
+            "code": "35015",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Lie Low",
+        "stripped_title": "Lie Low",
+        "stripped_text": "Resolve 1 of the following: * Draw 4 cards. * Remove up to 2 tags.",
+        "text": "Resolve 1 of the following:<ul><li>Draw 4 cards</li><li>Remove up to 2 tags.</li></ul>",
+        "uniqueness": false
+    },
+    {
         "type_code": "hardware",
         "faction": "criminal",
         "cost": 1,
