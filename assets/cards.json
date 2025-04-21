@@ -44425,5 +44425,117 @@
         "stripped_text": "Dividends 1 (When you score this agenda, place 1 agenda counter on it for each excess advancement counter.) When your discard phase ends, you may remove 1 hosted agenda counter to search R&D for 1 card and reveal it. (Shuffle R&D after searching it.) You may install that card, ignoring all costs. If you do not, add it to HQ.",
         "text": "Dividends 1 <i>(When you score this agenda, place 1 agenda counter on it for each excess advancement counter.)</i>\nWhen your discard phase ends, you may remove 1 hosted agenda counter to search R&D for 1 card and reveal it. <i>(Shuffle R&D after searching it.)</i> You may install that card, ignoring all costs. If you do not, add it to HQ.",
         "uniqueness": false
-    }  
+    },
+    {
+        "type_code": "resource",
+        "faction": "criminal",
+        "cost": 2,
+        "influence": 2,
+        "subtypes": "Job - Location",
+        "printings": [{
+            "artist": "Kira L. Nguyen",
+            "flavour": "“That kepo NBN gang makes trillions off incidental data scraping. So what if I use it to network?”\n-MuslihaT",
+            "code": "35022",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Open Market",
+        "stripped_title": "Open Market",
+        "stripped_text": "When you install this resource, load 6 credit onto it. When it is empty trash it. You can spend hosted credits to install connection and job resources. When your turn begins, take 1 credit from this resource.",
+        "text": "When you install this resource, load 6[credit] onto it. When it is empty trash it.\nYou can spend hosted credits to install <b>connection</b> and <b>job</b> resources.\nWhen your turn begins, take 1[credit] from this resource.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "hardware",
+        "faction": "criminal",
+        "cost": 3,
+        "influence": 3,
+        "subtypes": "Console",
+        "printings": [{
+            "artist": "Oliver Morit",
+            "code": "35018",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Detente",
+        "stripped_title": "Detente",
+        "stripped_text": "+1 mu The first time each turn you make a successful run on HQ, you may host 1 card from HQ at random faceup on this hardware. (It is not installed or rezzed.) click, add 2 hosted cards to HQ: The Runner may access 1 card in HQ at random. Any player can use this ability. Limit 1 console per player.",
+        "text": "+1 [mu]\nThe first time each turn you make a successful run on HQ, you may host 1 card from HQ at random faceup on this hardware. <i>(It is not installed or rezzed.)</i>\n<b>[click], add 2 hosted cards to HQ:</b> The Runner may access 1 card in HQ at random. Any player can use this ability.\nLimit 1 <b>console</b> per player.",
+        "uniqueness": true
+    },
+    {
+        "type_code": "resource",
+        "faction": "criminal",
+        "cost": 3,
+        "influence": 3,
+        "subtypes": "Connection",
+        "printings": [{
+            "artist": "Oliver Morit",
+            "flavour": "“She's learned from the best: me. When I retire, the KK Tri-Maf'll be in good hands.”\n-Barry “Baz” Wong",
+            "code": "35021",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Fransofia Ward",
+        "stripped_title": "Fransofia Ward",
+        "stripped_text": "The rez cost of each piece of ice is increased by 1 credit. Whenever you encounter a piece of ice, if the Corp has 15 credit or more, you may trash this resource to bypass that ice. (Pass that ice. No subroutines or further \"when encountered\" abilities resolve.)",
+        "text": "The rez cost of each piece of ice is increased by 1[credit].\nWhenever you encounter a piece of ice, if the Corp has 15[credit] or more, you may trash this resource to bypass that ice. <i>(Pass that ice. No subroutines or further \"when encountered\" abilities resolve.)</i>",
+        "uniqueness": false
+    },
+    {
+        "type_code": "program",
+        "faction": "shaper",
+        "cost": 1,
+        "influence": 1,
+        "memory_cost": 1,
+        "printings": [{
+            "artist": "Bruno Balixa",
+            "flavour": "“I still have friends on the inside”\n-Magdelene Keino-Chemutai",
+            "code": "35031",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Devadatta Drone",
+        "stripped_title": "Devadatta Drone",
+        "stripped_text": "When you install this program, place 2 power counters on it. Whenever you breach R&D, you may remove 1 hosted power counter to access 1 additional card.",
+        "text": "When you install this program, place 2 power counters on it.\nWhenever you breach R&D, you may remove 1 hosted power counter to access 1 additional card.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "event",
+        "faction": "anarch",
+        "cost": 1,
+        "influence": 1,
+        "subtypes": "Double",
+        "printings": [{
+            "artist": "Amirul Hhf",
+            "flavour": "“99% of everything is trash. That's why I pay someone else to search it for me.”\n-Sturg3on General",
+            "code": "35004",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Scrounge",
+        "stripped_title": "Scrounge",
+        "stripped_text": "As an additional cost to play this event, spend click. Install 1 program from your heap. You may add 1 program to the bottom of your stack.",
+        "text": "As an additional cost to play this event, spend [click].\nInstall 1 program from your heap. You may add 1 program to the bottom of your stack.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "hardware",
+        "faction": "anarch",
+        "cost": 2,
+        "influence": 3,
+        "subtypes": "Console",
+        "printings": [{
+            "artist": "Martin de Diego Sádaba",
+            "code": "35006",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Bling",
+        "stripped_title": "Bling",
+        "stripped_text": "+1 mu Whenever you install a card without spending credits, you may host the top card of your stack faceup on this hardware. (It is not installed.) You can play or install hosted cards as if they were in your grip. When your discard phase ends, trash all hosted cards. Limit 1 console per player.",
+        "text": "+1 [mu]\nWhenever you install a card without spending credits, you may host the top card of your stack faceup on this hardware. <i>(It is not installed.)</i>\nYou can play or install hosted cards as if they were in your grip.\nWhen your discard phase ends, trash all hosted cards.\nLimit 1 <b>console</b> per player.",
+        "uniqueness": true
+    }
 ]
