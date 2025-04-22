@@ -44556,5 +44556,82 @@
         "stripped_text": "+1 mu Whenever you install a card without spending credits, you may host the top card of your stack faceup on this hardware. (It is not installed.) You can play or install hosted cards as if they were in your grip. When your discard phase ends, trash all hosted cards. Limit 1 console per player.",
         "text": "+1 [mu]\nWhenever you install a card without spending credits, you may host the top card of your stack faceup on this hardware. <i>(It is not installed.)</i>\nYou can play or install hosted cards as if they were in your grip.\nWhen your discard phase ends, trash all hosted cards.\nLimit 1 <b>console</b> per player.",
         "uniqueness": true
+    },
+    {
+        "type_code": "resource",
+        "faction": "anarch",
+        "cost": 3,
+        "influence": 4,
+        "subtypes": "Virtual",
+        "printings": [{
+            "artist": "Adam S. Doyle",
+            "flavour": "“Nil SIR, black noise, lost girls, drowned boys”\n-Ryō “Phoenix” Ōno",
+            "code": "35010",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Cacophony",
+        "stripped_title": "Cacophony",
+        "stripped_text": "The first time each turn you steal or trash a Corp card, place 1 power counter on this resource. When your action phase ends, you may remove 2 hosted power counters to sabotage 3.",
+        "text": "The first time each turn you steal or trash a Corp card, place 1 power counter on this resource. When your action phase ends, you may remove 2 hosted power counters to sabotage 3.",
+        "uniqueness": true
+    },
+    {
+        "type_code": "program",
+        "faction": "anarch",
+        "cost": 0,
+        "memory_cost": 1,
+        "influence": 2,
+        "printings": [{
+            "artist": "Cat Shen",
+            "flavour": "48c7 c0c9 0000 000f 0549 c7c2 8051 0100 49f7 fa48 83fa 007c 1048 c7c0 3c00 0000 48c7 c707 0000 000f 05...",
+            "code": "35007",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Gourmand",
+        "stripped_title": "Gourmand",
+        "stripped_text": "Access -> trash: Trash the non-agenda card you are accessing. If you do, draw 1 card.",
+        "text": "Access -> [trash]: Trash the non-agenda card you are accessing. If you do, draw 1 card.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "agenda",
+        "faction": "haas-bioroid",
+        "advancement_cost": 3,
+        "points": 1,
+        "subtypes": "Initiative",
+        "printings": [{
+            "artist": "Elliott Birt",
+            "flavour": "“Don't tell me you were at the gala, darling? I must not have seen you”",
+            "code": "35037",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Aggressive Trendsetting",
+        "stripped_title": "Aggressive Trendsetting",
+        "stripped_text": "The first time the Runner trashes an installed Corp card during each of their turn, they may spend click. If they do not, you get +1 allotted click for your next turn.",
+        "text": "The first time the Runner trashes an installed Corp card during each of their turn, they may spend [click]. If they do not, you get +1 allotted [click] for your next turn.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "upgrade",
+        "faction": "haas-bioroid",
+        "cost": 2,
+        "trash_cost": 2,
+        "influence": 2,
+        "subtypes": "Bioroid - Academic",
+        "printings": [{
+            "artist": "Dimik",
+            "flavour": "“My predecessor had passion, imagination, ambition. I assure you, I possess no such flaws.”",
+            "code": "35045",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Mercia B4LL4RD",
+        "stripped_title": "Mercia B4LL4RD",
+        "stripped_text": "When your action phase ends, you may install 1 piece of ice from HQ, paying 1 credit less. If you do, move this upgrade to the root of the server that piece of ice is protecting.",
+        "text": "When your action phase ends, you may install 1 piece of ice from HQ, paying 1[credit] less. If you do, move this upgrade to the root of the server that piece of ice is protecting.",
+        "uniqueness": true
     }
 ]
