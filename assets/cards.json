@@ -44615,7 +44615,7 @@
         "uniqueness": false
     },
     {
-        "type_code": "upgrade",
+        "type_code": "upgr/ade",
         "faction": "haas-bioroid",
         "cost": 2,
         "trash_cost": 2,
@@ -44633,5 +44633,215 @@
         "stripped_text": "When your action phase ends, you may install 1 piece of ice from HQ, paying 1 credit less. If you do, move this upgrade to the root of the server that piece of ice is protecting.",
         "text": "When your action phase ends, you may install 1 piece of ice from HQ, paying 1[credit] less. If you do, move this upgrade to the root of the server that piece of ice is protecting.",
         "uniqueness": true
+    },
+    {
+        "cost": 0,
+        "faction": "jinteki",
+        "influence": 2,
+        "subtypes": "Ambush",
+        "printings": [
+            {
+                "artist": "Cat Shen",
+                "code": "35050",
+                "flavour": "You thought you were safe?",
+                "img_type": "local",
+                "set": "ele"
+            }
+        ],
+        "stripped_text": "While the Runner is accessing this asset in R&D, they must reveal it. When the Runner accesses this asset anywhere except in Archives, you may pay 4 credits. If you do, give the Runner 1 tag and do 3 net damage.",
+        "stripped_title": "Byte!",
+        "text": "While the Runner is accessing this asset in R&D, they must reveal it.\nWhen the Runner accesses this asset anywhere except in Archives, you may pay 4[credit]. If you do, give the Runner 1 tag and do 3 net damage.",
+        "title": "Byte!",
+        "trash_cost": 0,
+        "type_code": "asset",
+        "uniqueness": false
+    },
+    {
+        "type_code": "event",
+        "cost": 0,
+        "faction": "criminal",
+        "influence": 3,
+        "subtypes": "Run - Double",
+        "printings": [{
+            "artist": "Mauricio Herrera",
+            "flavour": "“Don't let self-respect get in the way of a good shortcut”\n-“G0ph3r” O'Ryan",
+            "code": "35016",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Maintenance Access",
+        "stripped_title": "Maintenance Access",
+        "stripped_text": "As an additional cost to play this event, spend click. Run Archives. When you would approach Archives (After passing all ice), instead change the attacked server to HQ and approach HQ.",
+        "text": "As an additional cost to play this event, spend [click].\nRun Archives. When you would approach Archives <i>(After passing all ice)</i>, instead change the attacked server to HQ and approach HQ.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "ice",
+        "faction": "haas-bioroid",
+        "cost": 3,
+        "strength": 3,
+        "influence": 1,
+        "subtypes": "Sentry - Bioroid - AP - Destroyer",
+        "printings": [{
+            "artist": "Ferenc Patk\u00f3s",
+            "flavour": "“You dare?”",
+            "code": "35041",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Bumi 1.0",
+        "stripped_title": "Bumi 1.0",
+        "stripped_text": "When you rez this ice during a run against this server, you may trash 1 installed trojan program. Lose click: Break 1 subroutine on this ice. Only the Runner can use this ability. subroutine Trash 1 installed program. subroutine Do 1 core damage.",
+        "text": "When you rez this ice during a run against this server, you may trash 1 installed <b>trojan</b> program.\n<b>Lose [click]:</b> Break 1 subroutine on this ice. Only the Runner can use this ability.\n[subroutine] Trash 1 installed program.\n[subroutine] Do 1 core damage.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "ice",
+        "faction": "jinteki",
+        "cost": 3,
+        "strength": 3,
+        "influence": 1,
+        "subtypes": "Barrier - AP",
+        "printings": [{
+            "artist": "Scott Uminga",
+            "flavour": "The silence of the forest is the surest sign of danger.",
+            "code": "35054",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Semak-samun",
+        "stripped_title": "Semak-samun",
+        "stripped_text": "The Runner cannot break the printed subroutine on this ice except using a fracter. subroutine End the run unless the Runner suffers 3 net damage.",
+        "text": "The Runner cannot break the printed subroutine on this ice except using a <b>fracter</b>.\n[subroutine] End the run unless the Runner suffers 3 net damage.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "asset",
+        "faction": "nbn",
+        "cost": 1,
+        "trash_cost": 2,
+        "influence": 2,
+        "subtypes": "hostile",
+        "printings": [{
+            "artist": "Adam S. Doyle",
+            "flavour": "You don't really want to know what makes you unique as a person. It's so much less than you think.",
+            "code": "35061",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Idiosyncresis",
+        "stripped_title": "Idiosyncresis",
+        "stripped_text": "You can advance this asset. When your turn begins, you may trash this asset. If you do, for each hosted advancement counter, gain 3 credit and the Runner loses 2 credit.",
+        "text": "You can advance this asset.\nWhen your turn begins, you may trash this asset. If you do, for each hosted advancement counter, gain 3[credit] and the Runner loses 2[credit].",
+        "uniqueness": false
+    },
+    {
+        "type_code": "agenda",
+        "faction": "nbn",
+        "points": 2,
+        "advancement_cost": 3,
+        "subtypes": "Initiative",
+        "printings": [{
+            "artist": "Anthony Hutchings",
+            "code": "35059",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Embedded Reporting",
+        "stripped_title": "Embedded Reporting",
+        "stripped_text": "Dividends 2 (When you score this agenda place 2 agenda counters on it for each excess advancement counter.) When your discard phase ends, you may remove 1 hosted agenda counter to search R&D for 1 operation and reveal it. (Shuffle R&D after searching it.) Add that operation to the top of R&D.",
+        "text": "Dividends 2 <i>(When you score this agenda place 2 agenda counters on it for each excess advancement counter.)</i>\nWhen your discard phase ends, you may remove 1 hosted agenda counter to search R&D for 1 operation and reveal it. <i>(Shuffle R&D after searching it.)</i> Add that operation to the top of R&D.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "operation",
+        "faction": "nbn",
+        "cost": 0,
+        "influence": 2,
+        "subtypes": "Gray Ops",
+        "printings": [{
+            "artist": "Mia Siergiejew",
+            "code": "35065",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Bigger Picture",
+        "stripped_title": "Bigger Picture",
+        "stripped_text": "Play only if the Runner is tagged. Resolve 1 of the following: * Give the Runner 1 tag. * Remove any number of tags. The runner loses 5 credit for each tag removed this way. Gain credits equal to the number of credits the Runner lost.",
+        "text": "Play only if the Runner is tagged.\nResolve 1 of the following:<ul><li>Give the Runner 1 tag.</li><li>Remove any number of tags. The runner loses 5[credit] for each tag removed this way. Gain credits equal to the number of credits the Runner lost.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "resource",
+        "faction": "anarch",
+        "cost": 2,
+        "influence": 1,
+        "subtypes": "Connection - Seedy",
+        "printings": [{
+            "artist": "Oliver Morit",
+            "code": "35011",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Rent Rioters",
+        "stripped_title": "Rent Rioters",
+        "stripped_text": "click click click, trash: Gain 9 credit.",
+        "text": "click click click, trash: Gain 9 credit.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "agenda",
+        "faction": "jinteki",
+        "advancement_cost": 4,
+        "points": 2,
+        "subtypes": "Security",
+        "printings": [{
+            "artist": "Cat Shen",
+            "code": "35048",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Proprionegation",
+        "stripped_title": "Proprionegation",
+        "stripped_text": "When you score this agenda, place 1 agenda counter on it. Hosted agenda counter: The Runner moves to the outermost position of Archives. (They approach any ice in that position.) Use this ability only during a run.",
+        "text": "When you score this agenda, place 1 agenda counter on it.\n<b>Hosted agenda counter:</b> The Runner moves to the outermost position of Archives. <i>(They approach any ice in that position.)</i> Use this ability only during a run.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "operation",
+        "faction": "jinteki",
+        "cost": 4,
+        "influence": 2,
+        "subtypes": "Transaction",
+        "printings": [{
+            "artist": "Matheus Calza",
+            "code": "35055",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Peer Review",
+        "stripped_title": "Peer Review",
+        "stripped_text": "Reveal all but 1 card in HQ. Gain 7 credit. You may install 1 card from HQ in the root of a remote server.",
+        "text": "Reveal all but 1 card in HQ. Gain 7[credit]. You may install 1 card from HQ in the root of a remote server.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "agenda",
+        "faction": "weyland-consortium",
+        "advancement_cost": 2,
+        "points": 1,
+        "subtypes": "Expansion",
+        "printings": [{
+            "artist": "Mauricio Herrera",
+            "flavour": "“It's been a real pleasure doing business with you.”",
+            "code": "35070",
+            "img_type": "local",
+            "set": "ele"
+        }],
+        "title": "Greenmail",
+        "stripped_title": "Greenmail",
+        "stripped_text": "When you score this agenda, gain 2 credit. When you forfeit this agenda, gain credit.",
+        "text": "When you score this agenda, gain 2[credit].\nWhen you forfeit this agenda, gain 4[credit].",
+        "uniqueness": false
     }
 ]
