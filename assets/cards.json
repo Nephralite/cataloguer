@@ -44572,8 +44572,8 @@
         }],
         "title": "Cacophony",
         "stripped_title": "Cacophony",
-        "stripped_text": "The first time each turn you steal or trash a Corp card, place 1 power counter on this resource. When your action phase ends, you may remove 2 hosted power counters to sabotage 3.",
-        "text": "The first time each turn you steal or trash a Corp card, place 1 power counter on this resource. When your action phase ends, you may remove 2 hosted power counters to sabotage 3.",
+        "stripped_text": "The first time each turn you steal or trash a Corp card, place 1 power counter on this resource. When your action phase ends, you may remove 2 hosted power counters to sabotage 3. (The Corp trashes 3 cards of their choice from HQ and/or the top of R&D.)",
+        "text": "The first time each turn you steal or trash a Corp card, place 1 power counter on this resource. When your action phase ends, you may remove 2 hosted power counters to sabotage 3. <i>(The Corp trashes 3 cards of their choice from HQ and/or the top of R&D.)</i>",
         "uniqueness": true
     },
     {
@@ -44798,6 +44798,7 @@
         "printings": [{
             "artist": "Cat Shen",
             "code": "35048",
+            "flavour": "We rely too much on spatial cognition. What happens when that system receives a null signal?",
             "img_type": "local",
             "set": "ele"
         }],
@@ -44815,6 +44816,7 @@
         "subtypes": "Transaction",
         "printings": [{
             "artist": "Matheus Calza",
+            "flavour": "Peer reviews are the difference between living in the arcs and living in the slums. Cloneline gengineering never made anything as vicious or cutthroat as a Jinteki scientist.",
             "code": "35055",
             "img_type": "local",
             "set": "ele"
