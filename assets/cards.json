@@ -43360,7 +43360,7 @@
                 "code": "35077",
                 "flavour": "<strong>Designed by 2023 World Champion William Huang</strong>",
                 "img_type": "local",
-                "set": "misc"
+                "set": "worlds23"
             },
             {
                 "artist": "Wyn Lacabra",
@@ -43386,7 +43386,7 @@
             "artist": "Olie Boldador",
             "code": "35072",
             "flavour": "If you lived here, you'd be at work by now! \u201d\n\u2014Weyland recruiter",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "stripped_text": "When you rez this asset, load 8 credits onto it, When it is empty, trash it. When your turn begins, take 4 credits from this asset and draw 1 card.",
@@ -43406,7 +43406,7 @@
             "artist": "Krembler",
             "code": "35075",
             "flavour": "\u201cThe detritus of failed incursions accumulates. Instead of sweeping it all away, the parsimonious sysop should nudge this debris into defensive positions in the server’s metagravity well.\u201d\n\u2014 Moira Virtue, Ice Engineering, KKU",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "stripped_text": "The Runner cannot trash this ice (while it is rezzed). End the run. End the run.",
@@ -43445,7 +43445,7 @@
             "artist": "Scott Uminga",
             "code": "35009",
             "flavour": "The waters begin to roil, and bit by bit they swell.",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "stripped_text": "This program gets +1 strength for each fracter in your heap. Interface -> 1 credit: Break 1 barrier subroutine. 1 credit: +1 strength.",
@@ -43466,7 +43466,7 @@
             "artist": "Rafael Monk",
             "code": "35066",
             "flavour": "I believe you have something of ours.",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "stripped_text":"As an additional cost to play this operation, remove X tags. Install 1 agenda from the Runner’s score area with a printed agenda point value equal to X. If the Runner is still tagged, place 1 advancement counter on that agenda.",
@@ -43485,7 +43485,7 @@
             "artist": "Martin de Diego S\u00e1daba",
             "code": "35044",
             "flavour": "“The instability of human braintapes is directly proportional to the number of limbs on a given bioroid, so we’ve begun phasing them out for something better-equipped. A human braintape could be working beside an octopus for weeks and never have an inkling.”—Maía Mínervudóttir, R&D",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "stripped_text": "Draw 2 cards. Install up to 2 cards from HQ (one at a time).",
@@ -43503,7 +43503,7 @@
         "printings": [{
             "artist": "Marlon Ruiz",
             "code": "35082",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "stripped_text": "2 recurring-credit (When you rez this upgrade and before your turn begins, refill to 2 hosted credits.) You can spend hosted credits to rez assets in the root of this server and ice protecting this server. Persistent -> The trash cost of each asset in the root of this server is increased by 2credit. Limit 1 region per server.",
@@ -43523,7 +43523,7 @@
             "artist":"Elizaveta Sokolova",
             "flavour": "“They were fast, friendly, and efficient. ★★★★☆.”\n—satisfied customer",
             "code": "35034",
-            "img_type":"local",
+            "img_type":"nrdb",
             "set":"ele"
         }],
         "stripped_text": "When you install this resource and whenever a run begins, place 1credit on this resource. When there are 6 or more hosted credits, take all credits from this resource, trash it, and draw 1 card.",
@@ -43543,7 +43543,7 @@
             "artist":"Ed Mattinian",
             "flavour":"Stop that.",
             "code": "35079",
-            "img_type":"local",
+            "img_type":"nrdb",
             "set":"ele"
         }],
         "stripped_text": "When you rez this ice during a run against this server, purge virus counters. Subroutine End the run.",
@@ -43563,7 +43563,7 @@
             "artist":"Anna Butova",
             "flavour":"“We would like to reassure our shareholders that none of the buildings damaged in the blast were owned by Weyland Consortium subsidiaries…”\n—Luana Campos, Weyland spokesperson",
             "code": "35078",
-            "img_type":"local",
+            "img_type":"nrdb",
             "set":"ele"
         }],
         "stripped_text": "Play only if the threat level is 4 or greater, and only if the Runner made a successful run during their last turn. Do 4 meat damage unless the Runner pays 8credit.",
@@ -43582,7 +43582,7 @@
             "artist": "Alecia Doyley",
             "flavour": "“I am a very reasonable manager. I do not expect my staff to do anything I could not do.”\n—Bass CH1R180G4",
             "code": "35043",
-            "img_type":"local",
+            "img_type":"nrdb",
             "set": "ele"
         }],
         "stripped_text": "Gain click click.",
@@ -43600,7 +43600,7 @@
         "printings": [{
             "artist": "Elizaveta Sokolova",
             "code": "35027",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set":"ele"
         }],
         "stripped_text": "When you install this hardware and when your turn begins, you may host this hardware on an installed non-AI icebreaker. Host icebreaker gets +1 strength. Abilities that increase its strength last for the remainder of the run (instead of any shorter duration).",
@@ -43619,7 +43619,7 @@
             "artist": "Marlon Ruiz",
             "flavour": "Action at a distance.", 
             "code": "35069",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "stripped_title": "The Zwicky Group: Invisible Hands",
@@ -43639,7 +43639,7 @@
             "artist": "Marlon Ruiz",
             "flavour": "Light up, flame out, and burn it all down.",
             "code": "35001",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Ryō “Phoenix” Ōno: Out of the Ashes",
@@ -43658,7 +43658,7 @@
         "printings": [{
             "artist": "Marlon Ruiz",
             "code": "35046",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "AU Co.: The Gold Standard in Clones",
@@ -43679,7 +43679,7 @@
             "artist": "Zefanya Langkan Maega",
             "flavour": "Whatever it takes for us to survive.",
             "code": "35002",
-            "img_type":"local",
+            "img_type":"nrdb",
             "set":"ele"
         }],
         "title": "Topan: Ormas Leader",
@@ -43698,7 +43698,7 @@
             "artist": "Kira L. Nguyen",
             "flavour": "The Looming Future.",
             "code": "35047",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "PT Untaian: Life’s Building Blocks",
@@ -43718,7 +43718,7 @@
             "artist":"Adam S. Doyle",
             "flavour": "Rejoice executives! The Net has sent unto us a profit",
             "code": "35073",
-            "img_type":"local",
+            "img_type":"nrdb",
             "set":"ele"
         }],
         "title": "Plutus",
@@ -43737,7 +43737,7 @@
             "artist":"Wilson Nugraha (Polar Engine)",
             "flavour": "The volume is the message.",
             "code": "35005",
-            "img_type":"local",
+            "img_type":"nrdb",
             "set": "ele"
         }],
         "title": "Shred",
@@ -43757,7 +43757,7 @@
             "artist":"Zefanya Langkan Maega",
             "flavour":"Try me.",
             "code": "35012",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Barry “Baz” Wong: Tri-Maf Veteran",
@@ -43776,7 +43776,7 @@
             "artist": "Martin de Diego Sádaba",
             "flavour": "“Deploying in T-minus 5…”",
             "code": "35039",
-            "img_type":"local",
+            "img_type":"nrdb",
             "set": "ele"
         }],
         "title": "Humanoid Resources",
@@ -43795,7 +43795,7 @@
             "artist": "Mauricio Herrera",
             "flavour":"“Don’t be scared of the Ottos, kiddo. They’re building our future!”",
             "code": "35040",
-            "img_type":"local",
+            "img_type":"nrdb",
             "set":"ele"
         }],
         "title": "Otto Campaign",
@@ -43814,7 +43814,7 @@
             "artist": "Vitalii Ostaschenko",
             "flavour": "Workers of the World, Delivered",
             "code": "35035",
-            "img_type":"local",
+            "img_type":"nrdb",
             "set":"ele"
         }],
         "title": "LEO Construction: Labor Solutions",
@@ -43833,7 +43833,7 @@
             "artist": "Dimik",
             "flavour": "Fashion fades. Poétrï is eternal.",
             "code": "35036",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Poétrï Luxury Brands: All the Rage",
@@ -43854,7 +43854,7 @@
             "artist": "Zefanya Langkan Maega",
             "flavour": "Who else will teach the stories of good and evil?\nWe can’t leave the corps’ dirty deeds in the shadows.",
             "code": "35023",
-            "img_type":"local",
+            "img_type":"nrdb",
             "set": "ele"
         }],
         "title": "Dewi Subrotoputri: Pedagogical Dhalang",
@@ -43875,7 +43875,7 @@
             "artist": "Marlon Ruiz",
             "flavour": "Good design is invisible—but I’ll never settle for ‘good’.",
             "code": "35024",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Magdalene Keino-Chemutai: Cryptarchitect",
@@ -43894,7 +43894,7 @@
             "artist": "Alecia Doyley",
             "flavour": "There are a hundred currencies in the undercity, and Knickknack takes them all. Creds and rupiah get you noodles. For his secret menu, he’ll take your burnt-out rigs, your sterilized virii. But to taste his smoked vatchicken stew, bring him what he values most: your story.",
             "code": "35033",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "“Knickknack” O’Brian",
@@ -43913,7 +43913,7 @@
             "artist": "Ismatullog (Polar Engine)",
             "flavour": "“Won’t she get in trouble for putting that in the show? And how did she even find out?!”",
             "code": "35025",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Illumination",
@@ -43932,7 +43932,7 @@
             "artist": "Emilio Rodr\u00edguez",
             "flavour": "Every Impulse Monitored.",
             "code": "35058",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Synapse Global: Faster than Thought",
@@ -43951,7 +43951,7 @@
             "artist": "Emilio Rodr\u00edguez",
             "flavour": "Igniting your potential.\nNever stop shining.",
             "code": "35057",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Nebula Talent Management: Making Stars",
@@ -43971,7 +43971,7 @@
             "artist": "Oliver Morit",
             "flavour": "Spring-loaded minds, kept in suspension to be launched into the net at any incursion.",
             "code": "35056",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Mitra Aman",
@@ -43990,7 +43990,7 @@
             "artist": "Vitalii Ostaschenko",
             "flavour": "We'll be there",
             "code": "35068",
-            "img_type":"local",
+            "img_type":"nrdb",
             "set":"ele"
         }],
         "title": "BANGUN: When Disaster Strikes",
@@ -44011,7 +44011,7 @@
             "artist": "Marlon Ruiz",
             "flavour": "Peer pressure works.",
             "code":"35013",
-            "img_type":"local",
+            "img_type":"nrdb",
             "set":"ele"
         }],
         "title": "MuslihaT: Multifarious Marketeer",
@@ -44031,7 +44031,7 @@
             "artist": "J\u00falio Rocha",
             "flavour": "They know what makes you tick.\nAnd ticked-off.",
             "code": "35063",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Doomscroll",
@@ -44049,7 +44049,7 @@
         "printings": [{
             "artist": "Amirul Hhf",
             "code": "35028",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Madani",
@@ -44068,7 +44068,7 @@
             "artist":"Amirul Hhf",
             "flavour":"“...one hundred and twenty-seven rounds fired, and two police hoppers totalled. Miraclously no officers were hurt, though the suspect still remains at large” - Abdul el-Sattar, KKN 6",
             "code": "35014",
-            "img_type":"local",
+            "img_type":"nrdb",
             "set":"ele"
         }],
         "title": "Clean Getaway",
@@ -44087,7 +44087,7 @@
             "artist":"Matheus Calza",
             "flavour":"That's so fifteen minutes ago.",
             "code":"35060",
-            "img_type":"local",
+            "img_type":"nrdb",
             "set":"ele"
         }],
         "title": "Next Big Thing",
@@ -44106,7 +44106,7 @@
             "artist": "Amirul Hhf",
             "flavour": "“Your Star Power is in the toilet, kid. We need a fresh face.”",
             "code": "35067",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Touch-ups",
@@ -44125,7 +44125,7 @@
             "artist": "Oliver Morit",
             "flavour": "“In KK, we say 'harimau mati karena belangnya'. It means don't tell the world how much money you have if you plan on keeping it.” - JokoR",
             "code": "35017",
-            "img_type":"local",
+            "img_type":"nrdb",
             "set":"ele"
         }],
         "title": "Transfer of Wealth",
@@ -44146,7 +44146,7 @@
             "artist": "J\u00falio Rocha",
             "flavour": "“I'm on retainer for monthly purges on thirty-six different server.” - Ratu Maharani, pawang virus",
             "code": "35008",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Hantu",
@@ -44166,7 +44166,7 @@
             "artist":"Bruno Balixa",
             "flavour": "“It is a fallacy that conscious observation can change reality. The consciousness of the observer isn’t required at all.”—The Encyclopedia Silica",
             "code": "35042",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Scatter Field",
@@ -44185,7 +44185,7 @@
         "printings": [{
             "artist": "Mla Slerglerjew",
             "code": "35053",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Mycoweb",
@@ -44205,7 +44205,7 @@
             "artist": "Elliott Birt",
             "flavour": "“I make the best company.”",
             "code": "35051",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Phật Gioan Baotixita",
@@ -44224,7 +44224,7 @@
             "artist": "Anna Butova",
             "flavour": "“Give me five minutes of a user's Access Plaza traffic and I'll tell you where they're having lunch tomorrow. Give me another ten, and I'll have their bibi's secret rendang recipe.”",
             "code": "35062",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Public Access Plaza",
@@ -44244,7 +44244,7 @@
             "artist": "Adam S. Doyle",
             "flavour": "“The Net operates on as much dream loagic as it does digital logic. If you believe something to be true, it often is”",
             "code": "35030",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Chromatophores",
@@ -44265,7 +44265,7 @@
             "artist": "Bruno Balixa",
             "flavour": "On the shoulder of giants.",
             "code": "35032",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Principia",
@@ -44285,7 +44285,7 @@
             "artist": "Anthony Hutchings",
             "flavour": "“Dammit, Moth! Where are you? This thing is way bigger than you s-” -C0n4rd",
             "code": "35074",
-            "img_type":"local",
+            "img_type":"nrdb",
             "set":"ele"
         }],
         "title": "Biawak",
@@ -44305,7 +44305,7 @@
             "artist": "Bruno Balixa",
             "flavour": "Jinteki's most experimental ice are often their most dangerous.",
             "code": "35052",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Empiricist",
@@ -44323,7 +44323,7 @@
         "printings": [{
             "artist": "Kira L. Nguyen",
             "code": "35049",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Sericulture Expansion",
@@ -44342,7 +44342,7 @@
             "artist": "Dimik",
             "flavour": "“Pity the money's being spent here, when I could be buying hiasan for my apartment.”",
             "code": "35015",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Lie Low",
@@ -44361,7 +44361,7 @@
             "artist": "Matheus Calza",
             "flavour": "“You think I've finished messing with you?\nYeah, nah.”\n-Barry “Baz” Wong",
             "code": "35019",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Magelectric Rapid (748 Mod)",
@@ -44382,7 +44382,7 @@
             "artist": "Anthony Hutchings",
             "flavour": "Consequences only matter if they catch you.",
             "code": "35020",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Sang Kancil",
@@ -44400,7 +44400,7 @@
             "artist": "Alecia Doyley",
             "flavour": "Every day starts the same: tea, news, a threedee puzzle. Then it's off to work. Magdelene won't let being fired get in the way of completing her masterpiece.",
             "code": "35026",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Ritual",
@@ -44418,7 +44418,7 @@
         "printings": [{
             "artist": "Kira L. Nguyen",
             "code": "35038",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Project Ingatan",
@@ -44436,7 +44436,7 @@
         "printings": [{
             "artist": "Olie Boldador",
             "code": "35071",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Off the Books",
@@ -44455,7 +44455,7 @@
             "artist": "Kira L. Nguyen",
             "flavour": "“That kepo NBN gang makes trillions off incidental data scraping. So what if I use it to network?”\n-MuslihaT",
             "code": "35022",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Open Market",
@@ -44473,7 +44473,7 @@
         "printings": [{
             "artist": "Oliver Morit",
             "code": "35018",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Detente",
@@ -44492,7 +44492,7 @@
             "artist": "Oliver Morit",
             "flavour": "“She's learned from the best: me. When I retire, the KK Tri-Maf'll be in good hands.”\n-Barry “Baz” Wong",
             "code": "35021",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Fransofia Ward",
@@ -44511,7 +44511,7 @@
             "artist": "Bruno Balixa",
             "flavour": "“I still have friends on the inside”\n-Magdelene Keino-Chemutai",
             "code": "35031",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Devadatta Drone",
@@ -44530,7 +44530,7 @@
             "artist": "Amirul Hhf",
             "flavour": "“99% of everything is trash. That's why I pay someone else to search it for me.”\n-Sturg3on General",
             "code": "35004",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Scrounge",
@@ -44548,7 +44548,7 @@
         "printings": [{
             "artist": "Martin de Diego Sádaba",
             "code": "35006",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Bling",
@@ -44567,7 +44567,7 @@
             "artist": "Adam S. Doyle",
             "flavour": "“Nil SIR, black noise, lost girls, drowned boys”\n-Ryō “Phoenix” Ōno",
             "code": "35010",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Cacophony",
@@ -44586,7 +44586,7 @@
             "artist": "Cat Shen",
             "flavour": "48c7 c0c9 0000 000f 0549 c7c2 8051 0100 49f7 fa48 83fa 007c 1048 c7c0 3c00 0000 48c7 c707 0000 000f 05...",
             "code": "35007",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Gourmand",
@@ -44605,7 +44605,7 @@
             "artist": "Elliott Birt",
             "flavour": "“Don't tell me you were at the gala, darling? I must not have seen you”",
             "code": "35037",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Aggressive Trendsetting",
@@ -44625,7 +44625,7 @@
             "artist": "Dimik",
             "flavour": "“My predecessor had passion, imagination, ambition. I assure you, I possess no such flaws.”",
             "code": "35045",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Mercia B4LL4RD",
@@ -44644,7 +44644,7 @@
                 "artist": "Cat Shen",
                 "code": "35050",
                 "flavour": "You thought you were safe?",
-                "img_type": "local",
+                "img_type": "nrdb",
                 "set": "ele"
             }
         ],
@@ -44666,7 +44666,7 @@
             "artist": "Mauricio Herrera",
             "flavour": "“Don't let self-respect get in the way of a good shortcut”\n-“G0ph3r” O'Ryan",
             "code": "35016",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Maintenance Access",
@@ -44686,7 +44686,7 @@
             "artist": "Ferenc Patk\u00f3s",
             "flavour": "“You dare?”",
             "code": "35041",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Bumi 1.0",
@@ -44706,7 +44706,7 @@
             "artist": "Scott Uminga",
             "flavour": "The silence of the forest is the surest sign of danger.",
             "code": "35054",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Semak-samun",
@@ -44726,7 +44726,7 @@
             "artist": "Adam S. Doyle",
             "flavour": "You don't really want to know what makes you unique as a person. It's so much less than you think.",
             "code": "35061",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Idiosyncresis",
@@ -44744,7 +44744,7 @@
         "printings": [{
             "artist": "Anthony Hutchings",
             "code": "35059",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Embedded Reporting",
@@ -44762,7 +44762,7 @@
         "printings": [{
             "artist": "Mia Siergiejew",
             "code": "35065",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Bigger Picture",
@@ -44780,7 +44780,7 @@
         "printings": [{
             "artist": "Oliver Morit",
             "code": "35011",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Rent Rioters",
@@ -44799,7 +44799,7 @@
             "artist": "Cat Shen",
             "code": "35048",
             "flavour": "We rely too much on spatial cognition. What happens when that system receives a null signal?",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Proprionegation",
@@ -44818,7 +44818,7 @@
             "artist": "Matheus Calza",
             "flavour": "Peer reviews are the difference between living in the arcs and living in the slums. Cloneline gengineering never made anything as vicious or cutthroat as a Jinteki scientist.",
             "code": "35055",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Peer Review",
@@ -44837,13 +44837,105 @@
             "artist": "Mauricio Herrera",
             "flavour": "“It's been a real pleasure doing business with you.”",
             "code": "35070",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "ele"
         }],
         "title": "Greenmail",
         "stripped_title": "Greenmail",
         "stripped_text": "When you score this agenda, gain 2 credit. When you forfeit this agenda, gain credit.",
         "text": "When you score this agenda, gain 2[credit].\nWhen you forfeit this agenda, gain 4[credit].",
+        "uniqueness": false
+    },
+    {
+        "type_code": "event",
+        "faction": "anarch",
+        "cost": 0,
+        "influence": 2,
+        "subtypes": "Run",
+        "printings": [{
+            "artist": "Matheus Calza",
+            "flavour": "“I’ll use what I have to get what I want.” ",
+            "code": "35003",
+            "img_type": "nrdb",
+            "set": "ele"
+        }],
+        "title": "Charm Offensive",
+        "stripped_title": "Charm Offensive",
+        "stripped_text": "Run Archives. When that run ends, you may trash 1 rezzed copy of a card you accessed in Archives during that run.",
+        "text": "Run Archives. When that run ends, you may trash 1 rezzed copy of a card you accessed in Archives during that run.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "program",
+        "faction": "shaper",
+        "cost": 1,
+        "memory_cost": 2,
+        "influence": 1,
+        "printings": [{
+            "artist": "Elwin \"Jakuza\" Rumplmair",
+            "flavour": "“For my children’s sake, I’ll endure any pain.”\n—Dewi Subrotoputri, as Dyah Kunthi",
+            "code": "35029",
+            "img_type": "nrdb",
+            "set": "ele"
+        }],
+        "title": "Azimat",
+        "stripped_title": "Azimat",
+        "stripped_text": "2 recurring credit (When you install this program and before your turn begins, refill to 2 hosted credits.) You can spend hosted credits to pay trash costs.",
+        "text": "2[recurring credit] </i>(When you install this program and before your turn begins, refill to 2 hosted credits.)<i>\nYou can spend hosted credits to pay trash costs.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "ice",
+        "faction": "nbn",
+        "cost": 4,
+        "strength": 4,
+        "influence": 2,
+        "printings": [{
+            "artist": "Ed Mattinain",
+            "flavour": "”On the Net, we hold the power.”\n—Arnold Teoh, NBN technologist",
+            "code": "35064",
+            "img_type": "nrdb",
+            "set": "ele"
+        }],
+        "title": "N-Pot",
+        "stripped_title": "N-Pot",
+        "stripped_text": "3 credit : Break 1 subroutine on this ice. Only the Runner can use this ability. subroutine End the run. subroutine If the threat level is 2 or greater, end the run. subroutine If the threat level is 4 or greater, end the run.",
+        "text": "3[credit]: Break 1 subroutine on this ice. Only the Runner can use this ability.\n[subroutine] End the run.\n[subroutine] If the threat level is 2 or greater, end the run.\n[subroutine] If the threat level is 4 or greater, end the run.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "ice",
+        "faction": "neutral-runner",
+        "cost": 2,
+        "influence": 0,
+        "printings": [{
+            "artist": "Ferenc Patk\u00f3s",
+            "flavour": "Itur in antiquam telam.",
+            "code": "35080",
+            "img_type": "nrdb",
+            "set": "ele"
+        }],
+        "title": "Lamplighter",
+        "stripped_title": "Lamplighter",
+        "stripped_text": "When an agenda is scored or stolen from this server or its root, trash this ice. subroutine Give the Runner 1 tag unless they pay 3 credit. subroutine End the run if the Runner is tagged.",
+        "text": "When an agenda is scored or stolen from this server or its root, trash this ice.\n[subroutine] Give the Runner 1 tag unless they pay 3[credit].\n[subroutine] End the run if the Runner is tagged.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "operation",
+        "faction": "neutral-runner",
+        "cost": 3,
+        "influence": 0,
+        "printings": [{
+            "artist": "Matheus Calza",
+            "code": "35081",
+            "img_type": "nrdb",
+            "set": "ele"
+        }],
+        "title": "Petty Cash",
+        "stripped_title": "Petty Cash",
+        "stripped_text": "Play only if you have not finished an action yet this turn. Gain 5 credit. If you played this operation from anywhere except HQ, gain click. click: Play this operation from Archives. After it resolves, remove it from the game.",
+        "text": "Play only if you have not finished an action yet this turn.\nGain 5[credit]. If you played this operation from anywhere except HQ, gain [click].\n[click]: Play this operation from Archives. After it resolves, remove it from the game.",
         "uniqueness": false
     }
 ]
