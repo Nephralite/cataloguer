@@ -463,14 +463,14 @@ fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Option<
                     remaining.into_iter().filter(|x| x.faction == temp).collect()
                 }},
             "fmt" | "format" | "z" | "legal" => match value {
-                "startup" | "sup" => search_cards("(cy:lib or cy:sg or cy:su21) -banned:startup -o:\"starter game only\"", backend, remaining)?,
-                "neo" => search_cards("is:nsg -set:ele -banned:neo -o:\"starter game only\"", backend, remaining)?,
+                "startup" | "sup" => search_cards("(cy:lib or cy:sg or cy:ele) -banned:startup -o:\"starter game only\"", backend, remaining)?,
+                "neo" => search_cards("is:nsg -set:su21 -banned:neo -o:\"starter game only\"", backend, remaining)?,
                 //"rig" | "postgateway" | "librealis" | "twocycle" => search_cards("date>=sg -banned:rig -o:\"starter game only\"", backend, remaining)?,
-                "standard" | "current" | "std" | "24.12" => search_cards("-banned:standard -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) or set:rar", backend, remaining)?,
-                "25.04" => search_cards("is:nsg -set:su21 -banned:25.04 -o:\"starter game only\"", backend, remaining)?, 
+                "standard" | "current" | "std" | "25.04" => search_cards("-banned:standard -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) or set:rar", backend, remaining)?,
+                "24.12" => search_cards("is:nsg -set:ele -banned:24.12 -o:\"starter game only\"", backend, remaining)?, 
                 "sunset" => search_cards("-banned:sunset -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) or cy:mor", backend, remaining)?,
-                "eternal" => search_cards("-banned:eternal -o:\"starter game only\" -set:tdc -cy:draft -cy:napd -cy:ele", backend, remaining)?,
-                "pawnshop" => search_cards("-o:\"starter game only\" -set:tdc -cy:draft -cy:napd -cy:ele (is:corp tob>509) or (is:runner tob>426)", backend, remaining)?,
+                "eternal" => search_cards("-banned:eternal -o:\"starter game only\" -set:tdc -cy:draft -cy:napd", backend, remaining)?,
+                "pawnshop" => search_cards("-o:\"starter game only\" -set:tdc -cy:draft -cy:napd (is:corp tob>509) or (is:runner tob>426)", backend, remaining)?,
                 _ => vec!(),
             },
             "ft" | "flavor" | "flavour" => remaining.into_iter().filter(
