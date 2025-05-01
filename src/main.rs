@@ -2,13 +2,14 @@ use anyhow::Context; use askama::Template;
 use axum::{
     extract::{Query, State, Path}, 
     http::StatusCode, 
-    response::{Html, IntoResponse, Response}, 
+    response::{Html, Json, IntoResponse, Response},
     routing::get,
     Router
 };
 use regex::Regex;
+//use serde::Serialize;
 use serde_json::{json, Map, Value};
-use std::{collections::HashMap, env};
+use std::{collections::HashMap, env, fmt::Debug};
 use rand::thread_rng;
 use rand::seq::SliceRandom;
 use tokio::net::TcpListener;
@@ -53,6 +54,7 @@ async fn main() -> anyhow::Result<()> {
         .route("/cards/:id/:printing", get(cardpage))
         .route("/syntax", get(syntax))
         .route("/sets", get(setspage))
+        .route("/simple_api/", get(simple_api))
         .with_state(backend)
         .nest_service(
             "/assets",
@@ -62,7 +64,7 @@ async fn main() -> anyhow::Result<()> {
         Ok(port) => port,
         Err(_) => "8080".to_owned()
     };
-    let listener = TcpListener::bind(format!("0.0.0.0:{port}")).await.unwrap();
+    let listener = TcpListener::bind(format!("0.0.0.0:{port}")).await?;
 
     info!("router initialized, listening on localhost:{port}");
 
@@ -143,7 +145,7 @@ struct SearchForm {
     dir: Option<String>
 }
 
-fn as_operator<T: std::cmp::PartialEq + std::cmp::PartialOrd + std::fmt::Debug>(
+fn as_operator<T: PartialEq + PartialOrd + Debug>(
     operand: &str,
     c1: T,
     c2: T,
@@ -190,6 +192,12 @@ impl IntoResponse for Templates {
     }
 }
 
+#[derive(serde::Serialize)]
+struct SimpleAPIout {
+    results: Vec<String>,
+    len: usize,
+}
+
 async fn cardpage(Path(params): Path<HashMap<String, String>>, State(backend): State<Backend>) -> impl IntoResponse {
     let printing = params.get("printing").unwrap().parse().unwrap();
     let id = params.get("id").unwrap();
@@ -202,6 +210,25 @@ async fn cardpage(Path(params): Path<HashMap<String, String>>, State(backend): S
     Templates::CardPageTemplate(CardPageTemplate{ query:"".to_owned(), order:"".to_owned(), dir:"".to_owned(), card: card.clone(), x: printing, legality: Legality {startup, standard, eternal}})
 }
 
+async fn simple_api(
+    State(backend): State<Backend>,
+    Query(params): Query<SearchForm>
+) -> impl IntoResponse {
+    if let Some(query) = params.search {
+        let mut temp: Vec<String> = vec![];
+        let results: Option<Vec<Card>> = search_cards(&query, &backend, backend.cards.clone());
+        if results.is_some() {
+            for card in results.unwrap() {
+                temp.push(card.printings.last().unwrap().code.clone());
+            }
+            Json(SimpleAPIout{len: temp.len(), results: temp}).into_response()
+        } else {
+            Json("").into_response()
+        }
+    } else {
+        Json("").into_response()
+    }
+}
 async fn search(
     State(backend): State<Backend>,
     Query(params): Query<SearchForm>,
