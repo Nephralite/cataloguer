@@ -194,7 +194,7 @@ impl IntoResponse for Templates {
 
 #[derive(serde::Serialize)]
 struct SimpleAPIout {
-    results: Vec<String>,
+    data: Vec<String>,
     len: usize,
 }
 
@@ -221,12 +221,12 @@ async fn simple_api(
             for card in results.unwrap() {
                 temp.push(card.printings.last().unwrap().code.clone());
             }
-            Json(SimpleAPIout{len: temp.len(), results: temp}).into_response()
+            Json(SimpleAPIout{len: temp.len(), data: temp}).into_response()
         } else {
-            Json("").into_response()
+            Json(SimpleAPIout{len: 0, data: vec!()})
         }
     } else {
-        Json("").into_response()
+        Json(SimpleAPIout{len: 0, data: vec!()})
     }
 }
 async fn search(
