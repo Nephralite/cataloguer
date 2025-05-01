@@ -223,10 +223,10 @@ async fn simple_api(
             }
             Json(SimpleAPIout{len: temp.len(), data: temp}).into_response()
         } else {
-            Json(SimpleAPIout{len: 0, data: vec!()})
+            Json(SimpleAPIout{len: 0, data: vec!()}).into_response()
         }
     } else {
-        Json(SimpleAPIout{len: 0, data: vec!()})
+        Json(SimpleAPIout{len: 0, data: vec!()}).into_response()
     }
 }
 async fn search(
