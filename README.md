@@ -8,8 +8,8 @@ Currently still in development, with a beta release out on the website, currentl
 
 What this is / plans to be
 - a versatile and powerful Netrunner card search engine
-- a catalog of ALL printings of Netrunner cards, inlcuding official prize kits (and maybe some proxies with permission of their creators)
-- easily integratable into NRO in the future
+- a catalog of ALL printings of Netrunner cards, including official prize kits (and maybe some proxies with permission of their creators)
+- easily integrable into NRO in the future
 
 What this is not
 - a replacement for all of nrdb, it's a neat website and deckbuilder

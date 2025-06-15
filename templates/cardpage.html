@@ -11,15 +11,15 @@
         <img class="w-3/5 h-auto" src="https://card-images.netrunnerdb.com/v2/large/{{card.printings[x].code}}.jpg">
     {% endif -%}
     </div>
-    <div id="card-info" class="flex items-center"><div>
-        <h1 id="top-bar">{{card.title}}  
+    <div id="card-info" class="border-2">
+        <div class="p-5 pb-3 pt-3 flex flex-row"><h1 class="font-bold basis-1/4">{{card.title}}</h1><h1 class="basis-3/4 text-right">
             {% if card.type_code == "agenda" -%}
                 {{card.advancement_cost.unwrap()}}/{{card.agenda_points.unwrap()}}
             {% else if card.type_code != "identity" -%}
                 {{card.cost.unwrap()}}[credit]
             {% endif -%}
-        </h1>
-        <span><strong>{{card.type_code}}{% if card.subtypes.is_some() -%}:</strong> {{card.subtypes.clone().unwrap()}}{% else -%}</strong>{% endif -%}<br>
+        </h1></div>
+        <span class="block border-b border-t"><strong>{{card.type_code}}{% if card.subtypes.is_some() -%}:</strong> {{card.subtypes.clone().unwrap()}}{% else -%}</strong>{% endif -%}<br>
         {% if card.strength.is_some() && card.memory_cost.is_none() -%}
             Strength: {{card.strength.unwrap()}} <br>
         {% else if card.strength.is_none() && card.memory_cost.is_some() -%}
@@ -34,10 +34,10 @@
             <span class="block italic text-wrap">{{card.printings[x].flavour.clone().unwrap()|safe}}</span>
             {% endif -%}
         {% if card.printings[x].artist.is_some() -%}
-        <span>Illustrated by <a href="https://cataloguer.web.app/?search=a%3A&quot;{{card.printings[x].artist.clone().unwrap()}}&quot;">{{card.printings[x].artist.clone().unwrap()}}</a></span><br>
+        <span class="block border-b border-t">Illustrated by <a href="https://cataloguer.web.app/?search=a%3A&quot;{{card.printings[x].artist.clone().unwrap()}}&quot;">{{card.printings[x].artist.clone().unwrap()}}</a></span><br>
         {% endif -%}
         {% if card.influence.is_some() -%}
-        <span> Influence: {{card.influence.unwrap()}} {{card.faction}}<span></br>
+        <span class="block border-b"> Influence: {{card.influence.unwrap()}} {{card.faction}}</span></br>
         {% endif -%} <br>
         <span>
             Startup: {{legality.startup}}<br>
