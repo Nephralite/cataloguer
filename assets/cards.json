@@ -20438,7 +20438,6 @@
     },
     {
         "cost": 1,
-        "eternal_points": 1,
         "faction": "criminal",
         "influence": 1,
         "subtypes": "Connection",
@@ -23481,7 +23480,8 @@
         "text": "Play only if the Runner trashed a card while accessing it during their last turn.\nTrace[2]. If successful, trash 2 installed non-program cards. If unsuccessful, take 1 bad publicity.",
         "title": "Hellion Beta Test",
         "type_code": "operation",
-        "uniqueness": false
+        "uniqueness": false,
+        "eternal_points": 2
     },
     {
         "advancement_cost": 2,
@@ -29890,7 +29890,7 @@
         "uniqueness": true
     },
     {
-        "eternal_points": 2,
+        "eternal_points": 3,
         "base_link": 1,
         "faction": "shaper",
         "influence": 0,
@@ -34233,7 +34233,6 @@
     {
         "advancement_cost": 3,
         "agenda_points": 1,
-        "eternal_points": 1,
         "faction": "jinteki",
         "influence": 0,
         "subtypes": "Ambush",
@@ -38567,7 +38566,8 @@
         "title": "Big Deal",
         "trash_cost": 3,
         "type_code": "operation",
-        "uniqueness": false
+        "uniqueness": false,
+        "eternal_points": 1
     },
     {
         "advancement_cost": null,
@@ -39220,7 +39220,8 @@
         "text": "Run any server. If successful, add 1 card from your heap to your grip.",
         "title": "Katorga Breakout",
         "type_code": "event",
-        "uniqueness": false
+        "uniqueness": false,
+        "eternal_points":  1
     },
     {
         "cost": 1,
@@ -39716,7 +39717,6 @@
         "uniqueness": false
     },
     {
-        "eternal_points": 1,
         "cost": 6,
         "faction": "shaper",
         "influence": 4,
@@ -43958,7 +43958,8 @@
         "stripped_title": "Nebula Talent Management: Making Stars",
         "stripped_text": "When your action phase ends, if you played an operation this turn, gain 1 credit and flip this identity. Flip side: The first time each turn you play an operation, gain click. When the Runner makes a successful run on HQ or R&D, flip this identity.",
         "text": "When your action phase ends, if you played an operation this turn, gain 1[credit] and flip this identity.\nFlip side:\nThe first time each turn you play an operation, gain [click].\nWhen the Runner makes a successful run on HQ or R&D, flip this identity.",
-        "uniqueness": false
+        "uniqueness": false,
+        "eternal_points":  1
     },
     {
         "type_code": "upgrade",
@@ -44132,7 +44133,8 @@
         "stripped_title": "Transfer of Wealth",
         "stripped_text": "Run HQ. If successful, take 1 tag and the Corp loses 3 credit. Gain 2 credit for each credit lost this way.",
         "text": "Run HQ. If successful, take 1 tag and the Corp loses 3[credit]. Gain 2[credit] for each credit lost this way.",
-        "uniqueness": false
+        "uniqueness": false,
+        "eternal_points": 1
     },
     {
         "type_code":"program",
