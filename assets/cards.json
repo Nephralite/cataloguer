@@ -4,8 +4,7 @@
         "influence_limit": null,
         "subtypes": "Megacorp",
         "minimum_deck_size": 30,
-        "nearprint": "The Syndicate: Profit over Principle",
-        "printings": [
+        "nearprint": "The Syndicate: Profit over Principle", "printings": [
             {
                 "artist": "Sawomir Maniak",
                 "code": "00005",
@@ -1276,7 +1275,7 @@
         "stripped_text": "Run R&D. If successful, access 2 additional cards when you breach R&D.",
         "stripped_title": "The Maker's Eye",
         "text": "Run R&D. If successful, access 2 additional cards when you breach R&D.",
-        "title": "The Maker\u2019s Eye",
+        "title": "The Maker's Eye",
         "type_code": "event",
         "uniqueness": false
     },
@@ -1621,7 +1620,7 @@
         "stripped_text": "When your turn begins, you may trash 1 of your other installed cards. If you do, gain 3 credits.",
         "stripped_title": "Aesop's Pawnshop",
         "text": "When your turn begins, you may trash 1 of your other installed cards. If you do, gain 3[credit].",
-        "title": "Aesop\u2019s Pawnshop",
+        "title": "Aesop's Pawnshop",
         "type_code": "resource",
         "uniqueness": true
     },
@@ -7542,7 +7541,7 @@
         "stripped_text": "The first time each turn you encounter a piece of ice, it gains code gate for the remainder of this run.",
         "stripped_title": "Rielle \"Kit\" Peddler: Transhuman",
         "text": "The first time each turn you encounter a piece of ice, it gains <strong>code gate</strong> for the remainder of this run.",
-        "title": "Rielle \u201cKit\u201d Peddler: Transhuman",
+        "title": "Rielle \"Kit\" Peddler: Transhuman",
         "pronouns": "she/her",
         "type_code": "identity",
         "uniqueness": false
@@ -11687,7 +11686,7 @@
         "stripped_text": "The first time each turn you play a run event, gain 1 credit.",
         "stripped_title": "Ken \"Express\" Tenma: Disappeared Clone",
         "text": "The first time each turn you play a <strong>run</strong> event, gain 1[credit].",
-        "title": "Ken \u201cExpress\u201d Tenma: Disappeared Clone",
+        "title": "Ken \"Express\" Tenma: Disappeared Clone",
         "pronouns": "he/him",
         "type_code": "identity",
         "uniqueness": false
@@ -27789,7 +27788,7 @@
         "stripped_text": "Before drawing your starting hand, set aside the top 6 cards of your stack facedown. (You may look at those cards at any time.) Shuffle 2 of those cards into your stack. click: Add 1 card set aside with this identity to your grip.",
         "stripped_title": "Ayla \"Bios\" Rahim: Simulant Specialist",
         "text": "Before drawing your starting hand, set aside the top 6 cards of your stack facedown. <em>(You may look at those cards at any time.)</em> Shuffle 2 of those cards into your stack.\n[click]<strong>:</strong> Add 1 card set aside with this identity to your grip.",
-        "title": "Ayla \u201cBios\u201d Rahim: Simulant Specialist",
+        "title": "Ayla \"Bios\" Rahim: Simulant Specialist",
         "pronouns": "she/her",
         "type_code": "identity",
         "uniqueness": false
@@ -33732,7 +33731,7 @@
         "stripped_text": "The first time you encounter a piece of ice during each run, place 1 power counter on this resource. trash, X hosted power counters: Derez the ice you are encountering if its strength is X or less. Take 1 tag.",
         "stripped_title": "\"Baklan\" Bochkin",
         "text": "The first time you encounter a piece of ice during each run, place 1 power counter on this resource.\n<strong>[trash], X hosted power counters:</strong> Derez the ice you are encountering if its strength is X or less. Take 1 tag.",
-        "title": "\u201cBaklan\u201d Bochkin",
+        "title": "\"Baklan\" Bochkin",
         "type_code": "resource",
         "uniqueness": true
     },
@@ -35337,7 +35336,7 @@
         "stripped_text": "click: Host 1 program or piece of hardware from your grip faceup on this resource. 1 credit: Install 1 hosted card. The first card you install this way during each of your turns costs 1 credit less to install for each unique () connection resource you have installed.",
         "stripped_title": "Paule's Cafe",
         "text": "<strong>[click]:</strong> Host 1 program or piece of hardware from your grip faceup on this resource.\n<strong>1[credit]:</strong> Install 1 hosted card. The first card you install this way during each of your turns costs 1[credit] less to install for each unique <em>({unique})</em> <strong>connection</strong> resource you have installed.",
-        "title": "Paule\u02bcs Caf\u00e9",
+        "title": "Paule's Café",
         "type_code": "resource",
         "uniqueness": true
     },
@@ -36122,7 +36121,7 @@
         "stripped_title": "Rene \"Loup\" Arcemont: Party Animal",
         "pronouns": "he/him",
         "text": "The first time each turn you trash a card you are accessing, gain 1[credit] and draw 1 card.",
-        "title": "Ren\u00e9 \u201cLoup\u201d Arcemont: Party Animal",
+        "title": "Ren\u00e9 \"Loup\" Arcemont: Party Animal",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -37202,7 +37201,7 @@
         "stripped_text": "When this agenda is scored or stolen, give the Runner 1 tag. Limit 1 per deck.",
         "stripped_title": "Tomorrow's Headline",
         "text": "When this agenda is scored or stolen, give the Runner 1 tag.\nLimit 1 per deck.",
-        "title": "Tomorrow\u02bcs Headline",
+        "title": "Tomorrow's Headline",
         "type_code": "agenda",
         "uniqueness": false
     },
@@ -42541,7 +42540,7 @@
         "stripped_text": "Whenever you breach R&D, if you are allowed to access 2 or more cards in R&D during this breach, you may access 1 additional card.",
         "stripped_title": "\"Pretty\" Mary da Silva",
         "text": "Whenever you breach R&D, if you are allowed to access 2 or more cards in R&D during this breach, you may access 1 additional card.",
-        "title": "\u201cPretty\u201d Mary da Silva",
+        "title": "\"Pretty\" Mary da Silva",
         "type_code": "resource",
         "uniqueness": true
     },
@@ -43019,7 +43018,7 @@
         "stripped_text": "When your turn begins, place 3 credits on this asset. click, add this asset to HQ: Take all credits from this asset. You may install 1 card from HQ.",
         "stripped_title": "Janaina \"JK\" Dumont Kindelan",
         "text": "When your turn begins, place 3[credit] on this asset.\n[click], <strong>add this asset to HQ:</strong> Take all credits from this asset. You may install 1 card from HQ.",
-        "title": "Jana\u00edna \u201cJK\u201d Dumont Kindel\u00e1n",
+        "title": "Jana\u00edna \"JK\" Dumont Kindel\u00e1n",
         "trash_cost": 1,
         "type_code": "asset",
         "uniqueness": true
@@ -43373,7 +43372,7 @@
         "stripped_text": "Resolve two of the following in any order: Draw 1 card. Shuffle 1 card from HQ into R&D. Install 1 piece of ice from HQ, ignoring all costs. Place 1 advancement counter on an installed card you can advance. Gain 2 credits.",
         "stripped_title": "Key Performance Inidicators",
         "text": "Resolve two of the following in any order: <ul><li>Draw 1 card.</li><li>Shuffle 1 card from HQ into R&D.</li><li>Install 1 piece of ice from HQ, ignoring all costs.</li><li>Place 1 advancement counter on an installed card you can advance.</li><li>Gain 2[credit].</li></ul>",
-        "title": "Key Performance Inidicators",
+        "title": "Key Performance Indicators",
         "type_code": "operation",
         "uniqueness": false
     },
@@ -43509,7 +43508,7 @@
         "stripped_text": "2 recurring-credit (When you rez this upgrade and before your turn begins, refill to 2 hosted credits.) You can spend hosted credits to rez assets in the root of this server and ice protecting this server. Persistent -> The trash cost of each asset in the root of this server is increased by 2credit. Limit 1 region per server.",
         "stripped_title": "Mahkota Langit Grid",
         "text": "2[recurring-credit] <i>(When you install this card and before your turn begins, refill to 2 hosted credits.)</i>\nYou can spend hosted credits to rez assets in the root of this server and ice protecting this server.\nPersistent -> The trash cost of each asset in the root of this server is increased by 2[credit].\nLimit 1 <b>region</b> per server.", 
-        "title":"Mahkota City Grid",
+        "title":"Mahkota Langit Grid",
         "type_code": "upgrade",
         "trash_cost": 2,
         "uniqueness": false
@@ -43606,7 +43605,7 @@
         "stripped_text": "When you install this hardware and when your turn begins, you may host this hardware on an installed non-AI icebreaker. Host icebreaker gets +1 strength. Abilities that increase its strength last for the remainder of the run (instead of any shorter duration).",
         "stripped_title": "GAMEDRAGONTM Pro",
         "text": "When you install this hardware and when your turn begins, you may host this hardware on an installed non-<strong>AI icebreaker</strong>.\nHost <strong>icebreaker</strong> gets +1 strength. Abilities that increase its strength last for the remainder of the run <i>(instead of any shorter duration)</i>.",
-        "title": "GAMEDRAGONTM Pro",
+        "title": "GAMEDRAGON™ Pro",
         "uniqueness": true
     },
     {
@@ -43642,7 +43641,7 @@
             "img_type": "nrdb",
             "set": "ele"
         }],
-        "title": "Ryō “Phoenix” Ōno: Out of the Ashes",
+        "title": "Ryō \"Phoenix\" Ōno: Out of the Ashes",
         "stripped_title": "Ryo \"Phoenix\" Ono: Out of the Ashes",
         "pronouns": "any/all",
         "stripped_text": "The first time each turn a run becomes successful after a subroutine resolved during that run, gain 1credit and the corp trashes 1 card from HQ.",
@@ -43701,7 +43700,7 @@
             "img_type": "nrdb",
             "set": "ele"
         }],
-        "title": "PT Untaian: Life’s Building Blocks",
+        "title": "PT Untaian: Life's Building Blocks",
         "stripped_title": "PT Untaian: Lifes Building Blocks",
         "stripped_text": "When your discard phase ends, if there are 3 or fewer cards in HQ, you may pay 1 credit to place 1 advancement counter on an unrezzed card you can advance. (You cannot score that card this turn.)",
         "text": "When your discard phase ends, if there are 3 or fewer cards in HQ, you may pay 1[credit] to place 1 advancement counter on an unrezzed card you can advance. <i>(You cannot score that card this turn.)</i>",
@@ -43760,7 +43759,7 @@
             "img_type": "nrdb",
             "set": "ele"
         }],
-        "title": "Barry “Baz” Wong: Tri-Maf Veteran",
+        "title": "Barry \"Baz\" Wong: Tri-Maf Veteran",
         "stripped_title": "Barry \"Baz\" Wong: Tri-Maf Veteran",
         "stripped_text": "Whenever the Corp rezzes a piece of ice, you may install 1 resource or piece of hardware from your grip.",
         "text": "Whenever the Corp rezzes a piece of ice, you may install 1 resource or piece of hardware from your grip.",
@@ -43897,7 +43896,7 @@
             "img_type": "nrdb",
             "set": "ele"
         }],
-        "title": "“Knickknack” O’Brian",
+        "title": "\"Knickknack\" O’Brian",
         "stripped_title": "\"Knickknack\" O'Brian",
         "stripped_text": "The first time each turn a run begins, you may trash 1 of your other installed cards. If you do, gain credits equal to its printed install cost and draw 1 card.",
         "text": "The first time each turn a run begins, you may trash 1 of your other installed cards. If you do, gain credits equal to its printed install cost and draw 1 card.",
@@ -44366,8 +44365,8 @@
             "img_type": "nrdb",
             "set": "ele"
         }],
-        "title": "Magelectric Rapid (748 Mod)",
-        "stripped_title": "Magelectric Rapid (748 Mod)",
+        "title": "Maglectric Rapid (748 Mod)",
+        "stripped_title": "Maglectric Rapid (748 Mod)",
         "stripped_text": "Whenever you make a successful run on HQ, you may trash this hardware to derez 1 installed Corp card.",
         "text": "Whenever you make a successful run on HQ, you may trash this hardware to derez 1 installed Corp card.",
         "uniqueness":true
@@ -44907,7 +44906,7 @@
     },
     {
         "type_code": "ice",
-        "faction": "neutral-runner",
+        "faction": "neutral-corp",
         "cost": 2,
         "influence": 0,
         "printings": [{
@@ -44925,7 +44924,7 @@
     },
     {
         "type_code": "operation",
-        "faction": "neutral-runner",
+        "faction": "neutral-corp",
         "cost": 3,
         "influence": 0,
         "printings": [{

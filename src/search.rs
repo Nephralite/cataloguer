@@ -190,7 +190,7 @@ pub fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Opt
                     "24.12" => search_cards("cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) -banned:24.12 -o:\"starter game only\"", backend, remaining)?,
                     "sunset" => search_cards("-banned:sunset -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) or cy:mor", backend, remaining)?,
                     "eternal" => search_cards("-banned:eternal -o:\"starter game only\" -set:tdc -cy:draft -cy:napd", backend, remaining)?,
-                    "pawnshop" => search_cards("-o:\"starter game only\" -set:tdc -cy:draft -cy:napd (is:corp tob>509) or (is:runner tob>426)", backend, remaining)?,
+                    "pawnshop" => search_cards("-o:\"starter game only\" -set:tdc -cy:draft -cy:napd (is:corp tob>523) or (is:runner tob>442)", backend, remaining)?,
                     _ => vec!(),
                 },
                 "ft" | "flavor" | "flavour" => remaining.into_iter().filter(
