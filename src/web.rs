@@ -139,6 +139,7 @@ pub(crate) async fn search(
             match params.order.clone().unwrap_or("".to_owned()).as_str() {
                 "artist" => results.sort_by_key(|card| card.printings.last()?.artist.clone()),
                 "cost" => results.sort_by_key(|card| card.cost),
+                "type" => results.sort_by_key(|card| card.type_code.clone()),
                 "faction" => results.sort_by_key(|card| faction_order(&card.faction)),
                 "inf" => results.sort_by_key(|card| card.influence),
                 "released" => results.sort_by_key(|card| card.printings.first().unwrap().code.clone()),
