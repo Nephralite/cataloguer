@@ -191,6 +191,7 @@ pub fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Opt
                     "sunset" => search_cards("-banned:sunset -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) or cy:mor", backend, remaining)?,
                     "eternal" => search_cards("-banned:eternal -o:\"starter game only\" -set:tdc -cy:draft -cy:napd", backend, remaining)?,
                     "pawnshop" => search_cards("-o:\"starter game only\" -set:tdc -cy:draft -cy:napd (is:corp tob>532) or (is:runner tob>442)", backend, remaining)?,
+                    "pawnshopprev" => search_cards("-o:\"starter game only\" -set:tdc -cy:draft -cy:napd (is:corp tobold>532) or (is:runner tobold>442)", backend, remaining)?,
                     "throwback" => search_cards("-banned:throwback -o:\"starter game only\" -set:tdc -cy:draft -cy:napd", backend, remaining)?,
                     _ => vec!(),
                 },
@@ -281,11 +282,20 @@ pub fn search_cards(query: &str, backend: &Backend, card_pool: Vec<Card>) -> Opt
                             as_operator(operator, ranks[&x.title].as_u64(), value.parse::<u64>().ok())
                         } else {
                             println!("card not in trasho: {}", &x.title); false
-                        }).collect()}
+                        }).collect()},
                 "trash" | "bin" | "h" => {
                     if value.parse::<u64>().is_err() {println!("{} was an invalid search term", buffer); continue;}
                     remaining.into_iter().filter(|x| as_operator(operator, x.trash_cost, value.parse::<u8>().ok())).collect()
                 },
+                "tobold" => {
+                    //these are only imported as needed to minimize load on general cataloguer searches, might lower performance for this search though
+                    let ranks = serde_json::from_str::<Map<String, Value>>(&std::fs::read_to_string("assets/tob_old.json").unwrap()).unwrap();
+                    remaining.into_iter().filter(
+                        |x| if ranks.contains_key(&x.title) {
+                            as_operator(operator, ranks[&x.title].as_u64(), value.parse::<u64>().ok())
+                        } else {
+                            println!("card not in trasho: {}", &x.title); false
+                        }).collect()},
                 "_" | "name" => remaining.into_iter().filter(|x: &Card| {x.stripped_title.to_lowercase().contains(&part)}).collect(),
                 _ => remaining, //skip if invalid mode
             };
