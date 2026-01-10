@@ -1,12 +1,22 @@
 [
   {
+    "code": "vp",
+    "name": "Vantage Point",
+    "cycle": true,
+    "date": "02/03/26",
+    "cards": 66,
+    "start_num": "36001",
+    "end_num": "36066",
+    "pt": "expansion"
+  },
+  {
     "code": "ele",
     "name": "Elevation",
     "cycle": true,
     "date": "24/04/25",
     "cards": 82,
     "start_num": "35001",
-    "end_num": "35085",
+    "end_num": "35082",
     "pt": "core"
   },
   {

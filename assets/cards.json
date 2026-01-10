@@ -44938,5 +44938,103 @@
         "stripped_text": "Play only if you have not finished an action yet this turn. Gain 5 credit. If you played this operation from anywhere except HQ, gain click. click: Play this operation from Archives. After it resolves, remove it from the game.",
         "text": "Play only if you have not finished an action yet this turn.\nGain 5[credit]. If you played this operation from anywhere except HQ, gain [click].\n[click]: Play this operation from Archives. After it resolves, remove it from the game.",
         "uniqueness": false
+    },
+    {
+        "type_code": "program",
+        "subtypes": "Icebreaker - Fracter",
+        "faction": "anarch",
+        "cost": 3,
+        "influence": 2,
+        "memory_cost": 1,
+        "strength": 0,
+        "printings": [{
+            "artist": "Anna Butova",
+            "flavour": "There have been many golden ages of piracy, each occurring on stranger and stormier waters.",
+            "code": "36004",
+            "img_type": "nrdb",
+            "set": "vp"
+        }],
+        "title": "Corsair",
+        "stripped_title": "Corsair",
+        "stripped_text": "Interface → 1 credit: Break 1 barrier subroutine. 1 credit: The barrier you are encountering gets −3 strength for the remainder of this encounter. Spend credits only from stealth cards to use this ability.",
+        "text": "Interface → <strong>1[credit]:</strong> Break 1 <strong>barrier</strong> subroutine.\n<strong>1[credit]:</strong> The <strong>barrier</strong> you are encountering gets −3 strength for the remainder of this encounter. Spend credits only from <strong>stealth</strong> cards to use this ability.",
+        "uniqueness":false
+    },
+    {
+        "type_code": "program",
+        "faction": "anarch",
+        "cost": 1,
+        "influence": 2,
+        "memory_cost": 1,
+        "printings": [{
+            "artist": "Júlio Rocha",
+            "flavour": "“We herald the goddess.”",
+            "code": "36005",
+            "img_type": "nrdb",
+            "set": "vp"
+        }],
+        "title": "Lampades",
+        "stripped_title": "Lampades",
+        "stripped_text": "When you install this program, place 3 power counters on it. Access -> Hosted power counter, pay the printed rez or play cost of the card you are accessing: Trash that card. Spend credits only from stealth cards to use this ability.",
+        "text": "When you install this program, place 3 power counters on it.\nAccess → <strong>Hosted power counter</strong>, <strong>pay the printed rez or play cost of the card you are accessing:</strong> Trash that card. Spend credits only from <strong>stealth</strong> cards to use this ability.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "resource",
+        "subtypes": "Connection",
+        "faction": "criminal",
+        "cost": 1,
+        "influence": 2,
+        "printings": [{
+            "artist": "Mauricio Herrera",
+            "flavour": "“Got me out of a jam, so I lend it a hand sometimes. Same with most of us: favors, debts, blackmail, whatever. Point is, when Vic calls, you pick up.”",
+            "code": "36016",
+            "img_type": "nrdb",
+            "set": "vp"
+        }],
+        "title": "Underdome Irregulars",
+        "stripped_title": "Underdome Irregulars",
+        "stripped_text": "When your action phase ends, if a piece of ice was rezzed this turn, draw 2 cards or remove 1 tag. If no ice was rezzed this turn, trash this resource.",
+        "text": "When your action phase ends, if a piece of ice was rezzed this turn, draw 2 cards or remove 1 tag. If no ice was rezzed this turn, trash this resource.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "asset",
+        "subtypes": "Facility",
+        "faction": "haas-bioroid",
+        "cost": 3,
+        "influence": 2,
+        "printings": [{
+            "artist": "Anna Butova",
+            "flavour": 	"The cyclotron’s utility was discovered after its magnets quenched during load testing, resulting in 1,600 tons of liquid helium venting directly into Heinlein city tenements and an anomalous 13-second local time loss. An apology was issued, funerals were covered, and funding was rerouted to recreate the error at scale.",
+            "code": "36027",
+            "img_type": "nrdb",
+            "set": "vp"
+        }],
+        "title": "Synchrocyclotron",
+        "stripped_title": "Synchrocyclotron",
+        "stripped_text": "The first double operation you play each turn costs click less to play.",
+        "text": "The first <strong>double</strong> operation you play each turn costs [click] less to play.",
+        "trash_cost": 3,
+        "uniqueness": true
+    },
+    {
+        "type_code": "operation",
+        "subtypes": "Double",
+        "faction": "nbn",
+        "cost": 3,
+        "influence": 3,
+        "printings": [{
+            "artist": "Dimik",
+            "flavour": "There is a tipping point where an ad becomes so omnipresent, it’s subliminal.",
+            "code": "36053",
+            "img_type": "nrdb",
+            "set": "vp"
+        }],
+        "title": "Flood the Market",
+        "stripped_title": "Flood the Market",
+        "stripped_text": "As an additional cost to play this operation, spend click. Choose 1 installed card you can advance. Place 1 advancement counter on that card for each remote server that has a card in its root and is protected by ice.",
+        "text": "As an additional cost to play this operation, spend [click].\nChoose 1 installed card you can advance. Place 1 advancement counter on that card for each remote server that has a card in its root and is protected by ice.",
+        "uniqueness": false
     }
 ]
