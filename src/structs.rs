@@ -30,6 +30,7 @@ pub struct Legality {
 #[derive(serde::Serialize)]
 pub struct SimpleAPIout {
     pub data: Vec<String>,
+    pub error: Option<String>,
     pub len: usize,
 }
 

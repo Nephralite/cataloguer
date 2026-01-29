@@ -1,8 +1,5 @@
-use std::borrow::Cow;
-
-use anyhow::anyhow;
 use pest::{
-    iterators::{Pair, Pairs},
+    iterators::Pair,
     Parser,
 };
 use pest_derive::Parser;
@@ -199,7 +196,7 @@ pub(crate) struct SearchSettings {
     pub display: Option<ResultDisplay>,
 }
 impl SearchSettings {
-    pub fn update(&mut self, key: SettingsKey, value: &str) -> Result<(), ParseError> {
+    fn update(&mut self, key: SettingsKey, value: &str) -> Result<(), ParseError> {
         match key {
             SettingsKey::Direction => {
                 if self.direction.is_some() {

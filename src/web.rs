@@ -1,4 +1,4 @@
-use std::collections::HashMap;
+use std::collections::{HashMap, HashSet};
 use askama::Template;
 use askama_axum::{IntoResponse, Response};
 use axum::extract::{Path, Query, State};
@@ -10,7 +10,7 @@ use rand::thread_rng;
 use serde_json::{Map, Value};
 use crate::parse::{SearchDirection, SearchOrder, SearchSettings, parse_query};
 use crate::structs::{Backend, Card, Legality, Set, SimpleAPIout};
-use crate::search::{self, do_search, faction_order, search_cards};
+use crate::search::{self, card_matches, do_search, faction_order};
 
 pub async fn setspage(State(backend): State<Backend>) -> impl IntoResponse {
     Templates::SetsPageTemplate(SetsPageTemplate {query:"".to_owned(), order:"".to_owned(), dir:"".to_owned(), sets:backend.sets})
@@ -110,9 +110,10 @@ pub async fn cardpage(Path(params): Path<HashMap<String, String>>, State(backend
     let id = params.get("id").unwrap();
     let card = backend.cards.iter().find(|x| x.stripped_title.to_lowercase() == *id).unwrap();
 
-    let startup = if search::search_cards("z:startup", &backend, vec!(card.clone())) == Some(vec!(card.clone())) {"legal"} else if search_cards("banned:startup", &backend, vec!(card.clone())) == Some(vec!(card.clone())) {"banned"} else {"not legal"};
-    let standard= if search::search_cards("z:standard", &backend, vec!(card.clone())) == Some(vec!(card.clone())) {"legal"} else if search_cards("banned:standard", &backend, vec!(card.clone())) == Some(vec!(card.clone())) {"banned"} else {"not legal"};
-    let eternal = if search::search_cards("ep>0", &backend, vec!(card.clone())) == Some(vec!(card.clone())) {format!("{} Points", card.eternal_points.unwrap())} else if search_cards("z:eternal", &backend, vec!(card.clone())) == Some(vec!(card.clone())) {"legal".to_owned()} else if search_cards("banned:eternal", &backend, vec!(card.clone())) == Some(vec!(card.clone())) {"banned".to_owned()} else {"not legal".to_owned()};
+    // SAFETY: The unwrap() calls here should all be safe as these are static string searches.
+    let startup = if card_matches("z:startup", &backend, card).unwrap() {"legal"} else if card_matches("banned:startup", &backend, card).unwrap() {"banned"} else {"not legal"};
+    let standard= if card_matches("z:standard", &backend, card).unwrap() {"legal"} else if card_matches("banned:standard", &backend, card).unwrap() {"banned"} else {"not legal"};
+    let eternal = if card_matches("ep>0", &backend, card).unwrap() {format!("{} Points", card.eternal_points.unwrap())} else if card_matches("z:eternal", &backend, card).unwrap() {"legal".to_owned()} else if card_matches("banned:eternal", &backend, card).unwrap() {"banned".to_owned()} else {"not legal".to_owned()};
 
     Templates::CardPageTemplate(CardPageTemplate{ query:"".to_owned(), order:"".to_owned(), dir:"".to_owned(), card: card.clone(), x: printing, legality: Legality {startup, standard, eternal}})
 }
@@ -122,18 +123,12 @@ pub async fn simple_api(
     Query(params): Query<SearchForm>
 ) -> impl IntoResponse {
     if let Some(query) = params.search {
-        let mut temp: Vec<String> = vec![];
-        let results: Option<Vec<Card>> = search_cards(&query, &backend, backend.cards.clone());
-        if results.is_some() {
-            for card in results.unwrap() {
-                temp.push(card.printings.last().unwrap().code.clone());
-            }
-            Json(SimpleAPIout{len: temp.len(), data: temp}).into_response()
-        } else {
-            Json(SimpleAPIout{len: 0, data: vec!()}).into_response()
+        match do_search(&query, &backend, SearchSettings::default()) {
+            Ok(printings) => Json(SimpleAPIout{len: printings.len(), data: printings.iter().map(|printing| printing.code.clone()).collect(), error: None}).into_response(),
+            Err(e) => Json(SimpleAPIout{len: 0, data: vec!(), error: Some(e.to_string())}).into_response(),
         }
     } else {
-        Json(SimpleAPIout{len: 0, data: vec!()}).into_response()
+        Json(SimpleAPIout{len: 0, data: vec!(), error: Some("no query provided".to_string())}).into_response()
     }
 }
 
