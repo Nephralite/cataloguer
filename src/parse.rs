@@ -1,7 +1,4 @@
-use pest::{
-    iterators::Pair,
-    Parser,
-};
+use pest::{iterators::Pair, Parser};
 use pest_derive::Parser;
 use thiserror::Error;
 
@@ -46,13 +43,24 @@ impl TryFrom<&Pair<'_, Rule>> for TextValue {
     fn try_from(value: &Pair<'_, Rule>) -> Result<Self, Self::Error> {
         let vs = value.as_str();
         match value.as_rule() {
-            Rule::exact_quoted_value => Ok(TextValue::Exact((vs[2..vs.len() - 1]).replace("\\\"", "\"").replace("\\\\", "\\"))),
+            Rule::exact_quoted_value => Ok(TextValue::Exact(
+                (vs[2..vs.len() - 1])
+                    .replace("\\\"", "\"")
+                    .replace("\\\\", "\\"),
+            )),
             Rule::exact_unquoted_value => Ok(TextValue::Exact(vs[1..vs.len()].to_string())),
             Rule::quoted_value => Ok(TextValue::Plain(
-                vs[1..vs.len() - 1].to_lowercase().replace("\\\"", "\"").replace("\\\\", "\\"),
+                vs[1..vs.len() - 1]
+                    .to_lowercase()
+                    .replace("\\\"", "\"")
+                    .replace("\\\\", "\\"),
             )),
             Rule::unquoted_value => Ok(TextValue::Plain(vs.to_lowercase().to_string())),
-            Rule::regex_value => Ok(TextValue::Regex(vs[1..vs.len() - 1].replace("\\/", "/").replace("\\\\", "\\"))),
+            Rule::regex_value => Ok(TextValue::Regex(
+                vs[1..vs.len() - 1]
+                    .replace("\\/", "/")
+                    .replace("\\\\", "\\"),
+            )),
 
             _ => Err(ParseError::Unreachable(format!(
                 "invalid inner for TextValue: {:?}",
