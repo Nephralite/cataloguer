@@ -52,7 +52,9 @@ impl TryFrom<&Pair<'_, Rule>> for TextValue {
             // TODO: string escaping or something lol
             Rule::exact_quoted_value => Ok(TextValue::Exact((vs[2..vs.len() - 1]).to_string())),
             Rule::exact_unquoted_value => Ok(TextValue::Exact(vs[1..vs.len()].to_string())),
-            Rule::quoted_value => Ok(TextValue::Plain(vs[1..vs.len() - 1].to_lowercase().to_string())),
+            Rule::quoted_value => Ok(TextValue::Plain(
+                vs[1..vs.len() - 1].to_lowercase().to_string(),
+            )),
             Rule::unquoted_value => Ok(TextValue::Plain(vs.to_lowercase().to_string())),
             Rule::regex_value => Ok(TextValue::Regex(vs[1..vs.len() - 1].to_string())),
 
@@ -102,6 +104,29 @@ pub enum NumericKey {
     Strength,
     TrashCost,
 }
+impl TryFrom<&str> for NumericKey {
+    type Error = ParseError;
+
+    fn try_from(value: &str) -> Result<Self, Self::Error> {
+        match value {
+            "adv" | "g" | "advancement" => Ok(Self::Advancement),
+            "c" | "cost" | "rez" => Ok(Self::Cost),
+            "ep" => Ok(Self::EternalPoints),
+            "i" | "inf" | "influence" => Ok(Self::InfluenceCost),
+            "inf_lim" | "il" => Ok(Self::InfulenceLimit),
+            "l" | "link" => Ok(Self::Link),
+            "m" | "mem" | "memory" => Ok(Self::Memory),
+            "md" | "min_deck" => Ok(Self::MinDeck),
+            "nrdb" => Ok(Self::NRDB),
+            "p" | "v" | "points" => Ok(Self::Points),
+            "str" | "strength" => Ok(Self::Strength),
+            "trash" | "bin" | "h" => Ok(Self::Strength),
+            _ => Err(ParseError::InvalidFilter(format!(
+                "not a numeric filter: '{value}'"
+            ))),
+        }
+    }
+}
 
 #[derive(Debug)]
 pub enum NumericComparator {
@@ -121,6 +146,23 @@ impl NumericComparator {
             NumericComparator::Geq => x >= y,
             NumericComparator::Le => x < y,
             NumericComparator::Leq => x <= y,
+        }
+    }
+}
+impl TryFrom<&str> for NumericComparator {
+    type Error = ParseError;
+
+    fn try_from(value: &str) -> Result<Self, Self::Error> {
+        match value {
+            "<=" => Ok(Self::Leq),
+            ">=" => Ok(Self::Geq),
+            "!=" => Ok(Self::Neq),
+            "=" => Ok(Self::Eq),
+            ">" => Ok(Self::Ge),
+            "<" => Ok(Self::Le),
+            _ => Err(ParseError::Unreachable(format!(
+                "invalid comparator: {value}"
+            ))),
         }
     }
 }
@@ -310,44 +352,12 @@ fn parse_filter(
         Rule::numeric_filter => {
             let mut iter = the_filter.into_inner();
             let key_str = iter.next().unwrap().as_str();
-            let comparator = iter.next().unwrap();
+            let comparator_str = iter.next().unwrap().as_str();
             let value = iter.next().unwrap().as_str().parse().unwrap();
             Ok(QueryNode::NumFilter(NumFilter {
-                key: match key_str {
-                    "adv" | "g" | "advancement" => NumericKey::Advancement,
-                    "c" | "cost" | "rez" => NumericKey::Cost,
-                    "ep" => NumericKey::EternalPoints,
-                    "i" | "inf" | "influence" => NumericKey::InfluenceCost,
-                    "inf_lim" | "il" => NumericKey::InfulenceLimit,
-                    "l" | "link" => NumericKey::Link,
-                    "m" | "mem" | "memory" => NumericKey::Memory,
-                    "md" | "min_deck" => NumericKey::MinDeck,
-                    "nrdb" => NumericKey::NRDB,
-                    "p" | "v" | "points" => NumericKey::Points,
-                    "str" | "strength" => NumericKey::Strength,
-                    "trash" | "bin" | "h" => NumericKey::Strength,
-                    _ => {
-                        return Err(ParseError::InvalidFilter(format!(
-                            "not a numeric filter: '{}'",
-                            key_str
-                        )))
-                    }
-                },
+                key: NumericKey::try_from(key_str)?,
                 value,
-                comparator: match comparator.as_str() {
-                    "<=" => NumericComparator::Leq,
-                    ">=" => NumericComparator::Geq,
-                    "!=" => NumericComparator::Neq,
-                    "=" => NumericComparator::Eq,
-                    ">" => NumericComparator::Ge,
-                    "<" => NumericComparator::Le,
-                    _ => {
-                        return Err(ParseError::Unreachable(format!(
-                            "invalid comparator: {}",
-                            comparator.as_str()
-                        )))
-                    }
-                },
+                comparator: NumericComparator::try_from(comparator_str)?,
             }))
         }
         Rule::negative_filter | Rule::positive_filter => {
@@ -429,6 +439,27 @@ fn parse_filter(
             }
 
             // Special case for setting search settings from the query.
+            // TODO
+
+            // Special case: first check if it's actually a NumericFilter using ":" as a comparator.
+            if let Ok(numeric_key) = NumericKey::try_from(key_str) {
+                if matches!(value_pair.as_rule(), Rule::regex_value) {
+                    return Err(ParseError::InvalidFilter(format!(
+                        "cannot use regex inputs with a numeric filter like '{key_str}'"
+                    )));
+                }
+                let Ok(value) = text_value.value().parse() else {
+                    return Err(ParseError::InvalidFilter(format!(
+                        "not a valid integer for filter '{key_str}': '{}'",
+                        text_value.value()
+                    )));
+                };
+                return Ok(QueryNode::NumFilter(NumFilter {
+                    key: numeric_key,
+                    value,
+                    comparator: NumericComparator::Eq,
+                }));
+            }
 
             // Parse actual `TextFilter`s.
             Ok(QueryNode::TextFilter(TextFilter {
@@ -447,7 +478,7 @@ fn parse_filter(
                     "_" | "name" => TextKey::Name,
                     _ => {
                         return Err(ParseError::InvalidFilter(format!(
-                            "not a text filter: '{key_str}'"
+                            "not a filter: '{key_str}'"
                         )))
                     }
                 },
@@ -464,7 +495,7 @@ fn parse_filter(
             if !matches!(value.as_rule(), Rule::value) {
                 return Err(ParseError::Unreachable(
                     "inner of negative_value should always be value".to_string(),
-                )); 
+                ));
             }
             let Some(inner) = value.into_inner().next() else {
                 return Err(ParseError::Unreachable(
