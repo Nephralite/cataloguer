@@ -405,8 +405,8 @@ pub(crate) fn do_search(query: &str, backend: &Backend, form_settings: SearchSet
     // Safety: when building this list, we only insert a Card if we have a printing for it - so
     // card.printings is always nonempty, so it's safe to call unwrap() on .first() and .last()
 
-    // TODO: do a default sort *first*, so that subsequent sorts that aren't based on a total order
-    // have a nice-looking output
+    // By default, sort the cards by their latest NRDB printing.
+    results.sort_by_key(|card| card.printings.last().unwrap().code.parse::<u64>().ok()); 
 
     let search_order = settings.sort.or(form_settings.sort).unwrap_or(SearchOrder::Released);
     match search_order {
