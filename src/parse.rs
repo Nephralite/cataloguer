@@ -1,5 +1,6 @@
 use pest::{iterators::Pair, Parser};
 use pest_derive::Parser;
+use regex::Regex;
 use thiserror::Error;
 
 #[derive(Parser)]
@@ -18,6 +19,7 @@ pub enum QueryNode {
 #[derive(Debug)]
 pub struct TextFilter {
     pub key: TextKey,
+    pub original_key: String,
     pub value: TextValue,
     pub is_negated: bool,
 }
@@ -26,7 +28,7 @@ pub struct TextFilter {
 pub enum TextValue {
     Plain(String),
     Exact(String),
-    Regex(String),
+    Regex(Regex),
 }
 impl TextValue {
     pub fn value(&self) -> &str {
@@ -34,6 +36,14 @@ impl TextValue {
             TextValue::Plain(s) => s.as_str(),
             TextValue::Exact(s) => s.as_str(),
             TextValue::Regex(s) => s.as_str(),
+        }
+    }
+
+    pub fn matches(&self, text: &str) -> bool {
+        match self {
+            TextValue::Plain(s) => text.to_lowercase().contains(&s.to_lowercase()),
+            TextValue::Exact(_) => unreachable!(), // should hit a "not yet implemented" first
+            TextValue::Regex(re) => re.is_match(text),
         }
     }
 }
@@ -56,11 +66,14 @@ impl TryFrom<&Pair<'_, Rule>> for TextValue {
                     .replace("\\\\", "\\"),
             )),
             Rule::unquoted_value => Ok(TextValue::Plain(vs.to_lowercase().to_string())),
-            Rule::regex_value => Ok(TextValue::Regex(
-                vs[1..vs.len() - 1]
+            Rule::regex_value => {
+                let re = vs[1..vs.len() - 1]
                     .replace("\\/", "/")
-                    .replace("\\\\", "\\"),
-            )),
+                    .replace("\\\\", "\\");
+                Ok(TextValue::Regex(
+                    Regex::new(&re).map_err(|_| ParseError::InvalidRegex(re))?,
+                ))
+            }
 
             _ => Err(ParseError::Unreachable(format!(
                 "invalid inner for TextValue: {:?}",
@@ -593,6 +606,7 @@ fn parse_filter(
                         )))
                     }
                 },
+                original_key: key_str.to_string(),
                 value: text_value,
                 is_negated,
             })))
@@ -616,6 +630,7 @@ fn parse_filter(
 
             Ok(Some(QueryNode::TextFilter(TextFilter {
                 key: TextKey::Name,
+                original_key: "".to_string(),
                 value: (&inner).try_into()?,
                 is_negated: true,
             })))
@@ -629,6 +644,7 @@ fn parse_filter(
 
             Ok(Some(QueryNode::TextFilter(TextFilter {
                 key: TextKey::Name,
+                original_key: "".to_string(),
                 value: (&inner).try_into()?,
                 is_negated: false,
             })))

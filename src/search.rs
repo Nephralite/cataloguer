@@ -198,19 +198,11 @@ fn search_impl<'a>(
             Ok(pool.into_owned())
         }
         QueryNode::TextFilter(text_filter) => {
-            let text_value = match text_filter.value {
-                TextValue::Regex(_) => {
-                    return Err(SearchError::NotYetImplemented(
-                        "regex searching".to_string(),
-                    ))
-                }
-                TextValue::Exact(_) => {
-                    return Err(SearchError::NotYetImplemented(
-                        "exact-string searching".to_string(),
-                    ))
-                }
-                TextValue::Plain(ref s) => s.clone(),
-            };
+            if matches!(text_filter.value, TextValue::Exact(_)) {
+                return Err(SearchError::NotYetImplemented(
+                    "exact-string searching".to_string(),
+                ));
+            }
             let results: HashSet<SearchPrinting> = match text_filter.key {
                 TextKey::Artist => card_pool
                     .iter()
@@ -218,11 +210,21 @@ fn search_impl<'a>(
                         x.printing
                             .artist
                             .as_ref()
-                            .is_some_and(|s| s.to_lowercase().contains(&text_value))
+                            .is_some_and(|s| text_filter.value.matches(s))
                     })
                     .copied()
                     .collect(),
                 TextKey::Agenda => {
+                    let text_value = match text_filter.value {
+                        TextValue::Plain(s) => s,
+                        TextValue::Exact(_) => unreachable!(),
+                        TextValue::Regex(_) => {
+                            return Err(SearchError::QueryError(format!(
+                                "can't use regex with '{}:' filter",
+                                text_filter.original_key
+                            )))
+                        }
+                    };
                     let parts: Vec<&str> = text_value.split('/').collect();
                     // reusable error message
                     let bad_agenda = || {
@@ -244,6 +246,16 @@ fn search_impl<'a>(
                     )?
                 }
                 TextKey::Banned => {
+                    let text_value = match text_filter.value {
+                        TextValue::Plain(s) => s,
+                        TextValue::Exact(_) => unreachable!(),
+                        TextValue::Regex(_) => {
+                            return Err(SearchError::QueryError(format!(
+                                "can't use regex with '{}:' filter",
+                                text_filter.original_key
+                            )))
+                        }
+                    };
                     let Some(banlist_arr) =
                         backend.banlist.get(&text_value).and_then(|a| a.as_array())
                     else {
@@ -258,6 +270,16 @@ fn search_impl<'a>(
                         .collect()
                 }
                 TextKey::Date => {
+                    let text_value = match text_filter.value {
+                        TextValue::Plain(s) => s,
+                        TextValue::Exact(_) => unreachable!(),
+                        TextValue::Regex(_) => {
+                            return Err(SearchError::QueryError(format!(
+                                "can't use regex with '{}:' filter",
+                                text_filter.original_key
+                            )))
+                        }
+                    };
                     let sets: Vec<&Set> = match &text_value {
                         x if Regex::new(r"^\d{2}/\d{2}/\d{4}$").unwrap().is_match(x) => {
                             return Err(SearchError::NotYetImplemented(
@@ -295,6 +317,16 @@ fn search_impl<'a>(
                         .collect()
                 }
                 TextKey::Faction => {
+                    let text_value = match text_filter.value {
+                        TextValue::Plain(s) => s,
+                        TextValue::Exact(_) => unreachable!(),
+                        TextValue::Regex(_) => {
+                            return Err(SearchError::QueryError(format!(
+                                "can't use regex with '{}:' filter",
+                                text_filter.original_key
+                            )))
+                        }
+                    };
                     let faction = match text_value.as_str() {
                         "a" => "anarch",
                         "c" | "crim" => "criminal",
@@ -323,6 +355,16 @@ fn search_impl<'a>(
                     }
                 }
                 TextKey::Format => {
+                    let text_value = match text_filter.value {
+                        TextValue::Plain(s) => s,
+                        TextValue::Exact(_) => unreachable!(),
+                        TextValue::Regex(_) => {
+                            return Err(SearchError::QueryError(format!(
+                                "can't use regex with '{}:' filter",
+                                text_filter.original_key
+                            )))
+                        }
+                    };
                     let query_str = match text_value.as_str() {
                         "startup" | "sup" => "(cy:lib or cy:sg or cy:ele) -banned:startup -o:\"starter game only\"",
                         "neo" => "is:nsg -set:su21 -banned:neo -o:\"starter game only\"",
@@ -349,7 +391,7 @@ fn search_impl<'a>(
                         x.printing
                             .flavour
                             .as_ref()
-                            .is_some_and(|s| s.to_lowercase().contains(&text_value))
+                            .is_some_and(|s| text_filter.value.matches(s))
                     })
                     .copied()
                     .collect(),
@@ -359,7 +401,7 @@ fn search_impl<'a>(
                         x.card
                             .stripped_text
                             .as_ref()
-                            .is_some_and(|s| s.to_lowercase().contains(&text_value))
+                            .is_some_and(|s| text_filter.value.matches(s))
                     })
                     .copied()
                     .collect(),
@@ -379,11 +421,21 @@ fn search_impl<'a>(
                         x.card
                             .pronouns
                             .as_ref()
-                            .is_some_and(|s| s.to_lowercase().contains(&text_value))
+                            .is_some_and(|s| text_filter.value.matches(s))
                     })
                     .copied()
                     .collect(),
                 TextKey::Set => {
+                    let text_value = match text_filter.value {
+                        TextValue::Plain(s) => s,
+                        TextValue::Exact(_) => unreachable!(),
+                        TextValue::Regex(_) => {
+                            return Err(SearchError::QueryError(format!(
+                                "can't use regex with '{}:' filter",
+                                text_filter.original_key
+                            )))
+                        }
+                    };
                     let set = backend
                         .sets
                         .iter()
@@ -406,18 +458,18 @@ fn search_impl<'a>(
                         x.card
                             .subtypes
                             .as_ref()
-                            .is_some_and(|s| s.to_lowercase().contains(&text_value))
+                            .is_some_and(|s| text_filter.value.matches(s))
                     })
                     .copied()
                     .collect(),
                 TextKey::Type => card_pool
                     .iter()
-                    .filter(|x| x.card.type_code.contains(&text_value))
+                    .filter(|x| text_filter.value.matches(&x.card.type_code))
                     .copied()
                     .collect(),
                 TextKey::Name => card_pool
                     .iter()
-                    .filter(|x| x.card.stripped_title.to_lowercase().contains(&text_value))
+                    .filter(|x| text_filter.value.matches(&x.card.stripped_title))
                     .copied()
                     .collect(),
             };
