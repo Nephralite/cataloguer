@@ -7,6 +7,7 @@ use rand::seq::SliceRandom;
 use rand::thread_rng;
 use regex::Regex;
 use serde_json::{json, Map, Value};
+use tracing::debug;
 use std::borrow::Cow;
 use std::collections::HashSet;
 use std::fmt::Debug;
@@ -59,7 +60,7 @@ pub(crate) fn do_search(
     backend: &Backend,
     form_settings: SearchSettings,
 ) -> Result<Vec<Printing>, SearchError> {
-    println!("Begin query: '{query}'");
+    debug!("Begin query: '{query}'");
     let (node, settings) = parse_query(query)?;
     let card_pool: HashSet<SearchPrinting> = backend
         .cards
@@ -152,7 +153,7 @@ pub(crate) fn card_matches(
     backend: &Backend,
     card: &Card,
 ) -> Result<bool, SearchError> {
-    println!("Begin query: '{query}'");
+    debug!("Begin query: '{query}'");
     let (node, _) = parse_query(query)?;
     let card_pool: HashSet<SearchPrinting> = card
         .printings
@@ -169,7 +170,7 @@ fn search_impl<'a>(
     card_pool: &HashSet<SearchPrinting<'a>>,
     depth: usize,
 ) -> Result<HashSet<SearchPrinting<'a>>, SearchError> {
-    println!("{} {:?}", ">".repeat(depth), &node);
+    debug!("{} {:?}", ">".repeat(depth), &node);
     let results = match node {
         QueryNode::OrGroup(inner_nodes) => {
             // doing this with iterators is a huge pain due to the Result handling, unfortunately
@@ -577,9 +578,9 @@ fn search_impl<'a>(
 
     match &results {
         Ok(set) => {
-            println!("{} {} results found", ">".repeat(depth), set.len())
+            debug!("{} {} results found", ">".repeat(depth), set.len())
         }
-        Err(e) => println!("{} Search error: {e}", ">".repeat(depth)),
+        Err(e) => debug!("{} Search error: {e}", ">".repeat(depth)),
     }
 
     results
