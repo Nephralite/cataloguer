@@ -611,7 +611,8 @@ fn parse_filter(
                 is_negated,
             })))
         }
-        Rule::negative_value => {
+        Rule::negative_value | Rule::positive_value => {
+            let is_negated = matches!(the_filter.as_rule(), Rule::negative_value);
             let Some(value) = the_filter.into_inner().next() else {
                 return Err(ParseError::Unreachable(
                     "negative_value should always have inner".to_string(),
@@ -632,21 +633,7 @@ fn parse_filter(
                 key: TextKey::Name,
                 original_key: "".to_string(),
                 value: (&inner).try_into()?,
-                is_negated: true,
-            })))
-        }
-        Rule::value => {
-            let Some(inner) = the_filter.into_inner().next() else {
-                return Err(ParseError::Unreachable(
-                    "value should always have inner".to_string(),
-                ));
-            };
-
-            Ok(Some(QueryNode::TextFilter(TextFilter {
-                key: TextKey::Name,
-                original_key: "".to_string(),
-                value: (&inner).try_into()?,
-                is_negated: false,
+                is_negated,
             })))
         }
         _ => Err(ParseError::Unreachable(
