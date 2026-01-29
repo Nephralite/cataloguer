@@ -1,16 +1,13 @@
-use std::collections::{HashMap, HashSet};
+use std::collections::HashMap;
 use askama::Template;
 use askama_axum::{IntoResponse, Response};
 use axum::extract::{Path, Query, State};
 use axum::http::StatusCode;
 use axum::Json;
 use axum::response::Html;
-use rand::prelude::SliceRandom;
-use rand::thread_rng;
-use serde_json::{Map, Value};
-use crate::parse::{SearchDirection, SearchOrder, SearchSettings, parse_query};
+use crate::parse::{SearchDirection, SearchSettings};
 use crate::structs::{Backend, Card, Legality, Set, SimpleAPIout};
-use crate::search::{self, card_matches, do_search, faction_order};
+use crate::search::{card_matches, do_search};
 
 pub async fn setspage(State(backend): State<Backend>) -> impl IntoResponse {
     Templates::SetsPageTemplate(SetsPageTemplate {query:"".to_owned(), order:"".to_owned(), dir:"".to_owned(), sets:backend.sets})
