@@ -424,7 +424,7 @@ pub(crate) fn do_search(query: &str, backend: &Backend, form_settings: SearchSet
             results.sort_by_key(|card| ranks.get(&card.title).unwrap().as_u64())
         },
         // TODO: handle not-implemented search types (e.g. strength, type) as well
-        other => return Err(SearchError::NotYetImplemented(format!("search order {other:?}"))),
+        other => return Err(SearchError::NotYetImplemented(format!("sorting by {other:?}"))),
     };
 
     let search_direction = settings.direction.or(form_settings.direction).unwrap_or(SearchDirection::Ascending);
@@ -433,7 +433,6 @@ pub(crate) fn do_search(query: &str, backend: &Backend, form_settings: SearchSet
     }
 
     let printing_preference = settings.prefer.or(form_settings.prefer).unwrap_or(PrintingPreference::Newest);
-    println!("End query: '{query}'");
     match printing_preference {
         PrintingPreference::Oldest => Ok(results.into_iter().map(|c| c.printings.first().unwrap().clone()).collect()),
         PrintingPreference::Newest => Ok(results.into_iter().map(|c| c.printings.last().unwrap().clone()).collect()),

@@ -198,6 +198,69 @@ pub(crate) struct SearchSettings {
     pub unique_by: Option<UniqueBy>,
     pub display: Option<ResultDisplay>,
 }
+impl SearchSettings {
+    pub fn update(&mut self, key: SettingsKey, value: &str) -> Result<(), ParseError> {
+        match key {
+            SettingsKey::Direction => {
+                if self.direction.is_some() {
+                    return Err(ParseError::DefinedTwice("sort direction".to_string()));
+                }
+                self.direction = Some(SearchDirection::try_from(value)?);
+            }
+            SettingsKey::SortBy => {
+                if self.sort.is_some() {
+                    return Err(ParseError::DefinedTwice("sort by".to_string()));
+                }
+                self.sort = Some(SearchOrder::try_from(value)?);
+            }
+            SettingsKey::Prefer => {
+                if self.prefer.is_some() {
+                    return Err(ParseError::DefinedTwice("printing preference".to_string()));
+                }
+                self.prefer = Some(PrintingPreference::try_from(value)?);
+            }
+            SettingsKey::UniqueBy => {
+                if self.unique_by.is_some() {
+                    return Err(ParseError::DefinedTwice("unique by".to_string()));
+                }
+                self.unique_by = Some(UniqueBy::try_from(value)?);
+            }
+            SettingsKey::Display => {
+                if self.display.is_some() {
+                    return Err(ParseError::DefinedTwice("display format".to_string()));
+                }
+                self.display = Some(ResultDisplay::try_from(value)?);
+            }
+        }
+
+        Ok(())
+    }
+}
+
+#[derive(Debug)]
+enum SettingsKey {
+    Direction,
+    SortBy,
+    Prefer,
+    UniqueBy,
+    Display,
+}
+impl TryFrom<&str> for SettingsKey {
+    type Error = ParseError;
+
+    fn try_from(value: &str) -> Result<Self, Self::Error> {
+        match value {
+            "order" | "sort" => Ok(Self::SortBy),
+            "dir" | "direction" => Ok(Self::Direction),
+            "prefer" => Ok(Self::Prefer),
+            "unique" => Ok(Self::UniqueBy),
+            "display" => Ok(Self::Display),
+            _ => Err(ParseError::InvalidFilter(format!(
+                "not a settings key: '{value}'"
+            ))),
+        }
+    }
+}
 
 #[derive(Debug)]
 pub(crate) enum SearchOrder {
@@ -214,7 +277,7 @@ pub(crate) enum SearchOrder {
     Type,
 }
 impl TryFrom<&str> for SearchOrder {
-    type Error = ();
+    type Error = ParseError;
 
     fn try_from(value: &str) -> Result<Self, Self::Error> {
         match value {
@@ -229,7 +292,9 @@ impl TryFrom<&str> for SearchOrder {
             "set" => Ok(Self::Set),
             "tob" => Ok(Self::TrashOrBusto),
             "type" => Ok(Self::Type),
-            _ => Err(()),
+            _ => Err(ParseError::InvalidFilter(format!(
+                "not a valid search order: '{value}'"
+            ))),
         }
     }
 }
@@ -239,11 +304,37 @@ pub(crate) enum SearchDirection {
     Ascending,
     Descending,
 }
+impl TryFrom<&str> for SearchDirection {
+    type Error = ParseError;
+
+    fn try_from(value: &str) -> Result<Self, Self::Error> {
+        match value {
+            "asc" | "ascending" => Ok(Self::Ascending),
+            "desc" | "descending" => Ok(Self::Descending),
+            _ => Err(ParseError::InvalidFilter(format!(
+                "not a valid search direction: '{value}'"
+            ))),
+        }
+    }
+}
 
 #[derive(Debug)]
 pub(crate) enum PrintingPreference {
     Oldest,
     Newest,
+}
+impl TryFrom<&str> for PrintingPreference {
+    type Error = ParseError;
+
+    fn try_from(value: &str) -> Result<Self, Self::Error> {
+        match value {
+            "oldest" => Ok(Self::Oldest),
+            "newest" | "latest" => Ok(Self::Newest),
+            _ => Err(ParseError::InvalidFilter(format!(
+                "not a valid printing preference: '{value}'"
+            ))),
+        }
+    }
 }
 
 #[derive(Debug)]
@@ -251,6 +342,20 @@ pub(crate) enum UniqueBy {
     Cards,
     Prints,
     Art,
+}
+impl TryFrom<&str> for UniqueBy {
+    type Error = ParseError;
+
+    fn try_from(value: &str) -> Result<Self, Self::Error> {
+        match value {
+            "cards" => Ok(Self::Cards),
+            "prints" => Ok(Self::Prints),
+            "art" => Ok(Self::Art),
+            _ => Err(ParseError::InvalidFilter(format!(
+                "not a valid uniqueness criterion: '{value}'"
+            ))),
+        }
+    }
 }
 
 #[derive(Debug)]
@@ -260,8 +365,23 @@ pub(crate) enum ResultDisplay {
     Full,
     Text,
 }
+impl TryFrom<&str> for ResultDisplay {
+    type Error = ParseError;
 
-pub fn parse_query(query: &str) -> Result<(QueryNode, SearchSettings), ParseError> {
+    fn try_from(value: &str) -> Result<Self, Self::Error> {
+        match value {
+            "grid" => Ok(Self::Grid),
+            "checklist" => Ok(Self::Checklist),
+            "full" => Ok(Self::Full),
+            "text" => Ok(Self::Text),
+            _ => Err(ParseError::InvalidFilter(format!(
+                "not a valid display format: '{value}'"
+            ))),
+        }
+    }
+}
+
+pub(crate) fn parse_query(query: &str) -> Result<(QueryNode, SearchSettings), ParseError> {
     let mut parsed = QueryParser::parse(Rule::input, query).or(Err(ParseError::Malformed))?;
 
     let pair = parsed.next().ok_or(ParseError::Unreachable(
@@ -280,7 +400,8 @@ pub fn parse_query(query: &str) -> Result<(QueryNode, SearchSettings), ParseErro
     ))?;
 
     let mut search_settings = SearchSettings::default();
-    let node = parse_query_group(query_group, &mut search_settings)?;
+    let node = parse_query_group(query_group, &mut search_settings)?
+        .unwrap_or(QueryNode::AndGroup(Vec::new()));
 
     Ok((node, search_settings))
 }
@@ -302,7 +423,7 @@ pub enum ParseError {
 fn parse_query_group(
     pair: Pair<'_, Rule>,
     settings: &mut SearchSettings,
-) -> Result<QueryNode, ParseError> {
+) -> Result<Option<QueryNode>, ParseError> {
     match pair.as_rule() {
         Rule::query_group => {
             let inner_group = pair
@@ -315,21 +436,26 @@ fn parse_query_group(
             let inner_bracketed = pair.into_inner().next().ok_or(ParseError::Unreachable("bracketed has exactly one inner".to_string()))?;
             parse_query_group(inner_bracketed, settings)
         }
-        Rule::or_query => Ok(QueryNode::OrGroup(
+        Rule::or_query => Ok(Some(QueryNode::OrGroup(
             pair
                 .into_inner()
-                .map(|inner| parse_query_group(inner, settings).map(Box::new))
+                .flat_map(
+                    |inner| parse_query_group(inner, settings)
+                    .transpose()
+                )
+                .map(|node| node.map(Box::new))
                 .collect::<Result<Vec<Box<QueryNode>>, ParseError>>()?,
-        )),
-        Rule::and_query => Ok(QueryNode::AndGroup(
+        ))),
+        Rule::and_query => Ok(Some(QueryNode::AndGroup(
             pair
                 .into_inner()
-                .map(|inner: Pair<'_, Rule>| {
-                    parse_query_group(inner, settings)
-                    .map(Box::new)
-                })
+                .flat_map(
+                    |inner| parse_query_group(inner, settings)
+                    .transpose()
+                )
+                .map(|node| node.map(Box::new))
                 .collect::<Result<Vec<Box<QueryNode>>, ParseError>>()?,
-        )),
+        ))),
         Rule::filter => parse_filter(pair, settings),
         other_rule => Err(ParseError::Unreachable(format!("expected one of `query_group | and_query | bracketed_query | or_query | filter`, got rule `{:?}`", other_rule))),
     }
@@ -338,7 +464,7 @@ fn parse_query_group(
 fn parse_filter(
     filter: Pair<'_, Rule>,
     settings: &mut SearchSettings,
-) -> Result<QueryNode, ParseError> {
+) -> Result<Option<QueryNode>, ParseError> {
     if !matches!(filter.as_rule(), Rule::filter) {
         return Err(ParseError::Unreachable(format!(
             "expected rule `filter`, got rule `{:?}`",
@@ -355,11 +481,11 @@ fn parse_filter(
             let key_str = iter.next().unwrap().as_str();
             let comparator_str = iter.next().unwrap().as_str();
             let value = iter.next().unwrap().as_str().parse().unwrap();
-            Ok(QueryNode::NumFilter(NumFilter {
+            Ok(Some(QueryNode::NumFilter(NumFilter {
                 key: NumericKey::try_from(key_str)?,
                 value,
                 comparator: NumericComparator::try_from(comparator_str)?,
-            }))
+            })))
         }
         Rule::negative_filter | Rule::positive_filter => {
             let is_negated = matches!(the_filter.as_rule(), Rule::negative_filter);
@@ -382,7 +508,7 @@ fn parse_filter(
                         "can't use regex/exact values in a '{key_str}:' filter."
                     )));
                 }
-                return Ok(QueryNode::IsFilter(IsFilter {
+                return Ok(Some(QueryNode::IsFilter(IsFilter {
                     filter_type: match text_value.value() {
                         "advanceable" => IsFilterType::Advanceable,
                         "corp" | "c" => IsFilterType::Corp,
@@ -404,11 +530,20 @@ fn parse_filter(
                         }
                     },
                     is_negated: negated,
-                }));
+                })));
             }
 
             // Special case for setting search settings from the query.
-            // TODO
+            if let Ok(settings_key) = SettingsKey::try_from(key_str) {
+                if matches!(value_pair.as_rule(), Rule::regex_value) {
+                    return Err(ParseError::InvalidFilter(format!(
+                        "cannot use regex inputs with settings like '{key_str}'"
+                    )));
+                }
+                settings.update(settings_key, text_value.value())?;
+
+                return Ok(None);
+            }
 
             // Special case: first check if it's actually a NumericFilter using ":" as a comparator.
             if let Ok(numeric_key) = NumericKey::try_from(key_str) {
@@ -423,15 +558,15 @@ fn parse_filter(
                         text_value.value()
                     )));
                 };
-                return Ok(QueryNode::NumFilter(NumFilter {
+                return Ok(Some(QueryNode::NumFilter(NumFilter {
                     key: numeric_key,
                     value,
                     comparator: NumericComparator::Eq,
-                }));
+                })));
             }
 
             // Parse actual `TextFilter`s.
-            Ok(QueryNode::TextFilter(TextFilter {
+            Ok(Some(QueryNode::TextFilter(TextFilter {
                 key: match key_str {
                     "a" | "artist" => TextKey::Artist,
                     "agenda" => TextKey::Agenda,
@@ -454,7 +589,7 @@ fn parse_filter(
                 },
                 value: text_value,
                 is_negated,
-            }))
+            })))
         }
         Rule::negative_value => {
             let Some(value) = the_filter.into_inner().next() else {
@@ -473,11 +608,11 @@ fn parse_filter(
                 ));
             };
 
-            Ok(QueryNode::TextFilter(TextFilter {
+            Ok(Some(QueryNode::TextFilter(TextFilter {
                 key: TextKey::Name,
                 value: (&inner).try_into()?,
                 is_negated: true,
-            }))
+            })))
         }
         Rule::value => {
             let Some(inner) = the_filter.into_inner().next() else {
@@ -486,11 +621,11 @@ fn parse_filter(
                 ));
             };
 
-            Ok(QueryNode::TextFilter(TextFilter {
+            Ok(Some(QueryNode::TextFilter(TextFilter {
                 key: TextKey::Name,
                 value: (&inner).try_into()?,
                 is_negated: false,
-            }))
+            })))
         }
         _ => Err(ParseError::Unreachable(
             "parse_filter fallthrough".to_string(),
