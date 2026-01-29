@@ -69,6 +69,7 @@ impl TryFrom<&Pair<'_, Rule>> for TextValue {
 #[derive(Debug)]
 pub enum TextKey {
     Artist,
+    Agenda,
     Banned,
     Date, // not really text but close enough
     Faction,
@@ -367,38 +368,6 @@ fn parse_filter(
             let value_pair = iter.next().unwrap().into_inner().next().unwrap();
             let text_value = TextValue::try_from(&value_pair)?;
 
-            // Syntactic sugar: "agenda" should parse out to an AndGroup of a points and value search
-            // TODO: move this out to the search layer, it doesn't need to live in the parse layer lol
-            if key_str == "agenda" {
-                let text_str = text_value.value();
-                let parts: Vec<&str> = text_str.split('/').collect();
-                // reusable error message
-                let bad_agenda = || {
-                    ParseError::InvalidFilter(format!(
-                        "not a valid 'agenda' filter: '{}'",
-                        text_value.value()
-                    ))
-                };
-                dbg!(text_value.value());
-                let [adv_str, points_str] = &parts[..] else {
-                    return Err(bad_agenda());
-                };
-                let adv_req: i32 = adv_str.parse().map_err(|_| bad_agenda())?;
-                let points: i32 = points_str.parse().map_err(|_| bad_agenda())?;
-                return Ok(QueryNode::AndGroup(vec![
-                    Box::new(QueryNode::NumFilter(NumFilter {
-                        key: NumericKey::Advancement,
-                        value: adv_req,
-                        comparator: NumericComparator::Eq,
-                    })),
-                    Box::new(QueryNode::NumFilter(NumFilter {
-                        key: NumericKey::Points,
-                        value: points,
-                        comparator: NumericComparator::Eq,
-                    })),
-                ]));
-            }
-
             // Special case for "is:" and "not:" filters.
             // In the grammar, they're functionally text filters, but we parse them into
             // `IsFilter`s instead.
@@ -465,6 +434,7 @@ fn parse_filter(
             Ok(QueryNode::TextFilter(TextFilter {
                 key: match key_str {
                     "a" | "artist" => TextKey::Artist,
+                    "agenda" => TextKey::Agenda,
                     "b" | "banned" => TextKey::Banned,
                     "d" | "date" | "year" => TextKey::Date,
                     "f" | "faction" => TextKey::Faction,

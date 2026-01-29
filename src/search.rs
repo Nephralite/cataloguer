@@ -477,6 +477,22 @@ fn search_impl<'a>(node: QueryNode, backend: &Backend, card_pool: &HashSet<Searc
                     )
                     .copied()
                     .collect(),
+                TextKey::Agenda => {
+                    let parts: Vec<&str> = text_value.split('/').collect();
+                    // reusable error message
+                    let bad_agenda = || {
+                        SearchError::QueryError(format!(
+                            "not a valid 'agenda' filter: '{}'",
+                            &text_value
+                        ))
+                    };
+                    let [adv_str, points_str] = &parts[..] else {
+                        return Err(bad_agenda());
+                    };
+                    let adv_req: i32 = adv_str.parse().map_err(|_| bad_agenda())?;
+                    let points: i32 = points_str.parse().map_err(|_| bad_agenda())?;
+                    inner_search(&format!("advancement:{adv_req} points:{points}"), backend, card_pool, depth+1)?
+                }   
                 TextKey::Banned => {
                     let Some(banlist_arr) = backend.banlist
                         .get(&text_value)
@@ -493,9 +509,10 @@ fn search_impl<'a>(node: QueryNode, backend: &Backend, card_pool: &HashSet<Searc
                 },
                 TextKey::Date => {
                     let sets: Vec<&Set> = match &text_value {
-                        x if Regex::new(r"\d{2}/\d{2}/\d{2}").unwrap().is_match(x) => return Err(SearchError::NotYetImplemented("dates of the form xx/xx/xx".to_string())), //think aboutthis one
-                        x if Regex::new(r"\d{4}").unwrap().is_match(x) => backend.sets.iter().filter(|x| x.date[6..8]==text_value[2..4]).collect(),
-                        x if Regex::new(r"\w{2,4}").unwrap().is_match(x) => backend.sets.iter().filter(|x| x.code==text_value).collect(), //works
+                        x if Regex::new(r"^\d{2}/\d{2}/\d{4}$").unwrap().is_match(x) => return Err(SearchError::NotYetImplemented("dates of the form xx/xx/xxxx".to_string())), //think aboutthis one
+                        x if Regex::new(r"^\d{2}/\d{2}/\d{2}$").unwrap().is_match(x) => return Err(SearchError::NotYetImplemented("dates of the form xx/xx/xx".to_string())), //think aboutthis one
+                        x if Regex::new(r"^\d{4}$").unwrap().is_match(x) => backend.sets.iter().filter(|x| !x.date.is_empty() && x.date[6..8]==text_value[2..4]).collect(),
+                        x if Regex::new(r"^\w{2,4}$").unwrap().is_match(x) => backend.sets.iter().filter(|x| x.code==text_value).collect(), //works
                         _ => return Err(SearchError::QueryError(format!("invalid date: '{text_value}'"))),
                     };
                     if sets.is_empty() {
