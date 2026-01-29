@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}{{query}} | Cataloguer Search{% endblock %}
+
+{% block content %}
+    {% include "search-bar.html" %}
+    <p class="text-red-600 px-10 py-4"> {{error}} </p>
+    <script defer>
+        //unhide the dropdown menu in the form
+        document.getElementById('dropdowns').hidden = false;
+    </script>
+{% endblock %}

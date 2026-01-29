@@ -1,7 +1,4 @@
-mod structs;
-mod web;
-
-use anyhow::Context;
+use anyhow::{Context, bail};
 use axum::{
     routing::get,
     Router
@@ -12,14 +9,24 @@ use tokio::net::TcpListener;
 use tower_http::services::ServeDir;
 use tracing::info;
 use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
+use cataloguer::*;
 
 //initialize a backend from our jsons
 fn init_backend() -> anyhow::Result<structs::Backend> {
-    Ok(structs::Backend {
+    let backend = structs::Backend {
         cards: serde_json::from_str::<Vec<structs::Card>>(&std::fs::read_to_string("assets/cards.json")?)?,
         banlist: serde_json::from_str::<Map<String, Value>>(&std::fs::read_to_string("assets/banned.json")?)?,
         sets: serde_json::from_str::<Vec<structs::Set>>(&std::fs::read_to_string("assets/sets.json")?)?,
-    })
+    };
+
+    // Safety check - ensure that all cards have at least one printing
+    for card in &backend.cards {
+        if card.printings.is_empty() {
+            bail!("Card '{}' has no printings!", card.title)
+        }
+    }
+    
+    Ok(backend)
 }
 
 //creates a router and hosts several pages on 0.0.0.0:PORT

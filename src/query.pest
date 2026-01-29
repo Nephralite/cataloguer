@@ -1,0 +1,32 @@
+input = { SOI ~ query_group ~ EOI }
+
+// A query is a group of filters.
+query_group = { or_query | and_query | bracketed_query }
+or_query = { (and_query | bracketed_query) ~ ( WHITE_SPACE+ ~ or ~ WHITE_SPACE+ ~ (and_query | bracketed_query) )+ }
+and_query = { (filter | bracketed_query) ~ ( WHITE_SPACE+ ~ (filter | bracketed_query) )* }
+bracketed_query = { "(" ~ WHITE_SPACE* ~ query_group ~ WHITE_SPACE* ~ ")" }
+
+// A filter is a key + comparator + value expression.
+filter = { numeric_filter | negative_filter | positive_filter | negative_value | value }
+
+key = { ASCII_ALPHA+ }
+
+negative_value = { "-" ~ value }
+positive_filter = { key ~ ":" ~ value }
+negative_filter = { "-" ~ key ~ ":" ~ value }
+numeric_filter = { key ~ comparator ~ numeric }
+
+comparator = { "<=" | ">=" | "!=" | "=" | ">" | "<" }
+
+// Values have a few forms, with quoting/regexes/bang-prefixing.
+value = { exact_quoted_value | quoted_value | regex_value | exact_unquoted_value | unquoted_value }
+
+exact_unquoted_value = { "!" ~ unquoted_value }
+exact_quoted_value = { "!" ~ quoted_value }
+unquoted_value = { !(or ~ WHITE_SPACE | "-") ~ (ASCII_ALPHANUMERIC | "-")+ }
+quoted_value = { "\"" ~ ("\\\"" | (!"\"" ~ ANY))* ~ "\"" }
+regex_value = { "/" ~ ("\\/" | (!"/" ~ ANY))* ~ "/" }
+numeric = { ASCII_DIGIT+ } // in principle we can parse better here but who cares
+
+or = _{ "or" | "OR" }
+
