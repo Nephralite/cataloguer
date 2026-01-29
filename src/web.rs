@@ -146,7 +146,6 @@ pub async fn search(
             display: None,
         };
 
-        // TODO: on Error, redirect to an error page or something rather than just returning nothing
         let results = match do_search(&query, &backend, form_search_settings) {
             Ok(results) => results,
             Err(e) => return Templates::SearchErrorTemplate(

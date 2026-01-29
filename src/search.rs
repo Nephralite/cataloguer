@@ -1,3 +1,4 @@
+use std::borrow::Cow;
 use std::collections::HashSet;
 use std::fmt::Debug;
 use serde_json::{json, Map, Value};
@@ -77,13 +78,13 @@ pub(crate) fn do_search(query: &str, backend: &Backend, form_settings: SearchSet
         SearchOrder::Influence => results.sort_by_key(|card| card.influence),
         SearchOrder::Released => results.sort_by_key(|card| &card.printings.first().unwrap().code),
         SearchOrder::Random => results.shuffle(&mut thread_rng()),
+        SearchOrder::Strength => results.sort_by_key(|card| card.strength),
+        SearchOrder::Set => return Err(SearchError::NotYetImplemented("sort by set".to_string())),
         SearchOrder::TrashOrBusto => {
             let ranks: Map<String, Value> = serde_json::from_str::<Map<String, Value>>(&std::fs::read_to_string("assets/trashobusto.json").unwrap()).unwrap();
             results = results.into_iter().filter(|c| ranks.contains_key(&c.title)).collect::<Vec<&Card>>();
             results.sort_by_key(|card| ranks.get(&card.title).unwrap().as_u64())
         },
-        // TODO: handle not-implemented search types (e.g. strength, type) as well
-        other => return Err(SearchError::NotYetImplemented(format!("sorting by {other:?}"))),
     };
 
     let search_direction = settings.direction.or(form_settings.direction).unwrap_or(SearchDirection::Ascending);
@@ -111,21 +112,20 @@ fn search_impl<'a>(node: QueryNode, backend: &Backend, card_pool: &HashSet<Searc
     println!("{} {:?}", ">".repeat(depth), &node);
     let results = match node {
         QueryNode::OrGroup(inner_nodes) => {
+            // doing this with iterators is a huge pain due to the Result handling, unfortunately
             let mut hs = HashSet::new();
-            // TODO: there's probably a way to do this nicely with a flat_map or something
             for inner in inner_nodes {
                 let results = search_impl(*inner, backend, card_pool, depth+1)?;
                 hs.extend(results);
-            }
+            }            
             Ok(hs)
         },
         QueryNode::AndGroup(inner_nodes) => {
-            // TODO: surely I can do this without the clone
-            let mut pool = card_pool.clone();
+            let mut pool = Cow::Borrowed(card_pool);
             for inner in inner_nodes {
-                pool = search_impl(*inner, backend, &pool, depth+1)?;
+                pool = Cow::Owned(search_impl(*inner, backend, &pool, depth+1)?);
             }
-            Ok(pool)
+            Ok(pool.into_owned())
         },
         QueryNode::TextFilter(text_filter) => {
             let text_value = match text_filter.value {
@@ -176,34 +176,21 @@ fn search_impl<'a>(node: QueryNode, backend: &Backend, card_pool: &HashSet<Searc
                 },
                 TextKey::Date => {
                     let sets: Vec<&Set> = match &text_value {
-                        x if Regex::new(r"^\d{2}/\d{2}/\d{4}$").unwrap().is_match(x) => return Err(SearchError::NotYetImplemented("dates of the form xx/xx/xxxx".to_string())), //think aboutthis one
-                        x if Regex::new(r"^\d{2}/\d{2}/\d{2}$").unwrap().is_match(x) => return Err(SearchError::NotYetImplemented("dates of the form xx/xx/xx".to_string())), //think aboutthis one
+                        x if Regex::new(r"^\d{2}/\d{2}/\d{4}$").unwrap().is_match(x) => return Err(SearchError::NotYetImplemented("dates of the form xx/xx/xxxx".to_string())),
+                        x if Regex::new(r"^\d{2}/\d{2}/\d{2}$").unwrap().is_match(x) => return Err(SearchError::NotYetImplemented("dates of the form xx/xx/xx".to_string())),
                         x if Regex::new(r"^\d{4}$").unwrap().is_match(x) => backend.sets.iter().filter(|x| !x.date.is_empty() && x.date[6..8]==text_value[2..4]).collect(),
                         x if Regex::new(r"^\w{2,4}$").unwrap().is_match(x) => backend.sets.iter().filter(|x| x.code==text_value).collect(), //works
                         _ => return Err(SearchError::QueryError(format!("invalid date: '{text_value}'"))),
                     };
-                    if sets.is_empty() {
-                        //fails on years like 2025, or 2001, then currently shows no cards
-                        return Ok(HashSet::new());
-                    } else if let [the_set] = &sets[..] {
-                        // if it's a single set, then just get that set
-                        card_pool.iter()
-                            .filter(
-                                |x| x.printing.set == the_set.code
-                            )
-                            .copied()
-                            .collect()
-                    } else {
-                        // TODO: why are we not just using the set matching code above??
-                        let start = sets.iter().fold("99999", |acc, x| if acc.parse::<u64>().ok() > x.start_num.parse::<u64>().ok() {&x.start_num} else {acc});
-                        let end = sets.iter().fold("00000", |acc, x| if acc.parse::<u64>().ok() < x.end_num.parse::<u64>().ok() {&x.end_num} else {acc});
-                        let query_string = format!("nrdb<{end} nrdb>{start}");
-                        let Ok((node, _)) = parse_query(&query_string) else {
-                            // TODO: should this maybe be a QueryError instead?
-                            return Err(SearchError::InternalError("failed to parse internally-generated query".to_string()))
-                        };
-                        search_impl(node, backend, card_pool, depth+1)?
-                    }
+                    let set_codes: Vec::<&str> = sets.into_iter().map(|set| set.code.as_str()).collect();
+                    
+                    card_pool.iter()
+                        .filter(
+                            |x| set_codes.contains(&x.printing.set.as_str())
+                        )
+                        .copied()
+                        .collect()
+                    
                 },
                 TextKey::Faction => {
                     let faction = match text_value.as_str() {
