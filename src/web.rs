@@ -153,7 +153,7 @@ pub async fn search(
                     query,
                     order: params.order.unwrap_or("".to_owned()),
                     dir: params.dir.unwrap_or("".to_owned()),
-                    error: e.to_string()
+                    error: e.to_string(),
                 }
             )
         };

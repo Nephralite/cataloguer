@@ -127,7 +127,7 @@ impl TryFrom<&str> for NumericKey {
             "str" | "strength" => Ok(Self::Strength),
             "trash" | "bin" | "h" => Ok(Self::Strength),
             _ => Err(ParseError::InvalidFilter(format!(
-                "not a numeric filter: '{value}'"
+                "not a valid numeric filter: '{value}'"
             ))),
         }
     }
@@ -260,7 +260,7 @@ impl TryFrom<&str> for SettingsKey {
             "unique" => Ok(Self::UniqueBy),
             "display" => Ok(Self::Display),
             _ => Err(ParseError::InvalidFilter(format!(
-                "not a settings key: '{value}'"
+                "not a valid settings key: '{value}'"
             ))),
         }
     }
@@ -420,7 +420,7 @@ pub enum ParseError {
     InvalidRegex(String),
     #[error("malformed query, failed to parse")]
     Malformed,
-    #[error("internal error - hit code path that should have been unreachable: {0}")]
+    #[error("hit code path that should have been unreachable: {0}")]
     Unreachable(String), // use instead of unreachable, expect, unwrap, etc to avoid panics
 }
 
@@ -509,7 +509,7 @@ fn parse_filter(
                     Rule::unquoted_value | Rule::quoted_value
                 ) {
                     return Err(ParseError::InvalidFilter(format!(
-                        "can't use regex/exact values in a '{key_str}:' filter."
+                        "cannot use regex/exact values in a '{key_str}:' filter"
                     )));
                 }
                 return Ok(Some(QueryNode::IsFilter(IsFilter {
@@ -528,7 +528,7 @@ fn parse_filter(
                         "unique" => IsFilterType::Unique,
                         _ => {
                             return Err(ParseError::InvalidFilter(format!(
-                                "not a valid '{key_str}:' value: {}",
+                                "not a valid '{key_str}:' value: '{}'",
                                 text_value.value()
                             )))
                         }
@@ -558,7 +558,7 @@ fn parse_filter(
                 }
                 let Ok(value) = text_value.value().parse() else {
                     return Err(ParseError::InvalidFilter(format!(
-                        "not a valid integer for filter '{key_str}': '{}'",
+                        "'{}' is not a valid integer for numeric filter '{key_str}'",
                         text_value.value()
                     )));
                 };
@@ -587,7 +587,7 @@ fn parse_filter(
                     "_" | "name" => TextKey::Name,
                     _ => {
                         return Err(ParseError::InvalidFilter(format!(
-                            "not a filter: '{key_str}'"
+                            "not a valid filter: '{key_str}'"
                         )))
                     }
                 },

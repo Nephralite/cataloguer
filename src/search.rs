@@ -7,11 +7,11 @@ use rand::seq::SliceRandom;
 use rand::thread_rng;
 use regex::Regex;
 use serde_json::{json, Map, Value};
-use tracing::debug;
 use std::borrow::Cow;
 use std::collections::HashSet;
 use std::fmt::Debug;
 use thiserror::Error;
+use tracing::debug;
 
 pub fn faction_order(faction: &str) -> usize {
     let order = [
@@ -46,13 +46,22 @@ struct SearchPrinting<'a> {
 #[derive(Error, Debug)]
 pub enum SearchError {
     #[error("invalid search query: {0}")]
-    ParseError(#[from] ParseError),
-    #[error("invalid search query: {0}")]
     QueryError(String),
     #[error("internal error while searching: {0}")]
     InternalError(String),
     #[error("feature not yet implemented: {0}")]
     NotYetImplemented(String),
+}
+impl From<ParseError> for SearchError {
+    fn from(value: ParseError) -> Self {
+        match value {
+            ParseError::DefinedTwice(_)
+            | ParseError::InvalidFilter(_)
+            | ParseError::InvalidRegex(_)
+            | ParseError::Malformed => Self::QueryError(value.to_string()),
+            ParseError::Unreachable(_) => Self::InternalError(value.to_string()),
+        }
+    }
 }
 
 pub(crate) fn do_search(
@@ -239,7 +248,7 @@ fn search_impl<'a>(
                         backend.banlist.get(&text_value).and_then(|a| a.as_array())
                     else {
                         return Err(SearchError::QueryError(format!(
-                            "not a banlist: '{text_value}'"
+                            "not a known banlist: '{text_value}'"
                         )));
                     };
                     card_pool
@@ -325,7 +334,7 @@ fn search_impl<'a>(
                         "pawnshop" => "-o:\"starter game only\" -set:tdc -cy:draft -cy:napd (is:corp tob>532) or (is:runner tob>442)",
                         "pawnshopprev" => "-o:\"starter game only\" -set:tdc -cy:draft -cy:napd (is:corp tobold>532) or (is:runner tobold>442)",
                         "throwback" => "-banned:throwback -o:\"starter game only\" -set:tdc -cy:draft -cy:napd",
-                        _ => return Err(SearchError::QueryError(format!("not a format: '{text_value}'"))),
+                        _ => return Err(SearchError::QueryError(format!("not a known format: '{text_value}'"))),
                     };
                     let Ok((node, _)) = parse_query(query_str) else {
                         return Err(SearchError::InternalError(
@@ -370,7 +379,7 @@ fn search_impl<'a>(
                         .iter()
                         .find(|x| x.code == text_value)
                         .ok_or_else(|| {
-                            SearchError::QueryError(format!("not a set: '{text_value}'"))
+                            SearchError::QueryError(format!("not a known set: '{text_value}'"))
                         })?;
                     let start = &set.start_num;
                     let end = &set.end_num;
