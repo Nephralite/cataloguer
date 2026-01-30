@@ -9,7 +9,7 @@ bracketed_query = { "(" ~ WHITE_SPACE* ~ query_group ~ WHITE_SPACE* ~ ")" }
 // A filter is a key + comparator + value expression.
 filter = { numeric_filter | negative_filter | positive_filter | negative_value | value }
 
-key = { ASCII_ALPHA+ }
+key = { (ASCII_ALPHA | "_")+ }
 
 negative_value = { "-" ~ value }
 positive_filter = { key ~ ":" ~ value }
