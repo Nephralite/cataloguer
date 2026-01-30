@@ -25,8 +25,8 @@ value = { exact_quoted_value | quoted_value | regex_value | exact_unquoted_value
 exact_unquoted_value = { "!" ~ unquoted_value }
 exact_quoted_value = { "!" ~ quoted_value }
 unquoted_value = { (ASCII_ALPHANUMERIC | "-")+ }
-quoted_value = { "\"" ~ ("\\\"" | (!"\"" ~ ANY))* ~ "\"" }
-regex_value = { "/" ~ ("\\/" | (!"/" ~ ANY))* ~ "/" }
+quoted_value = { "\"" ~ ("\\\"" | "\\\\" | (!"\"" ~ ANY))* ~ "\"" }
+regex_value = { "/" ~ ("\\/" | "\\\\" | (!"/" ~ ANY))* ~ "/" }
 numeric = { ASCII_DIGIT+ } // in principle we can parse better here but who cares
 
 or = _{ "or" | "OR" }

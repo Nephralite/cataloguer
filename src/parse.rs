@@ -67,11 +67,9 @@ impl TryFrom<&Pair<'_, Rule>> for TextValue {
             )),
             Rule::unquoted_value => Ok(TextValue::Plain(vs.to_lowercase().to_string())),
             Rule::regex_value => {
-                let re = vs[1..vs.len() - 1]
-                    .replace("\\/", "/")
-                    .replace("\\\\", "\\");
+                let re = &vs[1..vs.len() - 1];
                 Ok(TextValue::Regex(
-                    Regex::new(&re).map_err(|_| ParseError::InvalidRegex(re))?,
+                    Regex::new(re).map_err(|_| ParseError::InvalidRegex(re.to_string()))?,
                 ))
             }
 
