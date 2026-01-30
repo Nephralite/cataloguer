@@ -346,8 +346,8 @@ impl TryFrom<&str> for PrintingPreference {
 
     fn try_from(value: &str) -> Result<Self, Self::Error> {
         match value {
-            "oldest" => Ok(Self::Oldest),
-            "newest" | "latest" => Ok(Self::Newest),
+            "old" | "oldest" => Ok(Self::Oldest),
+            "new" | "newest" | "latest" => Ok(Self::Newest),
             _ => Err(ParseError::InvalidFilter(format!(
                 "not a valid printing preference: '{value}'"
             ))),
@@ -366,8 +366,8 @@ impl TryFrom<&str> for UniqueBy {
 
     fn try_from(value: &str) -> Result<Self, Self::Error> {
         match value {
-            "cards" => Ok(Self::Cards),
-            "prints" => Ok(Self::Prints),
+            "card" | "cards" => Ok(Self::Cards),
+            "prints" | "printing" | "printings" => Ok(Self::Prints),
             "art" => Ok(Self::Art),
             _ => Err(ParseError::InvalidFilter(format!(
                 "not a valid uniqueness criterion: '{value}'"
