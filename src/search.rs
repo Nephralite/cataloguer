@@ -468,7 +468,7 @@ fn search_impl<'a>(
                     })
                     .copied()
                     .collect(),
-                NumericKey::InfulenceLimit => card_pool
+                NumericKey::InfluenceLimit => card_pool
                     .iter()
                     .filter(|x| {
                         x.card.influence_limit.is_some_and(|v| {
