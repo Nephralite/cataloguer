@@ -610,6 +610,13 @@ fn search_impl<'a>(
                     })
                     .copied()
                     .collect(),
+                NumericKey::NumPrintings => card_pool
+                    .iter()
+                    .filter(|x| {
+                        num_filter.comparator.as_operator(x.card.printings.len() as i32, num_filter.value)
+                    })
+                    .copied()
+                    .collect(),
                 NumericKey::Points => card_pool
                     .iter()
                     .filter(|x| {
