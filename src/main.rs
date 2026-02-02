@@ -24,6 +24,9 @@ fn init_backend() -> anyhow::Result<structs::Backend> {
         if card.printings.is_empty() {
             bail!("Card '{}' has no printings!", card.title)
         }
+        // if card.stripped_text.is_none() {
+        //     bail!("Card '{}' has no stripped_text", card.title)
+        // }
     }
     
     Ok(backend)
