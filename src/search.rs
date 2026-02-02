@@ -432,16 +432,28 @@ fn search_impl<'a>(
                     })
                     .copied()
                     .collect(),
-                TextKey::Symbol => card_pool
-                    .iter()
-                    .filter(|x| {
-                        x.card
-                            .text
-                            .as_ref()
-                            .is_some_and(|s| s.to_lowercase().contains(&format!("[{}]", text_value)))
-                    })
-                    .copied()
-                    .collect(),
+                TextKey::Symbol =>{
+                    let text_value = match text_filter.value {
+                        TextValue::Plain(s) => s,
+                        TextValue::Exact(_) => unreachable!(),
+                        TextValue::Regex(_) => {
+                            return Err(SearchError::QueryError(format!(
+                                "can't use regex with '{}:' filter",
+                                text_filter.original_key
+                            )))
+                        }
+                    };
+                    card_pool
+                        .iter()
+                        .filter(|x| {
+                            x.card
+                                .text
+                                .as_ref()
+                                .is_some_and(|s| s.to_lowercase().contains(&format!("[{}]", text_value)))
+                        })
+                        .copied()
+                        .collect()
+                },
                 TextKey::Pronouns => card_pool
                     .iter()
                     .filter(|x| {
