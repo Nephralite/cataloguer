@@ -1,5 +1,6 @@
 use pest::{iterators::Pair, Parser};
 use pest_derive::Parser;
+use regex::Regex;
 use thiserror::Error;
 
 #[derive(Parser)]
@@ -18,6 +19,7 @@ pub enum QueryNode {
 #[derive(Debug)]
 pub struct TextFilter {
     pub key: TextKey,
+    pub original_key: String,
     pub value: TextValue,
     pub is_negated: bool,
 }
@@ -26,7 +28,7 @@ pub struct TextFilter {
 pub enum TextValue {
     Plain(String),
     Exact(String),
-    Regex(String),
+    Regex(Regex),
 }
 impl TextValue {
     pub fn value(&self) -> &str {
@@ -34,6 +36,14 @@ impl TextValue {
             TextValue::Plain(s) => s.as_str(),
             TextValue::Exact(s) => s.as_str(),
             TextValue::Regex(s) => s.as_str(),
+        }
+    }
+
+    pub fn matches(&self, text: &str) -> bool {
+        match self {
+            TextValue::Plain(s) => text.to_lowercase().contains(&s.to_lowercase()),
+            TextValue::Exact(_) => unreachable!(), // should hit a "not yet implemented" first
+            TextValue::Regex(re) => re.is_match(text),
         }
     }
 }
@@ -56,11 +66,12 @@ impl TryFrom<&Pair<'_, Rule>> for TextValue {
                     .replace("\\\\", "\\"),
             )),
             Rule::unquoted_value => Ok(TextValue::Plain(vs.to_lowercase().to_string())),
-            Rule::regex_value => Ok(TextValue::Regex(
-                vs[1..vs.len() - 1]
-                    .replace("\\/", "/")
-                    .replace("\\\\", "\\"),
-            )),
+            Rule::regex_value => {
+                let re = &vs[1..vs.len() - 1];
+                Ok(TextValue::Regex(
+                    Regex::new(re).map_err(|_| ParseError::InvalidRegex(re.to_string()))?,
+                ))
+            }
 
             _ => Err(ParseError::Unreachable(format!(
                 "invalid inner for TextValue: {:?}",
@@ -105,6 +116,7 @@ pub enum NumericKey {
     Link,
     Memory,
     MinDeck,
+    NumPrintings,
     NRDB,
     Points,
     Strength,
@@ -124,6 +136,7 @@ impl TryFrom<&str> for NumericKey {
             "m" | "mem" | "memory" => Ok(Self::Memory),
             "md" | "min_deck" => Ok(Self::MinDeck),
             "nrdb" => Ok(Self::NRDB),
+            "num_printings" => Ok(Self::NumPrintings),
             "p" | "v" | "points" => Ok(Self::Points),
             "str" | "strength" => Ok(Self::Strength),
             "trash" | "bin" | "h" => Ok(Self::TrashCost),
@@ -333,8 +346,8 @@ impl TryFrom<&str> for PrintingPreference {
 
     fn try_from(value: &str) -> Result<Self, Self::Error> {
         match value {
-            "oldest" => Ok(Self::Oldest),
-            "newest" | "latest" => Ok(Self::Newest),
+            "old" | "oldest" => Ok(Self::Oldest),
+            "new" | "newest" | "latest" => Ok(Self::Newest),
             _ => Err(ParseError::InvalidFilter(format!(
                 "not a valid printing preference: '{value}'"
             ))),
@@ -353,8 +366,8 @@ impl TryFrom<&str> for UniqueBy {
 
     fn try_from(value: &str) -> Result<Self, Self::Error> {
         match value {
-            "cards" => Ok(Self::Cards),
-            "prints" => Ok(Self::Prints),
+            "card" | "cards" => Ok(Self::Cards),
+            "prints" | "printing" | "printings" => Ok(Self::Prints),
             "art" => Ok(Self::Art),
             _ => Err(ParseError::InvalidFilter(format!(
                 "not a valid uniqueness criterion: '{value}'"
@@ -593,11 +606,13 @@ fn parse_filter(
                         )))
                     }
                 },
+                original_key: key_str.to_string(),
                 value: text_value,
                 is_negated,
             })))
         }
-        Rule::negative_value => {
+        Rule::negative_value | Rule::positive_value => {
+            let is_negated = matches!(the_filter.as_rule(), Rule::negative_value);
             let Some(value) = the_filter.into_inner().next() else {
                 return Err(ParseError::Unreachable(
                     "negative_value should always have inner".to_string(),
@@ -616,21 +631,9 @@ fn parse_filter(
 
             Ok(Some(QueryNode::TextFilter(TextFilter {
                 key: TextKey::Name,
+                original_key: "".to_string(),
                 value: (&inner).try_into()?,
-                is_negated: true,
-            })))
-        }
-        Rule::value => {
-            let Some(inner) = the_filter.into_inner().next() else {
-                return Err(ParseError::Unreachable(
-                    "value should always have inner".to_string(),
-                ));
-            };
-
-            Ok(Some(QueryNode::TextFilter(TextFilter {
-                key: TextKey::Name,
-                value: (&inner).try_into()?,
-                is_negated: false,
+                is_negated,
             })))
         }
         _ => Err(ParseError::Unreachable(

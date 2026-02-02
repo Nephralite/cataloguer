@@ -1,6 +1,6 @@
 use crate::parse::{
     parse_query, IsFilterType, NumericKey, ParseError, PrintingPreference, QueryNode,
-    SearchDirection, SearchOrder, SearchSettings, TextKey, TextValue,
+    SearchDirection, SearchOrder, SearchSettings, TextKey, TextValue, UniqueBy,
 };
 use crate::structs::{Backend, Card, Printing, Set};
 use rand::seq::SliceRandom;
@@ -8,7 +8,7 @@ use rand::thread_rng;
 use regex::Regex;
 use serde_json::{json, Map, Value};
 use std::borrow::Cow;
-use std::collections::HashSet;
+use std::collections::{HashMap, HashSet};
 use std::fmt::Debug;
 use thiserror::Error;
 use tracing::debug;
@@ -64,11 +64,11 @@ impl From<ParseError> for SearchError {
     }
 }
 
-pub(crate) fn do_search(
+pub(crate) fn do_search<'a>(
     query: &str,
-    backend: &Backend,
+    backend: &'a Backend,
     form_settings: SearchSettings,
-) -> Result<Vec<Printing>, SearchError> {
+) -> Result<Vec<&'a Printing>, SearchError> {
     debug!("Begin query: '{query}'");
     let (node, settings) = parse_query(query)?;
     let card_pool: HashSet<SearchPrinting> = backend
@@ -82,42 +82,82 @@ pub(crate) fn do_search(
         .collect();
     let results: HashSet<SearchPrinting> = search_impl(node, backend, &card_pool, 0)?;
 
-    // After searching, collect back into a HashSet of Cards
-    let mut result_cards: HashSet<Card> = HashSet::new();
-    for printing in results {
-        if let Some(mut existing_card) = result_cards.take(printing.card) {
-            existing_card.printings.push(printing.printing.clone());
-            result_cards.insert(existing_card);
-        } else {
-            let mut new_card = printing.card.clone();
-            new_card.printings = vec![printing.printing.clone()];
-            result_cards.insert(new_card);
+    // After searching, collect back into a Vec of SearchPrintings, so we can sort them.
+    // Check for uniqueness while doing this.
+    let unique_by = settings
+        .unique_by
+        .or(form_settings.unique_by)
+        .unwrap_or(crate::parse::UniqueBy::Cards);
+    let printing_preference = settings
+        .prefer
+        .or(form_settings.prefer)
+        .unwrap_or(PrintingPreference::Newest);
+    let mut results: Vec<SearchPrinting> = match unique_by {
+        UniqueBy::Cards => {
+            let mut printings_by_card: HashMap<&Card, Vec<&Printing>> = HashMap::new();
+            for sp in results {
+                if let Some(printings) = printings_by_card.get_mut(sp.card) {
+                    printings.push(sp.printing);
+                } else {
+                    printings_by_card.insert(sp.card, vec![sp.printing]);
+                }
+            }
+            printings_by_card
+                .into_iter()
+                .map(|(card, mut printings)| {
+                    printings.sort_by_key(|p| &p.code);
+                    SearchPrinting {
+                        card,
+                        // these unwraps are safe, as the vecs are always nonempty
+                        printing: match printing_preference {
+                            PrintingPreference::Oldest => printings.first().unwrap(),
+                            PrintingPreference::Newest => printings.last().unwrap(),
+                        },
+                    }
+                })
+                .collect()
         }
-    }
-
-    //...and then into a Vec of cards, so we can sort them
-    let mut results: Vec<&Card> = result_cards.iter().collect();
+        UniqueBy::Prints => {
+            let mut seen_printings: HashSet<&Printing> = HashSet::new();
+            let mut results_vec: Vec<SearchPrinting> = Vec::new();
+            for printing in results {
+                if !seen_printings.contains(printing.printing) {
+                    seen_printings.insert(printing.printing);
+                    results_vec.push(printing);
+                }
+            }
+            results_vec
+        }
+        // Implementing "unique:art" requires more information than we currently get from `cards`.
+        // e.g. we have no way of finding that the first three printings of Mimic have the same
+        // art, while the fourth has different art.
+        UniqueBy::Art => {
+            return Err(SearchError::NotYetImplemented(
+                "uniqueness by art".to_string(),
+            ))
+        }
+    };
 
     // Safety: when building this list, we only insert a Card if we have a printing for it - so
     // card.printings is always nonempty, so it's safe to call unwrap() on .first() and .last()
 
-    // By default, sort the cards by their latest NRDB printing.
-    results.sort_by_key(|card| card.printings.last().unwrap().code.parse::<u64>().ok());
+    // By default, sort the cards by their NRDB printing.
+    results.sort_by_key(|card| card.printing.code.parse::<u64>().ok());
 
     let search_order = settings
         .sort
         .or(form_settings.sort)
         .unwrap_or(SearchOrder::Released);
     match search_order {
-        SearchOrder::Name => results.sort_by_cached_key(|card| &card.stripped_title),
-        SearchOrder::Artist => results.sort_by_key(|card| &card.printings.last().unwrap().artist),
-        SearchOrder::Cost => results.sort_by_key(|card| card.cost),
-        SearchOrder::Type => results.sort_by_key(|card| &card.type_code),
-        SearchOrder::Faction => results.sort_by_key(|card| faction_order(&card.faction)),
-        SearchOrder::Influence => results.sort_by_key(|card| card.influence),
-        SearchOrder::Released => results.sort_by_key(|card| &card.printings.first().unwrap().code),
+        SearchOrder::Name => results.sort_by_cached_key(|sp| &sp.card.stripped_title),
+        SearchOrder::Artist => results.sort_by_key(|sp| &sp.card.printings.last().unwrap().artist),
+        SearchOrder::Cost => results.sort_by_key(|sp| sp.card.cost),
+        SearchOrder::Type => results.sort_by_key(|sp| &sp.card.type_code),
+        SearchOrder::Faction => results.sort_by_key(|sp| faction_order(&sp.card.faction)),
+        SearchOrder::Influence => results.sort_by_key(|sp| sp.card.influence),
+        SearchOrder::Released => results.sort_by_key(|sp| &sp.card.printings.first().unwrap().code),
         SearchOrder::Random => results.shuffle(&mut thread_rng()),
-        SearchOrder::Strength => results.sort_by_key(|card| card.strength),
+        SearchOrder::Strength => results.sort_by_key(|sp| sp.card.strength),
         SearchOrder::Set => return Err(SearchError::NotYetImplemented("sort by set".to_string())),
         SearchOrder::TrashOrBusto => {
             let ranks: Map<String, Value> = serde_json::from_str::<Map<String, Value>>(
@@ -126,9 +166,9 @@ pub(crate) fn do_search(
             .unwrap();
             results = results
                 .into_iter()
-                .filter(|c| ranks.contains_key(&c.title))
-                .collect::<Vec<&Card>>();
-            results.sort_by_key(|card| ranks.get(&card.title).unwrap().as_u64())
+                .filter(|c| ranks.contains_key(&c.card.title))
+                .collect::<Vec<SearchPrinting>>();
+            results.sort_by_key(|sp| ranks.get(&sp.card.title).unwrap().as_u64())
         }
     };
 
@@ -140,20 +180,7 @@ pub(crate) fn do_search(
         results.reverse();
     }
 
-    let printing_preference = settings
-        .prefer
-        .or(form_settings.prefer)
-        .unwrap_or(PrintingPreference::Newest);
-    match printing_preference {
-        PrintingPreference::Oldest => Ok(results
-            .into_iter()
-            .map(|c| c.printings.first().unwrap().clone())
-            .collect()),
-        PrintingPreference::Newest => Ok(results
-            .into_iter()
-            .map(|c| c.printings.last().unwrap().clone())
-            .collect()),
-    }
+    Ok(results.iter().map(|sp| sp.printing).collect())
 }
 
 /// Check whether a card matches a given query.
@@ -198,19 +225,11 @@ fn search_impl<'a>(
             Ok(pool.into_owned())
         }
         QueryNode::TextFilter(text_filter) => {
-            let text_value = match text_filter.value {
-                TextValue::Regex(_) => {
-                    return Err(SearchError::NotYetImplemented(
-                        "regex searching".to_string(),
-                    ))
-                }
-                TextValue::Exact(_) => {
-                    return Err(SearchError::NotYetImplemented(
-                        "exact-string searching".to_string(),
-                    ))
-                }
-                TextValue::Plain(ref s) => s.clone(),
-            };
+            if matches!(text_filter.value, TextValue::Exact(_)) {
+                return Err(SearchError::NotYetImplemented(
+                    "exact-string searching".to_string(),
+                ));
+            }
             let results: HashSet<SearchPrinting> = match text_filter.key {
                 TextKey::Artist => card_pool
                     .iter()
@@ -218,11 +237,21 @@ fn search_impl<'a>(
                         x.printing
                             .artist
                             .as_ref()
-                            .is_some_and(|s| s.to_lowercase().contains(&text_value))
+                            .is_some_and(|s| text_filter.value.matches(s))
                     })
                     .copied()
                     .collect(),
                 TextKey::Agenda => {
+                    let text_value = match text_filter.value {
+                        TextValue::Plain(s) => s,
+                        TextValue::Exact(_) => unreachable!(),
+                        TextValue::Regex(_) => {
+                            return Err(SearchError::QueryError(format!(
+                                "can't use regex with '{}:' filter",
+                                text_filter.original_key
+                            )))
+                        }
+                    };
                     let parts: Vec<&str> = text_value.split('/').collect();
                     // reusable error message
                     let bad_agenda = || {
@@ -244,6 +273,16 @@ fn search_impl<'a>(
                     )?
                 }
                 TextKey::Banned => {
+                    let text_value = match text_filter.value {
+                        TextValue::Plain(s) => s,
+                        TextValue::Exact(_) => unreachable!(),
+                        TextValue::Regex(_) => {
+                            return Err(SearchError::QueryError(format!(
+                                "can't use regex with '{}:' filter",
+                                text_filter.original_key
+                            )))
+                        }
+                    };
                     let Some(banlist_arr) =
                         backend.banlist.get(&text_value).and_then(|a| a.as_array())
                     else {
@@ -258,6 +297,16 @@ fn search_impl<'a>(
                         .collect()
                 }
                 TextKey::Date => {
+                    let text_value = match text_filter.value {
+                        TextValue::Plain(s) => s,
+                        TextValue::Exact(_) => unreachable!(),
+                        TextValue::Regex(_) => {
+                            return Err(SearchError::QueryError(format!(
+                                "can't use regex with '{}:' filter",
+                                text_filter.original_key
+                            )))
+                        }
+                    };
                     let sets: Vec<&Set> = match &text_value {
                         x if Regex::new(r"^\d{2}/\d{2}/\d{4}$").unwrap().is_match(x) => {
                             return Err(SearchError::NotYetImplemented(
@@ -295,6 +344,16 @@ fn search_impl<'a>(
                         .collect()
                 }
                 TextKey::Faction => {
+                    let text_value = match text_filter.value {
+                        TextValue::Plain(s) => s,
+                        TextValue::Exact(_) => unreachable!(),
+                        TextValue::Regex(_) => {
+                            return Err(SearchError::QueryError(format!(
+                                "can't use regex with '{}:' filter",
+                                text_filter.original_key
+                            )))
+                        }
+                    };
                     let faction = match text_value.as_str() {
                         "a" => "anarch",
                         "c" | "crim" => "criminal",
@@ -323,6 +382,16 @@ fn search_impl<'a>(
                     }
                 }
                 TextKey::Format => {
+                    let text_value = match text_filter.value {
+                        TextValue::Plain(s) => s,
+                        TextValue::Exact(_) => unreachable!(),
+                        TextValue::Regex(_) => {
+                            return Err(SearchError::QueryError(format!(
+                                "can't use regex with '{}:' filter",
+                                text_filter.original_key
+                            )))
+                        }
+                    };
                     let query_str = match text_value.as_str() {
                         "startup" | "sup" => "(cy:lib or cy:sg or cy:ele) -banned:startup -o:\"starter game only\"",
                         "neo" => "is:nsg -set:su21 -banned:neo -o:\"starter game only\"",
@@ -349,7 +418,7 @@ fn search_impl<'a>(
                         x.printing
                             .flavour
                             .as_ref()
-                            .is_some_and(|s| s.to_lowercase().contains(&text_value))
+                            .is_some_and(|s| text_filter.value.matches(s))
                     })
                     .copied()
                     .collect(),
@@ -359,31 +428,53 @@ fn search_impl<'a>(
                         x.card
                             .stripped_text
                             .as_ref()
-                            .is_some_and(|s| s.to_lowercase().contains(&text_value))
+                            .is_some_and(|s| text_filter.value.matches(s))
                     })
                     .copied()
                     .collect(),
-                TextKey::Symbol => card_pool
-                    .iter()
-                    .filter(|x| {
-                        x.card
-                            .text
-                            .as_ref()
-                            .is_some_and(|s| s.to_lowercase().contains(&format!("[{}]", text_value)))
-                    })
-                    .copied()
-                    .collect(),
+                TextKey::Symbol =>{
+                    let text_value = match text_filter.value {
+                        TextValue::Plain(s) => s,
+                        TextValue::Exact(_) => unreachable!(),
+                        TextValue::Regex(_) => {
+                            return Err(SearchError::QueryError(format!(
+                                "can't use regex with '{}:' filter",
+                                text_filter.original_key
+                            )))
+                        }
+                    };
+                    card_pool
+                        .iter()
+                        .filter(|x| {
+                            x.card
+                                .text
+                                .as_ref()
+                                .is_some_and(|s| s.to_lowercase().contains(&format!("[{}]", text_value)))
+                        })
+                        .copied()
+                        .collect()
+                },
                 TextKey::Pronouns => card_pool
                     .iter()
                     .filter(|x| {
                         x.card
                             .pronouns
                             .as_ref()
-                            .is_some_and(|s| s.to_lowercase().contains(&text_value))
+                            .is_some_and(|s| text_filter.value.matches(s))
                     })
                     .copied()
                     .collect(),
                 TextKey::Set => {
+                    let text_value = match text_filter.value {
+                        TextValue::Plain(s) => s,
+                        TextValue::Exact(_) => unreachable!(),
+                        TextValue::Regex(_) => {
+                            return Err(SearchError::QueryError(format!(
+                                "can't use regex with '{}:' filter",
+                                text_filter.original_key
+                            )))
+                        }
+                    };
                     let set = backend
                         .sets
                         .iter()
@@ -406,18 +497,18 @@ fn search_impl<'a>(
                         x.card
                             .subtypes
                             .as_ref()
-                            .is_some_and(|s| s.to_lowercase().contains(&text_value))
+                            .is_some_and(|s| text_filter.value.matches(s))
                     })
                     .copied()
                     .collect(),
                 TextKey::Type => card_pool
                     .iter()
-                    .filter(|x| x.card.type_code.contains(&text_value))
+                    .filter(|x| text_filter.value.matches(&x.card.type_code))
                     .copied()
                     .collect(),
                 TextKey::Name => card_pool
                     .iter()
-                    .filter(|x| x.card.stripped_title.to_lowercase().contains(&text_value))
+                    .filter(|x| text_filter.value.matches(&x.card.stripped_title))
                     .copied()
                     .collect(),
             };
@@ -528,6 +619,13 @@ fn search_impl<'a>(
                         x.printing.code.parse().is_ok_and(|v: i32| {
                             num_filter.comparator.as_operator(v, num_filter.value)
                         })
+                    })
+                    .copied()
+                    .collect(),
+                NumericKey::NumPrintings => card_pool
+                    .iter()
+                    .filter(|x| {
+                        num_filter.comparator.as_operator(x.card.printings.len() as i32, num_filter.value)
                     })
                     .copied()
                     .collect(),
