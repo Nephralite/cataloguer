@@ -125,7 +125,7 @@ impl TryFrom<&str> for NumericKey {
             "nrdb" => Ok(Self::NRDB),
             "p" | "v" | "points" => Ok(Self::Points),
             "str" | "strength" => Ok(Self::Strength),
-            "trash" | "bin" | "h" => Ok(Self::Strength),
+            "trash" | "bin" | "h" => Ok(Self::TrashCost),
             _ => Err(ParseError::InvalidFilter(format!(
                 "not a valid numeric filter: '{value}'"
             ))),
