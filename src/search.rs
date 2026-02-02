@@ -363,6 +363,16 @@ fn search_impl<'a>(
                     })
                     .copied()
                     .collect(),
+                TextKey::Symbol => card_pool
+                    .iter()
+                    .filter(|x| {
+                        x.card
+                            .text
+                            .as_ref()
+                            .is_some_and(|s| s.to_lowercase().contains(&format!("[{}]", text_value)))
+                    })
+                    .copied()
+                    .collect(),
                 TextKey::Pronouns => card_pool
                     .iter()
                     .filter(|x| {
