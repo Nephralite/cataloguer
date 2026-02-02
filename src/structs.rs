@@ -30,10 +30,11 @@ pub struct Legality {
 #[derive(serde::Serialize)]
 pub struct SimpleAPIout {
     pub data: Vec<String>,
+    pub error: Option<String>,
     pub len: usize,
 }
 
-#[derive(serde::Deserialize, Clone)]
+#[derive(serde::Deserialize, Clone, Eq)]
 pub struct Printing {
     pub artist: Option<String>,
     pub flavour: Option<String>,
@@ -48,8 +49,14 @@ impl PartialEq for Printing {
     }
 }
 
+impl std::hash::Hash for Printing {
+    fn hash<H: std::hash::Hasher>(&self, state: &mut H) {
+        self.code.hash(state);
+    }
+}
 
-#[derive(serde::Deserialize, Clone)]
+
+#[derive(serde::Deserialize, Clone, Eq)]
 pub struct Card {
     pub printings: Vec<Printing>,
     pub faction: String,
@@ -78,5 +85,10 @@ pub struct Card {
 impl PartialEq for Card {
     fn eq(&self, other: &Card) -> bool {
         self.title == other.title
+    }
+}
+impl std::hash::Hash for Card {
+    fn hash<H: std::hash::Hasher>(&self, state: &mut H) {
+        self.title.hash(state);
     }
 }
