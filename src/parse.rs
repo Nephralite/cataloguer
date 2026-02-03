@@ -607,7 +607,7 @@ fn parse_filter(
                     "s" | "sub" | "subtype" => TextKey::Subtype,
                     "set" | "e" | "edition" | "cycle" | "cyc" | "cy" => TextKey::Set,
                     "t" | "type" => TextKey::Type,
-                    "_" | "name" => TextKey::Name,
+                    "_" | "name" | "title" => TextKey::Name,
                     _ => {
                         return Err(ParseError::InvalidFilter(format!(
                             "not a valid filter: '{key_str}'"
