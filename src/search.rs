@@ -10,6 +10,7 @@ use serde_json::{json, Map, Value};
 use std::borrow::Cow;
 use std::collections::{HashMap, HashSet};
 use std::fmt::Debug;
+//use std::num;
 use thiserror::Error;
 use tracing::debug;
 
@@ -460,7 +461,7 @@ fn search_impl<'a>(
                         x.card
                             .pronouns
                             .as_ref()
-                            .is_some_and(|s| text_filter.value.matches(s))
+                            .is_some_and(|s| text_filter.value.matches(&s) || s.to_lowercase().contains("any"))
                     })
                     .copied()
                     .collect(),
@@ -662,6 +663,15 @@ fn search_impl<'a>(
                     })
                     .copied()
                     .collect(),
+                NumericKey::Tob | NumericKey::TobOld =>  {//these are only imported as needed to minimize load on general cataloguer searches, might lower performance for this search though
+                    let string = if matches!(num_filter.key, NumericKey::Tob) {"assets/trashobusto.json"} else {"assets/tob_old.json"};
+                    let ranks = serde_json::from_str::<Map<String, Value>>(&std::fs::read_to_string(string).unwrap()).unwrap();
+                    card_pool.iter().filter(
+                        |x| if ranks.contains_key(&x.card.title) {
+                            num_filter.comparator.as_operator(ranks[&x.card.title].as_i64().unwrap(), num_filter.value as i64)
+                        } else {
+                            debug!("card not in trasho: {}", &x.card.title); false
+                        }).copied().collect()},
             };
             Ok(results)
         }
@@ -679,6 +689,8 @@ fn search_impl<'a>(
                 IsFilterType::Space => inner_search("o:\"rez cost is lowered\"", backend, card_pool, depth+1)?,
                 IsFilterType::Trap => inner_search("o:\"when the runner accesses this\"", backend, card_pool, depth+1)?,
                 IsFilterType::Unique => card_pool.iter().filter(|x| x.card.uniqueness).copied().collect(),
+                IsFilterType::Wet => inner_search("z:pawnshop", backend, card_pool, depth+1)?,
+                IsFilterType::Creepy => inner_search("tob>0 -z:pawnshop", backend, card_pool, depth+1)?
             };
 
             if is_filter.is_negated {

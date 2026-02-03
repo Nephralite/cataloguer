@@ -121,6 +121,8 @@ pub enum NumericKey {
     Points,
     Strength,
     TrashCost,
+    Tob,
+    TobOld
 }
 impl TryFrom<&str> for NumericKey {
     type Error = ParseError;
@@ -140,6 +142,8 @@ impl TryFrom<&str> for NumericKey {
             "p" | "v" | "points" => Ok(Self::Points),
             "str" | "strength" => Ok(Self::Strength),
             "trash" | "bin" | "h" => Ok(Self::TrashCost),
+            "tob" => Ok(Self::Tob),
+            "tobold" => Ok(Self::TobOld),
             _ => Err(ParseError::InvalidFilter(format!(
                 "not a valid numeric filter: '{value}'"
             ))),
@@ -206,6 +210,8 @@ pub enum IsFilterType {
     Space,
     Trap,
     Unique,
+    Creepy,
+    Wet
 }
 
 #[derive(Debug, Default)]
@@ -540,6 +546,8 @@ fn parse_filter(
                         "space" => IsFilterType::Space,
                         "trap" => IsFilterType::Trap,
                         "unique" => IsFilterType::Unique,
+                        "wet" => IsFilterType::Wet,
+                        "creepy" => IsFilterType::Creepy,
                         _ => {
                             return Err(ParseError::InvalidFilter(format!(
                                 "not a valid '{key_str}:' value: '{}'",

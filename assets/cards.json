@@ -44843,7 +44843,7 @@
         }],
         "title": "Greenmail",
         "stripped_title": "Greenmail",
-        "stripped_text": "When you score this agenda, gain 2 credit. When you forfeit this agenda, gain credit.",
+        "stripped_text": "When you score this agenda, gain 2 credit. When you forfeit this agenda, gain 4 credit.",
         "text": "When you score this agenda, gain 2[credit].\nWhen you forfeit this agenda, gain 4[credit].",
         "uniqueness": false
     },
