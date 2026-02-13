@@ -146,7 +146,7 @@ pub async fn search(
             display: None,
         };
 
-        let results = match do_search(&query, &backend, form_search_settings) {
+        let results = match do_search(&query.trim(), &backend, form_search_settings) {
             Ok(results) => results,
             Err(e) => return Templates::SearchErrorTemplate(
                 SearchErrorTemplate {
