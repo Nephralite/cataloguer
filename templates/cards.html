@@ -10,7 +10,7 @@
         {% for card_code in cards %}
             {% if card_code[1] == "nrdb" %}
             <a href="https://netrunnerdb.com/en/card/{{card_code[0]}}">
-            <img class="rounded-lg" src="https://card-images.netrunnerdb.com/v2/large/{{card_code[0]}}.jpg">
+            <img class="rounded-lg" src="https://card-images.netrunnerdb.com/v2/large/{{card_code[0]}}.jpg", width=300>
             </a>
             {% else %}
             <a href="https://netrunnerdb.com/en/card/{{card_code[0]}}">
