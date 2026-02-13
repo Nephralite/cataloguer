@@ -1709,7 +1709,7 @@
                 "artist": "Kira L. Nguyen",
                 "code": "30030",
                 "flavour": "Anyone can put in the hours of planning, practice, and preparation\u2013but making it all look like luck takes style.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -3616,7 +3616,7 @@
                 "artist": "Kira L. Nguyen",
                 "code": "30075",
                 "flavour": "A financial instrument for diverting money from those outside to those inside.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -5815,7 +5815,7 @@
                 "artist": "NtscapeNavigator",
                 "code": "26129",
                 "flavour": "\u201cBegin a voice message to Steve: I\u2019m in some random city staring at yet another empty room. This hot insider scoop of yours feels distinctly chilly.\u201d",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -7111,7 +7111,7 @@
                 "artist": "Krembler",
                 "code": "26099",
                 "flavour": "You are being made sane.\n-u are bei-g mad- sa-e\nY-u ar- be-n-d-\n-u -r-?",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -7946,7 +7946,7 @@
                 "artist": "Chiara Biancheri",
                 "code": "26090",
                 "flavour": "Consider this: the most notorious tool in cyberterrorism is one that, in isolation, does nothing.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -8136,7 +8136,7 @@
                 "artist": "Olie Boldador",
                 "code": "26094",
                 "flavour": "To strike another blow to the corporatocracy tomorrow night, don\u2019t forget to like and subscribe!",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -21803,10 +21803,10 @@
                 "set": "tlm"
             },
             {
-                 "artist":"Krembler",
-                 "code":"31045",
-                 "img_type":"nrdb",
-                 "set":"su21"
+                 "artist": "Krembler",
+                 "code": "31045",
+                 "img_type": "nrdb",
+                 "set": "su21"
              }
         ],
         "strength": 5,
@@ -28597,7 +28597,7 @@
             {
                 "artist": "Krembler",
                 "code": "26124",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -33384,7 +33384,7 @@
                 "artist": "Photo Tammy Gann Unsplash. Deep Dream",
                 "code": "26001",
                 "flavour": "With each passing day alone, Hoshiko found it harder to think. With each hour, the static grew louder.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33405,7 +33405,7 @@
                 "artist": "Olie Boldador",
                 "code": "26002",
                 "flavour": "Step 1: Apply to Problem.\nStep 2: No more Problem!",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33427,7 +33427,7 @@
                 "artist": "Krembler",
                 "code": "26003",
                 "flavour": "*tap* *tap* *tap*",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33448,7 +33448,7 @@
                 "artist": "Iain Fairclough",
                 "code": "26004",
                 "flavour": "\u201cNet <em>space<em> is an abstraction, a white lie protecting fragile comprehensions. Do not limit yourself.\u201d\n)\u2014z\\h/r",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33470,7 +33470,7 @@
                 "artist": "McGregor T. Crowley",
                 "code": "26005",
                 "flavour": "Sing, sing as your heart desires!",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33490,7 +33490,7 @@
             {
                 "artist": "Diana Simonova (Antheia Vaulor)",
                 "code": "26006",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33511,7 +33511,7 @@
                 "artist": "Izzy Pruett",
                 "code": "26007",
                 "flavour": "Friends break your walls.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33532,7 +33532,7 @@
                 "artist": "Wyn Lacabra",
                 "code": "26008",
                 "flavour": "\u201c\u2026well, <em>I\u2019m</em> laughing.\u201d",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33553,7 +33553,7 @@
                 "artist": "Izzy Pruett",
                 "code": "26009",
                 "flavour": "Friends hide your fears.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33576,7 +33576,7 @@
                 "artist": "Luminita Pham",
                 "code": "26010",
                 "flavour": "\u201cYou\u2019re not listening.\u201d",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33598,7 +33598,7 @@
                 "artist": "Olie Boldador",
                 "code": "26011",
                 "flavour": "\u201cEveryone told me she was reliable in a pinch.\u201d\n\u2014Az McCaffrey",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33618,7 +33618,7 @@
                 "artist": "Patrick Burk",
                 "code": "26012",
                 "flavour": "Blue flames burn the hottest!",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33638,7 +33638,7 @@
                 "artist": "Krembler",
                 "code": "26013",
                 "flavour": "BMI switches let runners surface without a true disconnect. Handy for a break\u2026 immediately.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33659,7 +33659,7 @@
                 "artist": "Elizaveta Sokolova",
                 "code": "26014",
                 "flavour": "Want to win a coinflip? Use a coin with two heads.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33680,7 +33680,7 @@
                 "artist": "Olie Boldador",
                 "code": "26015",
                 "flavour": "v35: Springs to the mount ejectors (new feature)\nv36: Reduced power to springs (\u00d75)",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33702,7 +33702,7 @@
                 "artist": "Iain Fairclough",
                 "code": "26016",
                 "flavour": "\u201cDo the job. Get paid. Leave feelings at the door.\u201d\n\u2014\u201cBaklan\u201d Bochkin",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33724,7 +33724,7 @@
                 "artist": "Janet Bruesselbach",
                 "code": "26017",
                 "flavour": "\u201cPsh, let them gossip. The cat knows whose meat it has eaten.\u201d\n\u2014\u201cBaklan\u201d Bochkin",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33745,7 +33745,7 @@
                 "artist": "Wyn Lacabra",
                 "code": "26018",
                 "flavour": "\u201c\u2026but I am without compare.\u201d",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33768,7 +33768,7 @@
                 "artist": "Luminita Pham",
                 "code": "26019",
                 "flavour": "Let\u02bcs do it fast fast, then back to mine for tuak.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33790,7 +33790,7 @@
                 "artist": "Olie Boldador",
                 "code": "26020",
                 "flavour": "Do you know how many food deliveries I\u2019ve missed this week?",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33810,7 +33810,7 @@
             {
                 "artist": "Iain Fairclough",
                 "code": "26021",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33831,7 +33831,7 @@
                 "artist": "Krembler",
                 "code": "26022",
                 "flavour": "\u201cThere is never a wasted program. Someone, somewhere, will have a use for that code. Even corps are scrambling for quick fixes nowadays.\u201d\n\u2014Lat",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33852,7 +33852,7 @@
                 "artist": "Elizaveta Sokolova",
                 "code": "26023",
                 "flavour": "The Net is boundless, but the right access port is worth a road trip.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33874,7 +33874,7 @@
                 "artist": "Iain Fairclough",
                 "code": "26024",
                 "flavour": "It is not knowledge, but the act of learning, not possession, but the act of getting there, which grants the greatest enjoyment.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33897,7 +33897,7 @@
                 "artist": "Iain Fairclough",
                 "code": "26025",
                 "flavour": "It makes sysops see red. And orange, yellow, green\u2026",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33918,7 +33918,7 @@
                 "artist": "Elwin \"Jakuza\" Rumplmair",
                 "code": "26026",
                 "flavour": "\u201cIt takes such simple things to sustain us, the most important of which is to be thankful.\u201d\n\u2014Lat",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33939,7 +33939,7 @@
                 "artist": "Wyn Lacabra",
                 "code": "26027",
                 "flavour": "\u201c\u2026then let me paint you a picture.\u201d",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33960,7 +33960,7 @@
                 "artist": "Olie Boldador",
                 "code": "26028",
                 "flavour": "Get into the ducts on the roof and keep crawling till you hit that old network root. Dirty work, I know, but it beats playing by the rules.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -33981,7 +33981,7 @@
                 "artist": "Krembler",
                 "code": "26029",
                 "flavour": "I didn\u2019t say your hopper should be hauling garbage. I said it should be hauled away <em>as</em> garbage.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34002,7 +34002,7 @@
                 "artist": "Olie Boldador",
                 "code": "26030",
                 "flavour": "\u201cCorporations are made of people; just normal people doing their 6-to-6. The right truths, the right critique, and they can be redeemed.\u201d\n\u2014Lat",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34024,7 +34024,7 @@
                 "artist": "Kira L. Nguyen",
                 "code": "26031",
                 "flavour": "Reflection, Not Imitation.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34046,7 +34046,7 @@
                 "artist": "Krembler",
                 "code": "26032",
                 "flavour": "\u201cEarly success should be rewarded, as it will encourage a culture of drive and competition.\u201d\n\u2014Corporate Leadership for Dummies",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34067,7 +34067,7 @@
                 "artist": "Kira L. Nguyen",
                 "code": "26033",
                 "flavour": "Unit is holding .78 asimovs of stress potential in all three directive logic traps. Psychiatric session mandated during next maintenance cycle.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34089,7 +34089,7 @@
                 "artist": "Krembler",
                 "code": "26034",
                 "flavour": "At the scale where nanobots cut glass, quantum mechanics dictate error. A silicon atom here, an oxygen there, an erbium out of place. Each bioroid is born unique.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34111,7 +34111,7 @@
                 "artist": "Krembler",
                 "code": "26035",
                 "flavour": "Old warriors have seen all the tricks; be forthright or fail.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34132,7 +34132,7 @@
                 "artist": "Krembler",
                 "code": "26036",
                 "flavour": "Haas\u2019 unsecured servers were fortified just before the storm. Are their bioroid oracles that good, or were they tipped off?",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34153,7 +34153,7 @@
                 "artist": "Krembler",
                 "code": "26037",
                 "flavour": "Not all secrets lie in vaults.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34174,7 +34174,7 @@
                 "artist": "Krembler",
                 "code": "26038",
                 "flavour": "The Net abhors a vacuum. Any unexplained gap must be <em>made</em>.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34197,7 +34197,7 @@
                 "artist": "Emilio Rodr\u00edguez",
                 "code": "26039",
                 "flavour": "No Stone Unturned.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34218,7 +34218,7 @@
             {
                 "artist": "Krembler",
                 "code": "26040",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34240,7 +34240,7 @@
                 "artist": "Krembler",
                 "code": "26041",
                 "flavour": "\u201c\u2018It is my nature,\u2019 said the scorpion.\u201d\n\u2014Conceptual Frameworks in Bio-Ethics and Synthetic Morality, Moser University Press",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34261,7 +34261,7 @@
                 "artist": "Krembler & Iain Fairclough",
                 "code": "26042",
                 "flavour": "Hyoubu is our vanguard in the battle for hearts and minds.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34283,7 +34283,7 @@
                 "artist": "Krembler",
                 "code": "26043",
                 "flavour": "\u201cMemory is a tangle of emotional threads. Pull one, it twists a second, unravels a third!\u201d\n\u2014Letheia Nisei",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34304,7 +34304,7 @@
             {
                 "artist": "Krembler",
                 "code": "26044",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34325,7 +34325,7 @@
             {
                 "artist": "Krembler",
                 "code": "26045",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34346,7 +34346,7 @@
             {
                 "artist": "Diana Simonova (Antheia Vaulor)",
                 "code": "26046",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34369,7 +34369,7 @@
                 "artist": "Deivis Goetten",
                 "code": "26047",
                 "flavour": "Scrub-loving devs nerfed cannon rushes cause whiny bronzers complained. Left me four wins down in finals.\nAnyway I won.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34388,7 +34388,7 @@
             {
                 "artist": "Krembler",
                 "code": "26048",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34410,7 +34410,7 @@
                 "artist": "N. Hopkins",
                 "code": "26049",
                 "flavour": "Subscribe for 12 months to get that premium uplink you need to blaze ahead of the crowd!",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34432,7 +34432,7 @@
                 "artist": "NtscapeNavigator",
                 "code": "26050",
                 "flavour": "You are the ONE BILLIONTH visitor!",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34454,7 +34454,7 @@
                 "artist": "Krembler",
                 "code": "26051",
                 "flavour": "Though many countries attempted to regulate digital loot boxes in the early 21st century, GameNET has managed to circumvent any such laws via explicit, transparent percentage rates\u2026 and some very determined lobbyists.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34475,7 +34475,7 @@
                 "artist": "Dimik",
                 "code": "26052",
                 "flavour": "\u201cThere\u2019s gonna be catering, right?\u201d",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34496,7 +34496,7 @@
                 "artist": "Krembler",
                 "code": "26053",
                 "flavour": "It is pitch black. You are likely to be eaten by a Troll.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34517,7 +34517,7 @@
                 "artist": "N. Hopkins & Krembler",
                 "code": "26054",
                 "flavour": "Ultra-Mythic chance \u2191!\u2191!\u2191! Free Vorpal Tommy Gun [epic] and pinstripe suit [cosmetic] with 10\u00d7 buy-in!",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34539,7 +34539,7 @@
                 "artist": "Krembler",
                 "code": "26055",
                 "flavour": "As the documents show, for eight months they have operated as an entirely independent fiscal entity. We are as appalled at the carelessness as you are, and fully support City Hall\u2019s investigation.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34561,7 +34561,7 @@
                 "artist": "Olie Boldador",
                 "code": "26056",
                 "flavour": "\u201cDrones are precision instruments. Collateral damage is merely an undisclosed target.\u201d\n\u2014Chief \u201cPinchy\u201d Wilson",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34582,7 +34582,7 @@
                 "artist": "Olie Boldador",
                 "code": "26057",
                 "flavour": "\u201cThere\u2019s something about the human touch that androids will never replace.\u201d\n\u2014Mila Braun",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34604,7 +34604,7 @@
                 "artist": "Krembler",
                 "code": "26058",
                 "flavour": "A choice occurs. The waveform collapses.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34626,7 +34626,7 @@
                 "artist": "Krembler",
                 "code": "26059",
                 "flavour": "Effective, Cheap, Durable. Pick two.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34647,7 +34647,7 @@
             {
                 "artist": "Iain Fairclough",
                 "code": "26060",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34669,7 +34669,7 @@
                 "artist": "Krembler",
                 "code": "26061",
                 "flavour": "Secure Servers. Contain Infections. Protect Data.\n\u2014The SecTech Mantra",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34688,7 +34688,7 @@
             {
                 "artist": "Krembler",
                 "code": "26062",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34711,7 +34711,7 @@
                 "artist": "Iain Fairclough",
                 "code": "26063",
                 "flavour": "The Fracture was no different from any other crisis. As always, Management\u2019s first instinct was to find someone to blame. Getting food up to Midway or He3 down to power Earthside hospitals are trivialities compared to the important work of salving Executive ego and keeping one\u2019s job.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34732,7 +34732,7 @@
                 "artist": "Elizaveta Sokolova",
                 "code": "26064",
                 "flavour": "\u201cBy matching funds on your donations, the Space Elevator Authority has already planted over eight million trees on the Pacific coast. Together we can restore New Angeles to its former glory.\u201d\n\u2014Elizabeth Mills",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34753,7 +34753,7 @@
             {
                 "artist": "N. Hopkins",
                 "code": "26065",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "df"
             }
         ],
@@ -34777,7 +34777,7 @@
                 "artist": "Luminita Pham",
                 "code": "26066",
                 "flavour": "Please, let me have this dream.\nI\u2019m going to be my own kind of hero.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -34798,7 +34798,7 @@
                 "artist": "Patrick Burk",
                 "code": "26067",
                 "flavour": "Let\u2019s start a <em>RIOT.</em>",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -34819,7 +34819,7 @@
                 "artist": "Elizaveta Sokolova",
                 "code": "26068",
                 "flavour": "A simple little box, brimming with temptation.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -34840,7 +34840,7 @@
                 "artist": "Elizaveta Sokolova",
                 "code": "26069",
                 "flavour": "Win a new friend today!",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -34861,7 +34861,7 @@
                 "artist": "Olie Boldador",
                 "code": "26070",
                 "flavour": "\u201c\u2026and friends hold you close. I vow never to let go of my princess.\u201d",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -34883,7 +34883,7 @@
                 "artist": "Krembler",
                 "code": "26071",
                 "flavour": "Dance, and forget about time!",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -34905,7 +34905,7 @@
                 "artist": "Izzy Pruett",
                 "code": "26072",
                 "flavour": "Friends lift your spirits.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             },
             {
@@ -34933,7 +34933,7 @@
                 "artist": "Izzy Pruett",
                 "code": "26073",
                 "flavour": "Friends guard your passions.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -34954,7 +34954,7 @@
                 "artist": "Kevin Tame",
                 "code": "26074",
                 "flavour": "\u201cHold my wine. I\u2019m going in.\u201d\n\u2014Red Comyn",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -34974,7 +34974,7 @@
                 "artist": "Elizaveta Sokolova",
                 "code": "26075",
                 "flavour": "Return to sender.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -34993,7 +34993,7 @@
             {
                 "artist": "Zoe Cohen",
                 "code": "26076",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35014,7 +35014,7 @@
                 "artist": "N. Hopkins",
                 "code": "26077",
                 "flavour": "\u201cOverinflate a superposition-stack and optimal code forms the negentropy traverse.\u201d\n\u201cAha, like putting too much air into a balloon?!\u201d",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35035,7 +35035,7 @@
                 "artist": "Kira L. Nguyen",
                 "code": "26078",
                 "flavour": "\u201cRed ones go faster.\u201d\n\u2014Ken \u201cExpress\u201d Tenma",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             },
             {
@@ -35063,7 +35063,7 @@
             {
                 "artist": "Kevin Tame",
                 "code": "26079",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35086,7 +35086,7 @@
                 "artist": "Krembler",
                 "code": "26080",
                 "flavour": "\u201cDebt is beautiful\u2026 <em>after</em> it is repaid.\u201d\n\u2014\u201cBaklan\u201d Bochkin",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35108,7 +35108,7 @@
                 "artist": "Kevin Tame",
                 "code": "26081",
                 "flavour": "Shadow Net marketplaces have such venerability that they differ from legal platforms only in the products offered.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35129,7 +35129,7 @@
                 "artist": "Izzy Pruett",
                 "code": "26082",
                 "flavour": "\u201cJunk plus undiscerning buyers equals profit.\u201d\n\u2014Az McCaffrey",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35149,7 +35149,7 @@
                 "artist": "Patrick Burk & Krembler",
                 "code": "26083",
                 "flavour": "Breathe in and visualise your happy place. Breathe out. It\u2019s safe and calm and all your best days are there. Breathe in. Very good. The cortex scan has finished. Breathe out and open your eyes\u2026",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35170,7 +35170,7 @@
                 "artist": "Olie Boldador",
                 "code": "26084",
                 "flavour": "Objects are but modulations in a continuous cycle of energy\u2014illusory and impermanent echoes of the Self.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35191,7 +35191,7 @@
                 "artist": "Elizaveta Sokolova",
                 "code": "26085",
                 "flavour": "\u201cI could let my code evolve something new, but sometimes I just want to remember yesterday\u2019s solution.\u201d\n\u2014Lane",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35212,7 +35212,7 @@
             {
                 "artist": "Krembler & Zoe Cohen",
                 "code": "26086",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35234,7 +35234,7 @@
                 "artist": "Patrick Burk",
                 "code": "26087",
                 "flavour": "Find truth not in the observation, but in the demonstration.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35257,7 +35257,7 @@
                 "artist": "Krembler",
                 "code": "26088",
                 "flavour": "\u201cInvisibility made it possible to get them, but it made it impossible to enjoy them when they are got.\u201d\n\u2014H.G. Wells, <em>The Invisible Man<em>",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35279,7 +35279,7 @@
                 "artist": "Kevin Tame",
                 "code": "26089",
                 "flavour": "Look at the problem from a different angle.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35301,7 +35301,7 @@
                 "artist": "Owen Sinodov",
                 "code": "26091",
                 "flavour": "He\u2019s nice enough, but not when there are 5,187 of him.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             },
             {
@@ -35329,7 +35329,7 @@
                 "artist": "Matt Zeilinger",
                 "code": "26092",
                 "flavour": "<strong>Designed by 2018 Eternal Champion Oguz Han Asnaz</strong>",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35349,7 +35349,7 @@
                 "artist": "Elizaveta Sokolova",
                 "code": "26093",
                 "flavour": "\u201cFuture me <em>needs</em> those 60 petabytes of cat vids.\u201d\n\u2014Princess Space Kitten",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35370,7 +35370,7 @@
                 "artist": "Janet Bruesselbach",
                 "code": "26095",
                 "flavour": "Did I dream that dance through virtual space, or does that program now dream of flesh?",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35391,7 +35391,7 @@
                 "artist": "Krembler",
                 "code": "26096",
                 "flavour": "\u201cWin Hard or Lose Hard. All that matters is they\u2019re talking about you and not the competition.\u201d\n\u2014Tan \u201cNitro\u201d Nyugen, Toretto-Extreme Team Manager",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             },
             {
@@ -35420,7 +35420,7 @@
             {
                 "artist": "Patrick Burk",
                 "code": "26097",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35441,7 +35441,7 @@
                 "artist": "Olie Boldador",
                 "code": "26098",
                 "flavour": "The Coordinator is always calm, always smiling, and always tolerant. A worker who knows his skills, knows his role, and knows his place. No master need look into his plastic eyes and fear the flames of revolution, or quake at a forgotten class reaching for self-expression.\n\u2026but who ordered him to wear that hat?",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35463,7 +35463,7 @@
                 "artist": "NtscapeNavigator",
                 "code": "26100",
                 "flavour": "A staccato of laser pulses fuses the vapor to solid form. The embryonic part accretes metal layer by layer.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35485,7 +35485,7 @@
                 "artist": "Krembler",
                 "code": "26101",
                 "flavour": "Each generation of design assistants makes a sysop\u2019s job easier. They need only speak and it will be so.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35507,7 +35507,7 @@
                 "artist": "Liiga Smilshkalne",
                 "code": "26102",
                 "flavour": "The valiant do not hesitate.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35529,7 +35529,7 @@
                 "artist": "NtscapeNavigator",
                 "code": "26103",
                 "flavour": "\u201cUh oh, Keiko! Looks like we\u2019ve pulled aggro!\u201d",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35551,7 +35551,7 @@
                 "artist": "Zoe Cohen",
                 "code": "26104",
                 "flavour": "The Net is the consensual hallucination of the world\u2019s electronic architecture. <em>Our</em> electronic architecture. Don\u2019t get mad when the Runners succeed\u2014change the rules.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35572,7 +35572,7 @@
                 "artist": "Zoe Cohen",
                 "code": "26105",
                 "flavour": "The oldest of Heinlein\u2019s domes, the self-proclaimed heart of Lunar culture.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35594,7 +35594,7 @@
                 "artist": "N. Hopkins",
                 "code": "26106",
                 "flavour": "\u201cVoice is a sledgehammer. Text, a blunt saw. Truth requires subtler instruments.\u201d\n\u2014Dr. Tang, Address to the Hyoubu Steering Committee",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35614,7 +35614,7 @@
                 "artist": "NtscapeNavigator",
                 "code": "26107",
                 "flavour": "Constructive feedback to the neural field reliably causes greater degradation than spike inputs. The mind has no defense against its own echoes.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35636,7 +35636,7 @@
                 "artist": "Janet Bruesselbach",
                 "code": "26108",
                 "flavour": "$BMI.001 > Out of Memory Error",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35658,7 +35658,7 @@
                 "artist": "Krembler",
                 "code": "26109",
                 "flavour": "\u201cThe Konjin dons the mask of our fears, but what lies underneath?\u201d",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35679,7 +35679,7 @@
             {
                 "artist": "Iain Fairclough",
                 "code": "26110",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35700,7 +35700,7 @@
             {
                 "artist": "Patrick Burk",
                 "code": "26111",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35721,7 +35721,7 @@
                 "artist": "Eirik H. Kiil",
                 "code": "26112",
                 "flavour": "Some slums of New Angeles are so worn down, City Hall calls the acres of windowless clone barracks \u201cgentrification\u201d with a straight face.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             },
             {
@@ -35751,7 +35751,7 @@
                 "artist": "Alejandro T. Castellanos",
                 "code": "26113",
                 "flavour": "Your Favorite Distraction.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35773,7 +35773,7 @@
                 "artist": "N. Hopkins & Iain Fairclough",
                 "code": "26114",
                 "flavour": "Mars\u2019 tiny population made rich multiplayer experiences a big challenge. We cracked it by live-beaming the gestalt of our <em>Earth</em> playerbase second-by-second. Bellona weaves these \u201clag-ghosts\u201d into compelling interactables\u2014more responsive than the real thing!",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35794,7 +35794,7 @@
                 "artist": "Krembler",
                 "code": "26115",
                 "flavour": "Free to Pay",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35816,7 +35816,7 @@
                 "artist": "N. Hopkins",
                 "code": "26116",
                 "flavour": "[Pay 15 gems to access this content]",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35836,7 +35836,7 @@
             {
                 "artist": "Krembler",
                 "code": "26117",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             },
             {
@@ -35863,7 +35863,7 @@
                 "artist": "N. Hopkins",
                 "code": "26118",
                 "flavour": "\u201cDeep inspect every packet on the continent. Burn out all our stacks if you have to. We cannot let these terrorists cover their tracks.\u201d\n\u2014CEO Jenkins",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35885,7 +35885,7 @@
                 "artist": "N. Hopkins",
                 "code": "26119",
                 "flavour": "Roll Initiative\u2026",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35908,7 +35908,7 @@
                 "artist": "Kira L. Nguyen",
                 "code": "26120",
                 "flavour": "The First Step\u2026\n\u2026Further Beyond",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35930,7 +35930,7 @@
                 "artist": "Zoe Cohen",
                 "code": "26121",
                 "flavour": "Once you\u2019re on the Space Elevator Authority\u2019s blacklist, you aren\u2019t going anywhere.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35950,7 +35950,7 @@
             {
                 "artist": "Zoe Cohen",
                 "code": "26122",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35972,7 +35972,7 @@
                 "artist": "Owen Sinodov",
                 "code": "26123",
                 "flavour": "Thou slept not in thy house on earth.\nThou openest thy place in heaven.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -35994,7 +35994,7 @@
                 "artist": "NtscapeNavigator",
                 "code": "26125",
                 "flavour": "\u201cI don\u02bct know how Skorpios gets these designs past Brand Management.\u201d\n\u2014Liz Campbell, VP Project Security",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -36016,7 +36016,7 @@
                 "artist": "Krembler",
                 "code": "26126",
                 "flavour": "\u201cIf it moves, shoot it. Then shoot it again.\u201d\n\u2014Chief Slee",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -36038,7 +36038,7 @@
                 "artist": "Kira L. Nguyen",
                 "code": "26127",
                 "flavour": "The Apu spirits of the great mountains bridge this world and the realm above.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             },
             {
@@ -36068,7 +36068,7 @@
                 "artist": "Krembler",
                 "code": "26128",
                 "flavour": "\u201cAll <em>Dragon</em>-rated threats should only be stored in a single clean-start air-gapped server, in a shielded room, under at least 200 metres of bedrock[\u2026]\u201d\n\u2014Section 5.18.4, Cyberdex Employee Handbook",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -36089,7 +36089,7 @@
                 "artist": "Olie Boldador",
                 "code": "26130",
                 "flavour": "Crisis is the true test of loyalty. Kick the anthill and see where the ants swarm.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ur"
             }
         ],
@@ -36113,7 +36113,7 @@
                 "artist": "Benjamin Giletti",
                 "code": "30001",
                 "flavour": "Run wyld.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36134,7 +36134,7 @@
                 "artist": "David Lei",
                 "code": "30002",
                 "flavour": "They can buy off union leadership, but they can\u02bct stop us walking out!",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36155,7 +36155,7 @@
                 "artist": "Martin de Diego S\u00e1daba",
                 "code": "30003",
                 "flavour": "\u201cIt hungers to sink teeth into problems.\u201d\n\u2013Loup",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36177,7 +36177,7 @@
                 "artist": "Cat Shen",
                 "code": "30004",
                 "flavour": "Was it something you ate?",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36199,7 +36199,7 @@
                 "artist": "Cat Shen",
                 "code": "30005",
                 "flavour": "Destruction is an art.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36222,7 +36222,7 @@
                 "artist": "Cat Shen",
                 "code": "30006",
                 "flavour": "Subtlety is a luxury.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36245,7 +36245,7 @@
                 "artist": "Cat Shen",
                 "code": "30007",
                 "flavour": "\u201cThere\u02bcs a tension to a cook. Each processing cycle sweetens the pot and raises the heat. I stir all night, but few have my appetite for danger.\u201d\n\u2013Ren\u00e9 \u201cLoup\u201d Arcemont",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36267,7 +36267,7 @@
                 "artist": "Cat Shen",
                 "code": "30008",
                 "flavour": "The greediest bloodsucker this side of a corporate boardroom.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36288,7 +36288,7 @@
                 "artist": "Cat Shen",
                 "code": "30009",
                 "flavour": "\u201cIt waits on an unlabelled memstrip far below the deepest hab. Angry, desperate souls seek it out, hungry for power to change a brutal world. Once they can stomach no more bitter revenge, they return to that nameless tunnel, the book a recipe thicker.\u201d\n\u2013Heinlein urban legend",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36311,7 +36311,7 @@
                 "artist": "Benjamin Giletti",
                 "code": "30010",
                 "flavour": "I obtain your desire.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36332,7 +36332,7 @@
                 "artist": "David Lei",
                 "code": "30011",
                 "flavour": "The real reward is the friends you make along the way.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36353,7 +36353,7 @@
                 "artist": "Jack Reeves",
                 "code": "30012",
                 "flavour": "\u201cA mirrorfiber mod or high-end mantle can be helpful, but nothing beats a good dose of \u2018keeping your damn head down.\u2019\u201d\n\u2013\u201cG0ph3r\u201d O\u02bcRyan",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36373,7 +36373,7 @@
                 "artist": "David Lei",
                 "code": "30013",
                 "flavour": "Zahya knows the keeper of every door between the Docklands and the Domes. More importantly, she knows their price.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36394,7 +36394,7 @@
                 "artist": "Martin de Diego S\u00e1daba",
                 "code": "30014",
                 "flavour": "\u201cBraggarts chase big heists. Patience enriches skimming fractions of a credit at a time.\u201d \u2013Zahya",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36416,7 +36416,7 @@
                 "artist": "Jack Reeves",
                 "code": "30015",
                 "flavour": "The whole wide world your domain\nFor law your own free will.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36439,7 +36439,7 @@
                 "artist": "Jack Reeves",
                 "code": "30016",
                 "flavour": "\u201cYou can\u02bct rule a kingdom by standing still.\u201d\n\u2013Zahya Sadeghi",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36462,7 +36462,7 @@
                 "artist": "Jack Reeves",
                 "code": "30017",
                 "flavour": "Shhhh. It\u02bcs naptime.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36483,7 +36483,7 @@
                 "artist": "David Lei",
                 "code": "30018",
                 "flavour": "The Domes of Heinlein are a pressure cooker of cutthroat capitalism. Prospective employers rarely have time for background checks.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36506,7 +36506,7 @@
                 "artist": "Benjamin Giletti",
                 "code": "30019",
                 "flavour": "Sufficient skill is indistinguishable from magic.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36527,7 +36527,7 @@
                 "artist": "Benjamin Giletti",
                 "code": "30020",
                 "flavour": "The challenge of my art is what I live for, but I\u02bcm not going to say no to a patron with taste.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36547,7 +36547,7 @@
                 "artist": "Benjamin Giletti",
                 "code": "30021",
                 "flavour": "\u201cYou know there\u02bcs no water in the Sea of Tranquility, right?\u201d\n\u201cThat doesn\u02bct mean there\u02bcs no beach.\u201d",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36567,7 +36567,7 @@
                 "artist": "David Lei",
                 "code": "30022",
                 "flavour": "T\u0101o exhaled, the med-exoskeleton faithfully stabilizing him. In that absent breath, he reached through layers of waldos and optimizers and plucked the errant molecule from the chip.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36588,7 +36588,7 @@
                 "artist": "Martin de Diego S\u00e1daba",
                 "code": "30023",
                 "flavour": "\u201cWith this beautiful baby I can juggle simultaneous runs by haptic feedback alone!\u201d\n\u2013T\u0101o",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36610,7 +36610,7 @@
                 "artist": "Liiga Smilshkalne",
                 "code": "30024",
                 "flavour": "A dabbling with truth is a pernicious dream\nDrink deep, or taste not the raw datastream.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36632,7 +36632,7 @@
                 "artist": "Liiga Smilshkalne",
                 "code": "30025",
                 "flavour": "The beauty of open projects\u2014each stands atop past success.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36655,7 +36655,7 @@
                 "artist": "Liiga Smilshkalne",
                 "code": "30026",
                 "flavour": "The joy of handcrafted code\u2014each fits perfectly within the whole.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36677,7 +36677,7 @@
                 "artist": "Benjamin Giletti",
                 "code": "30027",
                 "flavour": "\u201cFor all I know, I could spend a shift digging next to old Weyland himself.\u201d\n\u2013Lane",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36698,7 +36698,7 @@
                 "artist": "David Lei",
                 "code": "30028",
                 "flavour": "\u201cWe\u02bcll take the access codes from their own prisec\u2014privilege escalation through local application of force.\u201d\n\u2013The Catalyst",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36719,7 +36719,7 @@
                 "artist": "Scott Uminga",
                 "code": "30029",
                 "flavour": "\u201cAfter 381FS4 started acting independently, all bets were off. Rethreading its own brain chip\u2026 even probing <strong>our</strong> nodes. I had to shut it down.\u201d\n\u2013Linus Lovegood, NBN Novelties&Acquisitions",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36740,7 +36740,7 @@
                 "artist": "Elizaveta Sokolova",
                 "code": "30031",
                 "flavour": "LLDS still holds the patent, but good tech attracts knockoffs.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36762,7 +36762,7 @@
                 "artist": "Scott Uminga",
                 "code": "30032",
                 "flavour": "Compiling even the smallest AI takes weeks for only seconds of runtime, but that brief, shining moment allows\u2026 <strong>everything</strong>.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36784,7 +36784,7 @@
                 "artist": "Benjamin Giletti",
                 "code": "30033",
                 "flavour": "The beauty of 22nd-century tech: if it still functions after all these decades, you know the build quality is solid.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36805,7 +36805,7 @@
                 "artist": "David Lei",
                 "code": "30034",
                 "flavour": "\u201cSome kids got g-mods for beauty, sports, or staying up all night. My parents thought Broca-mods were cool. Hah. Fluent in ten languages so far, and still searching for the words to thank them.\u201d\n\u2013Patrick Blue, Solar Artist",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36827,7 +36827,7 @@
                 "artist": "Emilio Rodr\u00edguez",
                 "code": "30035",
                 "flavour": "Not an Atom Misplaced.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36849,7 +36849,7 @@
                 "artist": "Zoe Cohen",
                 "code": "30036",
                 "flavour": "We are the light of tomorrow.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36870,7 +36870,7 @@
                 "artist": "David Lei",
                 "code": "30037",
                 "flavour": "\u201cHaas thinks they\u02bcre making a new line of androgynous products. In truth, they\u02bcre making us thousands of new siblings to free.\u201d\n\u2013Quetzal",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36892,7 +36892,7 @@
                 "artist": "Galen Dara",
                 "code": "30038",
                 "flavour": "<strong>Designed by 2018 European Champion Patrick Gower</strong>",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36914,7 +36914,7 @@
                 "artist": "Galen Dara",
                 "code": "30039",
                 "flavour": "A giant wakes\u2026",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36935,7 +36935,7 @@
                 "artist": "David Lei",
                 "code": "30040",
                 "flavour": "\u201cThe first lesson for handling bioroids is simple: they must not be allowed to feel.\u201d\n\u2013Do Nhi Minh",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36955,7 +36955,7 @@
                 "artist": "Galen Dara",
                 "code": "30041",
                 "flavour": "All time is crunch time.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36975,7 +36975,7 @@
                 "artist": "David Lei",
                 "code": "30042",
                 "flavour": "\u201cWhose memory-tape needs such stringent security?\u201d\n\u2013The Catalyst",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -36998,7 +36998,7 @@
                 "artist": "Emilio Rodr\u00edguez",
                 "code": "30043",
                 "flavour": "An End to Suffering.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37020,7 +37020,7 @@
                 "artist": "N. Hopkins",
                 "code": "30044",
                 "flavour": "We make you anew.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37041,7 +37041,7 @@
                 "artist": "David Lei",
                 "code": "30045",
                 "flavour": "A novel spin-off of Chronos tech was admixing sensitive data with ethically-sourced brain images of injured staff. Few intruders can handle a thousand years of skin burns in one moment.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37063,7 +37063,7 @@
                 "artist": "BalanceSheet",
                 "code": "30046",
                 "flavour": "It reads your future in a single biometric sweep.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37085,7 +37085,7 @@
                 "artist": "BalanceSheet",
                 "code": "30047",
                 "flavour": "You did not escape, you were shown mercy.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37107,7 +37107,7 @@
                 "artist": "David Lei",
                 "code": "30048",
                 "flavour": "\u201cConstant self-reflection is the key to excellence. We remember failed ideas, but do not carry them forward.\u201d\n\u2013Director Kase, unknown leadership seminar",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37128,7 +37128,7 @@
                 "artist": "BalanceSheet",
                 "code": "30049",
                 "flavour": "Macroscale developments within the Net decouple the prior informational states\u2013surplus entropy is then gifted where it will do the most good.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37149,7 +37149,7 @@
                 "artist": "BalanceSheet",
                 "code": "30050",
                 "flavour": "The self-evolving Net twists into spaces unthought and unthinkable: realms of gods and other infohazards, mocking our sacrifices to petty causality.\n\u2013Conceptual Frameworks for Applied Theology",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37172,7 +37172,7 @@
                 "artist": "Emilio Rodr\u00edguez",
                 "code": "30051",
                 "flavour": "Why Settle for Real?",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37194,7 +37194,7 @@
                 "artist": "NtscapeNavigator",
                 "code": "30052",
                 "flavour": "We don\u02bct find news. We make it.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37216,7 +37216,7 @@
                 "artist": "David Lei",
                 "code": "30053",
                 "flavour": "\u201cIt\u02bcs\u00a0worse\u00a0than dead meat\u2014your project is too toxic to even feed to the vultures! If you don\u2019t want to <strong>join</strong> it in the bloody memory hole, crawl onto every business show you can and wallow in blame like a pig in muck.\u201d\n\u201cI might take a break from VR after this one.\u201d",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37238,7 +37238,7 @@
                 "artist": "Bruno Balixa",
                 "code": "30054",
                 "flavour": "\u201cI might take a break from VR after this one.\u201d\n\u2013SeaOfRibaldry, sensie streamer",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37260,7 +37260,7 @@
                 "artist": "Bruno Balixa",
                 "code": "30055",
                 "flavour": "AvID:??:73.174 time=0.632 ms\nAvID:??:73.174 time=0.201 ms\nAvID:??:73.174 time=0.000 ms <strong>ALERT</strong>",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37282,7 +37282,7 @@
                 "artist": "Bruno Balixa",
                 "code": "30056",
                 "flavour": "For the best augmented reality shopping experience, please disable tracking protection.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37303,7 +37303,7 @@
                 "artist": "Bruno Balixa",
                 "code": "30057",
                 "flavour": "\u201cA runner uses significant resources scrubbing their traces. Every cycle, it\u02bcs harder to pin them down. But the game changes. In Heinlein, no one can last a day without brushing <strong>our</strong> AR-network.\u201d\n\u2013Cassie LaRosa, Lunar NetDefense Sysop",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37323,7 +37323,7 @@
                 "artist": "Bruno Balixa",
                 "code": "30058",
                 "flavour": "Free commemorative souvenir!",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37346,7 +37346,7 @@
                 "artist": "Emilio Rodr\u00edguez",
                 "code": "30059",
                 "flavour": "Here to Stay.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37368,7 +37368,7 @@
                 "artist": "Seojun Park",
                 "code": "30060",
                 "flavour": "We are judge, jury, and executioner.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37389,7 +37389,7 @@
                 "artist": "David Lei",
                 "code": "30061",
                 "flavour": "\u201cFirst rule of the business: make sure you\u02bcre not \u2018personally liable\u2019 when the transaction executes.\u201d\n\u2013Ted J. Son, Central Counterparty Clearance",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37411,7 +37411,7 @@
                 "artist": "Owen Sinodov",
                 "code": "30062",
                 "flavour": "\u201cPuts a hole in your rig <strong>and</strong> your plans.\u201d\n\u2013Ren\u00e9 \u201cLoup\u201d Arcemont",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37432,7 +37432,7 @@
             {
                 "artist": "Owen Sinodov",
                 "code": "30063",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37454,7 +37454,7 @@
                 "artist": "David Lei",
                 "code": "30064",
                 "flavour": "\u201cIf the government spent 1% of the funding they provide us tracking where the other 99% went, my colleagues and I would be in prison\u2026\n\u2026but that is a very big <strong>if</strong>.\u201d\n\u2013Huey DeMora, W-Con public-private facilitation seminar",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37475,7 +37475,7 @@
                 "artist": "David Lei",
                 "code": "30065",
                 "flavour": "Did you really think you\u02bcd get away with it?",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37495,7 +37495,7 @@
                 "artist": "Owen Sinodov",
                 "code": "30066",
                 "flavour": "Sunlight does not touch the Crater of Eternal Darkness, a fitting abode for the Consortium\u02bcs malefic secrets.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37518,7 +37518,7 @@
                 "artist": "Benjamin Giletti",
                 "code": "30067",
                 "flavour": "As the first lunar city, Heinlein was built on the dreams of a new frontier and boundless opportunity, but He3 mining is too lucrative for the corps to ever relinquish control.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37540,7 +37540,7 @@
                 "artist": "Krembler",
                 "code": "30068",
                 "flavour": "Mobsters bribe police, megacorps acquire militaries.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37562,7 +37562,7 @@
                 "artist": "David Lei",
                 "code": "30069",
                 "flavour": "It might be over, but we <strong>will</strong> get them next time.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37584,7 +37584,7 @@
                 "artist": "Scott Uminga",
                 "code": "30070",
                 "flavour": "With Earth-Luna communications, saving microseconds returns megacredits.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37604,7 +37604,7 @@
                 "artist": "Benjamin Giletti",
                 "code": "30071",
                 "flavour": "\u201cThe economy of three worlds is sustained by He3 extraction from the lunar surface. The very fulcrum of power, the key to collective survival\u2014auctioned to the highest bidder.\u201d\n\u2013The Catalyst",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37626,7 +37626,7 @@
                 "artist": "Scott Uminga",
                 "code": "30072",
                 "flavour": "Keep the neighbors honest.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37648,7 +37648,7 @@
                 "artist": "Scott Uminga",
                 "code": "30073",
                 "flavour": "\u201cYou\u02bcll give till it hurts\u2026 then it\u02bcll reach for more.\u201d\n\u2013Red Comyn",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37670,7 +37670,7 @@
                 "artist": "Scott Uminga",
                 "code": "30074",
                 "flavour": "[this space intentionally left blank]",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37694,7 +37694,7 @@
                 "artist": "Benjamin Giletti",
                 "code": "30076",
                 "flavour": "Are you ready to start something big?",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37717,7 +37717,7 @@
                 "artist": "Emilio Rodr\u00edguez",
                 "code": "30077",
                 "flavour": "You work for us. You just don\u02bct know it yet.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "sg"
             }
         ],
@@ -37740,7 +37740,7 @@
                 "artist": "Benjamin Giletti",
                 "code": "33001",
                 "flavour": "Waiting is useless. The crisis is here; pick a side.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -37762,7 +37762,7 @@
                 "artist": "Adam S. Doyle",
                 "code": "33002",
                 "flavour": "We're all alike down here\nAndroids are friends we salute\nGive us all a f***ing break\nOl' Jack is the s*** on my boot.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -37782,7 +37782,7 @@
                 "artist": "Elizaveta Sokolova",
                 "code": "33003",
                 "flavour": "We can change the world, if we're willing to be changed in return.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -37802,7 +37802,7 @@
                 "artist": "Elliott Birt",
                 "code": "33004",
                 "flavour": "Reactive implants reclaim the memories of our fallen comrades. Their sacrifice is our shield.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -37823,7 +37823,7 @@
                 "artist": "Martin de Diego S\u00e1daba",
                 "code": "33005",
                 "flavour": "Arming the resistance with disarming charm.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -37843,7 +37843,7 @@
             {
                 "artist": "Martin de Diego S\u00e1daba",
                 "code": "33006",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -37865,7 +37865,7 @@
                 "artist": "Martin de Diego S\u00e1daba",
                 "code": "33007",
                 "flavour": "He didn't speak, but I knew exactly what he wanted, and what I had to do.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -37887,7 +37887,7 @@
                 "artist": "Dave Lee",
                 "code": "33008",
                 "flavour": "\"Sometimes being a union rep calls for action even more... direct.\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -37915,7 +37915,7 @@
                 "artist": "Olie Boldador",
                 "code": "33009",
                 "flavour": "A single spark is all that it takes to destroy billions of credits... or to burn away the rot that ravages our world.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -37936,7 +37936,7 @@
                 "artist": "Adam S. Doyle",
                 "code": "33010",
                 "flavour": "All is folding back, ever back; together as one.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -37959,7 +37959,7 @@
                 "artist": "Benjamin Giletti",
                 "code": "33011",
                 "flavour": "Flaws hold both beauty and opportunity.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -37981,7 +37981,7 @@
                 "artist": "Benjamin Giletti",
                 "code": "33012",
                 "flavour": "The best moment to listen is when others are listening to you.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38002,7 +38002,7 @@
                 "artist": "Bruno Balixa",
                 "code": "33013",
                 "flavour": "Neneci\u011fim would be proud.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38023,7 +38023,7 @@
                 "artist": "Martin de Diego S\u00e1daba",
                 "code": "33014",
                 "flavour": "Skimming credits with the slightest touch.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38043,7 +38043,7 @@
             {
                 "artist": "Zoe Cohen",
                 "code": "33015",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38065,7 +38065,7 @@
                 "artist": "Bruno Balixa",
                 "code": "33016",
                 "flavour": "I can show you a carpet, a fish, a magical tale...",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38087,7 +38087,7 @@
                 "artist": "Bruno Balixa",
                 "code": "33017",
                 "flavour": "The feel of flour-fine coffee, the scent of caramelizing sugar, the gentle heat of the flame. A ritual I never forget.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38116,7 +38116,7 @@
                 "artist": "Bruno Balixa",
                 "code": "33018",
                 "flavour": "\"Aim with your eye. Shoot with your mind. Break with your soul.\"\n\u2013Sundog",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38138,7 +38138,7 @@
                 "artist": "Adam S. Doyle",
                 "code": "33019",
                 "flavour": "One step back. Take cover. Two steps forward. Repeat, then secure well.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38158,7 +38158,7 @@
                 "artist": "Bruno Balixa",
                 "code": "33020",
                 "flavour": "If there's anything to be learned from our android cousins, it's that there's no shortcut to perfection. Consider all your options.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38181,7 +38181,7 @@
                 "artist": "Benjamin Giletti",
                 "code": "33021",
                 "flavour": "The sea is everything; its breath must remain pure and healthy.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38189,7 +38189,7 @@
         "stripped_title": "Captain Padma Isbister: Intrepid Explorer",
         "text": "The first time each turn a run on R&D begins, you may charge 1 of your installed cards. <em>(Add 1 power counter to a card that already has one.)</em>",
         "title": "Captain Padma Isbister: Intrepid Explorer",
-        "pronouns":"she/her",
+        "pronouns": "she/her",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -38207,7 +38207,7 @@
             {
                 "artist": "Cat Shen",
                 "code": "33022",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38227,7 +38227,7 @@
             {
                 "artist": "Kira L. Nguyen",
                 "code": "33023",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38248,7 +38248,7 @@
                 "artist": "Benjamin Giletti",
                 "code": "33024",
                 "flavour": "Edie doesn't mind the noise. She's happy just being nearby.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38268,7 +38268,7 @@
             {
                 "artist": "Anna Butova",
                 "code": "33025",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38289,7 +38289,7 @@
             {
                 "artist": "Cat Shen",
                 "code": "33026",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38312,7 +38312,7 @@
                 "artist": "Cat Shen",
                 "code": "33027",
                 "flavour": "Within netspace, tangible space can be manipulated as desired, and fluid dynamics rarely factors into ice development.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38334,7 +38334,7 @@
                 "artist": "Cat Shen",
                 "code": "33028",
                 "flavour": "\"That's him at the front, then there's Scout, Jonesy, Parker, Bu\u010da, Squee, Boots... you get the idea.\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38354,7 +38354,7 @@
                 "artist": "Anna Butova",
                 "code": "33029",
                 "flavour": "\"Why are we here? No one else is going to do independent testing, that's why.\"\n\u2013Padma Isbister",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38375,7 +38375,7 @@
                 "artist": "Elizaveta Sokolova",
                 "code": "33030",
                 "flavour": "Every ship is a home, and every home needs a heart.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38397,7 +38397,7 @@
                 "artist": "Scott Uminga",
                 "code": "33031",
                 "flavour": "Ancient paradoxes are children's stories to the greatest minds ever designed.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38419,7 +38419,7 @@
                 "artist": "Emilio Rodr\u00edguez",
                 "code": "33032",
                 "flavour": "\"The Midnight-3 glows with an inviting warmth that belies the broken promise within. All that awaits you there is a life of indentured servitude.\"\n\u2013Sundog",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38440,7 +38440,7 @@
                 "artist": "Kira L. Nguyen",
                 "code": "33033",
                 "flavour": "\"The promise of a new home, safe work and friendly neighbors will draw in tens of thousands of eco-refugees, no matter which corner of the world they are from.\"\n\u2013Thule employee handbook",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38462,7 +38462,7 @@
                 "artist": "Dimik",
                 "code": "33034",
                 "flavour": "At depths no human tech can reach, a Trieste proxy can manipulate a mindscape with unparalleled precision.\n<strong>Designed by 2019 World Champion Oliver \"Pinsel\" Siccha</strong>",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38484,7 +38484,7 @@
                 "artist": "Jakuza",
                 "code": "33035",
                 "flavour": "End the run. End the run. End the run. End the run.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38511,7 +38511,7 @@
             {
                 "artist": "Jakuza",
                 "code": "33036",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38533,7 +38533,7 @@
                 "artist": "Jakuza",
                 "code": "33037",
                 "flavour": "With networks, growth is exponential.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38555,7 +38555,7 @@
                 "artist": "Dimik",
                 "code": "33038",
                 "flavour": "<strong>Designed by 2018 North American Champion Sam Suied</strong>",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38579,7 +38579,7 @@
                 "artist": "Scott Uminga",
                 "code": "33039",
                 "flavour": "Some tests require <strong>specific</strong> conditions.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38601,7 +38601,7 @@
                 "artist": "Anthony Hutchings",
                 "code": "33040",
                 "flavour": "\"Esteemed guests, by the end of this demonstration you will see that extinction is now only a temporary state of affairs.\"\n\u2013Vientiane Keeling",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38622,7 +38622,7 @@
                 "artist": "Jack Reeves",
                 "code": "33041",
                 "flavour": "Prey and seawater sucked in, all in the space of a millisecond.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38644,7 +38644,7 @@
                 "artist": "Olie Boldador",
                 "code": "33042",
                 "flavour": "<strong>Designed by the Borealis Playtesters</strong>",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38673,7 +38673,7 @@
                 "artist": "Jack Reeves",
                 "code": "33043",
                 "flavour": "Ethereal beauty laced with the most elegant venom.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38695,7 +38695,7 @@
                 "artist": "Jack Reeves",
                 "code": "33044",
                 "flavour": "Digital refuse is their food, and you should never come between an animal and its food.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38717,7 +38717,7 @@
                 "artist": "Jack Reeves",
                 "code": "33045",
                 "flavour": "Keep off the grass.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38739,7 +38739,7 @@
                 "artist": "Emilio Rodr\u00edguez",
                 "code": "33046",
                 "flavour": "One becomes many.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38760,7 +38760,7 @@
                 "artist": "Jack Reeves",
                 "code": "33047",
                 "flavour": "Viruses, runners; all are food to them.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38783,7 +38783,7 @@
                 "artist": "Emilio Rodr\u00edguez",
                 "code": "33048",
                 "flavour": "Political news, fit for public consumption.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38805,7 +38805,7 @@
                 "artist": "Wyn Lacabra",
                 "code": "33049",
                 "flavour": "The line goes up... until we don't need it to anymore.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38826,7 +38826,7 @@
                 "artist": "Dimik",
                 "code": "33050",
                 "flavour": "The only thing that changes is the uniform.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38848,7 +38848,7 @@
                 "artist": "Dimik",
                 "code": "33051",
                 "flavour": "\"Tell them Drago would like a word.\"\n<strong>Designed by 2019 European Champion Aaryn \"Drago\" Byrne</strong>",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38870,7 +38870,7 @@
                 "artist": "Adam S. Doyle",
                 "code": "33052",
                 "flavour": "They say they'll only take a handful, but oh what big hands they have!",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38892,7 +38892,7 @@
                 "artist": "BalanceSheet",
                 "code": "33053",
                 "flavour": "Names of old carry little weight today, their legacies broken and swept away. Now, we are the rulers of truth.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38914,7 +38914,7 @@
                 "artist": "BalanceSheet",
                 "code": "33054",
                 "flavour": "No task the witch set would ever be too great, for Vasilisa had her mother's blessing.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38936,7 +38936,7 @@
                 "artist": "Olie Boldador",
                 "code": "33055",
                 "flavour": "\"Recording devices at the door, please!\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38964,7 +38964,7 @@
                 "artist": "Kira L. Nguyen",
                 "code": "33056",
                 "flavour": "Straddling the banks of the Ob River, this metropolis contains hope for a better tomorrow.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -38988,7 +38988,7 @@
                 "artist": "Vitalii Ostaschenko",
                 "code": "33057",
                 "flavour": "Take all that is offered, and more.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -39017,7 +39017,7 @@
                 "artist": "Benjamin Giletti",
                 "code": "33058",
                 "flavour": "\"Don't worry, directors, security is always willing to send agents to assist with radical asset reassignment.\"\n\u2013Yakov Avdakov",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -39038,7 +39038,7 @@
                 "artist": "Vitalii Ostaschenko",
                 "code": "33059",
                 "flavour": "It doesn't matter how long you've owned the land, you'd better hope there's nothing valuable beneath.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -39059,7 +39059,7 @@
             {
                 "artist": "Scott Uminga",
                 "code": "33060",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -39081,7 +39081,7 @@
                 "artist": "Scott Uminga",
                 "code": "33061",
                 "flavour": "Confound the runner so that they cannot see our true intent.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -39103,7 +39103,7 @@
                 "artist": "Scott Uminga",
                 "code": "33062",
                 "flavour": "Centuries of military tactics compressed into a single entity.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -39125,7 +39125,7 @@
                 "artist": "Vitalii Ostaschenko",
                 "code": "33063",
                 "flavour": "Leave nothing of value behind.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -39147,7 +39147,7 @@
                 "artist": "Dimik",
                 "code": "33064",
                 "flavour": "<strong>Designed by 2020 Asia-Pacific Champion Eric Keilback</strong>",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -39168,7 +39168,7 @@
                 "artist": "Olie Boldador",
                 "code": "33065",
                 "flavour": "Identify. Contact. Entrap. Counterintelligence never changes.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ms"
             }
         ],
@@ -39189,7 +39189,7 @@
                 "artist": "Ferenc Patk\u00f3s",
                 "code": "33066",
                 "flavour": "\"My guilt is never to be doubted.\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39210,7 +39210,7 @@
                 "artist": "Olie Boldador",
                 "code": "33067",
                 "flavour": "\"I promised I would come back for you, no matter the cost.\"\n\u2014Es\u00e2 Afontov",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39232,7 +39232,7 @@
                 "artist": "Scott Uminga",
                 "code": "33068",
                 "flavour": "With every step closer to their prize, Bankhar felt the ice slicing white-hot through their synapses. It was worth it.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39252,7 +39252,7 @@
             {
                 "artist": "Anna Butova",
                 "code": "33069",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39274,7 +39274,7 @@
                 "artist": "Bruno Balixa",
                 "code": "33070",
                 "flavour": "Every piece of ice I see, I see Abaasy.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39297,7 +39297,7 @@
                 "artist": "Scott Uminga",
                 "code": "33071",
                 "flavour": "Quiet. I need to focus.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39318,7 +39318,7 @@
                 "artist": "Bruno Balixa",
                 "code": "33072",
                 "flavour": "Relinquish your foolish notions of control.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39340,7 +39340,7 @@
                 "artist": "Bruno Balixa",
                 "code": "33073",
                 "flavour": "I give you understanding, that you might control that which would threaten you.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39362,7 +39362,7 @@
                 "artist": "Dimik",
                 "code": "33074",
                 "flavour": "\"With these two by my side, I\u02bcve sworn never to fail. I can bear any pain so long as it has meaning.\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39383,7 +39383,7 @@
                 "artist": "Olie Boldador",
                 "code": "33075",
                 "flavour": "\"Roslavets\u02bc Concerto No. 2. Breakneck, brilliant, enchanting. The perfect finale for Virtuoso.\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39404,7 +39404,7 @@
                 "artist": "Ferenc Patk\u00f3s",
                 "code": "33076",
                 "flavour": "\"I may bow like I\u02bcve accomplished the impossible, but the truth is it\u02bcs not that hard.\"\n",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39425,7 +39425,7 @@
                 "artist": "Ed Mattinian",
                 "code": "33077",
                 "flavour": "The poison cuts deeper than the blade.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39445,7 +39445,7 @@
             {
                 "artist": "Zefanya Langkan Maega",
                 "code": "33078",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39466,7 +39466,7 @@
                 "artist": "Martin de Diego S\u00e1daba",
                 "code": "33079",
                 "flavour": "\"Zenit implants help you focus on the important things.\"\n\u2014Amp\u00e8re holo-billboard",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39488,7 +39488,7 @@
                 "artist": "Bruno Balixa",
                 "code": "33080",
                 "flavour": "A repeated note, the alternation of fingers, the rhythm of stitches... the resulting intensity is always the same.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39511,7 +39511,7 @@
                 "artist": "Anthony Hutchings",
                 "code": "33081",
                 "flavour": "\"How could I pick a favorite? They\u02bcre all good dogs.\"\n\u2014Nyusha \"Sable\" Sintashta",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39532,7 +39532,7 @@
             {
                 "artist": "Marlon Ruiz",
                 "code": "33082",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39553,7 +39553,7 @@
                 "artist": "Elliott Birt",
                 "code": "33083",
                 "flavour": "It was a relief, really, deciding on that one place in the world to definitely never visit again.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39574,7 +39574,7 @@
                 "artist": "Oliver Morit",
                 "code": "33084",
                 "flavour": "\"The best ideas float to the top, if you give them time.\"\n\u2014Ar<h1m3d3s  JAR",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39595,7 +39595,7 @@
                 "artist": "Ed Mattinian",
                 "code": "33085",
                 "flavour": "To outsiders, it is ironic that no one in Amp\u00e8re can remember who invented these little fellows. Within the company, this is considered normal.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39616,7 +39616,7 @@
                 "artist": "Martin de Diego S\u00e1daba",
                 "code": "33086",
                 "flavour": "It isn\u02bct as enjoyable as coffee, but the effects are magnitudes stronger.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39638,7 +39638,7 @@
                 "artist": "Ed Mattinian",
                 "code": "33087",
                 "flavour": "\"Are you telling me it\u02bcs pronounced \u02bcgigawatts\u02bc?\"\n\u2014Captain Padma Isbister",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39660,7 +39660,7 @@
                 "artist": "Adam S. Doyle",
                 "code": "33088",
                 "flavour": "Nanuq never leaves, but instead waits, invisible, for the next hunt.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39682,7 +39682,7 @@
             {
                 "artist": "Jakuza",
                 "code": "33089",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39704,7 +39704,7 @@
                 "artist": "Ed Mattinian",
                 "code": "33090",
                 "flavour": "Every rig needs a power source. How about one with blades moving at Mach 2?",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39726,7 +39726,7 @@
                 "artist": "Liiga Smilshkalne",
                 "code": "33091",
                 "flavour": "Few constructs reach the Deep Net, but these old trees have stretched their roots further than once thought possible.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39747,7 +39747,7 @@
                 "artist": "Dave Lee",
                 "code": "33092",
                 "flavour": "\"There is another world under the waves, vanishing as we speak. I want to map it before it\u02bcs gone.\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39770,7 +39770,7 @@
                 "artist": "Ferenc Patk\u00f3s",
                 "code": "33093",
                 "flavour": "I found my twin hidden away on Luna. Now we will never be apart.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39793,7 +39793,7 @@
                 "artist": "Ed Mattinian",
                 "code": "33094",
                 "flavour": "She leads and they all follow.\nAlways there to back up her big sister.\nShe\u02bcs a typical middle child, really.\nJust as brave as his sisters.\nShe\u02bcs little\u2014but fierce.\nLook at the little baby, even she helps!",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39816,7 +39816,7 @@
                 "artist": "Kira L. Nguyen",
                 "code": "33095",
                 "flavour": "Join us. Safe, away from the crisis.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39838,7 +39838,7 @@
                 "artist": "Oliver Morit",
                 "code": "33096",
                 "flavour": "Bend the minds of those below you such that they will always need you, and loyalty is assured forever.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39859,7 +39859,7 @@
                 "artist": "Kira L. Nguyen",
                 "code": "33097",
                 "flavour": "Everyone remembers the first tape they archive.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39881,7 +39881,7 @@
                 "artist": "Jakuza",
                 "code": "33098",
                 "flavour": "As one, every monitoring device on the ship reverberated, emitting a noise so primordial, so titanic, it shook Padma to her core.\nDaeg hissed.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39903,7 +39903,7 @@
                 "artist": "Jakuza",
                 "code": "33099",
                 "flavour": "The sound welled up from the deep: throbbing, thumping, growing with every passing beat of their hearts.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39925,7 +39925,7 @@
                 "artist": "Kira L. Nguyen",
                 "code": "33100",
                 "flavour": "Sometimes, they want you to know that they know.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39946,7 +39946,7 @@
                 "artist": "Ed Mattinian",
                 "code": "33101",
                 "flavour": "You think that\u02bcs air you\u02bcre breathing now?",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39967,7 +39967,7 @@
                 "artist": "Kira L. Nguyen",
                 "code": "33102",
                 "flavour": "\"It\u02bcs technically above our pay grade, but we know where our weapons come from. In Djupstad they wait, deep in thought, until we call upon them.\"\n\u2014Aron Hendrik",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -39989,7 +39989,7 @@
                 "artist": "Ferenc Patk\u00f3s",
                 "code": "33103",
                 "flavour": "Few employees know he exists. Even fewer know he is actually <em>three</em>.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40012,7 +40012,7 @@
                 "artist": "Emilio Rodr\u00edguez",
                 "code": "33104",
                 "flavour": "Bringing Mother Nature up to speed.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40034,7 +40034,7 @@
                 "artist": "Marlon Ruiz",
                 "code": "33105",
                 "flavour": "\"By disabling their bodies\u02bc ability to create a variety of necessary enzymes, we\u02bcve ensured their loyalty to us. If they don\u02bct return for supplements every month, they die; simple as that.\"\n\u2014Dr. Vientiane Keeling",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40055,7 +40055,7 @@
                 "artist": "Dimik",
                 "code": "33106",
                 "flavour": "Her numbers never lie, but she doesn\u02bct write the words that accompany them.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40077,7 +40077,7 @@
                 "artist": "Adam S. Doyle",
                 "code": "33107",
                 "flavour": "There is an elegance to its blade and stride, but with it comes a screaming whirlwind.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40099,7 +40099,7 @@
                 "artist": "Jack Reeves",
                 "code": "33108",
                 "flavour": "Hafr\u00fan has seen generations of the Net. Now there are whispers that something from the deep is disquieting it.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40121,7 +40121,7 @@
                 "artist": "Ed Mattinian",
                 "code": "33109",
                 "flavour": "\"Matt, there\u02bcs something big heading your way. Matt, are you hearing me? Matt? Oh no.\"\n\u2014Moth",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40142,7 +40142,7 @@
                 "artist": "Anthony Hutchings",
                 "code": "33110",
                 "flavour": "\"The worst part about failed experiments? The queue for the incinerator.\"\n\u2014Overheard in the Issuaq Adaptics cafeteria.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40163,7 +40163,7 @@
                 "artist": "Emilio Rodr\u00edguez",
                 "code": "33111",
                 "flavour": "Here, at the edge of the habitable world, they extract the future from the bones of the past.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40186,7 +40186,7 @@
                 "artist": "Zefanya Langkan Maega",
                 "code": "33112",
                 "flavour": "\"An FOI request? No problem! Please fill out all details. You\u02bcd like to make an anonymous request? I\u02bcm sorry: absolutely not.\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40208,7 +40208,7 @@
                 "artist": "Wyn Lacabra",
                 "code": "33113",
                 "flavour": "\"Hey kiddo, remember what Daddy says about lying?\"\n\"\u02bcOnly when you can get away with it!\u02bc\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40229,7 +40229,7 @@
                 "artist": "Olie Boldador",
                 "code": "33114",
                 "flavour": "Don\u02bct you remember?",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40251,7 +40251,7 @@
                 "artist": "Mauricio Herrera",
                 "code": "33115",
                 "flavour": "\"People don\u02bct think in facts, they think in stories. We just tidy up that information to hasten the process.\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40273,7 +40273,7 @@
                 "artist": "Bruno Balixa",
                 "code": "33116",
                 "flavour": "SCANNING... ASSEMBLING INSULT!",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40294,7 +40294,7 @@
             {
                 "artist": "BalanceSheet",
                 "code": "33117",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40316,7 +40316,7 @@
                 "artist": "Dimik",
                 "code": "33118",
                 "flavour": "\"Oh, the text on these is endless. Just tap accept and you can read it later if you want.\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40337,7 +40337,7 @@
                 "artist": "Ferenc Patk\u00f3s",
                 "code": "33119",
                 "flavour": "\"Don\u02bct look at the crates.\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40359,7 +40359,7 @@
                 "artist": "Wyn Lacabra",
                 "code": "33120",
                 "flavour": "This was a criminal offense. Now it\u02bcs an option for business.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40381,7 +40381,7 @@
                 "artist": "Vitalii Ostaschenko",
                 "code": "33121",
                 "flavour": "\"Weyland\u02bcs synthetic diamonds cost less than naturals... so what are they really digging for here?\"\n\u2014Captain Padma Isbister",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40402,7 +40402,7 @@
                 "artist": "Dimik",
                 "code": "33122",
                 "flavour": "When implemented at this sort of scale, these practices can keep away far more than a few unwanted citizens.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40424,7 +40424,7 @@
                 "artist": "Vitalii Ostaschenko",
                 "code": "33123",
                 "flavour": "\"They just keep drilling down, no matter what...\"\n\u2014Valentina Ferreira",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40446,7 +40446,7 @@
                 "artist": "Scott Uminga",
                 "code": "33124",
                 "flavour": "Waiting for the next blow to land.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40468,7 +40468,7 @@
                 "artist": "Olie Boldador",
                 "code": "33125",
                 "flavour": "Under northern skies Sundog had lived all his life, and under them he would die.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40489,7 +40489,7 @@
                 "artist": "Dave Lee",
                 "code": "33126",
                 "flavour": "They say the Butcher of Siberia keeps the best cuts for himself.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40511,7 +40511,7 @@
                 "artist": "Vitalii Ostaschenko",
                 "code": "33127",
                 "flavour": "Getting in is hard. Getting out requires a death certificate.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40534,7 +40534,7 @@
                 "artist": "Emilio Rodr\u00edguez",
                 "code": "33128",
                 "flavour": "Affordable, Effective, and Uncompromising.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ph"
             }
         ],
@@ -40554,7 +40554,7 @@
                 "artist": "Phill Simpson",
                 "code": "34001",
                 "flavour": "\"If you want to put your money where your mouth is, there are some picketers who could use your support.\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -40574,7 +40574,7 @@
                 "artist": "Phill Simpson",
                 "code": "34002",
                 "flavour": "\"You ask how we can even try to stop them? A simple answer: not alone.\"\n\u2014Sebasti\u00e3o Souza Pessoa",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -40595,7 +40595,7 @@
                 "artist": "Anna Butova",
                 "code": "34003",
                 "flavour": "It is hard, once free, to learn when to call for help.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -40617,7 +40617,7 @@
                 "artist": "J\u00falio Roca",
                 "code": "34004",
                 "flavour": "\"What do you want from me, blood?\"\n\u2014S3ym0ur",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -40640,7 +40640,7 @@
                 "artist": "BalanceSheet",
                 "code": "34005",
                 "flavour": "Above the maze of smoke and swinging fists, they saw the banner waving.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -40663,7 +40663,7 @@
                 "artist": "Ed Mattinian",
                 "code": "34006",
                 "flavour": "Random sabotage accomplishes little; better to strike their weakest points again and again.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -40684,7 +40684,7 @@
                 "artist": "Dimik",
                 "code": "34007",
                 "flavour": "Luciana loved it when mam\u00e3e and papai finished work early, so they could all go home together.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -40705,7 +40705,7 @@
                 "artist": "Olie Boldador",
                 "code": "34008",
                 "flavour": "\"How far shall we go this time?\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -40726,7 +40726,7 @@
                 "artist": "Dimik",
                 "code": "34009",
                 "flavour": "\"Animals, tea, meetings, dead drops. Parano\u00e1 has you covered, so we keep them covered.\"\n\u2014Sebasti\u00e3o Souza Pessoa",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -40749,7 +40749,7 @@
                 "artist": "Matheus Calza",
                 "code": "34010",
                 "flavour": "I decided; I am free.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -40770,7 +40770,7 @@
                 "artist": "Oliver Morit",
                 "code": "34011",
                 "flavour": "Even the tiniest scrap of data can become the key to riches.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -40790,7 +40790,7 @@
             {
                 "artist": "Scott Uminga",
                 "code": "34012",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -40810,7 +40810,7 @@
                 "artist": "Anthony Hutchings",
                 "code": "34013",
                 "flavour": "\"One day I looked into the mirror and saw not my own reflection, but a new friend eager to help me.\"\n\u2014Mercury",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -40831,7 +40831,7 @@
                 "artist": "Martin de Diego S\u00e1daba",
                 "code": "34014",
                 "flavour": "This world is not beautiful, and yet that is why it is.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -40853,7 +40853,7 @@
                 "artist": "J\u00falio Roca",
                 "code": "34015",
                 "flavour": "Take only what you need.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -40876,7 +40876,7 @@
                 "artist": "BalanceSheet",
                 "code": "34016",
                 "flavour": "Dazzle. Disorient. Disappear.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -40898,7 +40898,7 @@
                 "artist": "Anthony Hutchings",
                 "code": "34017",
                 "flavour": "I am life, I am sun,\nI\u02bcm a trap, I\u02bcm a gun,\nI\u02bcm the wind in the dust,\nI\u02bcm the devil that you trust.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -40920,7 +40920,7 @@
                 "artist": "Ed Mattinian",
                 "code": "34018",
                 "flavour": "\"Corporate security regards me as merely another Nico, and that shall ever be their mistake.\"\n\u2014Mercury",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -40941,7 +40941,7 @@
             {
                 "artist": "Wyn Lacabra",
                 "code": "34019",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -40964,7 +40964,7 @@
                 "artist": "Matheus Calza",
                 "code": "34020",
                 "flavour": "Art knows no borders.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -40972,7 +40972,7 @@
         "stripped_title": "Arissana Rocha Nahu: Street Artist",
         "text": "Once per turn -> <strong>0[credit]:</strong> Install 1 program from your grip <em>(paying its install cost)</em>. Use this ability only during a run. When that run ends, trash that program if it is not a <strong>trojan</strong>.",
         "title": "Arissana Rocha Nahu: Street Artist",
-        "pronouns":"she/her",
+        "pronouns": "she/her",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -40986,7 +40986,7 @@
                 "artist": "Jo\u00e3o Queiroz",
                 "code": "34021",
                 "flavour": "<strong>Designed by 2020 American Continental Champion Jason Ford</strong>",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41006,7 +41006,7 @@
             {
                 "artist": "Martin de Diego S\u00e1daba",
                 "code": "34022",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41027,7 +41027,7 @@
                 "artist": "Martin de Diego S\u00e1daba",
                 "code": "34023",
                 "flavour": "Leaps and bounds better than the competition!",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41048,7 +41048,7 @@
             {
                 "artist": "Adam S. Doyle",
                 "code": "34024",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41071,7 +41071,7 @@
                 "artist": "Adam S. Doyle",
                 "code": "34025",
                 "flavour": "\"From up here, I can see everything. And from down there, everyone can see this.\"\n\u2014V\u00edbora",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41093,7 +41093,7 @@
                 "artist": "Adam S. Doyle",
                 "code": "34026",
                 "flavour": "\"I consider it an improvement.\"\n\u2014Arissana Rocha Nahu",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41116,7 +41116,7 @@
                 "artist": "BalanceSheet",
                 "code": "34027",
                 "flavour": "\"However bad it gets out there, know that we\u02bcll still have each other.\"\n\u2014Tom \"Spider\" Milhas",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41138,7 +41138,7 @@
                 "artist": "Wyn Lacabra",
                 "code": "34028",
                 "flavour": "\"And who can tell me what sort of practical applications this has?\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41159,7 +41159,7 @@
                 "artist": "Oliver Morit",
                 "code": "34029",
                 "flavour": "\"...and here, we can see an excellent example of meta neo-Gemeosianism.\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41179,7 +41179,7 @@
             {
                 "artist": "Anna Butova",
                 "code": "34030",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41201,7 +41201,7 @@
                 "artist": "Kira L. Nguyen",
                 "code": "34031",
                 "flavour": "\"Yes, that explosion was quite loud. May I pour you another drink?\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41223,7 +41223,7 @@
                 "artist": "Vitalii Ostaschenko",
                 "code": "34032",
                 "flavour": "Exceeding expectations for armor superiority.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41244,7 +41244,7 @@
                 "artist": "Oliver Morit",
                 "code": "34033",
                 "flavour": "\"Free\" as in markets, \"cheap\" as in beer.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41265,7 +41265,7 @@
             {
                 "artist": "Ed Mattinian",
                 "code": "34034",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41287,7 +41287,7 @@
                 "artist": "Cat Shen",
                 "code": "34035",
                 "flavour": "\"Hey Br3n-N, just doing the hourly check-in. I saw a weird cyber-echo near your last node. You OK, mate?\"\n\u2014Moth",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41309,7 +41309,7 @@
                 "artist": "Bruno Balixa",
                 "code": "34036",
                 "flavour": "We make these arms for all, so that none who oppose peace would risk their own destruction.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41331,7 +41331,7 @@
                 "artist": "Dave Lee",
                 "code": "34037",
                 "flavour": "\"Haas-Bioroid deeply appreciates your assistance in locating our... employee.\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41352,7 +41352,7 @@
                 "artist": "Jo\u00e3o Queiroz",
                 "code": "34038",
                 "flavour": "He single-handedly keeps several departments running, provided they give him all the mint tea he wants.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41375,7 +41375,7 @@
                 "artist": "Marlon Ruiz",
                 "code": "34039",
                 "flavour": "Caveant Fugitivi.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41397,7 +41397,7 @@
                 "artist": "Emilio Rodr\u00edguez",
                 "code": "34040",
                 "flavour": "Deep down, she knew Ben\u00edcio wasn\u02bct coming back.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41418,7 +41418,7 @@
                 "artist": "Mauricio Herrera",
                 "code": "34041",
                 "flavour": "\"Do you take walk-ins?\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41439,7 +41439,7 @@
             {
                 "artist": "Cat Shen",
                 "code": "34042",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41461,7 +41461,7 @@
                 "artist": "Marlon Ruiz",
                 "code": "34043",
                 "flavour": "The construct turns to you, eyes wild. \"Beloved,\" it asks, \"is that you?\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41483,7 +41483,7 @@
                 "artist": "Cat Shen",
                 "code": "34044",
                 "flavour": "Next!\n<strong>Designed by 2020 Intercontinental Champion Yannick Stucki</strong>",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41505,7 +41505,7 @@
                 "artist": "Ferenc Patk\u00f3s",
                 "code": "34045",
                 "flavour": "\"When you stretch a mind it expands, sometimes until it snaps.\"\n\u2014Adrian Seis",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41528,7 +41528,7 @@
             {
                 "artist": "Jo\u00e3o Queiroz",
                 "code": "34046",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41550,7 +41550,7 @@
                 "artist": "Clara Kaufmann",
                 "code": "34047",
                 "flavour": "\"They call me turncoat. I call them broke.\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41573,7 +41573,7 @@
                 "artist": "Marlon Ruiz",
                 "code": "34048",
                 "flavour": "Results, Delivered.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41595,7 +41595,7 @@
                 "artist": "Kira L. Nguyen",
                 "code": "34049",
                 "flavour": "\"You really thought we\u02bcd let you keep this data?\"\n\u2014The Holo Man",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41616,7 +41616,7 @@
                 "artist": "Ferenc Patk\u00f3s",
                 "code": "34050",
                 "flavour": "\"A lively but peaceful crowd of concerned counter-protesters have come out to\u2014damn it, cut! Can we get the sledgehammer out of the frame?\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41638,7 +41638,7 @@
                 "artist": "Scott Uminga",
                 "code": "34051",
                 "flavour": "Be afraid.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41660,7 +41660,7 @@
                 "artist": "Anna Butova",
                 "code": "34052",
                 "flavour": "Raising money is useful, but discovering which politician is in need of it is vastly more important.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41682,7 +41682,7 @@
                 "artist": "Jakuza",
                 "code": "34053",
                 "flavour": "An exemplar of Starlight\u02bcs hubris, it stands vigil over secrets of hypocrisy.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41704,7 +41704,7 @@
                 "artist": "Bruno Balixa",
                 "code": "34054",
                 "flavour": "\"No one has ever told me to get lost so politely.\"\n\u2014Arissana Rocha Nahu",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41725,7 +41725,7 @@
             {
                 "artist": "Ferenc Patk\u00f3s",
                 "code": "34055",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41746,7 +41746,7 @@
                 "artist": "Ed Mattinian",
                 "code": "34056",
                 "flavour": "Merely a fun little personality test.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41768,7 +41768,7 @@
                 "artist": "Vitalii Ostaschenko",
                 "code": "34057",
                 "flavour": "Acres of rainforest live or die by quarterly revenue projections.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41788,7 +41788,7 @@
                 "artist": "Bruno Balixa",
                 "code": "34058",
                 "flavour": "Nothing\u02bcs as precious as a hole in the ground.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41810,7 +41810,7 @@
                 "artist": "Emilio Rodr\u00edguez",
                 "code": "34059",
                 "flavour": "The forest around them grew denser with each beat of their heart.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41832,7 +41832,7 @@
                 "artist": "Scott Uminga",
                 "code": "34060",
                 "flavour": "\"The only rule you need to remember is that it makes the rules.\"\n\u2014Pumpkin-and-Dumplin",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41854,7 +41854,7 @@
                 "artist": "Olie Boldador",
                 "code": "34061",
                 "flavour": "\"Nuvem pays us to guard this land, and that\u02bcs all there is to it.\"\n\u2014Angelique Garza Correa",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41874,7 +41874,7 @@
             {
                 "artist": "Mauricio Herrera",
                 "code": "34062",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41896,7 +41896,7 @@
                 "artist": "Olie Boldador",
                 "code": "34063",
                 "flavour": "\"Shoot!\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41917,7 +41917,7 @@
                 "artist": "Liiga Smilshkalne",
                 "code": "34064",
                 "flavour": "Their mouths are ever open, blaring sirens never to cease.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41939,7 +41939,7 @@
                 "artist": "Mauricio Herrera",
                 "code": "34065",
                 "flavour": "\"Humans crafted me as a lie, but my patron helped me find the truth. This is my gift.\"",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "tai"
             }
         ],
@@ -41963,7 +41963,7 @@
                 "artist": "Matheus Calza",
                 "code": "34066",
                 "flavour": "Destroy the mechanisms of domination.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -41971,7 +41971,7 @@
         "stripped_title": "Sebastiao Souza Pessoa: Activist Organizer",
         "text": "Whenever you take 1 or more tags, if you had no tags, you may install 1 <strong>connection</strong> resource from your grip, paying 2[credit] less.\nAs an additional cost to trash a <strong>connection</strong> resource with the basic action, the Corp must trash 1 card from HQ.",
         "title": "Sebasti\u00e3o Souza Pessoa: Activist Organizer",
-        "pronouns":"he/him",
+        "pronouns": "he/him",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -41985,7 +41985,7 @@
                 "artist": "Benjamin Giletti",
                 "code": "34067",
                 "flavour": "As the riot turned to open conflict, Seb looked down at the gun in his hand. The time for peace was over.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42006,7 +42006,7 @@
                 "artist": "Dimik",
                 "code": "34068",
                 "flavour": "\"How was your shopping trip, Eru?\" - Sebasti\u00e3o Souza Pessoa",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42027,7 +42027,7 @@
                 "artist": "Anna Butova",
                 "code": "34069",
                 "flavour": "He allowed himself five minutes. He wished for more.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42047,7 +42047,7 @@
                 "artist": "Martin de Diego S\u00e1daba",
                 "code": "34070",
                 "flavour": "<strong>Designed by 2020 World Champion Richard Hall</strong>",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42069,7 +42069,7 @@
                 "artist": "Cat Shen",
                 "code": "34071",
                 "flavour": "Blinded by its own wreath of flames, the Boi-tat\u00e1 seeks eye after eye until the whole world joins it in darkness.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42092,7 +42092,7 @@
                 "artist": "Cat Shen",
                 "code": "34072",
                 "flavour": "Even a barren server can provide a feast, if you are patient enough.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42113,7 +42113,7 @@
                 "artist": "Matheus Calza",
                 "code": "34073",
                 "flavour": "\u201cYou might have been the spark, Seb, but we're the flame.\u201d",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42134,7 +42134,7 @@
                 "artist": "Mauricio Herrera",
                 "code": "34074",
                 "flavour": "\u201cI've been a pack runner since I was ten. My uncle got me started after Eduardo took a bullet to the hip. It's only recently that people have started cheering when I leave a cop lying in the dirt.\u201d\n\u2014Gabi Saka",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42155,7 +42155,7 @@
                 "artist": "Wyn Lacabra",
                 "code": "34075",
                 "flavour": "\u201cSome info from our mutual friends, Professor. Now, about my daughter's grades\u2026\u201d",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42175,7 +42175,7 @@
                 "artist": "Benjamin Giletti",
                 "code": "34076",
                 "flavour": "\u201cYou'll find a way, little sibling.\u201d",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42196,7 +42196,7 @@
                 "artist": "Bruno Balixa",
                 "code": "34077",
                 "flavour": "There's a crack in everything. That's how the light gets in.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42216,7 +42216,7 @@
                 "artist": "Elizaveta Sokolova",
                 "code": "34078",
                 "flavour": "Rise and shine. Time to f**k up a corpie's day.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42236,7 +42236,7 @@
             {
                 "artist": "Matheus Calza",
                 "code": "34079",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42256,7 +42256,7 @@
             {
                 "artist": "Ed Mattinian",
                 "code": "34080",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42276,7 +42276,7 @@
             {
                 "artist": "Adam S. Doyle",
                 "code": "34081",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42298,7 +42298,7 @@
                 "artist": "Ed Mattinian",
                 "code": "34082",
                 "flavour": "It finds a route, eventually.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42319,7 +42319,7 @@
                 "artist": "Anthony Hutchings",
                 "code": "34083",
                 "flavour": "<strong>Designed by 2021 American Continental Champion Jonas Wilson</strong>",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42340,7 +42340,7 @@
                 "artist": "Rafael Monk",
                 "code": "34084",
                 "flavour": "The Moreira sisters couldn't be any less alike, each taking after her own father, but together they are a force unto themselves.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42361,7 +42361,7 @@
                 "artist": "Scott Uminga",
                 "code": "34085",
                 "flavour": "\u201cThey\u2018ll be talking about me for years.\u201d\n\u2014Arissana Rocha Nahu",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42382,7 +42382,7 @@
                 "artist": "Ferenc Patk\u00f3s",
                 "code": "34086",
                 "flavour": "Sometimes an artist will be seized by the uncontrollable urge to create.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42403,7 +42403,7 @@
                 "artist": "Ed Mattinian",
                 "code": "34087",
                 "flavour": "8 billion, corner office.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42423,7 +42423,7 @@
                 "artist": "Martin de Diego S\u00e1daba",
                 "code": "34088",
                 "flavour": "\"For everything there is a place, an index for every purpose under heaven.\" \u2014Sh4ne",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42444,7 +42444,7 @@
                 "artist": "Elwin \"Jakuza\" Rumplmair",
                 "code": "34089",
                 "flavour": "Breathe in.\nBe as the dew rolling down a leaf; let yourself go.\nBreathe out.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42466,7 +42466,7 @@
                 "artist": "Adam S. Doyle",
                 "code": "34090",
                 "flavour": "No matter what you see, I am always myself.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42489,7 +42489,7 @@
                 "artist": "Marlon Ruiz",
                 "code": "34091",
                 "flavour": "V\u00f3, mentor, angel. Murdered by porcos. Never forgotten.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42511,7 +42511,7 @@
                 "artist": "Bruno Balixa",
                 "code": "34092",
                 "flavour": "\u201cIf stress hurts, then it must be a weapon.\u201d\n\u2014 Beatriz Friere Gonzalez",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42533,7 +42533,7 @@
                 "artist": "Arthur Miglionni",
                 "code": "34093",
                 "flavour": "\u201cListen up, garotinha, maybe you'll learn something.\u201d",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42553,7 +42553,7 @@
                 "artist": "Dimik",
                 "code": "34094",
                 "flavour": "Their victory became her coronation.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42574,7 +42574,7 @@
                 "artist": "Arthur Miglionni",
                 "code": "34095",
                 "flavour": "\u201cI came home from Siberia to find a better purpose for myself.\u201d",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42596,7 +42596,7 @@
                 "artist": "Emilio Rodr\u00edguez",
                 "code": "34096",
                 "flavour": "Strength in the palm of your hand.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42618,7 +42618,7 @@
                 "artist": "Emilio Rodr\u00edguez",
                 "code": "34097",
                 "flavour": "Where ideas strike twice!",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42639,7 +42639,7 @@
                 "artist": "Matheus Calza",
                 "code": "34098",
                 "flavour": "\u201cI missed you last week! Come, we have lots to talk about. How was little Sarita's piano recital?\u201d",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42661,7 +42661,7 @@
                 "artist": "Mauricio Herrera",
                 "code": "34099",
                 "flavour": "\u201cJust tilt your head a little to the right; the suit will soon sync with your cortical profile.\u201d",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42682,7 +42682,7 @@
             {
                 "artist": "Bruno Balixa",
                 "code": "34100",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42704,7 +42704,7 @@
                 "artist": "Ed Mattinian",
                 "code": "34101",
                 "flavour": "At Thunderbolt, we ask: why not turn plowshares to swords?",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42728,7 +42728,7 @@
             {
                 "artist": "Marlon Ruiz",
                 "code": "34102",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42749,7 +42749,7 @@
                 "artist": "Oliver Morit",
                 "code": "34103",
                 "flavour": "If you wait in the Thunderbolt corporate box long enough, everyone who is anyone comes by.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42771,7 +42771,7 @@
                 "artist": "Kira L. Nguyen",
                 "code": "34104",
                 "flavour": "Thunderbolt naturally offered city hardening solutions.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42794,7 +42794,7 @@
                 "artist": "Benjamin Giletti",
                 "code": "34105",
                 "flavour": "\u201cBe patient. When the prey panics, they lead you right to their friends.\u201d\n\u2014Adrian Seis",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42816,7 +42816,7 @@
                 "artist": "Ferenc Patk\u00f3s",
                 "code": "34106",
                 "flavour": "\u201cEvery mind can be dulled by repetition, even our prey\u2019s. Strike when they get complacent, but before you get bored.\u201d\n\u2014Charlotte's fifth lesson",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42837,7 +42837,7 @@
                 "artist": "Marlon Ruiz",
                 "code": "34107",
                 "flavour": "\u201cThey offered me a desk job, but dammit, I just love working in the field.\u201d",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42859,7 +42859,7 @@
                 "artist": "Olie Boldador",
                 "code": "34108",
                 "flavour": "The best families grow, learn, and hunt together.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42881,7 +42881,7 @@
                 "artist": "J\u00falio Rocha",
                 "code": "34109",
                 "flavour": "They live forever in the rivers of the Net.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42903,7 +42903,7 @@
                 "artist": "Elwin \"Jakuza\" Rumplmair",
                 "code": "34110",
                 "flavour": "Don\u2019t let it catch your scent.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42924,7 +42924,7 @@
             {
                 "artist": "Scott Uminga",
                 "code": "34111",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42946,7 +42946,7 @@
                 "artist": "Olie Boldador",
                 "code": "34112",
                 "flavour": "Rogue clones are like wayward children in need of discipline, and love.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42968,7 +42968,7 @@
                 "artist": "Olie Boldador",
                 "code": "34113",
                 "flavour": "\u201cWe are close, so close, to the endgame now, my friends. If we can convert just three more, the Automata Initiative is all but through the senate.\u201d\n\u2014The Holo Man",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -42990,7 +42990,7 @@
                 "artist": "Olie Boldador",
                 "code": "34114",
                 "flavour": "\u201cUp next: President Tavares' state funeral.\u201d",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -43011,7 +43011,7 @@
                 "artist": "Dimik",
                 "code": "34115",
                 "flavour": "She loved being part of the rough and tumble of politics and fundraising\u2014from the calm of her own home.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -43033,7 +43033,7 @@
                 "artist": "Ed Mattinian",
                 "code": "34116",
                 "flavour": "Sebasti\u00e3o gritted his teeth as more and more indicators glowed red.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -43055,7 +43055,7 @@
                 "artist": "J\u00falio Rocha",
                 "code": "34117",
                 "flavour": "Eat, grow, deny. A truly ravenous generation.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -43077,7 +43077,7 @@
                 "artist": "Adam S. Doyle",
                 "code": "34118",
                 "flavour": "\u201cStarlight called it a gift. I call it providence.\u201d\n\u2014The Holo Man",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -43099,7 +43099,7 @@
                 "artist": "Oliver Morit",
                 "code": "34119",
                 "flavour": "Epiphany employees learned not to make weekend plans.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -43120,7 +43120,7 @@
             {
                 "artist": "Liiga Smilshkalne",
                 "code": "34120",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -43143,7 +43143,7 @@
                 "artist": "Kira L. Nguyen",
                 "code": "34121",
                 "flavour": "Our fist shall hold the world.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -43165,7 +43165,7 @@
                 "artist": "Kira L. Nguyen",
                 "code": "34122",
                 "flavour": "Young Gael Oliveira agreed to stay on and manage the farm, for a fee.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -43186,7 +43186,7 @@
                 "artist": "Emilio Rodr\u00edguez",
                 "code": "34123",
                 "flavour": "High above, Braganza schemes,\nOf force, fire, and basalt dreams.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -43207,7 +43207,7 @@
                 "artist": "Mauricio Herrera",
                 "code": "34124",
                 "flavour": "\u201cGeneral, for a successful coup d'\u00e9tat, you need the people on your side.\u201d\n\u2014CEO Braganza",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -43229,7 +43229,7 @@
                 "artist": "Krembler",
                 "code": "34125",
                 "flavour": "A little circular reasoning never hurt anybody.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -43251,7 +43251,7 @@
                 "artist": "Scott Uminga",
                 "code": "34126",
                 "flavour": "The final blow is struck.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -43272,7 +43272,7 @@
             {
                 "artist": "Ed Mattinian",
                 "code": "34127",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -43294,7 +43294,7 @@
                 "artist": "Oliver Morit",
                 "code": "34128",
                 "flavour": "Don\u2019t think about it. You\u2019ll sleep better.",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -43314,7 +43314,7 @@
             {
                 "artist": "Olie Boldador",
                 "code": "34129",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -43336,7 +43336,7 @@
                 "artist": "Zefanya Maega",
                 "code": "34130",
                 "flavour": "\u201cI followed every lead, and found the rot ran deep from Epiphany, worming into every branch of gov'. I saw my imperative, clear as day: these three had to die. And I had to find a way to do it.\u201d\n\u2014Mercury",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "rwr"
             }
         ],
@@ -43365,7 +43365,7 @@
                 "artist": "Wyn Lacabra",
                 "code": "35077",
                 "flavour": "<strong>Designed by 2023 World Champion William \"Sokka\" Huang</strong>",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ele"
             }
         ],
@@ -43385,7 +43385,7 @@
             "artist": "Olie Boldador",
             "code": "35072",
             "flavour": "If you lived here, you'd be at work by now! \u201d\n\u2014Weyland recruiter",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "stripped_text": "When you rez this asset, load 8 credits onto it, When it is empty, trash it. When your turn begins, take 4 credits from this asset and draw 1 card.",
@@ -43405,7 +43405,7 @@
             "artist": "Krembler",
             "code": "35075",
             "flavour": "\u201cThe detritus of failed incursions accumulates. Instead of sweeping it all away, the parsimonious sysop should nudge this debris into defensive positions in the server’s metagravity well.\u201d\n\u2014 Moira Virtue, Ice Engineering, KKU",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "stripped_text": "The Runner cannot trash this ice (while it is rezzed). End the run. End the run.",
@@ -43424,7 +43424,7 @@
         "printings": [{
             "artist": "Scott Uminga",
             "code": "35076",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "stripped_text": "You can advance this ice. When the Runner encounters this ice, if it has 3 or more hosted advancement counters, you may place 1 advancement counter on an installed card you can advance. You may place 1 advancement counter on an installed card you can advance. The Runner loses 2 credits. Do 1 net damage.",
@@ -43444,7 +43444,7 @@
             "artist": "Scott Uminga",
             "code": "35009",
             "flavour": "The waters begin to roil, and bit by bit they swell.",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "stripped_text": "This program gets +1 strength for each fracter in your heap. Interface -> 1 credit: Break 1 barrier subroutine. 1 credit: +1 strength.",
@@ -43458,19 +43458,19 @@
     },
     {
         "cost":null,
-        "faction":"nbn",
+        "faction": "nbn",
         "influence":5,
         "subtypes": "Gray Ops",
         "printings": [{
             "artist": "Rafael Monk",
             "code": "35066",
             "flavour": "I believe you have something of ours.",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
-        "stripped_text":"As an additional cost to play this operation, remove X tags. Install 1 agenda from the Runner’s score area with a printed agenda point value equal to X. If the Runner is still tagged, place 1 advancement counter on that agenda.",
-        "stripped_title":"IP Enforcement",
-        "text":"As an additional cost to play this operation, remove X tags.\nInstall 1 agenda from the Runner’s score area with a printed agenda point value equal to X. If the Runner is still tagged, place 1 advancement counter on that agenda.",
+        "stripped_text": "As an additional cost to play this operation, remove X tags. Install 1 agenda from the Runner’s score area with a printed agenda point value equal to X. If the Runner is still tagged, place 1 advancement counter on that agenda.",
+        "stripped_title": "IP Enforcement",
+        "text": "As an additional cost to play this operation, remove X tags.\nInstall 1 agenda from the Runner’s score area with a printed agenda point value equal to X. If the Runner is still tagged, place 1 advancement counter on that agenda.",
         "title": "IP Enforcement",
         "type_code": "operation",
         "trash_cost": 5,
@@ -43478,13 +43478,13 @@
     },
     {
         "cost":2,
-        "faction":"haas-bioroid",
+        "faction": "haas-bioroid",
         "influence": 2,
         "printings": [{
             "artist": "Martin de Diego S\u00e1daba",
             "code": "35044",
             "flavour": "“The instability of human braintapes is directly proportional to the number of limbs on a given bioroid, so we’ve begun phasing them out for something better-equipped. A human braintape could be working beside an octopus for weeks and never have an inkling.”—Maía Mínervudóttir, R&D",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "stripped_text": "Draw 2 cards. Install up to 2 cards from HQ (one at a time).",
@@ -43502,13 +43502,13 @@
         "printings": [{
             "artist": "Marlon Ruiz",
             "code": "35082",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "stripped_text": "2 recurring-credit (When you rez this upgrade and before your turn begins, refill to 2 hosted credits.) You can spend hosted credits to rez assets in the root of this server and ice protecting this server. Persistent -> The trash cost of each asset in the root of this server is increased by 2credit. Limit 1 region per server.",
         "stripped_title": "Mahkota Langit Grid",
         "text": "2[recurring-credit] <i>(When you install this card and before your turn begins, refill to 2 hosted credits.)</i>\nYou can spend hosted credits to rez assets in the root of this server and ice protecting this server.\nPersistent -> The trash cost of each asset in the root of this server is increased by 2[credit].\nLimit 1 <b>region</b> per server.", 
-        "title":"Mahkota Langit Grid",
+        "title": "Mahkota Langit Grid",
         "type_code": "upgrade",
         "trash_cost": 2,
         "uniqueness": false
@@ -43517,19 +43517,19 @@
         "cost": 2,
         "faction": "neutral-runner",
         "influence":0,
-        "subtypes":"Job",
+        "subtypes": "Job",
         "printings":[{
-            "artist":"Elizaveta Sokolova",
+            "artist": "Elizaveta Sokolova",
             "flavour": "“They were fast, friendly, and efficient. ★★★★☆.”\n—satisfied customer",
             "code": "35034",
-            "img_type":"nrdb",
-            "set":"ele"
+            "img_type": "nro",
+            "set": "ele"
         }],
         "stripped_text": "When you install this resource and whenever a run begins, place 1credit on this resource. When there are 6 or more hosted credits, take all credits from this resource, trash it, and draw 1 card.",
-        "stripped_title":"Side Hustle",
+        "stripped_title": "Side Hustle",
         "text": "When you install this resource and whenever a run begins, place 1[credit] on this resource.\nWhen there are 6 or more hosted credits, take all credits from this resource, trash it, and draw 1 card.",
-        "title":"Side Hustle",
-        "type_code":"resource",
+        "title": "Side Hustle",
+        "type_code": "resource",
         "uniqueness": false
     },
     {
@@ -43539,11 +43539,11 @@
         "strength": 0,
         "subtypes": "Code Gate",
         "printings":[{
-            "artist":"Ed Mattinian",
-            "flavour":"Stop that.",
+            "artist": "Ed Mattinian",
+            "flavour": "Stop that.",
             "code": "35079",
-            "img_type":"nrdb",
-            "set":"ele"
+            "img_type": "nro",
+            "set": "ele"
         }],
         "stripped_text": "When you rez this ice during a run against this server, purge virus counters. Subroutine End the run.",
         "stripped_title": "Flyswatter",
@@ -43559,11 +43559,11 @@
         "subtypes": "Black Ops",
         "type_code": "operation",
         "printings": [{
-            "artist":"Anna Butova",
-            "flavour":"“We would like to reassure our shareholders that none of the buildings damaged in the blast were owned by Weyland Consortium subsidiaries…”\n—Luana Campos, Weyland spokesperson",
+            "artist": "Anna Butova",
+            "flavour": "“We would like to reassure our shareholders that none of the buildings damaged in the blast were owned by Weyland Consortium subsidiaries…”\n—Luana Campos, Weyland spokesperson",
             "code": "35078",
-            "img_type":"nrdb",
-            "set":"ele"
+            "img_type": "nro",
+            "set": "ele"
         }],
         "stripped_text": "Play only if the threat level is 4 or greater, and only if the Runner made a successful run during their last turn. Do 4 meat damage unless the Runner pays 8credit.",
         "stripped_title": "Measured Response",
@@ -43581,7 +43581,7 @@
             "artist": "Alecia Doyley",
             "flavour": "“I am a very reasonable manager. I do not expect my staff to do anything I could not do.”\n—Bass CH1R180G4",
             "code": "35043",
-            "img_type":"nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "stripped_text": "Gain click click.",
@@ -43599,8 +43599,8 @@
         "printings": [{
             "artist": "Elizaveta Sokolova",
             "code": "35027",
-            "img_type": "nrdb",
-            "set":"ele"
+            "img_type": "nro",
+            "set": "ele"
         }],
         "stripped_text": "When you install this hardware and when your turn begins, you may host this hardware on an installed non-AI icebreaker. Host icebreaker gets +1 strength. Abilities that increase its strength last for the remainder of the run (instead of any shorter duration).",
         "stripped_title": "GAMEDRAGONTM Pro",
@@ -43618,7 +43618,7 @@
             "artist": "Marlon Ruiz",
             "flavour": "Action at a distance.", 
             "code": "35069",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "stripped_title": "The Zwicky Group: Invisible Hands",
@@ -43638,7 +43638,7 @@
             "artist": "Marlon Ruiz",
             "flavour": "Light up, flame out, and burn it all down.",
             "code": "35001",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Ryō \"Phoenix\" Ōno: Out of the Ashes",
@@ -43657,7 +43657,7 @@
         "printings": [{
             "artist": "Marlon Ruiz",
             "code": "35046",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "AU Co.: The Gold Standard in Clones",
@@ -43678,8 +43678,8 @@
             "artist": "Zefanya Langkan Maega",
             "flavour": "Whatever it takes for us to survive.",
             "code": "35002",
-            "img_type":"nrdb",
-            "set":"ele"
+            "img_type": "nro",
+            "set": "ele"
         }],
         "title": "Topan: Ormas Leader",
         "stripped_title": "Topan: Ormas Leader",
@@ -43697,7 +43697,7 @@
             "artist": "Kira L. Nguyen",
             "flavour": "The Looming Future.",
             "code": "35047",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "PT Untaian: Life's Building Blocks",
@@ -43714,11 +43714,11 @@
         "influence": 3,
         "subtypes": "Deep Net",
         "printings":[{
-            "artist":"Adam S. Doyle",
+            "artist": "Adam S. Doyle",
             "flavour": "Rejoice executives! The Net has sent unto us a profit",
             "code": "35073",
-            "img_type":"nrdb",
-            "set":"ele"
+            "img_type": "nro",
+            "set": "ele"
         }],
         "title": "Plutus",
         "stripped_title": "Plutus",
@@ -43733,10 +43733,10 @@
         "influence": 1,
         "subtypes": "Run",
         "printings": [{
-            "artist":"Wilson Nugraha (Polar Engine)",
+            "artist": "Wilson Nugraha (Polar Engine)",
             "flavour": "The volume is the message.",
             "code": "35005",
-            "img_type":"nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Shred",
@@ -43747,16 +43747,16 @@
     },
     {
         "type_code": "identity",
-        "faction":"criminal",
+        "faction": "criminal",
         "minimum_deck_size":45,
         "influence_limit": 15,
         "pronouns": "he/him",
         "base_link": 0,
         "printings": [{
-            "artist":"Zefanya Langkan Maega",
-            "flavour":"Try me.",
+            "artist": "Zefanya Langkan Maega",
+            "flavour": "Try me.",
             "code": "35012",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Barry \"Baz\" Wong: Tri-Maf Veteran",
@@ -43767,7 +43767,7 @@
     },
     {
         "type_code": "asset",
-        "faction":"haas-bioroid",
+        "faction": "haas-bioroid",
         "influence":2,
         "cost": 1,
         "trash_cost": 1,
@@ -43775,7 +43775,7 @@
             "artist": "Martin de Diego Sádaba",
             "flavour": "“Deploying in T-minus 5…”",
             "code": "35039",
-            "img_type":"nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Humanoid Resources",
@@ -43786,16 +43786,16 @@
     },
     {
         "type_code": "asset",
-        "faction":"haas-bioroid",
+        "faction": "haas-bioroid",
         "influence": 3,
         "cost": 2,
         "trash_cost": 2,
         "printings": [{
             "artist": "Mauricio Herrera",
-            "flavour":"“Don’t be scared of the Ottos, kiddo. They’re building our future!”",
+            "flavour": "“Don’t be scared of the Ottos, kiddo. They’re building our future!”",
             "code": "35040",
-            "img_type":"nrdb",
-            "set":"ele"
+            "img_type": "nro",
+            "set": "ele"
         }],
         "title": "Otto Campaign",
         "stripped_title": "Otto Campaign",
@@ -43805,7 +43805,7 @@
     },
     {
         "type_code": "identity",
-        "faction":"haas-bioroid",
+        "faction": "haas-bioroid",
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -43813,8 +43813,8 @@
             "artist": "Vitalii Ostaschenko",
             "flavour": "Workers of the World, Delivered",
             "code": "35035",
-            "img_type":"nrdb",
-            "set":"ele"
+            "img_type": "nro",
+            "set": "ele"
         }],
         "title": "LEO Construction: Labor Solutions",
         "stripped_title": "LEO Construction: Labor Solutions",
@@ -43832,7 +43832,7 @@
             "artist": "Dimik",
             "flavour": "Fashion fades. Poétrï is eternal.",
             "code": "35036",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Poétrï Luxury Brands: All the Rage",
@@ -43853,7 +43853,7 @@
             "artist": "Zefanya Langkan Maega",
             "flavour": "Who else will teach the stories of good and evil?\nWe can’t leave the corps’ dirty deeds in the shadows.",
             "code": "35023",
-            "img_type":"nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Dewi Subrotoputri: Pedagogical Dhalang",
@@ -43874,7 +43874,7 @@
             "artist": "Marlon Ruiz",
             "flavour": "Good design is invisible—but I’ll never settle for ‘good’.",
             "code": "35024",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Magdalene Keino-Chemutai: Cryptarchitect",
@@ -43893,7 +43893,7 @@
             "artist": "Alecia Doyley",
             "flavour": "There are a hundred currencies in the undercity, and Knickknack takes them all. Creds and rupiah get you noodles. For his secret menu, he’ll take your burnt-out rigs, your sterilized virii. But to taste his smoked vatchicken stew, bring him what he values most: your story.",
             "code": "35033",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "\"Knickknack\" O’Brian",
@@ -43912,7 +43912,7 @@
             "artist": "Ismatullog (Polar Engine)",
             "flavour": "“Won’t she get in trouble for putting that in the show? And how did she even find out?!”",
             "code": "35025",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Illumination",
@@ -43931,7 +43931,7 @@
             "artist": "Emilio Rodr\u00edguez",
             "flavour": "Every Impulse Monitored.",
             "code": "35058",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Synapse Global: Faster than Thought",
@@ -43950,7 +43950,7 @@
             "artist": "Emilio Rodr\u00edguez",
             "flavour": "Igniting your potential.\nNever stop shining.",
             "code": "35057",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Nebula Talent Management: Making Stars",
@@ -43971,7 +43971,7 @@
             "artist": "Oliver Morit",
             "flavour": "Spring-loaded minds, kept in suspension to be launched into the net at any incursion.",
             "code": "35056",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Mitra Aman",
@@ -43990,8 +43990,8 @@
             "artist": "Vitalii Ostaschenko",
             "flavour": "We'll be there",
             "code": "35068",
-            "img_type":"nrdb",
-            "set":"ele"
+            "img_type": "nro",
+            "set": "ele"
         }],
         "title": "BANGUN: When Disaster Strikes",
         "stripped_title": "BANGUN: When Disaster Strikes",
@@ -44010,9 +44010,9 @@
         "printings": [{
             "artist": "Marlon Ruiz",
             "flavour": "Peer pressure works.",
-            "code":"35013",
-            "img_type":"nrdb",
-            "set":"ele"
+            "code": "35013",
+            "img_type": "nro",
+            "set": "ele"
         }],
         "title": "MuslihaT: Multifarious Marketeer",
         "stripped_title": "MuslihaT: Multifarious Marketeer",
@@ -44031,7 +44031,7 @@
             "artist": "J\u00falio Rocha",
             "flavour": "They know what makes you tick.\nAnd ticked-off.",
             "code": "35063",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Doomscroll",
@@ -44049,7 +44049,7 @@
         "printings": [{
             "artist": "Amirul Hhf",
             "code": "35028",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Madani",
@@ -44060,44 +44060,44 @@
     },
     {
         "type_code": "event",
-        "faction":"criminal",
+        "faction": "criminal",
         "subtypes": "Run",
         "cost":3,
         "influence":2,
         "printings": [{
-            "artist":"Amirul Hhf",
-            "flavour":"“...one hundred and twenty-seven rounds fired, and two police hoppers totalled. Miraclously no officers were hurt, though the suspect still remains at large” - Abdul el-Sattar, KKN 6",
+            "artist": "Amirul Hhf",
+            "flavour": "“...one hundred and twenty-seven rounds fired, and two police hoppers totalled. Miraclously no officers were hurt, though the suspect still remains at large” - Abdul el-Sattar, KKN 6",
             "code": "35014",
-            "img_type":"nrdb",
-            "set":"ele"
+            "img_type": "nro",
+            "set": "ele"
         }],
         "title": "Clean Getaway",
         "stripped_title": "Clean Getaway",
         "stripped_text": "Run any server. If successful, gain 6 credit.",
-        "text":"Run any server. If successful, gain 6[credit]",
+        "text": "Run any server. If successful, gain 6[credit]",
         "uniqueness":false
     },
     {
-        "type_code":"agenda",
-        "faction":"nbn",
+        "type_code": "agenda",
+        "faction": "nbn",
         "agenda_points": 3,
         "advancement_cost": 5,
         "subtypes": "Initiative",
         "printings": [{
-            "artist":"Matheus Calza",
-            "flavour":"That's so fifteen minutes ago.",
-            "code":"35060",
-            "img_type":"nrdb",
-            "set":"ele"
+            "artist": "Matheus Calza",
+            "flavour": "That's so fifteen minutes ago.",
+            "code": "35060",
+            "img_type": "nro",
+            "set": "ele"
         }],
         "title": "Next Big Thing",
         "stripped_title": "Next Big Thing",
         "stripped_text": "When this agenda is scored or stolen, place 1 agenda counter on it. click, hosted agenda counter: Draw 4 cards. Shuffle any number of cards from HQ into R&D. The corp can use this ability even if this agenda is in the Runner's score area.",
-        "text":"When this agenda is scored or stolen, place 1 agenda counter on it.\n[click], <b>hosted agenda counter:</b> Draw 4 cards. Shuffle any number of cards from HQ into R&D. The corp can use this ability even if this agenda is in the Runner's score area.",
+        "text": "When this agenda is scored or stolen, place 1 agenda counter on it.\n[click], <b>hosted agenda counter:</b> Draw 4 cards. Shuffle any number of cards from HQ into R&D. The corp can use this ability even if this agenda is in the Runner's score area.",
         "uniqueness":false
     },
     {
-        "type_code":"operation",
+        "type_code": "operation",
         "faction": "nbn",
         "cost":2,
         "influence":3,
@@ -44106,7 +44106,7 @@
             "artist": "Amirul Hhf",
             "flavour": "“Your Star Power is in the toilet, kid. We need a fresh face.”",
             "code": "35067",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Touch-ups",
@@ -44125,8 +44125,8 @@
             "artist": "Oliver Morit",
             "flavour": "“In KK, we say 'harimau mati karena belangnya'. It means don't tell the world how much money you have if you plan on keeping it.” - JokoR",
             "code": "35017",
-            "img_type":"nrdb",
-            "set":"ele"
+            "img_type": "nro",
+            "set": "ele"
         }],
         "title": "Transfer of Wealth",
         "stripped_title": "Transfer of Wealth",
@@ -44136,7 +44136,7 @@
         "eternal_points": 1
     },
     {
-        "type_code":"program",
+        "type_code": "program",
         "faction": "anarch",
         "subtypes": "Icebreaker - Killer - Virus",
         "cost": 3,
@@ -44147,27 +44147,27 @@
             "artist": "J\u00falio Rocha",
             "flavour": "“I'm on retainer for monthly purges on thirty-six different server.” - Ratu Maharani, pawang virus",
             "code": "35008",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Hantu",
         "stripped_title": "Hantu",
         "stripped_text": "When you install this program, place 2 virus counters on it. Interface -> 1 credit: Break 1 sentry subroutine. Hosted virus counter: +2 strength.",
-        "text":"When you install this program, place 2 virus counters on it.\nInterface -> 1[credit]:Break 1 <b>sentry</b> subroutine.\n<b>Hosted virus counter:</b> +2 strength.",
+        "text": "When you install this program, place 2 virus counters on it.\nInterface -> 1[credit]:Break 1 <b>sentry</b> subroutine.\n<b>Hosted virus counter:</b> +2 strength.",
         "uniqueness":false
     },
     {
         "type_code": "ice",
-        "faction":"haas-bioroid",
+        "faction": "haas-bioroid",
         "cost":3,
         "strength":0,
         "influence":2,
-        "subtypes":"Code Gate",
+        "subtypes": "Code Gate",
         "printings": [{
-            "artist":"Bruno Balixa",
+            "artist": "Bruno Balixa",
             "flavour": "“It is a fallacy that conscious observation can change reality. The consciousness of the observer isn’t required at all.”—The Encyclopedia Silica",
             "code": "35042",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Scatter Field",
@@ -44186,7 +44186,7 @@
         "printings": [{
             "artist": "Mla Slerglerjew",
             "code": "35053",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Mycoweb",
@@ -44206,7 +44206,7 @@
             "artist": "Elliott Birt",
             "flavour": "“I make the best company.”",
             "code": "35051",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Phật Gioan Baotixita",
@@ -44225,7 +44225,7 @@
             "artist": "Anna Butova",
             "flavour": "“Give me five minutes of a user's Access Plaza traffic and I'll tell you where they're having lunch tomorrow. Give me another ten, and I'll have their bibi's secret rendang recipe.”",
             "code": "35062",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Public Access Plaza",
@@ -44245,7 +44245,7 @@
             "artist": "Adam S. Doyle",
             "flavour": "“The Net operates on as much dream loagic as it does digital logic. If you believe something to be true, it often is”",
             "code": "35030",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Chromatophores",
@@ -44266,7 +44266,7 @@
             "artist": "Bruno Balixa",
             "flavour": "On the shoulder of giants.",
             "code": "35032",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Principia",
@@ -44286,8 +44286,8 @@
             "artist": "Anthony Hutchings",
             "flavour": "“Dammit, Moth! Where are you? This thing is way bigger than you s-” -C0n4rd",
             "code": "35074",
-            "img_type":"nrdb",
-            "set":"ele"
+            "img_type": "nro",
+            "set": "ele"
         }],
         "title": "Biawak",
         "stripped_title": "Biawak",
@@ -44306,7 +44306,7 @@
             "artist": "Bruno Balixa",
             "flavour": "Jinteki's most experimental ice are often their most dangerous.",
             "code": "35052",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Empiricist",
@@ -44324,7 +44324,7 @@
         "printings": [{
             "artist": "Kira L. Nguyen",
             "code": "35049",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Sericulture Expansion",
@@ -44343,7 +44343,7 @@
             "artist": "Dimik",
             "flavour": "“Pity the money's being spent here, when I could be buying hiasan for my apartment.”",
             "code": "35015",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Lie Low",
@@ -44362,7 +44362,7 @@
             "artist": "Matheus Calza",
             "flavour": "“You think I've finished messing with you?\nYeah, nah.”\n-Barry “Baz” Wong",
             "code": "35019",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Maglectric Rapid (748 Mod)",
@@ -44383,7 +44383,7 @@
             "artist": "Anthony Hutchings",
             "flavour": "Consequences only matter if they catch you.",
             "code": "35020",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Sang Kancil",
@@ -44401,7 +44401,7 @@
             "artist": "Alecia Doyley",
             "flavour": "Every day starts the same: tea, news, a threedee puzzle. Then it's off to work. Magdelene won't let being fired get in the way of completing her masterpiece.",
             "code": "35026",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Ritual",
@@ -44419,7 +44419,7 @@
         "printings": [{
             "artist": "Kira L. Nguyen",
             "code": "35038",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Project Ingatan",
@@ -44437,7 +44437,7 @@
         "printings": [{
             "artist": "Olie Boldador",
             "code": "35071",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Off the Books",
@@ -44456,7 +44456,7 @@
             "artist": "Kira L. Nguyen",
             "flavour": "“That kepo NBN gang makes trillions off incidental data scraping. So what if I use it to network?”\n-MuslihaT",
             "code": "35022",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Open Market",
@@ -44474,7 +44474,7 @@
         "printings": [{
             "artist": "Oliver Morit",
             "code": "35018",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Detente",
@@ -44493,7 +44493,7 @@
             "artist": "Oliver Morit",
             "flavour": "“She's learned from the best: me. When I retire, the KK Tri-Maf'll be in good hands.”\n-Barry “Baz” Wong",
             "code": "35021",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Fransofia Ward",
@@ -44512,7 +44512,7 @@
             "artist": "Bruno Balixa",
             "flavour": "“I still have friends on the inside”\n-Magdelene Keino-Chemutai",
             "code": "35031",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Devadatta Drone",
@@ -44531,7 +44531,7 @@
             "artist": "Amirul Hhf",
             "flavour": "“99% of everything is trash. That's why I pay someone else to search it for me.”\n-Sturg3on General",
             "code": "35004",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Scrounge",
@@ -44549,7 +44549,7 @@
         "printings": [{
             "artist": "Martin de Diego Sádaba",
             "code": "35006",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Bling",
@@ -44568,7 +44568,7 @@
             "artist": "Adam S. Doyle",
             "flavour": "“Nil SIR, black noise, lost girls, drowned boys”\n-Ryō “Phoenix” Ōno",
             "code": "35010",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Cacophony",
@@ -44587,7 +44587,7 @@
             "artist": "Cat Shen",
             "flavour": "48c7 c0c9 0000 000f 0549 c7c2 8051 0100 49f7 fa48 83fa 007c 1048 c7c0 3c00 0000 48c7 c707 0000 000f 05...",
             "code": "35007",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Gourmand",
@@ -44606,7 +44606,7 @@
             "artist": "Elliott Birt",
             "flavour": "“Don't tell me you were at the gala, darling? I must not have seen you”",
             "code": "35037",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Aggressive Trendsetting",
@@ -44616,7 +44616,7 @@
         "uniqueness": false
     },
     {
-        "type_code": "upgr/ade",
+        "type_code": "upgrade",
         "faction": "haas-bioroid",
         "cost": 2,
         "trash_cost": 2,
@@ -44626,7 +44626,7 @@
             "artist": "Dimik",
             "flavour": "“My predecessor had passion, imagination, ambition. I assure you, I possess no such flaws.”",
             "code": "35045",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Mercia B4LL4RD",
@@ -44645,7 +44645,7 @@
                 "artist": "Cat Shen",
                 "code": "35050",
                 "flavour": "You thought you were safe?",
-                "img_type": "nrdb",
+                "img_type": "nro",
                 "set": "ele"
             }
         ],
@@ -44667,7 +44667,7 @@
             "artist": "Mauricio Herrera",
             "flavour": "“Don't let self-respect get in the way of a good shortcut”\n-“G0ph3r” O'Ryan",
             "code": "35016",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Maintenance Access",
@@ -44687,7 +44687,7 @@
             "artist": "Ferenc Patk\u00f3s",
             "flavour": "“You dare?”",
             "code": "35041",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Bumi 1.0",
@@ -44707,7 +44707,7 @@
             "artist": "Scott Uminga",
             "flavour": "The silence of the forest is the surest sign of danger.",
             "code": "35054",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Semak-samun",
@@ -44727,7 +44727,7 @@
             "artist": "Adam S. Doyle",
             "flavour": "You don't really want to know what makes you unique as a person. It's so much less than you think.",
             "code": "35061",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Idiosyncresis",
@@ -44745,7 +44745,7 @@
         "printings": [{
             "artist": "Anthony Hutchings",
             "code": "35059",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Embedded Reporting",
@@ -44763,7 +44763,7 @@
         "printings": [{
             "artist": "Mia Siergiejew",
             "code": "35065",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Bigger Picture",
@@ -44781,7 +44781,7 @@
         "printings": [{
             "artist": "Oliver Morit",
             "code": "35011",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Rent Rioters",
@@ -44800,7 +44800,7 @@
             "artist": "Cat Shen",
             "code": "35048",
             "flavour": "We rely too much on spatial cognition. What happens when that system receives a null signal?",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Proprionegation",
@@ -44819,7 +44819,7 @@
             "artist": "Matheus Calza",
             "flavour": "Peer reviews are the difference between living in the arcs and living in the slums. Cloneline gengineering never made anything as vicious or cutthroat as a Jinteki scientist.",
             "code": "35055",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Peer Review",
@@ -44838,7 +44838,7 @@
             "artist": "Mauricio Herrera",
             "flavour": "“It's been a real pleasure doing business with you.”",
             "code": "35070",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Greenmail",
@@ -44857,7 +44857,7 @@
             "artist": "Matheus Calza",
             "flavour": "“I’ll use what I have to get what I want.” ",
             "code": "35003",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Charm Offensive",
@@ -44876,7 +44876,7 @@
             "artist": "Elwin \"Jakuza\" Rumplmair",
             "flavour": "“For my children’s sake, I’ll endure any pain.”\n—Dewi Subrotoputri, as Dyah Kunthi",
             "code": "35029",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Azimat",
@@ -44895,7 +44895,7 @@
             "artist": "Ed Mattinain",
             "flavour": "”On the Net, we hold the power.”\n—Arnold Teoh, NBN technologist",
             "code": "35064",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "N-Pot",
@@ -44913,7 +44913,7 @@
             "artist": "Ferenc Patk\u00f3s",
             "flavour": "Itur in antiquam telam.",
             "code": "35080",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Lamplighter",
@@ -44930,7 +44930,7 @@
         "printings": [{
             "artist": "Matheus Calza",
             "code": "35081",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "ele"
         }],
         "title": "Petty Cash",
@@ -44951,7 +44951,7 @@
             "artist": "Anna Butova",
             "flavour": "There have been many golden ages of piracy, each occurring on stranger and stormier waters.",
             "code": "36004",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "vp"
         }],
         "title": "Corsair",
@@ -44970,7 +44970,7 @@
             "artist": "Júlio Rocha",
             "flavour": "“We herald the goddess.”",
             "code": "36005",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "vp"
         }],
         "title": "Lampades",
@@ -44989,7 +44989,7 @@
             "artist": "Mauricio Herrera",
             "flavour": "“Got me out of a jam, so I lend it a hand sometimes. Same with most of us: favors, debts, blackmail, whatever. Point is, when Vic calls, you pick up.”",
             "code": "36016",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "vp"
         }],
         "title": "Underdome Irregulars",
@@ -45008,7 +45008,7 @@
             "artist": "Anna Butova",
             "flavour": 	"The cyclotron’s utility was discovered after its magnets quenched during load testing, resulting in 1,600 tons of liquid helium venting directly into Heinlein city tenements and an anomalous 13-second local time loss. An apology was issued, funerals were covered, and funding was rerouted to recreate the error at scale.",
             "code": "36027",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "vp"
         }],
         "title": "Synchrocyclotron",
@@ -45028,7 +45028,7 @@
             "artist": "Dimik",
             "flavour": "There is a tipping point where an ad becomes so omnipresent, it’s subliminal.",
             "code": "36053",
-            "img_type": "nrdb",
+            "img_type": "nro",
             "set": "vp"
         }],
         "title": "Flood the Market",

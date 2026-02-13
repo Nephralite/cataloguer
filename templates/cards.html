@@ -12,6 +12,10 @@
             <a href="https://netrunnerdb.com/en/card/{{card_code[0]}}">
             <img class="rounded-lg" src="https://card-images.netrunnerdb.com/v2/large/{{card_code[0]}}.jpg", width=300>
             </a>
+            {% else if card_code[1] == "nro" %}
+            <a href="https://netrunnerdb.com/en/card/{{card_code[0]}}">
+            <img class="rounded-lg" src="https://nro-public.s3.nl-ams.scw.cloud/nro/card-printings/v2/webp/english/card/{{card_code[0]}}.webp" width=300 onerror="this.onerror=null; this.src='https://nro-public.s3.nl-ams.scw.cloud/nro/card-printings/v2/webp/english/card/{{card_code[0]}}.1.webp'">
+            </a>
             {% else %}
             <a href="https://netrunnerdb.com/en/card/{{card_code[0]}}">
             <img class="rounded-lg" src="assets/images/{{card_code[0]}}.png", width=300>
