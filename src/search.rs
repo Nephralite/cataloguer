@@ -694,7 +694,7 @@ fn search_impl<'a>(
                 IsFilterType::Unique => card_pool.iter().filter(|x| x.card.uniqueness).copied().collect(),
                 IsFilterType::Wet => inner_search("z:pawnshop", backend, card_pool, depth+1)?,
                 IsFilterType::Creepy => inner_search("tob>0 -z:pawnshop", backend, card_pool, depth+1)?,
-                IsFilterType::Editorial => inner_search("z:std (s:\"black ops\" or s:\"gray ops\" or s:liability)", backend, card_pool, depth+1)?
+                IsFilterType::Editorial => inner_search("s:\"black ops\" or s:\"gray ops\" or s:liability", backend, card_pool, depth+1)?
             };
 
             if is_filter.is_negated {
