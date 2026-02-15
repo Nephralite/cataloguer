@@ -211,7 +211,8 @@ pub enum IsFilterType {
     Trap,
     Unique,
     Creepy,
-    Wet
+    Wet,
+    Editorial
 }
 
 #[derive(Debug, Default)]
@@ -548,6 +549,7 @@ fn parse_filter(
                         "unique" => IsFilterType::Unique,
                         "wet" => IsFilterType::Wet,
                         "creepy" => IsFilterType::Creepy,
+                        "editorial" | "illict" => IsFilterType::Editorial,
                         _ => {
                             return Err(ParseError::InvalidFilter(format!(
                                 "not a valid '{key_str}:' value: '{}'",

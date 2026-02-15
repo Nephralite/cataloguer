@@ -148,7 +148,7 @@ pub(crate) fn do_search<'a>(
     let search_order = settings
         .sort
         .or(form_settings.sort)
-        .unwrap_or(SearchOrder::Released);
+        .unwrap_or(SearchOrder::Faction);
     match search_order {
         SearchOrder::Name => results.sort_by_cached_key(|sp| &sp.card.stripped_title),
         SearchOrder::Artist => results.sort_by_key(|sp| &sp.card.printings.last().unwrap().artist),
@@ -156,7 +156,10 @@ pub(crate) fn do_search<'a>(
         SearchOrder::Type => results.sort_by_key(|sp| &sp.card.type_code),
         SearchOrder::Faction => results.sort_by_key(|sp| faction_order(&sp.card.faction)),
         SearchOrder::Influence => results.sort_by_key(|sp| sp.card.influence),
-        SearchOrder::Released => results.sort_by_key(|sp| &sp.card.printings.first().unwrap().code),
+        SearchOrder::Released => {
+            results.sort_by_key(|sp| &sp.card.printings.last().unwrap().code);
+            //results.sort_by_key(|sp| std::cmp::Reverse(&sp.card.printings.last().unwrap().code[..2]));
+            },
         SearchOrder::Random => results.shuffle(&mut thread_rng()),
         SearchOrder::Strength => results.sort_by_key(|sp| sp.card.strength),
         SearchOrder::Set => return Err(SearchError::NotYetImplemented("sort by set".to_string())),
@@ -690,7 +693,8 @@ fn search_impl<'a>(
                 IsFilterType::Trap => inner_search("o:\"when the runner accesses this\"", backend, card_pool, depth+1)?,
                 IsFilterType::Unique => card_pool.iter().filter(|x| x.card.uniqueness).copied().collect(),
                 IsFilterType::Wet => inner_search("z:pawnshop", backend, card_pool, depth+1)?,
-                IsFilterType::Creepy => inner_search("tob>0 -z:pawnshop", backend, card_pool, depth+1)?
+                IsFilterType::Creepy => inner_search("tob>0 -z:pawnshop", backend, card_pool, depth+1)?,
+                IsFilterType::Editorial => inner_search("z:std (s:\"black ops\" or s:\"gray ops\" or s:liability)", backend, card_pool, depth+1)?
             };
 
             if is_filter.is_negated {
