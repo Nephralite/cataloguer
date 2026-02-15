@@ -3083,7 +3083,7 @@
         "agenda_points": 1,
         "faction": "weyland-consortium",
         "influence": 0,
-        "subtypes": "Expansion",
+        "subtypes": "Expansion – Liability",
         "printings": [
             {
                 "artist": "Mauricio Herrera",
@@ -3126,7 +3126,7 @@
         "agenda_points": 1,
         "faction": "weyland-consortium",
         "influence": 0,
-        "subtypes": "Security",
+        "subtypes": "Security – Liability",
         "printings": [
             {
                 "artist": "Mauricio Herrera",
@@ -8389,7 +8389,7 @@
         "agenda_points": 2,
         "faction": "haas-bioroid",
         "influence": 0,
-        "subtypes": "Security",
+        "subtypes": "Security – Liability",
         "printings": [
             {
                 "artist": "Emilio Rodr\u00edguez",
@@ -8570,7 +8570,7 @@
         "cost": 2,
         "faction": "nbn",
         "influence": 3,
-        "subtypes": "Double - Gray Ops",
+        "subtypes": "Double - Gray Ops – Liability",
         "printings": [
             {
                 "artist": "Del Borovic",
@@ -8591,7 +8591,7 @@
         "agenda_points": 2,
         "faction": "weyland-consortium",
         "influence": 0,
-        "subtypes": "Expansion",
+        "subtypes": "Expansion – Liability",
         "printings": [
             {
                 "artist": "Mike Nesbitt",
@@ -8612,7 +8612,7 @@
         "cost": 8,
         "faction": "weyland-consortium",
         "influence": 4,
-        "subtypes": "Sentry - Destroyer - Illicit",
+        "subtypes": "Sentry - Destroyer – Liability",
         "printings": [
             {
                 "artist": "Ed Mattinian",
@@ -8653,7 +8653,7 @@
         "cost": 5,
         "faction": "neutral-corp",
         "influence": 0,
-        "subtypes": "Sentry - Destroyer - Illicit",
+        "subtypes": "Sentry - Destroyer - Liability",
         "printings": [
             {
                 "artist": "Liiga Smilshkalne",
@@ -8900,7 +8900,7 @@
         "cost": 1,
         "faction": "haas-bioroid",
         "influence": 3,
-        "subtypes": "Black Ops",
+        "subtypes": "Black Ops – Liability",
         "printings": [
             {
                 "artist": "Isuardi Therianto",
@@ -8921,7 +8921,7 @@
         "agenda_points": 1,
         "faction": "jinteki",
         "influence": 0,
-        "subtypes": "Initiative",
+        "subtypes": "Initiative – Liability",
         "printings": [
             {
                 "artist": "Gong Studios",
@@ -9006,7 +9006,7 @@
         "cost": 5,
         "faction": "nbn",
         "influence": 3,
-        "subtypes": "Sentry - Tracer - Illicit",
+        "subtypes": "Sentry - Tracer - Liability",
         "printings": [
             {
                 "artist": "Ed Mattinian",
@@ -9056,7 +9056,7 @@
         "cost": 2,
         "faction": "weyland-consortium",
         "influence": 2,
-        "subtypes": "Executive",
+        "subtypes": "Executive – Liability",
         "printings": [
             {
                 "artist": "Del Borovic",
@@ -9126,6 +9126,7 @@
         "stripped_title": "Profiteering",
         "text": "When you score Profiteering, take up to 3 bad publicity. Gain 5[credit] for each bad publicity taken.",
         "title": "Profiteering",
+        "subtypes": "Liability",
         "type_code": "agenda",
         "uniqueness": false
     },
@@ -9827,7 +9828,7 @@
         "cost": 4,
         "faction": "haas-bioroid",
         "influence": 2,
-        "subtypes": "Sentry - AP - Illicit",
+        "subtypes": "Sentry - AP - Liability",
         "printings": [
             {
                 "artist": "Liiga Smilshkalne",
@@ -10510,7 +10511,7 @@
         "agenda_points": 1,
         "faction": "weyland-consortium",
         "influence": 0,
-        "subtypes": "Security",
+        "subtypes": "Security – Liability",
         "printings": [
             {
                 "artist": "Adam Schumpert",
@@ -10916,7 +10917,7 @@
         "cost": 7,
         "faction": "jinteki",
         "influence": 3,
-        "subtypes": "Sentry - Tracer - AP - Illicit",
+        "subtypes": "Sentry - Tracer - AP - Liability",
         "printings": [
             {
                 "artist": "Chris Newman",
@@ -15334,7 +15335,7 @@
         "cost": 4,
         "faction": "weyland-consortium",
         "influence": 2,
-        "subtypes": "Code Gate - Tracer - Illicit",
+        "subtypes": "Code Gate - Tracer - Liability",
         "printings": [
             {
                 "artist": "Lili Ibrahim",
@@ -19031,7 +19032,7 @@
         "cost": 0,
         "faction": "nbn",
         "influence": 2,
-        "subtypes": "Illicit",
+        "subtypes": "Liability",
         "printings": [
             {
                 "artist": "Kate Laird",
@@ -23464,7 +23465,7 @@
         "cost": 1,
         "faction": "haas-bioroid",
         "influence": 3,
-        "subtypes": "Black Ops",
+        "subtypes": "Black Ops – Liability",
         "printings": [
             {
                 "artist": "VIKO",
@@ -24053,7 +24054,7 @@
         "cost": 10,
         "faction": "weyland-consortium",
         "influence": 3,
-        "subtypes": "Barrier - Illicit",
+        "subtypes": "Barrier - Liability",
         "printings": [
             {
                 "artist": "Mariusz Siergiejew",
@@ -28481,7 +28482,7 @@
         "agenda_points": 1,
         "faction": "weyland-consortium",
         "influence": 0,
-        "subtypes": "Expansion",
+        "subtypes": "Expansion – Liability",
         "printings": [
             {
                 "artist": "Ed Mattinian",
@@ -28522,7 +28523,7 @@
         "cost": 3,
         "faction": "weyland-consortium",
         "influence": 2,
-        "subtypes": "Facility - Illicit",
+        "subtypes": "Facility - Liability",
         "printings": [
             {
                 "artist": "Jason Juta",
@@ -32978,7 +32979,7 @@
         "agenda_points": 2,
         "faction": "weyland-consortium",
         "influence": 0,
-        "subtypes": "Security",
+        "subtypes": "Security – Liability",
         "printings": [
             {
                 "artist": "Steve Hamilton",
@@ -33081,7 +33082,7 @@
         "cost": 0,
         "faction": "weyland-consortium",
         "influence": 4,
-        "subtypes": "Transaction - Illicit",
+        "subtypes": "Transaction - Liability",
         "printings": [
             {
                 "artist": "Timur Shevtsov",
@@ -33103,7 +33104,7 @@
         "cost": 1,
         "faction": "weyland-consortium",
         "influence": 3,
-        "subtypes": "Gray Ops - Illicit",
+        "subtypes": "Gray Ops - Liability",
         "printings": [
             {
                 "artist": "Timur Shevtsov",
@@ -34490,7 +34491,7 @@
         "cost": 4,
         "faction": "nbn",
         "influence": 3,
-        "subtypes": "Illicit - Gray Ops",
+        "subtypes": "Liability - Gray Ops",
         "printings": [
             {
                 "artist": "Krembler",
@@ -34642,7 +34643,7 @@
         "cost": 7,
         "faction": "weyland-consortium",
         "influence": 3,
-        "subtypes": "Sentry - Illicit - Destroyer - Tracer",
+        "subtypes": "Sentry - Liability - Destroyer - Tracer",
         "printings": [
             {
                 "artist": "Iain Fairclough",
@@ -40418,7 +40419,7 @@
         "cost": 6,
         "faction": "weyland-consortium",
         "influence": 5,
-        "subtypes": "Illicit - Industrial",
+        "subtypes": "Liability - Industrial",
         "printings": [
             {
                 "artist": "Vitalii Ostaschenko",
@@ -41826,7 +41827,7 @@
         "cost": 5,
         "faction": "weyland-consortium",
         "influence": 3,
-        "subtypes": "Code Gate - Illicit",
+        "subtypes": "Code Gate - Liability",
         "printings": [
             {
                 "artist": "Scott Uminga",
@@ -43049,7 +43050,7 @@
         "cost": 5,
         "faction": "nbn",
         "influence": 3,
-        "subtypes": "Code Gate - Illicit - AP",
+        "subtypes": "Code Gate - Liability - AP",
         "printings": [
             {
                 "artist": "J\u00falio Rocha",
@@ -45073,6 +45074,64 @@
         "stripped_title": "Virtual Intelligence, P.I. – You Can Call Me Vic",
         "text": "Once per turn → [click], 1[credit]: Draw 1 card and remove 1 tag.",
         "stripped_text": "Once per turn -> click, 1 credit: Draw 1 card and remove 1 tag.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "identity",
+        "subtypes": "Division",
+        "minimum_deck_size": 45,
+        "influence_limit": 15,
+        "faction": "nbn",
+        "printings": [{
+            "artist": "Emilio Rodr\u00edguez",
+            "flavour": "it never happened",
+            "code": "36046",
+            "img_type": "local",
+            "set": "vp"
+        }],
+        "title": "Editorial Division: Ad Nihilum",
+        "stripped_title": "Editorial Division: Ad Nihilum",
+        "stripped_text": "The first time each turn you take bad publicity, you may search R&D for 1 non-agenda black ops, gray ops, or liability card and reveal it. (Shuffle R&D after searching it.) Add that card to HQ.",
+        "text": "The first time each turn you take bad publicity, you may search R&D for 1 non-agenda <strong>black ops</strong>, <strong>gray ops</strong>, or <strong>liability</strong> card and reveal it. <i>(Shuffle R&D after searching it.)</i> Add that card to HQ.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "asset",
+        "subtypes": "Enforcer – Liability",
+        "faction": "nbn",
+        "cost": 1,
+        "influence": 2,
+        "trash_cost": 3,
+        "printings": [{
+            "artist": "Qistina Khalidah",
+            "flavour": "bject acquir ₰ History dele",
+            "code": "36049",
+            "img_type": "local",
+            "set": "vp"
+        }],
+        "title": "Nihilo Agent",
+        "stripped_title": "Nihilo Agent",
+        "text": "When you rez this asset, load 3 power counters onto it. When it is empty, trash it.\nWhen your turn begins, remove 1 tag and 1 bad publicity.\nWhen your discard phase ends, give the Runner 1 tag, take 1 bad publicity, and remove 1 hosted power counter.",
+        "stripped_text": "When you rez this asset, load 3 power counters onto it. When it is empty, trash it. When your turn begins, remove 1 tag and 1 bad publicity. When your discard phase ends, give the Runner 1 tag, take 1 bad publicity, and remove 1 hosted power counter.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "asset",
+        "subtypes": "Transaction – Liability",
+        "faction": "weyland-consortium",
+        "cost": 7,
+        "influence": 2,
+        "printings": [{
+            "artist": "Oliver Morit",
+            "flavour": "“The boss likes to swoop in at just the last second. You should consider yourself lucky.”",
+            "code": "36063",
+            "img_type": "local",
+            "set": "vp"
+        }],
+        "title": "Vulture Fund",
+        "stripped_title": "Vulture Fund",
+        "text": "Gain 14[credit] and take 1 bad publicity.",
+        "stripped_text": "Gain 14 credit and take 1 bad publicity.",
         "uniqueness": false
     }
 ]
