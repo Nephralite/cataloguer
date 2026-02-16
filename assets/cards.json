@@ -45134,4 +45134,22 @@
         "stripped_text": "Gain 14 credit and take 1 bad publicity.",
         "uniqueness": false
     }
+    ,{
+        "type_code": "identity",
+        "faction": "shaper",
+        "influence_limit": 15,
+        "minimum_deck_size": 45,
+        "printings": [{
+            "artist": "Marlon Ruiz",
+            "flavour": "“Truth runs deeper than power can ever reach.”",
+            "code": "36017",
+            "img_type": "local",
+            "set": "vp"
+        }],
+        "title": "Hiram “0mission” Svensson: Shadow of the Past ",
+        "stripped_title": "Hiram 0mission Svensson: Shadow of the Past ",
+        "text": "Whenever you install or trash a piece of hardware (from any location), look at the top card of R&D.",
+        "stripped_text": "Whenever you install or trash a piece of hardware (from any location), look at the top card of R&D.",
+        "uniqueness": false
+}
 ]
