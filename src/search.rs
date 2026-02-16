@@ -71,7 +71,7 @@ pub(crate) fn do_search<'a>(
     form_settings: SearchSettings,
 ) -> Result<Vec<&'a Printing>, SearchError> {
     debug!("Begin query: '{query}'");
-    let (node, settings) = parse_query(query)?;
+    let (node, settings) = parse_query(&query.to_lowercase())?;
     let card_pool: HashSet<SearchPrinting> = backend
         .cards
         .iter()
