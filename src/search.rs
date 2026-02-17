@@ -397,6 +397,7 @@ fn search_impl<'a>(
                         }
                     };
                     let query_str = match text_value.as_str() {
+                        "vpstartup" => "(set:vp or set:ele or set:sg) -banned:vpstartup -o:\"starter game only\"",
                         "startup" | "sup" => "(cy:lib or cy:sg or cy:ele) -banned:startup -o:\"starter game only\"",
                         "neo" => "is:nsg -set:su21 -banned:neo -o:\"starter game only\"",
                         // "rig" | "postgateway" | "librealis" | "twocycle" => "date>=sg -banned:rig -o:\"starter game only\"",
@@ -495,16 +496,20 @@ fn search_impl<'a>(
                     };
                     search_impl(node, backend, card_pool, depth + 1)?
                 }
-                TextKey::Subtype => card_pool
+                TextKey::Subtype => {
+                    //this is garbage code, I plan to remove this when piggy comes out and everyone
+                    //forgets about illict
+                    let text_value = if text_filter.value.value()=="illict" {TextValue::Plain("liability".to_owned())} else {text_filter.value};
+                    card_pool
                     .iter()
                     .filter(|x| {
                         x.card
                             .subtypes
                             .as_ref()
-                            .is_some_and(|s| text_filter.value.matches(s))
+                            .is_some_and(|s| text_value.matches(s))
                     })
                     .copied()
-                    .collect(),
+                    .collect()},
                 TextKey::Type => card_pool
                     .iter()
                     .filter(|x| text_filter.value.matches(&x.card.type_code))

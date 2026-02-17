@@ -15,7 +15,7 @@ use cataloguer::*;
 fn init_backend() -> anyhow::Result<structs::Backend> {
     let backend = structs::Backend {
         cards: serde_json::from_str::<Vec<structs::Card>>(&std::fs::read_to_string("assets/cards.json")?.to_lowercase())?,
-        banlist: serde_json::from_str::<Map<String, Value>>(&std::fs::read_to_string("assets/banned.json")?)?,
+        banlist: serde_json::from_str::<Map<String, Value>>(&std::fs::read_to_string("assets/banned.json")?.to_lowercase())?,
         sets: serde_json::from_str::<Vec<structs::Set>>(&std::fs::read_to_string("assets/sets.json")?)?,
     };
 
