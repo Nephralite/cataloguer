@@ -45152,5 +45152,42 @@
         "text": "Whenever you install or trash a piece of hardware (from any location), look at the top card of R&D.",
         "stripped_text": "Whenever you install or trash a piece of hardware (from any location), look at the top card of R&D.",
         "uniqueness": false
-}
+    },
+    {
+        "type_code": "agenda",
+        "faction": "neutral-corp",
+        "influence": 1,
+        "advancement_cost": 4,
+        "agenda_points": 2,
+        "printings": [{
+            "artist": "Ed Mattinian",
+            "code": "36066",
+            "img_type": "local",
+            "set": "vp"
+        }],
+        "title": "Let Them Dream",
+        "stripped_title": "Let Them Dream",
+        "text": "When you score this agenda, you may search HQ, R&D, or Archives for 1 agenda and reveal it. (Shuffle R&D after searching it.) Add that card to HQ or the bottom of R&D.\nWhile this agenda is in the Runner's score area, it is worth 1 less agenda point.",
+        "stripped_text": "When you score this agenda, you may search HQ, R&D, or Archives for 1 agenda and reveal it. (Shuffle R&D after searching it.) Add that card to HQ or the bottom of R&D. While this agenda is in the Runner's score area, it is worth 1 less agenda point.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "agenda",
+        "subtypes": "Initiative",
+        "faction": "haas-bioroid",
+        "advancement_cost": 5,
+        "agenda_points": 3,
+        "printings": [{
+            "artist": "Mahardika Wahyu (Polar Engine)",
+            "flavour": "“Welcome aboard Moonsilver Class members. Our express stops today are New Lovell, Heinlein and Imamura Station.”",
+            "code": "36026",
+            "img_type": "local",
+            "set": "vp"
+        }],
+        "title": "Méliès City Luxury Line",
+        "stripped_title": "Melies City Luxury Line",
+        "text": "As an additional cost to steal this agenda, the Runner must pay [click].\nWhen you score this agenda, gain [click].",
+        "stripped_text": "As an additional cost to steal this agenda, the Runner must pay [click]. When you score this agenda, gain [click].",
+        "uniqueness": false
+    }
 ]
