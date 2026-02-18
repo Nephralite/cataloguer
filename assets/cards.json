@@ -23482,7 +23482,7 @@
         "title": "Hellion Beta Test",
         "type_code": "operation",
         "uniqueness": false,
-        "eternal_points": 2
+        "eternal_points": 1
     },
     {
         "advancement_cost": 2,
@@ -25410,7 +25410,7 @@
     },
     {
         "cost": 3,
-        "eternal_points": 3,
+        "eternal_points": 4,
         "faction": "anarch",
         "influence": 4,
         "subtypes": "Clan",
@@ -28455,7 +28455,8 @@
         "text": "[interrupt] \u2192 Whenever 1 or more Runner cards would be trashed <em>(from any location)</em>, set those cards aside instead of adding them to the heap. You can look at those cards. You may remove 1 of them from the game. Then, add all of those cards that are still set aside to the heap. Ignore this ability if you have already removed a card from the game with it this turn.",
         "title": "Skorpios Defense Systems: Persuasive Power",
         "type_code": "identity",
-        "uniqueness": false
+        "uniqueness": false,
+        "eternal_points": 2
     },
     {
         "advancement_cost": 4,
@@ -29891,7 +29892,7 @@
         "uniqueness": true
     },
     {
-        "eternal_points": 3,
+        "eternal_points": 4,
         "base_link": 1,
         "faction": "shaper",
         "influence": 0,
@@ -31497,7 +31498,6 @@
     },
     {
         "cost": 1,
-        "eternal_points": 1,
         "faction": "anarch",
         "influence": 3,
         "printings": [
@@ -41256,7 +41256,8 @@
         "title": "Wage Workers",
         "trash_cost": 4,
         "type_code": "asset",
-        "uniqueness": true
+        "uniqueness": true,
+        "eternal_points": 1
     },
     {
         "cost": 2,
@@ -41757,7 +41758,8 @@
         "text": "Gain 1[credit] for each card in HQ.",
         "title": "Your Digital Life",
         "type_code": "operation",
-        "uniqueness": false
+        "uniqueness": false,
+        "eternal_points": 2
     },
     {
         "advancement_cost": 4,
@@ -43960,7 +43962,7 @@
         "stripped_text": "When your action phase ends, if you played an operation this turn, gain 1[credit] and flip this identity. Flip side: The first time each turn you play an operation, gain [click]. When the Runner makes a successful run on HQ or R&D, flip this identity.",
         "text": "When your action phase ends, if you played an operation this turn, gain 1[credit] and flip this identity.\nFlip side:\nThe first time each turn you play an operation, gain [click].\nWhen the Runner makes a successful run on HQ or R&D, flip this identity.",
         "uniqueness": false,
-        "eternal_points":  1
+        "eternal_points":  2
     },
     {
         "type_code": "upgrade",
@@ -44398,6 +44400,7 @@
         "type_code": "event",
         "faction": "shaper",
         "cost": 0,
+        "eternal_points": 1,
         "influence": 2,
         "printings": [{
             "artist": "Alecia Doyley",
@@ -45068,7 +45071,7 @@
             "artist": "Marlon Ruiz",
             "flavour": "“I knew from the start this case was gonna be the end of me…”",
             "code": "36009",
-            "img_type": "local",
+            "img_type": "nro",
             "set": "vp"
         }],
         "title": "Virtual Intelligence, P.I. – “You Can Call Me Vic”",
@@ -45087,7 +45090,7 @@
             "artist": "Emilio Rodr\u00edguez",
             "flavour": "it never happened",
             "code": "36046",
-            "img_type": "local",
+            "img_type": "nro",
             "set": "vp"
         }],
         "title": "Editorial Division: Ad Nihilum",
@@ -45107,7 +45110,7 @@
             "artist": "Qistina Khalidah",
             "flavour": "bject acquir ₰ History dele",
             "code": "36049",
-            "img_type": "local",
+            "img_type": "nro",
             "set": "vp"
         }],
         "title": "Nihilo Agent",
@@ -45126,7 +45129,7 @@
             "artist": "Oliver Morit",
             "flavour": "“The boss likes to swoop in at just the last second. You should consider yourself lucky.”",
             "code": "36063",
-            "img_type": "local",
+            "img_type": "nro",
             "set": "vp"
         }],
         "title": "Vulture Fund",
@@ -45144,7 +45147,7 @@
             "artist": "Marlon Ruiz",
             "flavour": "“Truth runs deeper than power can ever reach.”",
             "code": "36017",
-            "img_type": "local",
+            "img_type": "nro",
             "set": "vp"
         }],
         "title": "Hiram “0mission” Svensson: Shadow of the Past ",
@@ -45162,7 +45165,7 @@
         "printings": [{
             "artist": "Ed Mattinian",
             "code": "36066",
-            "img_type": "local",
+            "img_type": "nro",
             "set": "vp"
         }],
         "title": "Let Them Dream",
@@ -45181,7 +45184,7 @@
             "artist": "Mahardika Wahyu (Polar Engine)",
             "flavour": "“Welcome aboard Moonsilver Class members. Our express stops today are New Lovell, Heinlein and Imamura Station.”",
             "code": "36026",
-            "img_type": "local",
+            "img_type": "nro",
             "set": "vp"
         }],
         "title": "Méliès City Luxury Line",
@@ -45189,5 +45192,24 @@
         "text": "As an additional cost to steal this agenda, the Runner must pay [click].\nWhen you score this agenda, gain [click].",
         "stripped_text": "As an additional cost to steal this agenda, the Runner must pay [click]. When you score this agenda, gain [click].",
         "uniqueness": false
+    },
+    {
+        "type_code": "resource",
+        "subtypes": "Virtual - Companion",
+        "faction": "anarch",
+        "influence": 3,
+        "cost": 0,
+        "printings": [{
+            "artist": "Cat Shen",
+            "flavour": "In the Net, it takes a special effort not to sanitize your equipment. But they manage anyway.",
+            "code": "36008",
+            "img_type": "nro",
+            "set": "vp"
+        }],
+        "title": "stick and poke",
+        "stripped_title": "stick and poke",
+        "text": "The first time each turn you encounter a piece ice, it gains “[sub] Do 1 net damage. The Runner draws 1 card.” before all its printed subroutines for the remainder of the encounter.",
+        "stripped_text": "The first time each turn you encounter a piece ice, it gains “[sub] Do 1 net damage. The Runner draws 1 card.” before all its printed subroutines for the remainder of the encounter.",
+        "uniqueness": true
     }
 ]
