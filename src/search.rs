@@ -65,6 +65,29 @@ impl From<ParseError> for SearchError {
     }
 }
 
+//I need a quick function with no sorting to expose card api results, this is mostly diamonds code
+//form the function below TODO fix this tech debt
+pub(crate) fn temp_simple_search<'a> (query: &str, backend: &'a Backend) -> Result<Vec<Card>, SearchError> {
+    let (node, _settings) = parse_query(&query.to_lowercase())?;
+    let card_pool: HashSet<SearchPrinting> = backend
+        .cards
+        .iter()
+        .flat_map(|card| {
+            card.printings
+                .iter()
+                .map(|printing| SearchPrinting { printing, card })
+        })
+        .collect();
+    let results: HashSet<SearchPrinting> = search_impl(node, backend, &card_pool, 0)?;
+    //lazy deduplication for the second
+    let cards: HashSet<Card> = results.iter().map(|s| s.card.clone()).collect();
+    let cards: Vec<Card> = cards.into_iter().collect();
+    Ok(cards)
+}
+
+
+
+
 pub(crate) fn do_search<'a>(
     query: &str,
     backend: &'a Backend,

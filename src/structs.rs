@@ -34,7 +34,14 @@ pub struct SimpleAPIout {
     pub len: usize,
 }
 
-#[derive(serde::Deserialize, Clone, Eq)]
+#[derive(serde::Serialize)]
+pub struct FullAPIout {
+    pub data: Vec<Card>,
+    pub error: Option<String>,
+    pub len: usize,
+}
+
+#[derive(serde::Serialize, serde::Deserialize, Clone, Eq)]
 pub struct Printing {
     pub artist: Option<String>,
     pub flavour: Option<String>,
@@ -56,7 +63,7 @@ impl std::hash::Hash for Printing {
 }
 
 
-#[derive(serde::Deserialize, Clone, Eq)]
+#[derive(serde::Serialize, serde::Deserialize, Clone, Eq)]
 pub struct Card {
     pub printings: Vec<Printing>,
     pub faction: String,

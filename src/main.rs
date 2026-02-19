@@ -52,6 +52,7 @@ async fn main() -> anyhow::Result<()> {
         .route("/syntax", get(web::syntax))
         .route("/sets", get(web::setspage))
         .route("/simple_api/", get(web::simple_api))
+        .route("/api/", get(web::full_api))
         .with_state(backend)
         .nest_service(
             "/assets",

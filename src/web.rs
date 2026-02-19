@@ -6,8 +6,8 @@ use axum::http::StatusCode;
 use axum::Json;
 use axum::response::Html;
 use crate::parse::{SearchDirection, SearchSettings};
-use crate::structs::{Backend, Card, Legality, Set, SimpleAPIout};
-use crate::search::{card_matches, do_search};
+use crate::structs::{Backend, Card, Legality, Set, SimpleAPIout, FullAPIout};
+use crate::search::{card_matches, do_search, temp_simple_search};
 
 pub async fn setspage(State(backend): State<Backend>) -> impl IntoResponse {
     Templates::SetsPageTemplate(SetsPageTemplate {query:"".to_owned(), order:"".to_owned(), dir:"".to_owned(), sets:backend.sets})
@@ -128,6 +128,17 @@ pub async fn simple_api(
         Json(SimpleAPIout{len: 0, data: vec!(), error: Some("no query provided".to_string())}).into_response()
     }
 }
+
+pub async fn full_api(State(backend): State<Backend>, Query(params): Query<SearchForm>) -> impl IntoResponse {
+    if let Some(query) = params.search {
+        match temp_simple_search(&query, &backend) {
+          Ok(cards) => Json(FullAPIout{len: cards.len(), data: cards, error: None}).into_response(),
+          Err(e) => Json(FullAPIout{len: 0, data: vec!(), error: Some(e.to_string())}).into_response(),
+        }
+    } else {
+        Json(SimpleAPIout{len: 0, data: vec!(), error: Some("no query provided".to_string())}).into_response()
+    }
+} 
 
 pub async fn search(
     State(backend): State<Backend>,
