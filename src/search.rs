@@ -421,6 +421,7 @@ fn search_impl<'a>(
                     };
                     let query_str = match text_value.as_str() {
                         "vpstartup" => "(set:vp or set:ele or set:sg) -banned:vpstartup -o:\"starter game only\"",
+                        "vpstandard" | "26.03" => "is:nsg -set:su21 -banned:vpstandard -o:\"starter game only\"",
                         "startup" | "sup" => "(cy:lib or cy:sg or cy:ele) -banned:startup -o:\"starter game only\"",
                         "neo" => "is:nsg -set:su21 -banned:neo -o:\"starter game only\"",
                         // "rig" | "postgateway" | "librealis" | "twocycle" => "date>=sg -banned:rig -o:\"starter game only\"",

@@ -45211,5 +45211,46 @@
         "text": "The first time each turn you encounter a piece ice, it gains “[sub] Do 1 net damage. The Runner draws 1 card.” before all its printed subroutines for the remainder of the encounter.",
         "stripped_text": "The first time each turn you encounter a piece ice, it gains “[sub] Do 1 net damage. The Runner draws 1 card.” before all its printed subroutines for the remainder of the encounter.",
         "uniqueness": true
+    },
+        {
+        "type_code": "upgrade",
+        "subtypes": "Facility",
+        "faction": "weyland",
+        "influence": 2,
+        "cost": 3,
+        "trash_cost": 4,
+        "printings": [{
+            "artist": "Dimik",
+            "flavour": "“Gilded lily? You can get one in the gift shop.”",
+            "code": "36064",
+            "img_type": "nro",
+            "set": "vp"
+        }],
+        "title": "flagship",
+        "stripped_title": "flagship",
+        "text": "Runs against this server cannot be declared successful. (This effect does not cause runs to become unsuccessful.)\nPersistent → During each run against this server, the Runner cannot access more than 1 card other than this upgrade.",
+        "stripped_text": "Runs against this server cannot be declared successful. (This effect does not cause runs to become unsuccessful.) Persistent -> During each run against this server, the Runner cannot access more than 1 card other than this upgrade.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "asset",
+        "subtypes": "Executive",
+        "faction": "nbn",
+        "influence": 4,
+        "cost": 2,
+        "trash_cost": 3,
+        "printings": [{
+            "artist": "Grace Zhu",
+            "code": "36048",
+            "flavour": "“I do not take kindly to uninvited guests in my reality. Have you at least brought a gift?”",
+            "img_type": "nro",
+            "set": "vp"
+        }],
+        "title": "magistrate aurora",
+        "stripped_title": "magistrate aurora",
+        "text": "As an additional cost to steal an agenda, the Runner must pay 3[credit].\nWhenever an agenda is scored, the Runner loses 3[credit].",
+        "stripped_text": "As an additional cost to steal an agenda, the Runner must pay 3[credit]. Whenever an agenda is scored, the Runner loses 3[credit].",
+        "uniqueness": true
     }
+
 ]
