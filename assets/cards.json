@@ -45560,5 +45560,25 @@
         "text": "When the Runner passes this ice, if they have no remaining [click], they cannot steal or trash cards for the remainder of this run.\n[sub] The Runner loses [click].",
         "stripped_text": "When the Runner passes this ice, if they have no remaining [click], they cannot steal or trash cards for the remainder of this run. [sub] The Runner loses [click].",
         "uniqueness": false
+    },
+    {
+        "type_code": "ice",
+        "subtypes": "Code Gate - Expendable",
+        "faction": "weyland-consortium",
+        "influence": 2,
+        "cost": 8,
+        "strength": 5,
+        "printings": [{
+            "artist": "Scott Uminga",
+            "code": "36060",
+            "img_type": "local",
+            "set": "vp",
+            "flavour": "No one can hear the clamor of the bells and not be alarmed. Least of all the intruder."
+        }],
+        "title": "tocsin",
+        "stripped_title": "tocsin",
+        "text": "[click], 1[credit], reveal and trash this ice from HQ: Search R&D for 1 barrier and 1 sentry. Reveal them and add them to HQ.\n[sub] The Runner loses 2[credit].\n[sub] End the run.\n[sub] End the run.",
+        "stripped_text": "[click], 1[credit], reveal and trash this ice from HQ: Search R&D for 1 barrier and 1 sentry. Reveal them and add them to HQ. [sub] The Runner loses 2[credit]. [sub] End the run. [sub] End the run.",
+        "uniqueness": false
     }
 ]
