@@ -44897,7 +44897,7 @@
         "strength": 4,
         "influence": 2,
         "printings": [{
-            "artist": "Ed Mattinain",
+            "artist": "Ed Mattinian",
             "flavour": "”On the Net, we hold the power.”\n—Arnold Teoh, NBN technologist",
             "code": "35064",
             "img_type": "nro",
@@ -45215,7 +45215,7 @@
         {
         "type_code": "upgrade",
         "subtypes": "Facility",
-        "faction": "weyland",
+        "faction": "weyland-consortium",
         "influence": 2,
         "cost": 3,
         "trash_cost": 4,
@@ -45251,6 +45251,314 @@
         "text": "As an additional cost to steal an agenda, the Runner must pay 3[credit].\nWhenever an agenda is scored, the Runner loses 3[credit].",
         "stripped_text": "As an additional cost to steal an agenda, the Runner must pay 3[credit]. Whenever an agenda is scored, the Runner loses 3[credit].",
         "uniqueness": true
+    },
+    {
+        "type_code": "ice",
+        "subtypes": "Barrier",
+        "faction": "nbn",
+        "influence": 1,
+        "cost": 1,
+        "strength": 1,
+        "printings": [{
+            "artist": "Ed Mattinian",
+            "code": "36052",
+            "img_type": "nro",
+            "set": "vp",
+            "flavour": "“Yeah, I previously worked at a Weyland shop, but the boss had it out for me. Creative differences.”—Isolde Muraro, ice architect"
+        }],
+        "title": "paywall",
+        "stripped_title": "paywall",
+        "text": "When the Runner encounters this ice, they lose 1[credit].\n[sub] End the run unless the Runner pays 1[credit].",
+        "stripped_text": "When the Runner encounters this ice, they lose 1[credit]. [sub] End the run unless the Runner pays 1[credit].",
+        "uniqueness": false
+    },
+    {
+        "type_code": "agenda",
+        "subtypes": "Liability",
+        "faction": "nbn",
+        "influence": 0,
+        "advancement_cost": 4,
+        "agenda_points": 2,
+        "printings": [{
+            "artist": "Alief Rusdiatama (Polar Engine)",
+            "code": "36047",
+            "img_type": "nro",
+            "set": "vp",
+            "flavour": "Of the truth, only ashes remained. Of his former life, even less."
+        }],
+        "title": "witch hunt",
+        "stripped_title": "witch hunt",
+        "text": "When this agenda is scored or stolen, take 1 bad publicity.\nWhen your action phase ends, if you scored this agenda this turn, remove all tags, then give the Runner 3 tags.",
+        "stripped_text": "When this agenda is scored or stolen, take 1 bad publicity. When your action phase ends, if you scored this agenda this turn, remove all tags, then give the Runner 3 tags.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "event",
+        "subtypes": "Run",
+        "faction": "criminal",
+        "influence": 2,
+        "cost": 3,
+        "printings": [{
+            "artist": "Oliver Morit",
+            "code": "36012",
+            "img_type": "nro",
+            "set": "vp",
+            "flavour": "In the age of unparalleled digital security, never underestimate the power of human error."
+        }],
+        "title": "tailgate",
+        "stripped_title": "tailgate",
+        "text": "This event costs 1[credit] less for each ice protecting HQ.\nRun HQ. If successful, when you breach HQ during this run, access 2 additional cards.",
+        "stripped_text": "This event costs 1[credit] less for each ice protecting HQ. Run HQ. If successful, when you breach HQ during this run, access 2 additional cards.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "event",
+        "subtypes": "Run",
+        "faction": "criminal",
+        "influence": 4,
+        "cost": 2,
+        "printings": [{
+            "artist": "Scott Uminga",
+            "code": "36010",
+            "img_type": "nro",
+            "set": "vp",
+            "flavour": "It’s easier to dodge a bullet than an envelope with your name on it."
+        }],
+        "title": "kompromat",
+        "stripped_title": "kompromat",
+        "text": "Run a server protected by ice. When this run ends, if it was successful, give the Corp 1 bad publicity unless they derez a piece of ice protecting the attacked server.\nRemove this event from the game.",
+        "stripped_text": "Run a server protected by ice. When this run ends, if it was successful, give the Corp 1 bad publicity unless they derez a piece of ice protecting the attacked server. Remove this event from the game.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "program",
+        "subtypes": "Trojan",
+        "faction": "shaper",
+        "influence": 1,
+        "cost": 0,
+        "memory": 1,
+        "printings": [{
+            "artist": "Elwin \"Jakuza\" Rumplmair",
+            "code": "36024",
+            "img_type": "nro",
+            "set": "vp",
+            "flavour": "Not only does life exist in the Net, it adapts to our presence and thrives."
+        }],
+        "title": "stowaway",
+        "stripped_title": "stowaway",
+        "text": "Install only on a piece of ice.\nWhenever you make a successful run on this server, gain 2[credit].",
+        "stripped_text": "Install only on a piece of ice. Whenever you make a successful run on this server, gain 2[credit].",
+        "uniqueness": false
+    },
+    {
+        "type_code": "ice",
+        "subtypes": "Sentry - Destroyer",
+        "faction": "weyland-consortium",
+        "influence": 3,
+        "cost": 4,
+        "strength": 0,
+        "printings": [{
+            "artist": "Ferenc Patkós",
+            "code": "36058",
+            "img_type": "nro",
+            "set": "vp",
+            "flavour": "Even light cannot escape. What makes you think you can?"
+        }],
+        "title": "event horizon",
+        "stripped_title": "event horizon",
+        "text": "[trash]: End the run. Use this ability only during a run on this server.\n[sub] Trash 1 installed program unless the Runner pays 3[credit].\n[sub] End the run unless the Runner pays 3[credit].",
+        "stripped_text": "[trash]: End the run. Use this ability only during a run on this server. [sub] Trash 1 installed program unless the Runner pays 3[credit]. [sub] End the run unless the Runner pays 3[credit].",
+        "uniqueness": false
+    },
+    {
+        "type_code": "operation",
+        "faction": "weyland-consortium",
+        "influence": 4,
+        "cost": 10,
+        "printings": [{
+            "artist": "Adam S. Doyle",
+            "code": "36061",
+            "img_type": "nro",
+            "set": "vp",
+            "flavour": "There is no victory which is not also beauty."
+        }],
+        "title": "myōshu",
+        "stripped_title": "myōshu",
+        "text": "Play only if you scored an agenda this turn that you did not install this turn.\nAdd this operation to your score area as an agenda worth 2 agenda points..",
+        "stripped_text": "Play only if you scored an agenda this turn that you did not install this turn. Add this operation to your score area as an agenda worth 2 agenda points..",
+        "uniqueness": false
+    },
+    {
+        "type_code": "ice",
+        "subtypes": "Sentry",
+        "faction": "weyland-consortium",
+        "influence": 2,
+        "cost": 2,
+        "strength": 3,
+        "printings": [{
+            "artist": "Ed Mattinian",
+            "code": "36059",
+            "img_type": "nro",
+            "set": "vp",
+            "flavour": "“The metakinetic energy of an incursion is an asset. Direct the invader’s movement into a dynamic system, and you may be surprised how much the cluster can extract from it.”—Moira Virtue, Ice Engineering, MU (formerly of KKU)"
+        }],
+        "title": "flywheel",
+        "stripped_title": "flywheel",
+        "text": "[sub] Gain 1[credit]. You may draw 1 card.\n[sub] Gain 1[credit]. You may draw 1 card.",
+        "stripped_text": "[sub] Gain 1[credit]. You may draw 1 card. [sub] Gain 1[credit]. You may draw 1 card.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "event",
+        "subtypes": "Run",
+        "faction": "shaper",
+        "influence": 3,
+        "cost": 3,
+        "printings": [{
+            "artist": "Ferenc Patkós",
+            "code": "36019",
+            "img_type": "nro",
+            "set": "vp",
+            "flavour": "“I donʼt need a forever answer, I need a now answer.”"
+        }],
+        "title": "beta build",
+        "stripped_title": "beta build",
+        "text": "Search your stack for 1 non-virus program and install it, ignoring all costs. Run any server. When that run ends, if that program is still installed, add it to the top of the stack.",
+        "stripped_text": "Search your stack for 1 non-virus program and install it, ignoring all costs. Run any server. When that run ends, if that program is still installed, add it to the top of the stack.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "hardware",
+        "faction": "criminal",
+        "influence": 1,
+        "cost": 0,
+        "printings": [{
+            "artist": "Oliver Morit",
+            "code": "36013",
+            "img_type": "nro",
+            "set": "vp",
+            "flavour": "“nice job kid, now lose the tail”"
+        }],
+        "title": "borrowed goods",
+        "stripped_title": "borrowed goods",
+        "text": "+1[mu]\nWhen you install this hardware, if you are not tagged, take 1 tag.",
+        "stripped_text": "+1[mu] When you install this hardware, if you are not tagged, take 1 tag.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "hardware",
+        "subtypes": "Stealth",
+        "faction": "shaper",
+        "influence": 2,
+        "cost": 2,
+        "printings": [{
+            "artist": "Si F Sweetman",
+            "code": "36021",
+            "img_type": "local",
+            "set": "vp",
+            "flavour": "I know who I am"
+        }],
+        "title": "touchstone",
+        "stripped_title": "touchstone",
+        "text": "The first time each turn you play an event, place 1[credit] on this hardware.\nUse hosted credits during runs.",
+        "stripped_text": "The first time each turn you play an event, place 1[credit] on this hardware. Use hosted credits during runs.",
+        "uniqueness": true
+    },
+    {
+        "type_code": "ice",
+        "subtypes": "Code Gate",
+        "faction": "jinteki",
+        "influence": 3,
+        "cost": 5,
+        "strength": 5,
+        "printings": [{
+            "artist": "Anthony Hutchings",
+            "code": "36040",
+            "img_type": "local",
+            "set": "vp",
+            "flavour": "<strong>Designed by 2021 Asia-Pacific Champion William \"Sokka\" Huang</strong>"
+        }],
+        "title": "knowledge seeker",
+        "stripped_title": "knowledge seeker",
+        "text": "When an encounter with this ice ends, if there are 3 or more hosted virus counters on it, purge virus counters and derez it.\n[sub] Place 1 virus counter on this ice.\n[sub] Look at the top 4 cards of R&D and arrange them in any order.\n[sub] End the run.",
+        "stripped_text": "When an encounter with this ice ends, if there are 3 or more hosted virus counters on it, purge virus counters and derez it. [sub] Place 1 virus counter on this ice. [sub] Look at the top 4 cards of R&D and arrange them in any order. [sub] End the run.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "hardware",
+        "subtypes": "Console",
+        "faction": "criminal",
+        "influence": 3,
+        "cost": 3,
+        "printings": [{
+            "artist": "Martin de Diego Sádaba",
+            "code": "36014",
+            "img_type": "local",
+            "set": "vp"
+        }],
+        "title": "rotary",
+        "stripped_title": "rotary",
+        "text": "+1[mu]\nWhenever you breach HQ or R&D during a successful run, you may take 1 tag to access 1 additional card.\n[click], 2[credit]: Trash this hardware. Only the Corp may use this ability, and only if you are tagged.\nLimit 1 console per player.",
+        "stripped_text": "+1[mu] Whenever you breach HQ or R&D during a successful run, you may take 1 tag to access 1 additional card. [click], 2[credit]: Trash this hardware. Only the Corp may use this ability, and only if you are tagged. Limit 1 console per player.",
+        "uniqueness": true
+    },
+    {
+        "type_code": "ice",
+        "subtypes": "Sentry - Bioroid - Destroyer",
+        "faction": "haas-bioroid",
+        "influence": 4,
+        "cost": 8,
+        "strength": 6,
+        "printings": [{
+            "artist": "Benjamin Giletti",
+            "code": "36028",
+            "img_type": "local",
+            "set": "vp",
+            "flavour": "<strong>Designed by 2021 World Champion Patrick Glover</strong>"
+        }],
+        "title": "ansel 2.0",
+        "stripped_title": "ansel 2.0",
+        "text": "Lose [click][click]: Break up to 2 subroutines on this ice. Only the Runner can use this ability.\n[sub] Trash 1 installed Runner card.\n[sub] Remove 1 card in the heap from the game.\n[sub] You may install 1 card from HQ or Archives.\n[sub] End the run.",
+        "stripped_text": "Lose [click][click]: Break up to 2 subroutines on this ice. Only the Runner can use this ability. [sub] Trash 1 installed Runner card. [sub] Remove 1 card in the heap from the game. [sub] You may install 1 card from HQ or Archives. [sub] End the run.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "program",
+        "faction": "criminal",
+        "influence": 3,
+        "cost": 3,
+        "memory": 1,
+        "printings": [{
+            "artist": "Adam S. Doyle",
+            "code": "36015",
+            "img_type": "local",
+            "set": "vp",
+            "flavour": "Time for a key change."
+        }],
+        "title": "baker",
+        "stripped_title": "baker",
+        "text": "Once per turn → [click]: Run Archives. If that run would be declared successful, you may spend 1[credit] from a stealth card to change the attacked server to HQ or R&D for the remainder of that run.",
+        "stripped_text": "Once per turn -> [click]: Run Archives. If that run would be declared successful, you may spend 1[credit] from a stealth card to change the attacked server to HQ or R&D for the remainder of that run.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "ice",
+        "subtypes": "Code Gate",
+        "faction": "haas-bioroid",
+        "influence": 2,
+        "cost": 1,
+        "strength": 1,
+        "printings": [{
+            "artist": "Ed Mattinian",
+            "code": "36031",
+            "img_type": "local",
+            "set": "vp",
+            "flavour": "It was only for a moment; you took no notice"
+        }],
+        "title": "vertigo",
+        "stripped_title": "vertigo",
+        "text": "When the Runner passes this ice, if they have no remaining [click], they cannot steal or trash cards for the remainder of this run.\n[sub] The Runner loses [click].",
+        "stripped_text": "When the Runner passes this ice, if they have no remaining [click], they cannot steal or trash cards for the remainder of this run. [sub] The Runner loses [click].",
+        "uniqueness": false
     }
-
 ]
