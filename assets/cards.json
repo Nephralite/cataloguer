@@ -45580,5 +45580,25 @@
         "text": "[click], 1[credit], reveal and trash this ice from HQ: Search R&D for 1 barrier and 1 sentry. Reveal them and add them to HQ.\n[sub] The Runner loses 2[credit].\n[sub] End the run.\n[sub] End the run.",
         "stripped_text": "[click], 1[credit], reveal and trash this ice from HQ: Search R&D for 1 barrier and 1 sentry. Reveal them and add them to HQ. [sub] The Runner loses 2[credit]. [sub] End the run. [sub] End the run.",
         "uniqueness": false
+    },
+    {
+        "type_code": "ice",
+        "subtypes": "Trap - Observer - AP",
+        "faction": "jinteki",
+        "influence": 3,
+        "cost": 2,
+        "strength": 3,
+        "printings": [{
+            "artist": "J\u00falio Rocha",
+            "code": "36042",
+            "img_type": "local",
+            "set": "vp",
+            "flavour": "BZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ"
+        }],
+        "title": "vicsek",
+        "stripped_title": "vicsek",
+        "text": "[sub] For each tag the Runner has, do 1 net damage and give them 1 tag.\n[sub] Give the Runner 1 tag. Trash this ice.",
+        "stripped_text": "[sub] For each tag the Runner has, do 1 net damage and give them 1 tag. [sub] Give the Runner 1 tag. Trash this ice.",
+        "uniqueness": false
     }
 ]
