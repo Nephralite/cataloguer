@@ -40616,7 +40616,7 @@
         "memory_cost": 2,
         "printings": [
             {
-                "artist": "J\u00falio Roca",
+                "artist": "J\u00falio Rocha",
                 "code": "34004",
                 "flavour": "\"What do you want from me, blood?\"\n\u2014S3ym0ur",
                 "img_type": "nro",
@@ -45454,7 +45454,7 @@
         "printings": [{
             "artist": "Si F Sweetman",
             "code": "36021",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "vp",
             "flavour": "I know who I am"
         }],
@@ -45474,7 +45474,7 @@
         "printings": [{
             "artist": "Anthony Hutchings",
             "code": "36040",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "vp",
             "flavour": "<strong>Designed by 2021 Asia-Pacific Champion William \"Sokka\" Huang</strong>"
         }],
@@ -45493,7 +45493,7 @@
         "printings": [{
             "artist": "Martin de Diego Sádaba",
             "code": "36014",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "vp"
         }],
         "title": "rotary",
@@ -45512,7 +45512,7 @@
         "printings": [{
             "artist": "Benjamin Giletti",
             "code": "36028",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "vp",
             "flavour": "<strong>Designed by 2021 World Champion Patrick Glover</strong>"
         }],
@@ -45531,7 +45531,7 @@
         "printings": [{
             "artist": "Adam S. Doyle",
             "code": "36015",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "vp",
             "flavour": "Time for a key change."
         }],
@@ -45551,7 +45551,7 @@
         "printings": [{
             "artist": "Ed Mattinian",
             "code": "36031",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "vp",
             "flavour": "It was only for a moment; you took no notice"
         }],
@@ -45591,14 +45591,260 @@
         "printings": [{
             "artist": "J\u00falio Rocha",
             "code": "36042",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "vp",
-            "flavour": "BZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ"
+            "flavour": "BZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ"
         }],
         "title": "vicsek",
         "stripped_title": "vicsek",
         "text": "[sub] For each tag the Runner has, do 1 net damage and give them 1 tag.\n[sub] Give the Runner 1 tag. Trash this ice.",
         "stripped_text": "[sub] For each tag the Runner has, do 1 net damage and give them 1 tag. [sub] Give the Runner 1 tag. Trash this ice.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "asset",
+        "subtypes": "Ambush",
+        "faction": "jinteki",
+        "influence": 1,
+        "cost": 0,
+        "trash_cost": 3,
+        "printings": [{
+            "artist": "J\u00falio Rocha",
+            "code": "36038",
+            "img_type": "nrdb",
+            "set": "vp",
+            "flavour": "“touch it for all I care! just don’t post a sob story if you get bit”—luc3ne, in the Rig Kids ‘new-runners’ channel"
+        }],
+        "title": "esca",
+        "stripped_title": "esca",
+        "text": "While the Runner is accessing this asset in R&D, they must reveal it.\nWhen the Runner accesses this asset, they lose 1[credit]. If they are tagged, do 1 net damage.",
+        "stripped_text": "While the Runner is accessing this asset in R&D, they must reveal it. When the Runner accesses this asset, they lose 1[credit]. If they are tagged, do 1 net damage.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "upgrade",
+        "faction": "jinteki",
+        "influence": 3,
+        "cost": 1,
+        "trash_cost": 3,
+        "printings": [{
+            "artist": "Benjamin Giletti",
+            "code": "36045",
+            "img_type": "nrdb",
+            "set": "vp",
+            "flavour": "The equipment for asset return and processing is bespoke, and can be set up in less than an hour."
+        }],
+        "title": "the red room",
+        "stripped_title": "the red room",
+        "text": "Central server only.\nThe first time each turn an agenda is scored or stolen, place 1 power counter on this upgrade.\nHosted power counter: End the run. Use this ability only during a run on another server.",
+        "stripped_text": "Central server only. The first time each turn an agenda is scored or stolen, place 1 power counter on this upgrade. Hosted power counter: End the run. Use this ability only during a run on another server.",
+        "uniqueness": true
+    },
+    {
+        "type_code": "operation",
+        "subtypes": "Gray Ops",
+        "faction": "jinteki",
+        "influence": 2,
+        "cost": 0,
+        "printings": [{
+            "artist": "Cat Shen",
+            "code": "36044",
+            "img_type": "local",
+            "set": "vp",
+            "flavour": "Found you"
+        }],
+        "title": "unleash",
+        "stripped_title": "unleash",
+        "text": "As an additional cost to play this operation, remove 1 tag.\nRez 1 installed piece of ice, ignoring all costs. If you do, resolve 1 subroutine on that ice.",
+        "stripped_text": "As an additional cost to play this operation, remove 1 tag. Rez 1 installed piece of ice, ignoring all costs. If you do, resolve 1 subroutine on that ice.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "ice",
+        "subtypes": "Code Gate",
+        "faction": "jinteki",
+        "influence": 2,
+        "cost": 1,
+        "strength": 3,
+        "printings": [{
+            "artist": "Benjamin Giletti",
+            "code": "36039",
+            "img_type": "nrdb",
+            "set": "vp",
+            "flavour": "A web that only tightens the more you’re lost within it."
+        }],
+        "title": "ezam",
+        "stripped_title": "ezam",
+        "text": "[click]: Swap this ice with another installed ice.\n[sub] Look at the top card of R&D. You may add that card to the bottom of R&D.\n[sub] Each piece of ice protecting this server gains +1 strength for the remainder of this run.",
+        "stripped_text": "[click]: Swap this ice with another installed ice. [sub] Look at the top card of R&D. You may add that card to the bottom of R&D. [sub] Each piece of ice protecting this server gains +1 strength for the remainder of this run.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "program",
+        "faction": "shaper",
+        "influence": 2,
+        "cost": 0,
+        "memory": 2,
+        "printings": [{
+            "artist": "Martin de Diego Sádaba",
+            "code": "36022",
+            "img_type": "local",
+            "set": "vp",
+            "flavour": "Take what you need. Leave what you can."
+        }],
+        "title": "read-write share",
+        "stripped_title": "read-write share",
+        "text": "When you install this card and when your turn begins, you may host 1 card from your grip on this program facedown. If you do, draw 1 card. Then, if there are 5 or more hosted cards, trash this program.\n[trash]: Shuffle all hosted cards into the stack.",
+        "stripped_text": "When you install this card and when your turn begins, you may host 1 card from your grip on this program facedown. If you do, draw 1 card. Then, if there are 5 or more hosted cards, trash this program. [trash]: Shuffle all hosted cards into the stack.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "hardware",
+        "subtypes": "Console - Stealth",
+        "faction": "shaper",
+        "influence": 2,
+        "cost": 4,
+        "printings": [{
+            "artist": "Marlon Ruiz",
+            "code": "36020",
+            "img_type": "local",
+            "set": "vp"
+        }],
+        "title": "methuselah",
+        "stripped_title": "methuselah",
+        "text": "+1[mu]\nWhenever a run begins, you may trash 1 piece of hardware from your grip to place 2[credit] on this hardware.\nYou can spend hosted credits during runs.\nLimit 1 console per player.",
+        "stripped_text": "+1[mu] Whenever a run begins, you may trash 1 piece of hardware from your grip to place 2[credit] on this hardware. You can spend hosted credits during runs. Limit 1 console per player.",
+        "uniqueness": true
+    },
+    {
+        "type_code": "ice",
+        "subtypes": "Barrier - Liability",
+        "faction": "nbn",
+        "influence": 3,
+        "cost": 5,
+        "strength": 5,
+        "printings": [{
+            "artist": "Scott Uminga",
+            "code": "36050",
+            "img_type": "local",
+            "set": "vp",
+            "flavour": "gimme gimme gimme gimme gimme gimme"
+        }],
+        "title": "grubber",
+        "stripped_title": "grubber",
+        "text": "When you rez this ice, take 1 bad publicity if it is protecting a central server.\n[sub] End the run unless the Runner pays 3[credit].\n[sub] End the run unless the Runner pays 3[credit].",
+        "stripped_text": "When you rez this ice, take 1 bad publicity if it is protecting a central server. [sub] End the run unless the Runner pays 3[credit]. [sub] End the run unless the Runner pays 3[credit].",
+        "uniqueness": false
+    },
+    {
+        "type_code": "upgrade",
+        "faction": "nbn",
+        "influence": 3,
+        "cost": 6,
+        "trash_cost": 2,
+        "printings": [{
+            "artist": "Matheus Calza",
+            "code": "36055",
+            "img_type": "local",
+            "set": "vp",
+            "flavour": "Every season is preview season"
+        }],
+        "title": "hype machine",
+        "stripped_title": "hype machine",
+        "text": "This upgrade costs 6[credit] less to rez if an agenda was scored or stolen this turn.\n[trash]: Place 1 advancement counter on a card in the root of this server that can be advanced.",
+        "stripped_text": "This upgrade costs 6[credit] less to rez if an agenda was scored or stolen this turn. [trash]: Place 1 advancement counter on a card in the root of this server that can be advanced.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "operation",
+        "subtypes": "Double",
+        "faction": "haas-bioroid",
+        "influence": 2,
+        "cost": 1,
+        "printings": [{
+            "artist": "Mauricio Herrera",
+            "code": "36034",
+            "img_type": "local",
+            "set": "vp",
+            "flavour": "Your terms of service have been extended."
+        }],
+        "title": "retirement plan",
+        "stripped_title": "retirement plan",
+        "text": "As an additional cost to play this operation, spend [click].\nInstall 1 non-upgrade card from Archives.",
+        "stripped_text": "As an additional cost to play this operation, spend [click]. Install 1 non-upgrade card from Archives.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "resource",
+        "subtypes": "Location",
+        "faction": "anarch",
+        "influence": 1,
+        "cost": 2,
+        "printings": [{
+            "artist": "generated",
+            "code": "36006",
+            "img_type": "local",
+            "set": "vp",
+            "flavour": "“That's S4lamander, Maestro, iggy two-fingers, C-Sweet, Johnny N., Tina 'Kickflips'. And of course, Sir Hacksalot”"
+        }],
+        "title": "hackerspace",
+        "stripped_title": "hackerspace",
+        "text": "You can install unique (◆) connection and unique (◆) companion resources onto this resource. Each resource installed this way costs 1[credit] less to install.\nIf there is a hosted connection and companion, you get +2 maximum hand size.",
+        "stripped_text": "You can install unique (◆) connection and unique (◆) companion resources onto this resource. Each resource installed this way costs 1[credit] less to install. If there is a hosted connection and companion, you get +2 maximum hand size.",
+        "uniqueness": true
+    },
+    {
+        "type_code": "event",
+        "faction": "anarch",
+        "influence": 5,
+        "cost": 1,
+        "printings": [{
+            "artist": "Matheus Calza",
+            "code": "36001",
+            "img_type": "local",
+            "set": "vp",
+            "flavour": "One stone is a small price to pay for two birds."
+        }],
+        "title": "chain reaction",
+        "stripped_title": "chain reaction",
+        "text": "Play only if you made a successful run on HQ, R&D, and Archives this turn.\nTrash 2 installed Corp cards. The Corp trashes 1 installed Runner card.",
+        "stripped_text": "Play only if you made a successful run on HQ, R&D, and Archives this turn. Trash 2 installed Corp cards. The Corp trashes 1 installed Runner card.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "upgrade",
+        "faction": "haas-bioroid",
+        "influence": 2,
+        "cost": 0,
+        "trash_cost": 3,
+        "printings": [{
+            "artist": "Oliver Morit",
+            "code": "36035",
+            "img_type": "local",
+            "set": "vp"
+        }],
+        "title": "perfect recall",
+        "stripped_title": "perfect recall",
+        "text": "When an agenda is scored or stolen from this server or its root, place 2 power counters on this upgrade.\nHosted power counter or [trash]: Reveal 1 card from HQ. The Runner cannot trash or steal copies of the revealed card during this run. Use this ability only during a run.",
+        "stripped_text": "When an agenda is scored or stolen from this server or its root, place 2 power counters on this upgrade. Hosted power counter or [trash]: Reveal 1 card from HQ. The Runner cannot trash or steal copies of the revealed card during this run. Use this ability only during a run.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "event",
+        "subtypes": "Run - Stealth",
+        "faction": "shaper",
+        "influence": 2,
+        "cost": 1,
+        "printings": [{
+            "artist": "Mia Siergiejew",
+            "code": "36018",
+            "img_type": "local",
+            "set": "vp"
+        }],
+        "title": "aircheck",
+        "stripped_title": "aircheck",
+        "text": "Place 4[credit] on this event. While this event is active, you can spend hosted credits, and credits cannot leave your credit pool.\nRun HQ or R&D. When that run ends, if it was successful, you may run a remote server.",
+        "stripped_text": "Place 4[credit] on this event. While this event is active, you can spend hosted credits, and credits cannot leave your credit pool. Run HQ or R&D. When that run ends, if it was successful, you may run a remote server.",
         "uniqueness": false
     }
 ]
