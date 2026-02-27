@@ -45011,7 +45011,7 @@
         "influence": 2,
         "printings": [{
             "artist": "Anna Butova",
-            "flavour": 	"The cyclotron’s utility was discovered after its magnets quenched during load testing, resulting in 1,600 tons of liquid helium venting directly into Heinlein city tenements and an anomalous 13-second local time loss. An apology was issued, funerals were covered, and funding was rerouted to recreate the error at scale.",
+            "flavour": 	"The cyclotron’s utility was discovered after its magnets quenched during load testing, resulting in 1,600 tons of liquid helium venting directly into Heinlein city tenements and an anomalous 13-second -Pumpkin-and-Dumplinlocal time loss. An apology was issued, funerals were covered, and funding was rerouted to recreate the error at scale.",
             "code": "36027",
             "img_type": "nro",
             "set": "vp"
@@ -45571,7 +45571,7 @@
         "printings": [{
             "artist": "Scott Uminga",
             "code": "36060",
-            "img_type": "local",
+            "img_type": "nro",
             "set": "vp",
             "flavour": "No one can hear the clamor of the bells and not be alarmed. Least of all the intruder."
         }],
@@ -45649,7 +45649,7 @@
         "printings": [{
             "artist": "Cat Shen",
             "code": "36044",
-            "img_type": "local",
+            "img_type": "nro",
             "set": "vp",
             "flavour": "Found you"
         }],
@@ -45688,7 +45688,7 @@
         "printings": [{
             "artist": "Martin de Diego Sádaba",
             "code": "36022",
-            "img_type": "local",
+            "img_type": "nro",
             "set": "vp",
             "flavour": "Take what you need. Leave what you can."
         }],
@@ -45707,7 +45707,7 @@
         "printings": [{
             "artist": "Marlon Ruiz",
             "code": "36020",
-            "img_type": "local",
+            "img_type": "nro",
             "set": "vp"
         }],
         "title": "methuselah",
@@ -45726,7 +45726,7 @@
         "printings": [{
             "artist": "Scott Uminga",
             "code": "36050",
-            "img_type": "local",
+            "img_type": "nro",
             "set": "vp",
             "flavour": "gimme gimme gimme gimme gimme gimme"
         }],
@@ -45745,7 +45745,7 @@
         "printings": [{
             "artist": "Matheus Calza",
             "code": "36055",
-            "img_type": "local",
+            "img_type": "nro",
             "set": "vp",
             "flavour": "Every season is preview season"
         }],
@@ -45764,7 +45764,7 @@
         "printings": [{
             "artist": "Mauricio Herrera",
             "code": "36034",
-            "img_type": "local",
+            "img_type": "nro",
             "set": "vp",
             "flavour": "Your terms of service have been extended."
         }],
@@ -45783,7 +45783,7 @@
         "printings": [{
             "artist": "generated",
             "code": "36006",
-            "img_type": "local",
+            "img_type": "nro",
             "set": "vp",
             "flavour": "“That's S4lamander, Maestro, iggy two-fingers, C-Sweet, Johnny N., Tina 'Kickflips'. And of course, Sir Hacksalot”"
         }],
@@ -45801,7 +45801,7 @@
         "printings": [{
             "artist": "Matheus Calza",
             "code": "36001",
-            "img_type": "local",
+            "img_type": "nro",
             "set": "vp",
             "flavour": "One stone is a small price to pay for two birds."
         }],
@@ -45820,7 +45820,7 @@
         "printings": [{
             "artist": "Oliver Morit",
             "code": "36035",
-            "img_type": "local",
+            "img_type": "nro",
             "set": "vp"
         }],
         "title": "perfect recall",
@@ -45838,13 +45838,108 @@
         "printings": [{
             "artist": "Mia Siergiejew",
             "code": "36018",
-            "img_type": "local",
+            "img_type": "nro",
             "set": "vp"
         }],
         "title": "aircheck",
         "stripped_title": "aircheck",
         "text": "Place 4[credit] on this event. While this event is active, you can spend hosted credits, and credits cannot leave your credit pool.\nRun HQ or R&D. When that run ends, if it was successful, you may run a remote server.",
         "stripped_text": "Place 4[credit] on this event. While this event is active, you can spend hosted credits, and credits cannot leave your credit pool. Run HQ or R&D. When that run ends, if it was successful, you may run a remote server.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "event",
+        "subtypes": "Run",
+        "faction": "anarch",
+        "influence": 4,
+        "cost": 2,
+        "printings": [{
+            "artist": "Amirul Hhf",
+            "code": "36002",
+            "img_type": "nro",
+            "set": "vp",
+            "flavour": "“The walking flatlined will never know the difference between a syberwall and a Saisentan. Use that fact!”-Cracking Corps for Fun and Profit"
+        }],
+        "title": "take a dive",
+        "stripped_title": "take a dive",
+        "text": "Run HQ or R&D. If successful, and a subroutine resolved during this run, the Corp takes 1 bad publicity.\nRemove this event from the game.",
+        "stripped_text": "Run HQ or R&D. If successful, and a subroutine resolved during this run, the Corp takes 1 bad publicity. Remove this event from the game.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "hardware",
+        "faction": "anarch",
+        "influence": 3,
+        "cost": 3,
+        "printings": [{
+            "artist": "Si F Sweetman",
+            "code": "36003",
+            "img_type": "nro",
+            "set": "vp",
+            "flavour": "“I don't know if the Net is made of atoms or bits or something else altogether. I do know this baby's sharp enough to poke a hole in whatever the answer is”-Pumpkin-and-Dumplin"
+        }],
+        "title": "the tungsten tailor",
+        "stripped_title": "the tungsten tailor",
+        "text": "All ice has -1 strength.\nThe first time each turn you break 1 or more subroutines on a piece of ice with 0 or less strength, gain 1[credit].",
+        "stripped_text": "All ice has -1 strength. The first time each turn you break 1 or more subroutines on a piece of ice with 0 or less strength, gain 1[credit].",
+        "uniqueness": true
+    },
+    {
+        "type_code": "operation",
+        "subtypes": "Double",
+        "faction": "haas-bioroid",
+        "influence": 2,
+        "cost": 0,
+        "printings": [{
+            "artist": "Mia Siergiejew",
+            "code": "36033",
+            "img_type": "nro",
+            "set": "vp",
+            "flavour": "All service will be indefinitely suspended by 11:59pm tonight. We apologize for any inconvenience"
+        }],
+        "title": "realloc()",
+        "stripped_title": "realloc()",
+        "text": "As an additional cost to play this operation, spend [click].\nDerez 2 rezzed pieces of ice. Gain credits equal to their combined printed rez costs.",
+        "stripped_text": "As an additional cost to play this operation, spend [click]. Derez 2 rezzed pieces of ice. Gain credits equal to their combined printed rez costs.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "ice",
+        "subtypes": "Barrier - Harmonic",
+        "faction": "haas-bioroid",
+        "influence": 1,
+        "cost": 4,
+        "strength": 2,
+        "printings": [{
+            "artist": "Elwin \"Jakuza\" Rumplmair",
+            "code": "36029",
+            "img_type": "nro",
+            "set": "vp",
+            "flavour": "Everythin in the Net is ultimately just information-light, sound, runners. If you can reflect any, you can reflect all."
+        }],
+        "title": "reverb",
+        "stripped_title": "reverb",
+        "text": "The rez cost of this ice is reduced by 1[credit] for each other unrezzed ice.\n[sub] End the run.\n[sub] End the run.",
+        "stripped_text": "The rez cost of this ice is reduced by 1[credit] for each other unrezzed ice. [sub] End the run. [sub] End the run.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "agenda",
+        "faction": "jinteki",
+        "influence": 0,
+        "advancement_cost": 4,
+        "agenda_points": 2,
+        "printings": [{
+            "artist": "Anna Butova",
+            "code": "36037",
+            "img_type": "nro",
+            "set": "vp",
+            "flavour": "Warn you? Uselss. Once they make the biofeedback stick, all you see is what they want you to see.-Witch_Of_The_Woods"
+        }],
+        "title": "lotus haze",
+        "stripped_title": "lotus haze",
+        "text": "When you score this agenda, place 3 agenda counters on it.\nHosted agenda counter: Move a rezzed upgrade to the root of another server.",
+        "stripped_text": "When you score this agenda, place 3 agenda counters on it. Hosted agenda counter: Move a rezzed upgrade to the root of another server.",
         "uniqueness": false
     }
 ]
