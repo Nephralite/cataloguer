@@ -45941,5 +45941,119 @@
         "text": "When you score this agenda, place 3 agenda counters on it.\nHosted agenda counter: Move a rezzed upgrade to the root of another server.",
         "stripped_text": "When you score this agenda, place 3 agenda counters on it. Hosted agenda counter: Move a rezzed upgrade to the root of another server.",
         "uniqueness": false
+    },
+    {
+        "type_code": "ice",
+        "subtypes": "Sentry - Observer",
+        "faction": "nbn",
+        "influence": 2,
+        "cost": 9,
+        "strength": 6,
+        "printings": [{
+            "artist": "Qistina Khalidah",
+            "code": "36051",
+            "img_type": "local",
+            "set": "vp",
+            "flavour": "Drink deeply and forget."
+        }],
+        "title": "lethe",
+        "stripped_title": "lethe",
+        "text": "Whenever the Runner passes this ice after encountering it, if no subroutines resolved during that encounter, give the Runner 1 tag.\n[sub] You may add 1 card from Archives to the top or bottom of R&D.\n[sub] Add 1 installed Runner card to the grip.",
+        "stripped_text": "Whenever the Runner passes this ice after encountering it, if no subroutines resolved during that encounter, give the Runner 1 tag. [sub] You may add 1 card from Archives to the top or bottom of R&D. [sub] Add 1 installed Runner card to the grip.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "operation",
+        "subtypes": "Liability",
+        "faction": "weyland-consortium",
+        "influence": 3,
+        "cost": 2,
+        "printings": [{
+            "artist": "Ferenc Patkós",
+            "code": "36062",
+            "img_type": "local",
+            "set": "vp",
+            "flavour": "The only blasphemy is to wallow in deletion."
+        }],
+        "title": "reanimation protocol",
+        "stripped_title": "reanimation protocol",
+        "text": "Install and rez 1 piece of ice from Archives, paying a total of 10[credit] less.\nIf the rezzed ice is not Liability, take 1 bad publicity.",
+        "stripped_text": "Install and rez 1 piece of ice from Archives, paying a total of 10[credit] less. If the rezzed ice is not Liability, take 1 bad publicity.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "operation",
+        "faction": "jinteki",
+        "influence": 1,
+        "cost": 0,
+        "printings": [{
+            "artist": "Matheus Calza",
+            "code": "36043",
+            "img_type": "local",
+            "set": "vp",
+            "flavour": "To nuture perfection is to know when, what, and whom to cut."
+        }],
+        "title": "cultivate",
+        "stripped_title": "cultivate",
+        "text": "Look at the top 5 cards of R&D. Trash 1 of those cards, add 1 of them to HQ, and arrange the rest in any order.",
+        "stripped_text": "Look at the top 5 cards of R&D. Trash 1 of those cards, add 1 of them to HQ, and arrange the rest in any order.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "event",
+        "faction": "criminal",
+        "influence": 1,
+        "cost": 1,
+        "printings": [{
+            "artist": "Alecia Doyley",
+            "code": "36011",
+            "img_type": "local",
+            "set": "vp",
+            "flavour": "“We're cooked, maninha. Somebody tipped them off.”"
+        }],
+        "title": "sell out",
+        "stripped_title": "sell out",
+        "text": "As an additional cost to play this event, trash 1 installed resource.\nGain 4[credit] and draw 2 cards.",
+        "stripped_text": "As an additional cost to play this event, trash 1 installed resource. Gain 4[credit] and draw 2 cards.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "asset",
+        "subtypes": "Executive",
+        "faction": "weyland-consortium",
+        "influence": 2,
+        "cost": 1,
+        "trash_cost": 3,
+        "printings": [{
+            "artist": "Dimik",
+            "code": "36057",
+            "img_type": "local",
+            "set": "vp",
+            "flavour": "“May our new headquarters live twice as long as the novle kapok tree that stood where I now stand!”"
+        }],
+        "title": "luana campos",
+        "stripped_title": "luana campos",
+        "text": "When your turn begins, you may move 1 of your bad publicity to this asset. If you do, gain 3[credit] and draw 1 card. (Hosted bad publicity doesn't have any effect.)\nWhen this asset is uninstalled, take all hosted bad publicity.",
+        "stripped_text": "When your turn begins, you may move 1 of your bad publicity to this asset. If you do, gain 3[credit] and draw 1 card. (Hosted bad publicity doesn't have any effect.) When this asset is uninstalled, take all hosted bad publicity.",
+        "uniqueness": true
+    },
+    {
+        "type_code": "resource",
+        "subtypes": "Connection",
+        "faction": "anarch",
+        "influence": 1,
+        "cost": 1,
+        "printings": [{
+            "artist": "Alecia Doyley",
+            "code": "36007",
+            "img_type": "local",
+            "set": "vp",
+            "flavour": "“I'll just need you arm for a few moments”"
+        }],
+        "title": "nurse hanh",
+        "stripped_title": "nurse hanh",
+        "text": "Whenever at least 2 cards in Archives are turned faceup during a run on Archives, draw 2 cards.",
+        "stripped_text": "Whenever at least 2 cards in Archives are turned faceup during a run on Archives, draw 2 cards.",
+        "uniqueness": true
     }
 ]
