@@ -45208,8 +45208,8 @@
         }],
         "title": "stick and poke",
         "stripped_title": "stick and poke",
-        "text": "The first time each turn you encounter a piece ice, it gains “[sub] Do 1 net damage. The Runner draws 1 card.” before all its printed subroutines for the remainder of the encounter.",
-        "stripped_text": "The first time each turn you encounter a piece ice, it gains “[sub] Do 1 net damage. The Runner draws 1 card.” before all its printed subroutines for the remainder of the encounter.",
+        "text": "The first time each turn you encounter a piece ice, it gains “[subroutine] Do 1 net damage. The Runner draws 1 card.” before all its printed subroutines for the remainder of the encounter.",
+        "stripped_text": "The first time each turn you encounter a piece ice, it gains “[subroutine] Do 1 net damage. The Runner draws 1 card.” before all its printed subroutines for the remainder of the encounter.",
         "uniqueness": true
     },
         {
@@ -45268,8 +45268,8 @@
         }],
         "title": "paywall",
         "stripped_title": "paywall",
-        "text": "When the Runner encounters this ice, they lose 1[credit].\n[sub] End the run unless the Runner pays 1[credit].",
-        "stripped_text": "When the Runner encounters this ice, they lose 1[credit]. [sub] End the run unless the Runner pays 1[credit].",
+        "text": "When the Runner encounters this ice, they lose 1[credit].\n[subroutine] End the run unless the Runner pays 1[credit].",
+        "stripped_text": "When the Runner encounters this ice, they lose 1[credit]. [subroutine] End the run unless the Runner pays 1[credit].",
         "uniqueness": false
     },
     {
@@ -45366,8 +45366,8 @@
         }],
         "title": "event horizon",
         "stripped_title": "event horizon",
-        "text": "[trash]: End the run. Use this ability only during a run on this server.\n[sub] Trash 1 installed program unless the Runner pays 3[credit].\n[sub] End the run unless the Runner pays 3[credit].",
-        "stripped_text": "[trash]: End the run. Use this ability only during a run on this server. [sub] Trash 1 installed program unless the Runner pays 3[credit]. [sub] End the run unless the Runner pays 3[credit].",
+        "text": "[trash]: End the run. Use this ability only during a run on this server.\n[subroutine] Trash 1 installed program unless the Runner pays 3[credit].\n[subroutine] End the run unless the Runner pays 3[credit].",
+        "stripped_text": "[trash]: End the run. Use this ability only during a run on this server. [subroutine] Trash 1 installed program unless the Runner pays 3[credit]. [subroutine] End the run unless the Runner pays 3[credit].",
         "uniqueness": false
     },
     {
@@ -45404,8 +45404,8 @@
         }],
         "title": "flywheel",
         "stripped_title": "flywheel",
-        "text": "[sub] Gain 1[credit]. You may draw 1 card.\n[sub] Gain 1[credit]. You may draw 1 card.",
-        "stripped_text": "[sub] Gain 1[credit]. You may draw 1 card. [sub] Gain 1[credit]. You may draw 1 card.",
+        "text": "[subroutine] Gain 1[credit]. You may draw 1 card.\n[subroutine] Gain 1[credit]. You may draw 1 card.",
+        "stripped_text": "[subroutine] Gain 1[credit]. You may draw 1 card. [subroutine] Gain 1[credit]. You may draw 1 card.",
         "uniqueness": false
     },
     {
@@ -45480,8 +45480,8 @@
         }],
         "title": "knowledge seeker",
         "stripped_title": "knowledge seeker",
-        "text": "When an encounter with this ice ends, if there are 3 or more hosted virus counters on it, purge virus counters and derez it.\n[sub] Place 1 virus counter on this ice.\n[sub] Look at the top 4 cards of R&D and arrange them in any order.\n[sub] End the run.",
-        "stripped_text": "When an encounter with this ice ends, if there are 3 or more hosted virus counters on it, purge virus counters and derez it. [sub] Place 1 virus counter on this ice. [sub] Look at the top 4 cards of R&D and arrange them in any order. [sub] End the run.",
+        "text": "When an encounter with this ice ends, if there are 3 or more hosted virus counters on it, purge virus counters and derez it.\n[subroutine] Place 1 virus counter on this ice.\n[subroutine] Look at the top 4 cards of R&D and arrange them in any order.\n[subroutine] End the run.",
+        "stripped_text": "When an encounter with this ice ends, if there are 3 or more hosted virus counters on it, purge virus counters and derez it. [subroutine] Place 1 virus counter on this ice. [subroutine] Look at the top 4 cards of R&D and arrange them in any order. [subroutine] End the run.",
         "uniqueness": false
     },
     {
@@ -45518,8 +45518,8 @@
         }],
         "title": "ansel 2.0",
         "stripped_title": "ansel 2.0",
-        "text": "Lose [click][click]: Break up to 2 subroutines on this ice. Only the Runner can use this ability.\n[sub] Trash 1 installed Runner card.\n[sub] Remove 1 card in the heap from the game.\n[sub] You may install 1 card from HQ or Archives.\n[sub] End the run.",
-        "stripped_text": "Lose [click][click]: Break up to 2 subroutines on this ice. Only the Runner can use this ability. [sub] Trash 1 installed Runner card. [sub] Remove 1 card in the heap from the game. [sub] You may install 1 card from HQ or Archives. [sub] End the run.",
+        "text": "Lose [click][click]: Break up to 2 subroutines on this ice. Only the Runner can use this ability.\n[subroutine] Trash 1 installed Runner card.\n[subroutine] Remove 1 card in the heap from the game.\n[subroutine] You may install 1 card from HQ or Archives.\n[subroutine] End the run.",
+        "stripped_text": "Lose [click][click]: Break up to 2 subroutines on this ice. Only the Runner can use this ability. [subroutine] Trash 1 installed Runner card. [subroutine] Remove 1 card in the heap from the game. [subroutine] You may install 1 card from HQ or Archives. [subroutine] End the run.",
         "uniqueness": false
     },
     {
@@ -45557,8 +45557,8 @@
         }],
         "title": "vertigo",
         "stripped_title": "vertigo",
-        "text": "When the Runner passes this ice, if they have no remaining [click], they cannot steal or trash cards for the remainder of this run.\n[sub] The Runner loses [click].",
-        "stripped_text": "When the Runner passes this ice, if they have no remaining [click], they cannot steal or trash cards for the remainder of this run. [sub] The Runner loses [click].",
+        "text": "When the Runner passes this ice, if they have no remaining [click], they cannot steal or trash cards for the remainder of this run.\n[subroutine] The Runner loses [click].",
+        "stripped_text": "When the Runner passes this ice, if they have no remaining [click], they cannot steal or trash cards for the remainder of this run. [subroutine] The Runner loses [click].",
         "uniqueness": false
     },
     {
@@ -45577,8 +45577,8 @@
         }],
         "title": "tocsin",
         "stripped_title": "tocsin",
-        "text": "[click], 1[credit], reveal and trash this ice from HQ: Search R&D for 1 barrier and 1 sentry. Reveal them and add them to HQ.\n[sub] The Runner loses 2[credit].\n[sub] End the run.\n[sub] End the run.",
-        "stripped_text": "[click], 1[credit], reveal and trash this ice from HQ: Search R&D for 1 barrier and 1 sentry. Reveal them and add them to HQ. [sub] The Runner loses 2[credit]. [sub] End the run. [sub] End the run.",
+        "text": "[click], 1[credit], reveal and trash this ice from HQ: Search R&D for 1 barrier and 1 sentry. Reveal them and add them to HQ.\n[subroutine] The Runner loses 2[credit].\n[subroutine] End the run.\n[subroutine] End the run.",
+        "stripped_text": "[click], 1[credit], reveal and trash this ice from HQ: Search R&D for 1 barrier and 1 sentry. Reveal them and add them to HQ. [subroutine] The Runner loses 2[credit]. [subroutine] End the run. [subroutine] End the run.",
         "uniqueness": false
     },
     {
@@ -45597,8 +45597,8 @@
         }],
         "title": "vicsek",
         "stripped_title": "vicsek",
-        "text": "[sub] For each tag the Runner has, do 1 net damage and give them 1 tag.\n[sub] Give the Runner 1 tag. Trash this ice.",
-        "stripped_text": "[sub] For each tag the Runner has, do 1 net damage and give them 1 tag. [sub] Give the Runner 1 tag. Trash this ice.",
+        "text": "[subroutine] For each tag the Runner has, do 1 net damage and give them 1 tag.\n[subroutine] Give the Runner 1 tag. Trash this ice.",
+        "stripped_text": "[subroutine] For each tag the Runner has, do 1 net damage and give them 1 tag. [subroutine] Give the Runner 1 tag. Trash this ice.",
         "uniqueness": false
     },
     {
@@ -45675,8 +45675,8 @@
         }],
         "title": "ezam",
         "stripped_title": "ezam",
-        "text": "[click]: Swap this ice with another installed ice.\n[sub] Look at the top card of R&D. You may add that card to the bottom of R&D.\n[sub] Each piece of ice protecting this server gains +1 strength for the remainder of this run.",
-        "stripped_text": "[click]: Swap this ice with another installed ice. [sub] Look at the top card of R&D. You may add that card to the bottom of R&D. [sub] Each piece of ice protecting this server gains +1 strength for the remainder of this run.",
+        "text": "[click]: Swap this ice with another installed ice.\n[subroutine] Look at the top card of R&D. You may add that card to the bottom of R&D.\n[subroutine] Each piece of ice protecting this server gains +1 strength for the remainder of this run.",
+        "stripped_text": "[click]: Swap this ice with another installed ice. [subroutine] Look at the top card of R&D. You may add that card to the bottom of R&D. [subroutine] Each piece of ice protecting this server gains +1 strength for the remainder of this run.",
         "uniqueness": false
     },
     {
@@ -45732,8 +45732,8 @@
         }],
         "title": "grubber",
         "stripped_title": "grubber",
-        "text": "When you rez this ice, take 1 bad publicity if it is protecting a central server.\n[sub] End the run unless the Runner pays 3[credit].\n[sub] End the run unless the Runner pays 3[credit].",
-        "stripped_text": "When you rez this ice, take 1 bad publicity if it is protecting a central server. [sub] End the run unless the Runner pays 3[credit]. [sub] End the run unless the Runner pays 3[credit].",
+        "text": "When you rez this ice, take 1 bad publicity if it is protecting a central server.\n[subroutine] End the run unless the Runner pays 3[credit].\n[subroutine] End the run unless the Runner pays 3[credit].",
+        "stripped_text": "When you rez this ice, take 1 bad publicity if it is protecting a central server. [subroutine] End the run unless the Runner pays 3[credit]. [subroutine] End the run unless the Runner pays 3[credit].",
         "uniqueness": false
     },
     {
@@ -45919,8 +45919,8 @@
         }],
         "title": "reverb",
         "stripped_title": "reverb",
-        "text": "The rez cost of this ice is reduced by 1[credit] for each other unrezzed ice.\n[sub] End the run.\n[sub] End the run.",
-        "stripped_text": "The rez cost of this ice is reduced by 1[credit] for each other unrezzed ice. [sub] End the run. [sub] End the run.",
+        "text": "The rez cost of this ice is reduced by 1[credit] for each other unrezzed ice.\n[subroutine] End the run.\n[subroutine] End the run.",
+        "stripped_text": "The rez cost of this ice is reduced by 1[credit] for each other unrezzed ice. [subroutine] End the run. [subroutine] End the run.",
         "uniqueness": false
     },
     {
@@ -45952,14 +45952,14 @@
         "printings": [{
             "artist": "Qistina Khalidah",
             "code": "36051",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "vp",
             "flavour": "Drink deeply and forget."
         }],
         "title": "lethe",
         "stripped_title": "lethe",
-        "text": "Whenever the Runner passes this ice after encountering it, if no subroutines resolved during that encounter, give the Runner 1 tag.\n[sub] You may add 1 card from Archives to the top or bottom of R&D.\n[sub] Add 1 installed Runner card to the grip.",
-        "stripped_text": "Whenever the Runner passes this ice after encountering it, if no subroutines resolved during that encounter, give the Runner 1 tag. [sub] You may add 1 card from Archives to the top or bottom of R&D. [sub] Add 1 installed Runner card to the grip.",
+        "text": "Whenever the Runner passes this ice after encountering it, if no subroutines resolved during that encounter, give the Runner 1 tag.\n[subroutine] You may add 1 card from Archives to the top or bottom of R&D.\n[subroutine] Add 1 installed Runner card to the grip.",
+        "stripped_text": "Whenever the Runner passes this ice after encountering it, if no subroutines resolved during that encounter, give the Runner 1 tag. [subroutine] You may add 1 card from Archives to the top or bottom of R&D. [subroutine] Add 1 installed Runner card to the grip.",
         "uniqueness": false
     },
     {
@@ -45971,7 +45971,7 @@
         "printings": [{
             "artist": "Ferenc Patkós",
             "code": "36062",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "vp",
             "flavour": "The only blasphemy is to wallow in deletion."
         }],
@@ -45989,7 +45989,7 @@
         "printings": [{
             "artist": "Matheus Calza",
             "code": "36043",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "vp",
             "flavour": "To nuture perfection is to know when, what, and whom to cut."
         }],
@@ -46007,7 +46007,7 @@
         "printings": [{
             "artist": "Alecia Doyley",
             "code": "36011",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "vp",
             "flavour": "“We're cooked, maninha. Somebody tipped them off.”"
         }],
@@ -46027,7 +46027,7 @@
         "printings": [{
             "artist": "Dimik",
             "code": "36057",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "vp",
             "flavour": "“May our new headquarters live twice as long as the novle kapok tree that stood where I now stand!”"
         }],
@@ -46046,7 +46046,7 @@
         "printings": [{
             "artist": "Alecia Doyley",
             "code": "36007",
-            "img_type": "local",
+            "img_type": "nrdb",
             "set": "vp",
             "flavour": "“I'll just need you arm for a few moments”"
         }],
@@ -46055,5 +46055,152 @@
         "text": "Whenever at least 2 cards in Archives are turned faceup during a run on Archives, draw 2 cards.",
         "stripped_text": "Whenever at least 2 cards in Archives are turned faceup during a run on Archives, draw 2 cards.",
         "uniqueness": true
+    },
+    {
+        "type_code": "program",
+        "faction": "shaper",
+        "influence": 3,
+        "cost": 1,
+        "memory": 2,
+        "printings": [{
+            "artist": "Ferenc Patkós",
+            "code": "36023",
+            "img_type": "nrdb",
+            "set": "vp"
+        }],
+        "title": "sipa",
+        "stripped_title": "sipa",
+        "text": "The first time each turn you fully break the outermost piece of ice protecting a server, you may swap it with another installed piece of ice.",
+        "stripped_text": "The first time each turn you fully break the outermost piece of ice protecting a server, you may swap it with another installed piece of ice.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "resource",
+        "faction": "neutral-runner",
+        "influence": 1,
+        "cost": 2,
+        "printings": [{
+            "artist": "Marlon Ruiz",
+            "code": "36025",
+            "img_type": "nrdb",
+            "set": "vp"
+        }],
+        "title": "word on the street",
+        "stripped_title": "word on the street",
+        "text": "As an additional cost for the Corp to score an agenda they installed this turn, the Corp must add this resource to their score area as an agenda worth −1 agenda points with \"You cannot forfeit this agenda.\"\nWhen the Corp scores an agenda they did not install this turn, trash this resource, gain 4[credit], and draw 1 card.",
+        "stripped_text": "As an additional cost for the Corp to score an agenda they installed this turn, the Corp must add this resource to their score area as an agenda worth −1 agenda points with \"You cannot forfeit this agenda.\" When the Corp scores an agenda they did not install this turn, trash this resource, gain 4[credit], and draw 1 card.",
+        "uniqueness": true
+    },
+    {
+        "type_code": "ice",
+        "subtypes": "Code Gate",
+        "faction": "haas-bioroid",
+        "influence": 2,
+        "cost": 4,
+        "strength": 4,
+        "printings": [{
+            "artist": "Adam S. Doyle",
+            "code": "36030",
+            "img_type": "nrdb",
+            "set": "vp"
+        }],
+        "title": "sleipnir",
+        "stripped_title": "sleipnir",
+        "text": "[subroutine] You may draw 1 card.\n[subroutine] You may shuffle 1 card from HQ or Archives into R&D.\n[subroutine] End the run.",
+        "stripped_text": "[subroutine] You may draw 1 card. [subroutine] You may shuffle 1 card from HQ or Archives into R&D. [subroutine] End the run.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "operation",
+        "subtypes": "Transaction",
+        "faction": "haas-bioroid",
+        "influence": 3,
+        "cost": 4,
+        "printings": [{
+            "artist": "Mauricio Herrera",
+            "code": "36032",
+            "img_type": "nrdb",
+            "set": "vp"
+        }],
+        "title": "caveat emptor",
+        "stripped_title": "caveat emptor",
+        "text": "Resolve 1 of the following:\n* Gain 5[credit]. The Runner gets −1 allotted [click] for their next turn.\n* Gain 9[credit]. The Runner gets +1 allotted [click] for their next turn.",
+        "stripped_text": "Resolve 1 of the following: * Gain 5[credit]. The Runner gets −1 allotted [click] for their next turn. * Gain 9[credit]. The Runner gets +1 allotted [click] for their next turn.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "ice",
+        "subtypes": "Sentry - AP",
+        "faction": "jinteki",
+        "influence": 3,
+        "cost": 6,
+        "strength": 4,
+        "printings": [{
+            "artist": "Liiga Smilshkalne",
+            "code": "36041",
+            "img_type": "nrdb",
+            "set": "vp"
+        }],
+        "title": "lionsmane",
+        "stripped_title": "lionsmane",
+        "text": "[subroutine] Do 2 net damage.\n[subroutine] Do 2 net damage unless the Runner pays 3[credit].\n[subroutine] Do 2 net damage unless the Runner jacks out.",
+        "stripped_text": "[subroutine] Do 2 net damage. [subroutine] Do 2 net damage unless the Runner pays 3[credit]. [subroutine] Do 2 net damage unless the Runner jacks out.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "operation",
+        "subtypes": "Gray Ops",
+        "faction": "nbn",
+        "influence": 2,
+        "cost": 0,
+        "printings": [{
+            "artist": "Olie Boldador",
+            "code": "36054",
+            "img_type": "nrdb",
+            "set": "vp"
+        }],
+        "title": "scapegoat",
+        "stripped_title": "scapegoat",
+        "text": "Resolve 1 of the Runner's choice:\n* Remove 2 bad publicity.\n* The Corp chooses 1 installed Runner card. The Runner shuffles it into the stack.",
+        "stripped_text": "Resolve 1 of the Runner's choice: * Remove 2 bad publicity. * The Corp chooses 1 installed Runner card. The Runner shuffles it into the stack.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "agenda",
+        "subtypes": "Public",
+        "faction": "weyland-consortium",
+        "influence": 0,
+        "advancement_cost": 4,
+        "agenda_points": 2,
+        "printings": [{
+            "artist": "Si F Sweetman",
+            "code": "36056",
+            "img_type": "nrdb",
+            "set": "vp"
+        }],
+        "title": "sacrifice zone expansion",
+        "stripped_title": "sacrifice zone expansion",
+        "text": "Install only faceup. (This agenda is neither rezzed nor unrezzed.)\nThe first time each turn you advance this agenda, gain 3[credit].\nOnce per turn → Whenever the Runner makes a successful run on another server, you may remove 1 hosted advancement counter to do 1 meat damage.",
+        "stripped_text": "Install only faceup. (This agenda is neither rezzed nor unrezzed.) The first time each turn you advance this agenda, gain 3[credit]. Once per turn -> Whenever the Runner makes a successful run on another server, you may remove 1 hosted advancement counter to do 1 meat damage.",
+        "uniqueness": false
+    },
+    {
+        "type_code": "upgrade",
+        "subtypes": "Region",
+        "faction": "weyland-consortium",
+        "influence": 3,
+        "cost": 1,
+        "trash_cost": 3,
+        "printings": [{
+            "artist": "Emilio Rodr\u00edguez",
+            "code": "36065",
+            "img_type": "nrdb",
+            "set": "vp"
+        }],
+        "title": "shackleton grid",
+        "stripped_title": "shackleton grid",
+        "text": "Once per turn -> When the Runner spends credits from outside their credit pool, you may do 4 meat damage. Use this ability only during runs on this server.\nLimit 1 region per server.",
+        "stripped_text": "Once per turn -> When the Runner spends credits from outside their credit pool, you may do 4 meat damage. Use this ability only during runs on this server. Limit 1 region per server.",
+        "uniqueness": false
     }
 ]
