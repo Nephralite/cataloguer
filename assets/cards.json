@@ -7265,9 +7265,9 @@
             }
         ],
         "strength": 0,
-        "stripped_text": "[subroutine] You may install and rez a piece of bioroid ice from HQ or Archives, ignoring all costs, placing it directly behind Howler. If you do, derez that piece of ice and trash Howler after the run is completed.",
+        "stripped_text": "[subroutine] You may install and rez 1 piece of bioroid ice from HQ or Archives directly inward from this ice, ignoring all costs. When this run ends, if you installed a piece of ice this way, trash this ice and derez the ice you installed.",
         "stripped_title": "Howler",
-        "text": "[subroutine] You may install and rez a piece of <strong>bioroid</strong> ice from HQ or Archives, ignoring all costs, placing it directly behind Howler. If you do, derez that piece of ice and trash Howler after the run is completed.",
+        "text": "[subroutine] You may install and rez 1 piece of <strong>bioroid</strong> ice from HQ or Archives directly inward from this ice, ignoring all costs. When this run ends, if you installed a piece of ice this way, trash this ice and derez the ice you installed.",
         "title": "Howler",
         "type_code": "ice",
         "uniqueness": false
@@ -7371,9 +7371,9 @@
                 "set": "cac"
             }
         ],
-        "stripped_text": "Awakening Center can host bioroid ice (each piece is installed facedown, ignoring all install costs). Whenever the Runner passes all of the ice protecting this server, you may rez a piece of ice on Awakening Center, lowering the rez cost by 7[credit], to force the Runner to encounter it. Trash that ice after the run is completed.",
+        "stripped_text": "You can install bioroid ice onto this upgrade at no install cost. Whenever the Runner passes all of the ice protecting this server, you may rez 1 hosted piece of ice, paying 7[credit] less. If you do, the Runner ecounters that ice. When this run ends, trash that ice.",
         "stripped_title": "Awakening Center",
-        "text": "Awakening Center can host <strong>bioroid</strong> ice (each piece is installed facedown, ignoring all install costs).\nWhenever the Runner passes all of the ice protecting this server, you may rez a piece of ice on Awakening Center, lowering the rez cost by 7[credit], to force the Runner to encounter it. Trash that ice after the run is completed.",
+        "text": "You can install <strong>bioroid</strong> ice onto this upgrade at no install cost.\nWhenever the Runner passes all of the ice protecting this server, you may rez 1 hosted piece of ice, paying 7[credit] less. If you do, the Runner encounters that ice. When this run ends, trash that ice.",
         "title": "Awakening Center",
         "trash_cost": 3,
         "type_code": "upgrade",
@@ -7852,9 +7852,9 @@
             }
         ],
         "strength": 0,
-        "stripped_text": "Interface -> 1[credit]: Break 1 sentry subroutine. 1[credit]: +5 strength. Use this ability only by spending a credit from a stealth card.",
+        "stripped_text": "Interface -> 1[credit]: Break 1 sentry subroutine. 1[credit]: +5 strength. Spend credits only from stealth cards to use this ability.",
         "stripped_title": "Dagger",
-        "text": "Interface \u2192 <strong>1[credit]:</strong> Break 1 <strong>sentry</strong> subroutine.\n<strong>1[credit]:</strong> +5 strength. Use this ability only by spending a credit from a <strong>stealth</strong> card.",
+        "text": "Interface \u2192 <strong>1[credit]:</strong> Break 1 <strong>sentry</strong> subroutine.\n<strong>1[credit]:</strong> +5 strength. Spend credits only from <strong>stealth</strong> cards to use this ability.",
         "title": "Dagger",
         "type_code": "program",
         "uniqueness": false
@@ -8203,9 +8203,9 @@
                 "set": "om"
             }
         ],
-        "stripped_text": "As an additional cost to play this event, spend [click]. Forfeit an agenda. If you do, give the Corp 1 bad publicity.",
+        "stripped_text": "As an additional cost to play this event, spend [click]. Forfeit 1 agenda. If you do, give the Corp 1 bad publicity.",
         "stripped_title": "Frame Job",
-        "text": "As an additional cost to play this event, spend [click].\nForfeit an agenda. If you do, give the Corp 1 bad publicity.",
+        "text": "As an additional cost to play this event, spend [click].\nForfeit 1 agenda. If you do, give the Corp 1 bad publicity.",
         "title": "Frame Job",
         "type_code": "event",
         "uniqueness": false
@@ -8602,9 +8602,9 @@
                 "set": "om"
             }
         ],
-        "stripped_text": "Place 2 agenda counters on Geothermal Fracking when you score it. [click], hosted agenda counter: Gain 7[credit] and take 1 bad publicity.",
+        "stripped_text": "When you score this agenda, place 2 agenda counters on it. [click], hosted agenda counter: Gain 7[credit] and take 1 bad publicity.",
         "stripped_title": "Geothermal Fracking",
-        "text": "Place 2 agenda counters on Geothermal Fracking when you score it.\n[click], <strong>hosted agenda counter:</strong> Gain 7[credit] and take 1 bad publicity.",
+        "text": "When you score this agenda, place 2 agenda counters on it.\n[click], <strong>hosted agenda counter:</strong> Gain 7[credit] and take 1 bad publicity.",
         "title": "Geothermal Fracking",
         "type_code": "agenda",
         "uniqueness": false
@@ -8665,9 +8665,9 @@
             }
         ],
         "strength": 5,
-        "stripped_text": "When you rez Grim, take 1 bad publicity. [subroutine] Trash 1 program.",
+        "stripped_text": "When you rez this ice, take 1 bad publicity. [subroutine] Trash 1 installed program.",
         "stripped_title": "Grim",
-        "text": "When you rez Grim, take 1 bad publicity.\n[subroutine] Trash 1 program.",
+        "text": "When you rez this ice, take 1 bad publicity.\n[subroutine] Trash 1 installed program.",
         "title": "Grim",
         "type_code": "ice",
         "uniqueness": false
@@ -8932,9 +8932,9 @@
                 "set": "st"
             }
         ],
-        "stripped_text": "When you score Clone Retirement, you may remove 1 bad publicity. When the Runner steals Clone Retirement, the Corp takes 1 bad publicity.",
+        "stripped_text": "When you score this agenda, you may remove 1 bad publicity. When the Runner steals this agenda, take 1 bad publicity.",
         "stripped_title": "Clone Retirement",
-        "text": "When you score Clone Retirement, you may remove 1 bad publicity.\nWhen the Runner steals Clone Retirement, the Corp takes 1 bad publicity.",
+        "text": "When you score this agenda, you may remove 1 bad publicity.\nWhen the Runner steals this agenda, take 1 bad publicity.",
         "title": "Clone Retirement",
         "type_code": "agenda",
         "uniqueness": false
@@ -9081,9 +9081,9 @@
                 "set": "sc19"
             }
         ],
-        "stripped_text": "When you rez Elizabeth Mills, remove 1 bad publicity. [click], [trash]: Trash 1 location. Take 1 bad publicity.",
+        "stripped_text": "When you rez this asset, remove 1 bad publicity. [click], [trash]: Trash 1 installed location resource. Take 1 bad publicity.",
         "stripped_title": "Elizabeth Mills",
-        "text": "When you rez Elizabeth Mills, remove 1 bad publicity.\n[click], [trash]: Trash 1 <strong>location</strong>. Take 1 bad publicity.",
+        "text": "When you rez this asset, remove 1 bad publicity.\n[click], [trash]: Trash 1 installed <strong>location</strong> resource. Take 1 bad publicity.",
         "title": "Elizabeth Mills",
         "trash_cost": 1,
         "type_code": "asset",
@@ -9544,9 +9544,9 @@
             }
         ],
         "strength": 2,
-        "stripped_text": "Ireress gains \"[subroutine] The Runner loses 1[credit]\" for each bad publicity you have.",
+        "stripped_text": "This ice gains \"[subroutine] The Runner loses 1[credit]\" for each bad publicity you have.",
         "stripped_title": "Ireress",
-        "text": "Ireress gains \"[subroutine] The Runner loses 1[credit]\" for each bad publicity you have.",
+        "text": "This ice gains \"[subroutine] The Runner loses 1[credit]\" for each bad publicity you have.",
         "title": "Ireress",
         "type_code": "ice",
         "uniqueness": false
@@ -10283,9 +10283,9 @@
                 "set": "fal"
             }
         ],
-        "stripped_text": "Play only if the Corp has at least 1 bad publicity. Make a run. The Corp cannot rez ice for the duration of this run.",
+        "stripped_text": "Play only if the Corp has at least 1 bad publicity. Run any server. The Corp cannot rez ice that run.",
         "stripped_title": "Blackmail",
-        "text": "Play only if the Corp has at least 1 bad publicity.\nMake a run. The Corp cannot rez ice for the duration of this run.",
+        "text": "Play only if the Corp has at least 1 bad publicity.\nRun any server. The Corp cannot rez ice that run.",
         "title": "Blackmail",
         "type_code": "event",
         "uniqueness": false
@@ -10950,9 +10950,9 @@
             }
         ],
         "strength": 3,
-        "stripped_text": "[subroutine] The next piece of ice the Runner encounters gains \"[subroutine] End the run.\" after all its other subroutines for the remainder of this run.",
+        "stripped_text": "[subroutine] The next piece of ice the Runner encounters during this run gains \"[subroutine] End the run.\" after its other subroutines for the remainder of that run.",
         "stripped_title": "Marker",
-        "text": "[subroutine] The next piece of ice the Runner encounters gains \"[subroutine] End the run.\" after all its other subroutines for the remainder of this run.",
+        "text": "[subroutine] The next piece of ice the Runner encounters during this run gains \"[subroutine] End the run.\" after all its other subroutines for the remainder of that run.",
         "title": "Marker",
         "type_code": "ice",
         "uniqueness": false
@@ -12518,9 +12518,9 @@
             }
         ],
         "strength": 1,
-        "stripped_text": "When the Runner encounters Galahad, you may reveal up to 2 grail ice from HQ. For the remainder of this run, Galahad gains the subroutines of the revealed ice in the order of your choice. [subroutine] End the run.",
+        "stripped_text": "When the Runner encounters this ice, you may reveal up to 2 pieces of grail ice in HQ. For the remainder of this run, this ice gains the subroutines of each revealed piece of ice in the order of your choice. [subroutine] End the run.",
         "stripped_title": "Galahad",
-        "text": "When the Runner encounters Galahad, you may reveal up to 2 <strong>grail</strong> ice from HQ. For the remainder of this run, Galahad gains the subroutines of the revealed ice in the order of your choice.\n[subroutine] End the run.",
+        "text": "When the Runner encounters this ice, you may reveal up to 2 pieces of <strong>grail</strong> ice in HQ. For the remainder of this run, this ice gains the subroutines of each piece of revealed ice in the order of your choice.\n[subroutine] End the run.",
         "title": "Galahad",
         "type_code": "ice",
         "uniqueness": false
@@ -13390,9 +13390,9 @@
             }
         ],
         "strength": 2,
-        "stripped_text": "When the Runner encounters Lancelot, you may reveal up to 2 grail ice from HQ. For the remainder of this run, Lancelot gains the subroutines of the revealed ice in the order of your choice. [subroutine] Trash 1 program.",
+        "stripped_text": "When the Runner encounters this ice, you may reveal up to 2 pieces of grail ice in HQ. For the remainder of this run, this ice gains the subroutines of each revealed piece of ice in the order of your choice. [subroutine] Trash 1 installed program.",
         "stripped_title": "Lancelot",
-        "text": "When the Runner encounters Lancelot, you may reveal up to 2 <strong>grail</strong> ice from HQ. For the remainder of this run, Lancelot gains the subroutines of the revealed ice in the order of your choice.\n[subroutine] Trash 1 program.",
+        "text": "When the Runner encounters this ice, you may reveal up to 2 pieces of <strong>grail</strong> ice in HQ. For the remainder of this run, this ice gains the subroutines of each revealed piece of ice in the order of your choice.\n[subroutine] Trash 1 installed program.",
         "title": "Lancelot",
         "type_code": "ice",
         "uniqueness": false
@@ -13683,9 +13683,9 @@
             }
         ],
         "strength": 4,
-        "stripped_text": "Ashigaru gains \"[subroutine] End the run.\" for each card in HQ.",
+        "stripped_text": "This ice gains \"[subroutine] End the run.\" for each card in HQ.",
         "stripped_title": "Ashigaru",
-        "text": "Ashigaru gains \"[subroutine] End the run.\" for each card in HQ.",
+        "text": "This ice gains \"[subroutine] End the run.\" for each card in HQ.",
         "title": "Ashigaru",
         "type_code": "ice",
         "uniqueness": false
@@ -15347,9 +15347,9 @@
             }
         ],
         "strength": 7,
-        "stripped_text": "When you rez Checkpoint, take 1 bad publicity. [subroutine] Trace[5]. If successful, do 3 meat damage when this run is successful.",
+        "stripped_text": "When you rez this ice, take 1 bad publicity. [subroutine] Trace[5]. If successful, do 3 meat damage when this run becomes successful.",
         "stripped_title": "Checkpoint",
-        "text": "When you rez Checkpoint, take 1 bad publicity.\n[subroutine] Trace[5]. If successful, do 3 meat damage when this run is successful.",
+        "text": "When you rez this ice, take 1 bad publicity.\n[subroutine] Trace[5]. If successful, do 3 meat damage when this run becomes successful.",
         "title": "Checkpoint",
         "type_code": "ice",
         "uniqueness": false
@@ -16018,9 +16018,9 @@
                 "set": "oac"
             }
         ],
-        "stripped_text": "Install only if the Corp has at least 1 bad publicity. [click],[click],[click],[click],[trash]: Give the Corp 1 bad publicity.",
+        "stripped_text": "Install only if the Corp has at least 1 bad publicity. [click][click][click][click], [trash]: Give the Corp 1 bad publicity.",
         "stripped_title": "Investigative Journalism",
-        "text": "Install only if the Corp has at least 1 bad publicity.\n[click],[click],[click],[click],[trash]: Give the Corp 1 bad publicity.",
+        "text": "Install only if the Corp has at least 1 bad publicity.\n[click][click][click][click], [trash]: Give the Corp 1 bad publicity.",
         "title": "Investigative Journalism",
         "type_code": "resource",
         "uniqueness": false
@@ -17791,9 +17791,9 @@
                 "set": "uw"
             }
         ],
-        "stripped_text": "Expose can be advanced. [trash]: Remove 1 bad publicity for each advancement token on Expose.",
+        "stripped_text": "You can advance this asset. [trash]: Remove 1 bad publicity for each advancement counter.",
         "stripped_title": "Expose",
-        "text": "Expos\u00e9 can be advanced.\n[trash]: Remove 1 bad publicity for each advancement token on Expos\u00e9.",
+        "text": "You can advance this asset.\n[trash]: Remove 1 bad publicity for each advancement counter.",
         "title": "Expos\u00e9",
         "trash_cost": 2,
         "type_code": "asset",
@@ -20492,9 +20492,9 @@
                 "set": "bf"
             }
         ],
-        "stripped_text": "This card is not trashed until another current is played or an agenda is scored. The Corp has 1 additional bad publicity (even if they have 0).",
+        "stripped_text": "This event is not trashed until another current is played or an agenda is scored. The Corp is considered to have 1 additional bad publicity (even if they have no bad publicity).",
         "stripped_title": "Corporate Scandal",
-        "text": "This card is not trashed until another <strong>current</strong> is played or an agenda is scored.\nThe Corp has 1 additional bad publicity (even if they have 0).",
+        "text": "This event is not trashed until another <strong>current</strong> is played or an agenda is scored.\nThe Corp is considered to have 1 additional bad publicity (even if they have no bad publicity).",
         "title": "Corporate Scandal",
         "type_code": "event",
         "uniqueness": false
@@ -22515,9 +22515,9 @@
             }
         ],
         "strength": 1,
-        "stripped_text": "Interface -> 2[credit]: Break all subroutines. Use this ability only by spending credits from stealth cards. 1[credit]: +1 strength.",
+        "stripped_text": "Interface -> 2[credit]: Break all subroutines. Spend credits only from stealth cards to use this ability. 1[credit]: +1 strength.",
         "stripped_title": "Dai V",
-        "text": "Interface \u2192 <strong>2[credit]:</strong> Break all subroutines. Use this ability only by spending credits from <strong>stealth</strong> cards.\n<strong>1[credit]:</strong> +1 strength.",
+        "text": "Interface \u2192 <strong>2[credit]:</strong> Break all subroutines. Spend credits only from <strong>stealth</strong> cards to use this ability.\n<strong>1[credit]:</strong> +1 strength.",
         "title": "Dai V",
         "type_code": "program",
         "uniqueness": false
@@ -22986,9 +22986,9 @@
                 "set": "bm"
             }
         ],
-        "stripped_text": "Make a run on R&D. If successful, you may make another run on R&D when this run ends.",
+        "stripped_text": "Run R&D. If successful, when that run ends, you may run R&D again.",
         "stripped_title": "Data Breach",
-        "text": "Make a run on R&D. If successful, you may make another run on R&D when this run ends.",
+        "text": "Run R&D. If successful, when that run ends, you may run R&D again.",
         "title": "Data Breach",
         "type_code": "event",
         "uniqueness": false
@@ -24065,9 +24065,9 @@
             }
         ],
         "strength": 8,
-        "stripped_text": "When you rez this ice, take 1 bad publicity. When the Runner encounters this ice, gain 2[credit] if there is an installed AI program. [subroutine] The Runner trashes 1 installed program. [subroutine] Gain 2[credit]. End the run. [subroutine] Gain 2 credits. End the run.",
+        "stripped_text": "When you rez this ice, take 1 bad publicity. When the Runner encounters this ice, if there is an installed AI program, gain 2[credit]. [subroutine] The Runner trashes 1 installed program. [subroutine] Gain 2[credit]. End the run. [subroutine] Gain 2 credits. End the run.",
         "stripped_title": "Bulwark",
-        "text": "When you rez this ice, take 1 bad publicity.\nWhen the Runner encounters this ice, gain 2[credit] if there is an installed <strong>AI</strong> program.\n[subroutine] The Runner trashes 1 installed program.\n[subroutine] Gain 2[credit]. End the run.\n[subroutine] Gain 2[credit]. End the run.",
+        "text": "When you rez this ice, take 1 bad publicity.\nWhen the Runner encounters this ice, if there is an installed <strong>AI</strong> program, gain 2[credit].\n[subroutine] The Runner trashes 1 installed program.\n[subroutine] Gain 2[credit]. End the run.\n[subroutine] Gain 2[credit]. End the run.",
         "title": "Bulwark",
         "type_code": "ice",
         "uniqueness": false
@@ -25128,9 +25128,9 @@
                 "set": "dc"
             }
         ],
-        "stripped_text": "Make a run. When this run ends, add Mad Dash to your score area as an agenda worth 1 agenda point if you stole at least 1 agenda during the run; otherwise, suffer 1 meat damage.",
+        "stripped_text": "Run any server. When that run ends, if you stole an agenda during that run, add this event to your score area as an agenda worth 1 agenda point. Otherwise, suffer 1 meat damage.",
         "stripped_title": "Mad Dash",
-        "text": "Make a run. When this run ends, add Mad Dash to your score area as an agenda worth 1 agenda point if you stole at least 1 agenda during the run; otherwise, suffer 1 meat damage.",
+        "text": "Run any server. When that run ends, if you stole an agenda during that run, add this event to your score area as an agenda worth 1 agenda point. Otherwise, suffer 1 meat damage.",
         "title": "Mad Dash",
         "type_code": "event",
         "uniqueness": false
@@ -26412,9 +26412,9 @@
             }
         ],
         "strength": 3,
-        "stripped_text": "When the Runner encounters this ice, choose another rezzed piece of ice. For the remainder of this run, this ice gains the subtypes of the chosen ice and gains the subroutines of that ice in order before all its other subroutines. [subroutine] The Runner must either end the run or shuffle all cards from the grip into the stack.",
+        "stripped_text": "When the Runner encounters this ice, choose another rezzed piece of ice. For the remainder of this run, this ice gains the subtypes of the chosen ice and gains the subroutines of that ice in order before its other subroutines. [subroutine] End the run unless the Runner shuffles all cards from the grip into the stack.",
         "stripped_title": "Loki",
-        "text": "When the Runner encounters this ice, choose another rezzed piece of ice. For the remainder of this run, this ice gains the subtypes of the chosen ice and gains the subroutines of that ice in order before all its other subroutines.\n[subroutine] The Runner must either end the run or shuffle all cards from the grip into the stack.",
+        "text": "When the Runner encounters this ice, choose another rezzed piece of ice. For the remainder of this run, this ice gains the subtypes of the chosen ice and gains the subroutines of that ice in order before its other subroutines.\n[subroutine] End the run unless the Runner shuffles all cards from the grip into the stack.",
         "title": "Loki",
         "type_code": "ice",
         "uniqueness": true
@@ -27192,9 +27192,9 @@
                 "set": "cd"
             }
         ],
-        "stripped_text": "Make a run. Whenever you encounter a piece of ice during this run, you may install a program from your grip, ignoring all costs. When this run ends, trash all programs installed using Diana's Hunt.",
+        "stripped_text": "Run any server. Whenever you encounter a piece of ice during that run, you may install 1 program from your grip, ignoring all costs. When that run ends, trash all programs installed this way.",
         "stripped_title": "Diana's Hunt",
-        "text": "Make a run. Whenever you encounter a piece of ice during this run, you may install a program from your grip, ignoring all costs. When this run ends, trash all programs installed using Diana's Hunt.",
+        "text": "Run any server. Whenever you encounter a piece of ice during that run, you may install 1 program from your grip, ignoring all costs. When that run ends, trash all programs installed this way.",
         "title": "Diana's Hunt",
         "type_code": "event",
         "uniqueness": false
@@ -28494,9 +28494,9 @@
                 "set": "td"
             }
         ],
-        "stripped_text": "When you score Illicit Sales, you may take 1 bad publicity. Gain 3[credit] for each bad publicity that you have.",
+        "stripped_text": "When you score this agenda, you may take 1 bad publicity. Gain 3[credit] for each bad publicity you have.",
         "stripped_title": "Illicit Sales",
-        "text": "When you score Illicit Sales, you may take 1 bad publicity. Gain 3[credit] for each bad publicity that you have.",
+        "text": "When you score this agenda, you may take 1 bad publicity. Gain 3[credit] for each bad publicity you have.",
         "title": "Illicit Sales",
         "type_code": "agenda",
         "uniqueness": false
@@ -28534,9 +28534,9 @@
                 "set": "td"
             }
         ],
-        "stripped_text": "If the Runner trashes Illegal Arms Factory while it is installed, take 1 bad publicity. When your turn begins, gain 1[credit] and draw 1 card.",
+        "stripped_text": "When your turn begins, gain 1 [credit] and draw 1 card. When the Runner trashes this asset (while it is rezzed), take 1 bad publicity.",
         "stripped_title": "Illegal Arms Factory",
-        "text": "If the Runner trashes Illegal Arms Factory while it is installed, take 1 bad publicity.\nWhen your turn begins, gain 1[credit] and draw 1 card.",
+        "text": "When your turn begins, gain 1[credit] and draw 1 card.\nWhen the Runner trashes this asset <em>(while it is rezzed)</em>, take 1 bad publicity.",
         "title": "Illegal Arms Factory",
         "trash_cost": 6,
         "type_code": "asset",
@@ -31468,9 +31468,9 @@
             }
         ],
         "strength": 3,
-        "stripped_text": "Masvingo can be advanced. When you rez Masvingo, place 1 advancement token on it. Masvingo gains \"[subroutine] End the run.\" for each advancement token on it.",
+        "stripped_text": "You can advance this ice. When you rez this ice, place 1 advancement token on it. This ice gains \"[subroutine] End the run.\" for each advancement token on it.",
         "stripped_title": "Masvingo",
-        "text": "Masvingo can be advanced.\nWhen you rez Masvingo, place 1 advancement token on it.\nMasvingo gains \"[subroutine] End the run.\" for each advancement token on it.",
+        "text": "You can advance this ice.\nWhen you rez this ice, place 1 advancement token on it.\nThis ice gains \"[subroutine] End the run.\" for each advancement token on it.",
         "title": "Masvingo",
         "type_code": "ice",
         "uniqueness": false
@@ -33030,9 +33030,9 @@
             }
         ],
         "strength": 4,
-        "stripped_text": "Blockchain gains \"[subroutine] The Corp gains 1[credit] and the Runner loses 1[credit].\" before all its other subroutines for every 2 faceup transaction operations in Archives. [subroutine] The Corp gains 1[credit] and the Runner loses 1[credit]. [subroutine] End the run.",
+        "stripped_text": "This ice gains \"[subroutine] Gain 1[credit] and the Runner loses 1[credit].\" before all its other subroutines for every 2 faceup transaction operations in Archives. [subroutine] Gain 1[credit] and the Runner loses 1[credit]. [subroutine] End the run.",
         "stripped_title": "Blockchain",
-        "text": "Blockchain gains \"[subroutine] The Corp gains 1[credit] and the Runner loses 1[credit].\" before all its other subroutines for every 2 faceup <strong>transaction</strong> operations in Archives.\n[subroutine] The Corp gains 1[credit] and the Runner loses 1[credit].\n[subroutine] End the run.",
+        "text": "This ice gains \"[subroutine] Gain 1[credit] and the Runner loses 1[credit].\" before all its other subroutines for every 2 faceup <strong>transaction</strong> operations in Archives.\n[subroutine] Gain 1[credit] and the Runner loses 1[credit].\n[subroutine] End the run.",
         "title": "Blockchain",
         "type_code": "ice",
         "uniqueness": false
@@ -35070,9 +35070,9 @@
             }
         ],
         "strength": 2,
-        "stripped_text": "Once per turn -> When you encounter a sentry, you may pay 2[credit] to bypass it. Use this ability only by spending credits from stealth cards. Interface -> 1[credit]: Break up to 2 sentry subroutines. 1[credit]: +2 strength. Use this ability only by spending a credit from a stealth card.",
+        "stripped_text": "Once per turn -> When you encounter a sentry, you may pay 2[credit] to bypass it. Spend credits only from stealth cards to use this ability. Interface -> 1[credit]: Break up to 2 sentry subroutines. 1[credit]: +2 strength. Use this ability only by spending a credit from a stealth card.",
         "stripped_title": "Afterimage",
-        "text": "Once per turn -> When you encounter a <strong>sentry</strong>, you may pay 2[credit] to bypass it. Use this ability only by spending credits from <strong>stealth</strong> cards.\nInterface \u2192 <strong>1[credit]:</strong> Break up to 2 <strong>sentry</strong> subroutines.\n<strong>1[credit]:</strong> +2 strength. Use this ability only by spending a credit from a <strong>stealth</strong> card.",
+        "text": "Once per turn -> When you encounter a <strong>sentry</strong>, you may pay 2[credit] to bypass it. Use this ability only by Spend credits only from <strong>stealth</strong> cards to use this ability.\nInterface \u2192 <strong>1[credit]:</strong> Break up to 2 <strong>sentry</strong> subroutines.\n<strong>1[credit]:</strong> +2 strength. Use this ability only by spending a credit from a <strong>stealth</strong> card.",
         "title": "Afterimage",
         "type_code": "program",
         "uniqueness": false
@@ -39066,9 +39066,9 @@
             }
         ],
         "strength": 5,
-        "stripped_text": "When you rez this ice, place 4 power counters on it. When your turn begins, remove 1 hosted power counter. This ice gains \"[subroutine] End the run.\" before its printed subroutine for each hosted power counter. [subroutine] Trash this ice.",
+        "stripped_text": "When you rez this ice, place 4 power counters on it. When your turn begins, remove 1 hosted power counter. This ice gains \"[subroutine] End the run.\" before its other subroutines for each hosted power counter. [subroutine] Trash this ice.",
         "stripped_title": "Envelopment",
-        "text": "When you rez this ice, place 4 power counters on it.\nWhen your turn begins, remove 1 hosted power counter.\nThis ice gains \"[subroutine] End the run.\" before its printed subroutine for each hosted power counter.\n[subroutine] Trash this ice.",
+        "text": "When you rez this ice, place 4 power counters on it.\nWhen your turn begins, remove 1 hosted power counter.\nThis ice gains \"[subroutine] End the run.\" before its other subroutines for each hosted power counter.\n[subroutine] Trash this ice.",
         "title": "Envelopment",
         "type_code": "ice",
         "uniqueness": false
@@ -46066,7 +46066,8 @@
             "artist": "Ferenc Patkós",
             "code": "36023",
             "img_type": "nrdb",
-            "set": "vp"
+            "set": "vp",
+            "flavour": "Can't let it touch the ground"
         }],
         "title": "sipa",
         "stripped_title": "sipa",
@@ -46102,7 +46103,8 @@
             "artist": "Adam S. Doyle",
             "code": "36030",
             "img_type": "nrdb",
-            "set": "vp"
+            "set": "vp",
+            "flavour": "He bade write runes on the shield before the shining goddess, on Sleipnir’s teeth, and the straps of the sledge." 
         }],
         "title": "sleipnir",
         "stripped_title": "sleipnir",
@@ -46120,7 +46122,8 @@
             "artist": "Mauricio Herrera",
             "code": "36032",
             "img_type": "nrdb",
-            "set": "vp"
+            "set": "vp",
+            "flavour": "“I can tell you’re a discerning customer. That’s why you’re here, after all.”"
         }],
         "title": "caveat emptor",
         "stripped_title": "caveat emptor",
@@ -46139,7 +46142,8 @@
             "artist": "Liiga Smilshkalne",
             "code": "36041",
             "img_type": "nrdb",
-            "set": "vp"
+            "set": "vp",
+            "flavour": "”Step closer,” you dream you hear. “Feel my embrace.”"
         }],
         "title": "lionsmane",
         "stripped_title": "lionsmane",
@@ -46157,7 +46161,8 @@
             "artist": "Olie Boldador",
             "code": "36054",
             "img_type": "nrdb",
-            "set": "vp"
+            "set": "vp",
+            "flavour": "She’d play the part of the dangerous criminal for now; that was the deal. She was too useful to put away for good. Even Lunar Customs could use a smuggler of her skills now and then."
         }],
         "title": "scapegoat",
         "stripped_title": "scapegoat",
@@ -46194,8 +46199,9 @@
         "printings": [{
             "artist": "Emilio Rodr\u00edguez",
             "code": "36065",
-            "img_type": "nrdb",
-            "set": "vp"
+            "img_type": "nro",
+            "set": "vp",
+            "flavour": "You're on your own."
         }],
         "title": "shackleton grid",
         "stripped_title": "shackleton grid",

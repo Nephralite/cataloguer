@@ -420,12 +420,12 @@ fn search_impl<'a>(
                         }
                     };
                     let query_str = match text_value.as_str() {
-                        "vpstartup" => "(set:vp or set:ele or set:sg) -banned:vpstartup -o:\"starter game only\"",
-                        "vpstandard" | "26.03" => "is:nsg -set:su21 -banned:vpstandard -o:\"starter game only\"",
-                        "startup" | "sup" => "(cy:lib or cy:sg or cy:ele) -banned:startup -o:\"starter game only\"",
+                        "startup" | "sup" | "vpstartup" => "(set:vp or set:ele or set:sg) -banned:startup -o:\"starter game only\"",
+                        "standard" | "current" | "std" | "vpstandard" | "26.03" => "is:nsg -set:su21 -banned:standard -o:\"starter game only\"",
+                        "elestartup" => "(cy:lib or cy:sg or cy:ele) -banned:elestartup -o:\"starter game only\"",
                         "neo" => "is:nsg -set:su21 -banned:neo -o:\"starter game only\"",
                         // "rig" | "postgateway" | "librealis" | "twocycle" => "date>=sg -banned:rig -o:\"starter game only\"",
-                        "standard" | "current" | "std" | "25.12" => "is:nsg -set:vp -set:su21 -banned:standard -o:\"starter game only\"",
+                        "25.12" => "is:nsg -set:vp -set:su21 -banned:25.12 -o:\"starter game only\"",
                         "24.12" => "cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) -banned:24.12 -o:\"starter game only\"",
                         "sunset" => "-banned:sunset -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) or cy:mor",
                         "eternal" => "-banned:eternal -o:\"starter game only\" -set:vp -set:tdc -cy:draft -cy:napd",
