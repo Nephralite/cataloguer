@@ -697,7 +697,7 @@ fn search_impl<'a>(
                     .collect(),
                 NumericKey::Tob | NumericKey::TobOld =>  {//these are only imported as needed to minimize load on general cataloguer searches, might lower performance for this search though
                     let string = if matches!(num_filter.key, NumericKey::Tob) {"assets/trashobusto.json"} else {"assets/tob_old.json"};
-                    let ranks = serde_json::from_str::<Map<String, Value>>(&std::fs::read_to_string(string).unwrap()).unwrap();
+                    let ranks = serde_json::from_str::<Map<String, Value>>(&std::fs::read_to_string(string).unwrap().to_lowercase()).unwrap();
                     card_pool.iter().filter(
                         |x| if ranks.contains_key(&x.card.title) {
                             num_filter.comparator.as_operator(ranks[&x.card.title].as_i64().unwrap(), num_filter.value as i64)
