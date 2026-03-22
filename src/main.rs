@@ -1,22 +1,25 @@
-use anyhow::{Context, bail};
-use axum::{
-    routing::get,
-    Router
-};
+use anyhow::{bail, Context};
+use axum::{routing::get, Router};
+use cataloguer::*;
 use serde_json::{Map, Value};
 use std::env;
 use tokio::net::TcpListener;
 use tower_http::services::ServeDir;
 use tracing::info;
 use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
-use cataloguer::*;
 
 //initialize a backend from our jsons
 fn init_backend() -> anyhow::Result<structs::Backend> {
     let backend = structs::Backend {
-        cards: serde_json::from_str::<Vec<structs::Card>>(&std::fs::read_to_string("assets/cards.json")?.to_lowercase())?,
-        banlist: serde_json::from_str::<Map<String, Value>>(&std::fs::read_to_string("assets/banned.json")?.to_lowercase())?,
-        sets: serde_json::from_str::<Vec<structs::Set>>(&std::fs::read_to_string("assets/sets.json")?)?,
+        cards: serde_json::from_str::<Vec<structs::Card>>(
+            &std::fs::read_to_string("assets/cards.json")?.to_lowercase(),
+        )?,
+        banlist: serde_json::from_str::<Map<String, Value>>(
+            &std::fs::read_to_string("assets/banned.json")?.to_lowercase(),
+        )?,
+        sets: serde_json::from_str::<Vec<structs::Set>>(&std::fs::read_to_string(
+            "assets/sets.json",
+        )?)?,
     };
 
     // Safety check - ensure that all cards have at least one printing
@@ -28,7 +31,7 @@ fn init_backend() -> anyhow::Result<structs::Backend> {
         //     bail!("Card '{}' has no stripped_text", card.title)
         // }
     }
-    
+
     Ok(backend)
 }
 

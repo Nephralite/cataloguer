@@ -1,16 +1,21 @@
-use std::collections::HashMap;
+use crate::parse::{SearchDirection, SearchSettings};
+use crate::search::{card_matches, do_search, temp_simple_search};
+use crate::structs::{Backend, Card, FullAPIout, Legality, Set, SimpleAPIout};
 use askama::Template;
 use askama_axum::{IntoResponse, Response};
 use axum::extract::{Path, Query, State};
 use axum::http::StatusCode;
-use axum::Json;
 use axum::response::Html;
-use crate::parse::{SearchDirection, SearchSettings};
-use crate::structs::{Backend, Card, Legality, Set, SimpleAPIout, FullAPIout};
-use crate::search::{card_matches, do_search, temp_simple_search};
+use axum::Json;
+use std::collections::HashMap;
 
 pub async fn setspage(State(backend): State<Backend>) -> impl IntoResponse {
-    Templates::SetsPageTemplate(SetsPageTemplate {query:"".to_owned(), order:"".to_owned(), dir:"".to_owned(), sets:backend.sets})
+    Templates::SetsPageTemplate(SetsPageTemplate {
+        query: "".to_owned(),
+        order: "".to_owned(),
+        dir: "".to_owned(),
+        sets: backend.sets,
+    })
 }
 
 #[derive(Template)]
@@ -28,16 +33,24 @@ struct CardPageTemplate {
 pub struct SearchForm {
     search: Option<String>,
     order: Option<String>,
-    dir: Option<String>
+    dir: Option<String>,
 }
 
 #[derive(Template)]
 #[template(path = "index.html")]
-struct IndexTemplate {query: String, order: String, dir: String}
+struct IndexTemplate {
+    query: String,
+    order: String,
+    dir: String,
+}
 
 #[derive(Template)]
 #[template(path = "syntax.html")]
-struct SyntaxTemplate {query: String, order: String, dir: String}
+struct SyntaxTemplate {
+    query: String,
+    order: String,
+    dir: String,
+}
 
 #[derive(Template)]
 #[template(path = "cards.html")]
@@ -45,7 +58,7 @@ struct CardsList {
     query: String,
     cards: Vec<[String; 2]>,
     order: String,
-    dir: String
+    dir: String,
 }
 
 #[derive(Template)]
@@ -54,7 +67,7 @@ struct SetsPageTemplate {
     query: String,
     order: String,
     dir: String,
-    sets: Vec<Set>
+    sets: Vec<Set>,
 }
 
 #[derive(Template)]
@@ -93,52 +106,131 @@ impl IntoResponse for Templates {
             Err(err) => (
                 StatusCode::INTERNAL_SERVER_ERROR,
                 format!("Failed to render template. Error: {}", err),
-            ).into_response(),
+            )
+                .into_response(),
         }
     }
 }
 
 pub async fn syntax() -> impl IntoResponse {
-    Templates::SyntaxTemplate(SyntaxTemplate { query: "".to_owned(), order: "".to_owned(), dir: "".to_owned(), })
+    Templates::SyntaxTemplate(SyntaxTemplate {
+        query: "".to_owned(),
+        order: "".to_owned(),
+        dir: "".to_owned(),
+    })
 }
 
-pub async fn cardpage(Path(params): Path<HashMap<String, String>>, State(backend): State<Backend>) -> impl IntoResponse {
+pub async fn cardpage(
+    Path(params): Path<HashMap<String, String>>,
+    State(backend): State<Backend>,
+) -> impl IntoResponse {
     let printing = params.get("printing").unwrap().parse().unwrap();
     let id = params.get("id").unwrap();
-    let card = backend.cards.iter().find(|x| x.stripped_title.to_lowercase() == *id).unwrap();
+    let card = backend
+        .cards
+        .iter()
+        .find(|x| x.stripped_title.to_lowercase() == *id)
+        .unwrap();
 
     // SAFETY: The unwrap() calls here should all be safe as these are static string searches.
-    let startup = if card_matches("z:startup", &backend, card).unwrap() {"legal"} else if card_matches("banned:startup", &backend, card).unwrap() {"banned"} else {"not legal"};
-    let standard= if card_matches("z:standard", &backend, card).unwrap() {"legal"} else if card_matches("banned:standard", &backend, card).unwrap() {"banned"} else {"not legal"};
-    let eternal = if card_matches("ep>0", &backend, card).unwrap() {format!("{} Points", card.eternal_points.unwrap())} else if card_matches("z:eternal", &backend, card).unwrap() {"legal".to_owned()} else if card_matches("banned:eternal", &backend, card).unwrap() {"banned".to_owned()} else {"not legal".to_owned()};
+    let startup = if card_matches("z:startup", &backend, card).unwrap() {
+        "legal"
+    } else if card_matches("banned:startup", &backend, card).unwrap() {
+        "banned"
+    } else {
+        "not legal"
+    };
+    let standard = if card_matches("z:standard", &backend, card).unwrap() {
+        "legal"
+    } else if card_matches("banned:standard", &backend, card).unwrap() {
+        "banned"
+    } else {
+        "not legal"
+    };
+    let eternal = if card_matches("ep>0", &backend, card).unwrap() {
+        format!("{} Points", card.eternal_points.unwrap())
+    } else if card_matches("z:eternal", &backend, card).unwrap() {
+        "legal".to_owned()
+    } else if card_matches("banned:eternal", &backend, card).unwrap() {
+        "banned".to_owned()
+    } else {
+        "not legal".to_owned()
+    };
 
-    Templates::CardPageTemplate(CardPageTemplate{ query:"".to_owned(), order:"".to_owned(), dir:"".to_owned(), card: card.clone(), x: printing, legality: Legality {startup, standard, eternal}})
+    Templates::CardPageTemplate(CardPageTemplate {
+        query: "".to_owned(),
+        order: "".to_owned(),
+        dir: "".to_owned(),
+        card: card.clone(),
+        x: printing,
+        legality: Legality {
+            startup,
+            standard,
+            eternal,
+        },
+    })
 }
 
 pub async fn simple_api(
     State(backend): State<Backend>,
-    Query(params): Query<SearchForm>
+    Query(params): Query<SearchForm>,
 ) -> impl IntoResponse {
     if let Some(query) = params.search {
         match do_search(&query, &backend, SearchSettings::default()) {
-            Ok(printings) => Json(SimpleAPIout{len: printings.len(), data: printings.iter().map(|printing| printing.code.clone()).collect(), error: None}).into_response(),
-            Err(e) => Json(SimpleAPIout{len: 0, data: vec!(), error: Some(e.to_string())}).into_response(),
+            Ok(printings) => Json(SimpleAPIout {
+                len: printings.len(),
+                data: printings
+                    .iter()
+                    .map(|printing| printing.code.clone())
+                    .collect(),
+                error: None,
+            })
+            .into_response(),
+            Err(e) => Json(SimpleAPIout {
+                len: 0,
+                data: vec![],
+                error: Some(e.to_string()),
+            })
+            .into_response(),
         }
     } else {
-        Json(SimpleAPIout{len: 0, data: vec!(), error: Some("no query provided".to_string())}).into_response()
+        Json(SimpleAPIout {
+            len: 0,
+            data: vec![],
+            error: Some("no query provided".to_string()),
+        })
+        .into_response()
     }
 }
 
-pub async fn full_api(State(backend): State<Backend>, Query(params): Query<SearchForm>) -> impl IntoResponse {
+pub async fn full_api(
+    State(backend): State<Backend>,
+    Query(params): Query<SearchForm>,
+) -> impl IntoResponse {
     if let Some(query) = params.search {
         match temp_simple_search(&query, &backend) {
-          Ok(cards) => Json(FullAPIout{len: cards.len(), data: cards, error: None}).into_response(),
-          Err(e) => Json(FullAPIout{len: 0, data: vec!(), error: Some(e.to_string())}).into_response(),
+            Ok(cards) => Json(FullAPIout {
+                len: cards.len(),
+                data: cards,
+                error: None,
+            })
+            .into_response(),
+            Err(e) => Json(FullAPIout {
+                len: 0,
+                data: vec![],
+                error: Some(e.to_string()),
+            })
+            .into_response(),
         }
     } else {
-        Json(SimpleAPIout{len: 0, data: vec!(), error: Some("no query provided".to_string())}).into_response()
+        Json(SimpleAPIout {
+            len: 0,
+            data: vec![],
+            error: Some("no query provided".to_string()),
+        })
+        .into_response()
     }
-} 
+}
 
 pub async fn search(
     State(backend): State<Backend>,
@@ -151,7 +243,10 @@ pub async fn search(
                 Some("desc") => Some(SearchDirection::Descending),
                 _ => None,
             },
-            sort: params.order.clone().and_then(|s| s.as_str().try_into().ok()),
+            sort: params
+                .order
+                .clone()
+                .and_then(|s| s.as_str().try_into().ok()),
             prefer: None,
             unique_by: None,
             display: None,
@@ -159,24 +254,30 @@ pub async fn search(
 
         let results = match do_search(&query.trim(), &backend, form_search_settings) {
             Ok(results) => results,
-            Err(e) => return Templates::SearchErrorTemplate(
-                SearchErrorTemplate {
+            Err(e) => {
+                return Templates::SearchErrorTemplate(SearchErrorTemplate {
                     query,
                     order: params.order.unwrap_or("".to_owned()),
                     dir: params.dir.unwrap_or("".to_owned()),
                     error: e.to_string(),
-                }
-            )
+                })
+            }
         };
 
-        Templates::CardsList(
-            CardsList {
-                query,
-                cards: results.iter().map(|p| [p.code.clone(), p.img_type.clone()]).collect(),
-                order: params.order.unwrap_or("".to_owned()), dir: params.dir.unwrap_or("".to_owned())
-            }
-        )
+        Templates::CardsList(CardsList {
+            query,
+            cards: results
+                .iter()
+                .map(|p| [p.code.clone(), p.img_type.clone()])
+                .collect(),
+            order: params.order.unwrap_or("".to_owned()),
+            dir: params.dir.unwrap_or("".to_owned()),
+        })
     } else {
-        Templates::IndexTemplate(IndexTemplate {query:"".to_owned(), order:"".to_owned(), dir:"".to_owned()})
+        Templates::IndexTemplate(IndexTemplate {
+            query: "".to_owned(),
+            order: "".to_owned(),
+            dir: "".to_owned(),
+        })
     }
 }

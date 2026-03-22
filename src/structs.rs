@@ -62,7 +62,6 @@ impl std::hash::Hash for Printing {
     }
 }
 
-
 #[derive(serde::Serialize, serde::Deserialize, Clone, Eq)]
 pub struct Card {
     pub printings: Vec<Printing>,
@@ -86,7 +85,7 @@ pub struct Card {
     pub agenda_points: Option<u8>,
     pub eternal_points: Option<u8>,
     pub nearprint: Option<String>,
-    pub pronouns: Option<String>
+    pub pronouns: Option<String>,
 }
 
 impl PartialEq for Card {

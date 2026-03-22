@@ -67,7 +67,10 @@ impl From<ParseError> for SearchError {
 
 //I need a quick function with no sorting to expose card api results, this is mostly diamonds code
 //form the function below TODO fix this tech debt
-pub(crate) fn temp_simple_search<'a> (query: &str, backend: &'a Backend) -> Result<Vec<Card>, SearchError> {
+pub(crate) fn temp_simple_search<'a>(
+    query: &str,
+    backend: &'a Backend,
+) -> Result<Vec<Card>, SearchError> {
     let (node, _settings) = parse_query(&query.to_lowercase())?;
     let card_pool: HashSet<SearchPrinting> = backend
         .cards
@@ -84,9 +87,6 @@ pub(crate) fn temp_simple_search<'a> (query: &str, backend: &'a Backend) -> Resu
     let cards: Vec<Card> = cards.into_iter().collect();
     Ok(cards)
 }
-
-
-
 
 pub(crate) fn do_search<'a>(
     query: &str,
@@ -182,7 +182,7 @@ pub(crate) fn do_search<'a>(
         SearchOrder::Released => {
             results.sort_by_key(|sp| &sp.card.printings.last().unwrap().code);
             //results.sort_by_key(|sp| std::cmp::Reverse(&sp.card.printings.last().unwrap().code[..2]));
-            },
+        }
         SearchOrder::Random => results.shuffle(&mut thread_rng()),
         SearchOrder::Strength => results.sort_by_key(|sp| sp.card.strength),
         SearchOrder::Set => return Err(SearchError::NotYetImplemented("sort by set".to_string())),
@@ -461,7 +461,7 @@ fn search_impl<'a>(
                     })
                     .copied()
                     .collect(),
-                TextKey::Symbol =>{
+                TextKey::Symbol => {
                     let text_value = match text_filter.value {
                         TextValue::Plain(s) => s,
                         TextValue::Exact(_) => unreachable!(),
@@ -475,21 +475,19 @@ fn search_impl<'a>(
                     card_pool
                         .iter()
                         .filter(|x| {
-                            x.card
-                                .text
-                                .as_ref()
-                                .is_some_and(|s| s.to_lowercase().contains(&format!("[{}]", text_value)))
+                            x.card.text.as_ref().is_some_and(|s| {
+                                s.to_lowercase().contains(&format!("[{}]", text_value))
+                            })
                         })
                         .copied()
                         .collect()
-                },
+                }
                 TextKey::Pronouns => card_pool
                     .iter()
                     .filter(|x| {
-                        x.card
-                            .pronouns
-                            .as_ref()
-                            .is_some_and(|s| text_filter.value.matches(&s) || s.to_lowercase().contains("any"))
+                        x.card.pronouns.as_ref().is_some_and(|s| {
+                            text_filter.value.matches(&s) || s.to_lowercase().contains("any")
+                        })
                     })
                     .copied()
                     .collect(),
@@ -523,17 +521,22 @@ fn search_impl<'a>(
                 TextKey::Subtype => {
                     //this is garbage code, I plan to remove this when piggy comes out and everyone
                     //forgets about illict
-                    let text_value = if text_filter.value.value()=="illict" {TextValue::Plain("liability".to_owned())} else {text_filter.value};
+                    let text_value = if text_filter.value.value() == "illict" {
+                        TextValue::Plain("liability".to_owned())
+                    } else {
+                        text_filter.value
+                    };
                     card_pool
-                    .iter()
-                    .filter(|x| {
-                        x.card
-                            .subtypes
-                            .as_ref()
-                            .is_some_and(|s| text_value.matches(s))
-                    })
-                    .copied()
-                    .collect()},
+                        .iter()
+                        .filter(|x| {
+                            x.card
+                                .subtypes
+                                .as_ref()
+                                .is_some_and(|s| text_value.matches(s))
+                        })
+                        .copied()
+                        .collect()
+                }
                 TextKey::Type => card_pool
                     .iter()
                     .filter(|x| text_filter.value.matches(&x.card.type_code))
@@ -658,7 +661,9 @@ fn search_impl<'a>(
                 NumericKey::NumPrintings => card_pool
                     .iter()
                     .filter(|x| {
-                        num_filter.comparator.as_operator(x.card.printings.len() as i32, num_filter.value)
+                        num_filter
+                            .comparator
+                            .as_operator(x.card.printings.len() as i32, num_filter.value)
                     })
                     .copied()
                     .collect(),
@@ -695,15 +700,33 @@ fn search_impl<'a>(
                     })
                     .copied()
                     .collect(),
-                NumericKey::Tob | NumericKey::TobOld =>  {//these are only imported as needed to minimize load on general cataloguer searches, might lower performance for this search though
-                    let string = if matches!(num_filter.key, NumericKey::Tob) {"assets/trashobusto.json"} else {"assets/tob_old.json"};
-                    let ranks = serde_json::from_str::<Map<String, Value>>(&std::fs::read_to_string(string).unwrap().to_lowercase()).unwrap();
-                    card_pool.iter().filter(
-                        |x| if ranks.contains_key(&x.card.title) {
-                            num_filter.comparator.as_operator(ranks[&x.card.title].as_i64().unwrap(), num_filter.value as i64)
-                        } else {
-                            debug!("card not in trasho: {}", &x.card.title); false
-                        }).copied().collect()},
+                NumericKey::Tob | NumericKey::TobOld => {
+                    //these are only imported as needed to minimize load on general cataloguer searches, might lower performance for this search though
+                    let string = if matches!(num_filter.key, NumericKey::Tob) {
+                        "assets/trashobusto.json"
+                    } else {
+                        "assets/tob_old.json"
+                    };
+                    let ranks = serde_json::from_str::<Map<String, Value>>(
+                        &std::fs::read_to_string(string).unwrap().to_lowercase(),
+                    )
+                    .unwrap();
+                    card_pool
+                        .iter()
+                        .filter(|x| {
+                            if ranks.contains_key(&x.card.title) {
+                                num_filter.comparator.as_operator(
+                                    ranks[&x.card.title].as_i64().unwrap(),
+                                    num_filter.value as i64,
+                                )
+                            } else {
+                                debug!("card not in trasho: {}", &x.card.title);
+                                false
+                            }
+                        })
+                        .copied()
+                        .collect()
+                }
             };
             Ok(results)
         }
