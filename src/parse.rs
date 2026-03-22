@@ -122,7 +122,7 @@ pub enum NumericKey {
     Strength,
     TrashCost,
     Tob,
-    TobOld
+    TobOld,
 }
 impl TryFrom<&str> for NumericKey {
     type Error = ParseError;
@@ -212,7 +212,7 @@ pub enum IsFilterType {
     Unique,
     Creepy,
     Wet,
-    Editorial
+    Editorial,
 }
 
 #[derive(Debug, Default)]
