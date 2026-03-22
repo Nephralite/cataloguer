@@ -175,17 +175,49 @@ pub(crate) fn do_search<'a>(
     match search_order {
         SearchOrder::Name => results.sort_by_cached_key(|sp| &sp.card.stripped_title),
         SearchOrder::Artist => results.sort_by_key(|sp| &sp.card.printings.last().unwrap().artist),
-        SearchOrder::Cost => results.sort_by_key(|sp| sp.card.cost),
-        SearchOrder::Type => results.sort_by_key(|sp| &sp.card.type_code),
-        SearchOrder::Faction => results.sort_by_key(|sp| faction_order(&sp.card.faction)),
-        SearchOrder::Influence => results.sort_by_key(|sp| sp.card.influence),
-        SearchOrder::Released => {
-            results.sort_by_key(|sp| &sp.card.printings.last().unwrap().code);
-            //results.sort_by_key(|sp| std::cmp::Reverse(&sp.card.printings.last().unwrap().code[..2]));
+        SearchOrder::Cost => {
+            results = results
+                .into_iter()
+                .filter(|sp| sp.card.cost.is_some())
+                .collect();
+            results.sort_by_key(|sp| (sp.card.cost, &sp.card.type_code, &sp.card.subtypes))
+        }
+        SearchOrder::Type => results.sort_by_key(|sp| (&sp.card.type_code, &sp.card.subtypes)),
+        SearchOrder::Faction => results.sort_by_key(|sp| {
+            (
+                faction_order(&sp.card.faction),
+                &sp.card.type_code,
+                &sp.card.subtypes,
+            )
+        }),
+        SearchOrder::Influence => {
+            results = results
+                .into_iter()
+                .filter(|sp| sp.card.influence.is_some())
+                .collect();
+            results.sort_by_key(|sp| {
+                (
+                    sp.card.influence,
+                    faction_order(&sp.card.faction),
+                    &sp.card.type_code,
+                    &sp.card.subtypes,
+                )
+            })
+        }
+        SearchOrder::Released | SearchOrder::Set => {
+            if matches!(settings.direction, Some(SearchDirection::Descending)) {
+                results.sort_by_key(|sp| {
+                    (
+                        &sp.card.printings.last().unwrap().code[..2],
+                        std::cmp::Reverse(&sp.card.printings.last().unwrap().code[2..]),
+                    )
+                })
+            } else {
+                results.sort_by_key(|sp| &sp.card.printings.last().unwrap().code);
+            }
         }
         SearchOrder::Random => results.shuffle(&mut thread_rng()),
         SearchOrder::Strength => results.sort_by_key(|sp| sp.card.strength),
-        SearchOrder::Set => return Err(SearchError::NotYetImplemented("sort by set".to_string())),
         SearchOrder::TrashOrBusto => {
             let ranks: Map<String, Value> = serde_json::from_str::<Map<String, Value>>(
                 &std::fs::read_to_string("assets/trashobusto.json").unwrap(),
