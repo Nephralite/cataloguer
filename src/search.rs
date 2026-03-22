@@ -217,7 +217,13 @@ pub(crate) fn do_search<'a>(
             }
         }
         SearchOrder::Random => results.shuffle(&mut thread_rng()),
-        SearchOrder::Strength => results.sort_by_key(|sp| sp.card.strength),
+        SearchOrder::Strength => {
+            results = results
+                .into_iter()
+                .filter(|sp| sp.card.strength.is_some())
+                .collect();
+            results.sort_by_key(|sp| (sp.card.strength, &sp.card.type_code, &sp.card.subtypes))
+        }
         SearchOrder::TrashOrBusto => {
             let ranks: Map<String, Value> = serde_json::from_str::<Map<String, Value>>(
                 &std::fs::read_to_string("assets/trashobusto.json").unwrap(),

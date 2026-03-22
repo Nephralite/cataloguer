@@ -651,7 +651,6 @@
     {
         "base_link": 0,
         "faction": "criminal",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Cyborg",
         "minimum_deck_size": 45,
@@ -1142,7 +1141,6 @@
     {
         "base_link": 1,
         "faction": "shaper",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Natural",
         "minimum_deck_size": 45,
@@ -1813,7 +1811,6 @@
     },
     {
         "faction": "haas-bioroid",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Megacorp",
         "minimum_deck_size": 45,
@@ -2230,7 +2227,6 @@
     },
     {
         "faction": "jinteki",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Megacorp",
         "minimum_deck_size": 45,
@@ -2628,7 +2624,6 @@
     },
     {
         "faction": "nbn",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Megacorp",
         "minimum_deck_size": 45,
@@ -3038,7 +3033,6 @@
     },
     {
         "faction": "weyland-consortium",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Megacorp",
         "minimum_deck_size": 45,
@@ -3746,7 +3740,6 @@
     {
         "base_link": 0,
         "faction": "anarch",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Natural",
         "minimum_deck_size": 45,
@@ -3982,8 +3975,6 @@
     },
     {
         "faction": "haas-bioroid",
-        "influence": 0,
-        "influence_limit": 15,
         "subtypes": "Megacorp",
         "minimum_deck_size": 45,
         "printings": [
@@ -4542,7 +4533,6 @@
     },
     {
         "faction": "jinteki",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Megacorp",
         "minimum_deck_size": 45,
@@ -4909,7 +4899,6 @@
     {
         "base_link": 0,
         "faction": "shaper",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "G-mod",
         "minimum_deck_size": 40,
@@ -5703,7 +5692,6 @@
     },
     {
         "faction": "weyland-consortium",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Megacorp",
         "minimum_deck_size": 45,
@@ -5892,7 +5880,6 @@
     {
         "base_link": 1,
         "faction": "criminal",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Natural",
         "minimum_deck_size": 45,
@@ -6732,7 +6719,6 @@
     },
     {
         "faction": "nbn",
-        "influence": 0,
         "influence_limit": 12,
         "subtypes": "Megacorp",
         "minimum_deck_size": 40,
@@ -6925,7 +6911,6 @@
     {
         "eternal_points": 3,
         "faction": "haas-bioroid",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -6947,7 +6932,6 @@
     },
     {
         "faction": "haas-bioroid",
-        "influence": 0,
         "influence_limit": 22,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -6969,7 +6953,6 @@
     },
     {
         "faction": "haas-bioroid",
-        "influence": 0,
         "influence_limit": 12,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -7512,7 +7495,6 @@
     {
         "base_link": 0,
         "faction": "shaper",
-        "influence": 0,
         "influence_limit": 10,
         "subtypes": "Cyborg",
         "minimum_deck_size": 45,
@@ -7550,7 +7532,6 @@
     {
         "base_link": 0,
         "faction": "shaper",
-        "influence": 0,
         "influence_limit": 1,
         "subtypes": "Natural",
         "minimum_deck_size": 45,
@@ -7573,7 +7554,6 @@
     {
         "base_link": 1,
         "faction": "shaper",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Natural",
         "minimum_deck_size": 45,
@@ -9155,7 +9135,6 @@
     {
         "base_link": 1,
         "faction": "anarch",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Cyborg - G-mod",
         "minimum_deck_size": 45,
@@ -10487,7 +10466,6 @@
     },
     {
         "faction": "weyland-consortium",
-        "influence": 0,
         "influence_limit": 10,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -11050,7 +11028,6 @@
     },
     {
         "faction": "jinteki",
-        "influence": 0,
         "influence_limit": 12,
         "subtypes": "Division",
         "minimum_deck_size": 40,
@@ -11072,7 +11049,6 @@
     },
     {
         "faction": "jinteki",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -11094,7 +11070,6 @@
     },
     {
         "faction": "jinteki",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -11117,7 +11092,6 @@
         "advancement_cost": 3,
         "agenda_points": 1,
         "faction": "jinteki",
-        "influence": 0,
         "subtypes": "Security",
         "printings": [
             {
@@ -11642,7 +11616,6 @@
     {
         "base_link": 1,
         "faction": "criminal",
-        "influence": 0,
         "influence_limit": 10,
         "subtypes": "Natural",
         "minimum_deck_size": 45,
@@ -11665,7 +11638,6 @@
     {
         "base_link": 0,
         "faction": "criminal",
-        "influence": 0,
         "influence_limit": 17,
         "subtypes": "Clone",
         "minimum_deck_size": 45,
@@ -11696,7 +11668,6 @@
     {
         "base_link": 0,
         "faction": "criminal",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Natural",
         "minimum_deck_size": 40,
@@ -12366,7 +12337,6 @@
     },
     {
         "faction": "nbn",
-        "influence": 0,
         "influence_limit": 17,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -12637,7 +12607,6 @@
     {
         "base_link": 1,
         "faction": "shaper",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Cyborg",
         "minimum_deck_size": 45,
@@ -12720,7 +12689,6 @@
     },
     {
         "faction": "haas-bioroid",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -13400,7 +13368,6 @@
     {
         "base_link": 0,
         "faction": "anarch",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "G-mod",
         "minimum_deck_size": 45,
@@ -13771,7 +13738,6 @@
     },
     {
         "faction": "weyland-consortium",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Corp",
         "minimum_deck_size": 45,
@@ -14388,7 +14354,6 @@
     {
         "base_link": 0,
         "faction": "criminal",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Natural",
         "minimum_deck_size": 45,
@@ -14616,7 +14581,6 @@
     {
         "eternal_points": 2,
         "faction": "jinteki",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -14986,7 +14950,6 @@
     },
     {
         "faction": "weyland-consortium",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Corp",
         "minimum_deck_size": 45,
@@ -15008,7 +14971,6 @@
     },
     {
         "faction": "weyland-consortium",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Corp",
         "minimum_deck_size": 45,
@@ -15030,7 +14992,6 @@
     },
     {
         "faction": "weyland-consortium",
-        "influence": 0,
         "influence_limit": 17,
         "subtypes": "Corp",
         "minimum_deck_size": 45,
@@ -15568,7 +15529,6 @@
     {
         "base_link": 1,
         "faction": "anarch",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Natural",
         "minimum_deck_size": 45,
@@ -15591,7 +15551,6 @@
     {
         "base_link": 0,
         "faction": "anarch",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "G-mod",
         "minimum_deck_size": 45,
@@ -15614,7 +15573,6 @@
     {
         "base_link": 0,
         "faction": "anarch",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Natural",
         "minimum_deck_size": 50,
@@ -16392,7 +16350,6 @@
     },
     {
         "faction": "jinteki",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -16681,7 +16638,6 @@
     {
         "base_link": 0,
         "faction": "shaper",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "G-mod",
         "minimum_deck_size": 45,
@@ -17214,7 +17170,6 @@
     },
     {
         "faction": "haas-bioroid",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 40,
@@ -17519,7 +17474,6 @@
     {
         "base_link": 1,
         "faction": "criminal",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "G-mod",
         "minimum_deck_size": 45,
@@ -18154,7 +18108,6 @@
     },
     {
         "faction": "nbn",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -18413,7 +18366,6 @@
     {
         "base_link": 0,
         "faction": "criminal",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Natural",
         "minimum_deck_size": 45,
@@ -18559,7 +18511,6 @@
     },
     {
         "faction": "jinteki",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -18786,7 +18737,6 @@
     },
     {
         "faction": "nbn",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 40,
@@ -18807,7 +18757,6 @@
     },
     {
         "faction": "nbn",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -18829,7 +18778,6 @@
     },
     {
         "faction": "nbn",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -19395,7 +19343,6 @@
     {
         "base_link": 0,
         "faction": "apex",
-        "influence": 0,
         "influence_limit": 25,
         "subtypes": "Digital",
         "minimum_deck_size": 45,
@@ -19564,7 +19511,6 @@
     {
         "base_link": 0,
         "faction": "adam",
-        "influence": 0,
         "influence_limit": 25,
         "subtypes": "Bioroid",
         "minimum_deck_size": 45,
@@ -19731,7 +19677,6 @@
     {
         "base_link": 2,
         "faction": "sunny-lebeau",
-        "influence": 0,
         "influence_limit": 25,
         "subtypes": "Natural",
         "minimum_deck_size": 50,
@@ -20078,7 +20023,6 @@
     {
         "base_link": 0,
         "faction": "shaper",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Natural",
         "minimum_deck_size": 45,
@@ -20582,7 +20526,6 @@
     },
     {
         "faction": "jinteki",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -20796,7 +20739,6 @@
     {
         "base_link": 1,
         "faction": "criminal",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Natural",
         "minimum_deck_size": 45,
@@ -22227,7 +22169,6 @@
     },
     {
         "faction": "nbn",
-        "influence": 0,
         "influence_limit": 17,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -22419,7 +22360,6 @@
     {
         "base_link": 0,
         "faction": "anarch",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Natural",
         "minimum_deck_size": 45,
@@ -22735,7 +22675,6 @@
     },
     {
         "faction": "nbn",
-        "influence": 0,
         "influence_limit": 12,
         "subtypes": "Megacorp",
         "minimum_deck_size": 45,
@@ -22953,7 +22892,6 @@
     {
         "base_link": 0,
         "faction": "criminal",
-        "influence": 0,
         "influence_limit": 12,
         "subtypes": "Natural",
         "minimum_deck_size": 40,
@@ -23185,7 +23123,6 @@
     },
     {
         "faction": "weyland-consortium",
-        "influence": 0,
         "influence_limit": 12,
         "subtypes": "Megacorp",
         "minimum_deck_size": 40,
@@ -23292,7 +23229,6 @@
     {
         "base_link": 0,
         "faction": "anarch",
-        "influence": 0,
         "influence_limit": 12,
         "subtypes": "Natural",
         "minimum_deck_size": 45,
@@ -23530,7 +23466,6 @@
     {
         "eternal_points": 3,
         "faction": "jinteki",
-        "influence": 0,
         "influence_limit": 12,
         "subtypes": "Megacorp",
         "minimum_deck_size": 45,
@@ -23791,7 +23726,6 @@
     {
         "base_link": 0,
         "faction": "shaper",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "G-mod - Stealth",
         "minimum_deck_size": 40,
@@ -23919,7 +23853,6 @@
     },
     {
         "faction": "haas-bioroid",
-        "influence": 0,
         "influence_limit": 12,
         "subtypes": "Megacorp",
         "minimum_deck_size": 45,
@@ -25286,7 +25219,6 @@
     },
     {
         "faction": "weyland-consortium",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Corp",
         "minimum_deck_size": 45,
@@ -25475,7 +25407,6 @@
     {
         "base_link": 0,
         "faction": "criminal",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "G-mod",
         "minimum_deck_size": 45,
@@ -26042,7 +25973,6 @@
     },
     {
         "faction": "jinteki",
-        "influence": 0,
         "influence_limit": 17,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -26233,7 +26163,6 @@
     {
         "base_link": 0,
         "faction": "anarch",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Cyborg",
         "minimum_deck_size": 50,
@@ -27494,7 +27423,6 @@
     {
         "base_link": 0,
         "faction": "criminal",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "G-mod",
         "minimum_deck_size": 45,
@@ -27769,7 +27697,6 @@
     {
         "base_link": 0,
         "faction": "shaper",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Natural",
         "minimum_deck_size": 45,
@@ -28121,7 +28048,6 @@
     },
     {
         "faction": "haas-bioroid",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -28437,7 +28363,6 @@
     },
     {
         "faction": "weyland-consortium",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Subsidiary",
         "minimum_deck_size": 40,
@@ -29557,7 +29482,6 @@
     },
     {
         "faction": "haas-bioroid",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -29895,7 +29819,6 @@
         "eternal_points": 4,
         "base_link": 1,
         "faction": "shaper",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "G-mod",
         "minimum_deck_size": 45,
@@ -30502,7 +30425,6 @@
     },
     {
         "faction": "nbn",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 40,
@@ -30692,7 +30614,6 @@
     {
         "base_link": 1,
         "faction": "criminal",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Natural",
         "minimum_deck_size": 45,
@@ -30991,7 +30912,6 @@
     },
     {
         "faction": "weyland-consortium",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -31078,7 +30998,6 @@
     {
         "base_link": 0,
         "faction": "anarch",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Cyborg",
         "minimum_deck_size": 45,
@@ -31768,7 +31687,6 @@
     {
         "eternal_points": 1,
         "faction": "jinteki",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -31918,7 +31836,6 @@
     {
         "base_link": 0,
         "faction": "anarch",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Natural",
         "minimum_deck_size": 40,
@@ -32065,7 +31982,6 @@
     {
         "base_link": 0,
         "faction": "criminal",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "G-mod",
         "minimum_deck_size": 50,
@@ -32215,7 +32131,6 @@
     {
         "base_link": 1,
         "faction": "shaper",
-        "influence": 0,
         "influence_limit": 12,
         "subtypes": "Clone",
         "minimum_deck_size": 45,
@@ -32444,7 +32359,6 @@
     },
     {
         "faction": "haas-bioroid",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Subsidiary",
         "minimum_deck_size": 45,
@@ -32615,7 +32529,6 @@
     },
     {
         "faction": "jinteki",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -32785,7 +32698,6 @@
     },
     {
         "faction": "nbn",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Subsidiary",
         "minimum_deck_size": 45,
@@ -32955,7 +32867,6 @@
     },
     {
         "faction": "weyland-consortium",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Subsidiary",
         "minimum_deck_size": 45,
@@ -33358,7 +33269,6 @@
     },
     {
         "faction": "neutral-corp",
-        "influence": 0,
         "influence_limit": null,
         "subtypes": "Police Department",
         "minimum_deck_size": 40,
@@ -33569,7 +33479,6 @@
     {
         "base_link": 1,
         "faction": "criminal",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Cyborg",
         "minimum_deck_size": 45,
@@ -33761,7 +33670,6 @@
     {
         "base_link": 1,
         "faction": "shaper",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Natural",
         "minimum_deck_size": 45,
@@ -34017,7 +33925,6 @@
     },
     {
         "faction": "haas-bioroid",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -34190,7 +34097,6 @@
     },
     {
         "faction": "jinteki",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -34770,7 +34676,6 @@
     {
         "base_link": 0,
         "faction": "anarch",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Natural",
         "minimum_deck_size": 45,
@@ -35744,7 +35649,6 @@
     },
     {
         "faction": "nbn",
-        "influence": 0,
         "influence_limit": 17,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -35901,7 +35805,6 @@
     },
     {
         "faction": "weyland-consortium",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -36106,7 +36009,6 @@
     {
         "base_link": 0,
         "faction": "anarch",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "G-mod",
         "minimum_deck_size": 40,
@@ -36304,7 +36206,6 @@
     {
         "base_link": 0,
         "faction": "criminal",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Cyborg",
         "minimum_deck_size": 40,
@@ -36499,7 +36400,6 @@
     {
         "base_link": 0,
         "faction": "shaper",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Natural",
         "minimum_deck_size": 40,
@@ -36820,7 +36720,6 @@
     },
     {
         "faction": "haas-bioroid",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Megacorp",
         "minimum_deck_size": 40,
@@ -36991,7 +36890,6 @@
     },
     {
         "faction": "jinteki",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Megacorp",
         "minimum_deck_size": 40,
@@ -37165,7 +37063,6 @@
     },
     {
         "faction": "nbn",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Megacorp",
         "minimum_deck_size": 40,
@@ -37339,7 +37236,6 @@
     },
     {
         "faction": "weyland-consortium",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Megacorp",
         "minimum_deck_size": 40,
@@ -37687,7 +37583,6 @@
     {
         "base_link": 0,
         "faction": "neutral-runner",
-        "influence": 0,
         "influence_limit": null,
         "subtypes": "Natural",
         "minimum_deck_size": 30,
@@ -37710,7 +37605,6 @@
     },
     {
         "faction": "neutral-corp",
-        "influence": 0,
         "influence_limit": null,
         "subtypes": "Megacorp",
         "minimum_deck_size": 30,
@@ -37733,7 +37627,6 @@
     {
         "base_link": 0,
         "faction": "anarch",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Cyborg",
         "minimum_deck_size": 45,
@@ -37952,7 +37845,6 @@
     {
         "base_link": 0,
         "faction": "criminal",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "G-mod",
         "minimum_deck_size": 45,
@@ -38174,7 +38066,6 @@
     {
         "base_link": 0,
         "faction": "shaper",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Cyborg",
         "minimum_deck_size": 45,
@@ -38776,7 +38667,6 @@
     },
     {
         "faction": "nbn",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -38981,7 +38871,6 @@
     {
         "eternal_points": 3,
         "faction": "weyland-consortium",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Corp",
         "minimum_deck_size": 45,
@@ -39763,7 +39652,6 @@
     {
         "base_link": 0,
         "faction": "neutral-runner",
-        "influence": 0,
         "influence_limit": null,
         "subtypes": "Digital - Natural",
         "minimum_deck_size": 40,
@@ -39809,7 +39697,6 @@
     },
     {
         "faction": "haas-bioroid",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -40005,7 +39892,6 @@
     },
     {
         "faction": "jinteki",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -40527,7 +40413,6 @@
     },
     {
         "faction": "neutral-corp",
-        "influence": 0,
         "influence_limit": null,
         "subtypes": "Corp",
         "minimum_deck_size": 45,
@@ -40742,7 +40627,6 @@
     {
         "base_link": 0,
         "faction": "criminal",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Bioroid",
         "minimum_deck_size": 45,
@@ -40957,7 +40841,6 @@
     {
         "base_link": 0,
         "faction": "shaper",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Natural",
         "minimum_deck_size": 45,
@@ -41369,7 +41252,6 @@
     },
     {
         "faction": "jinteki",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -41567,7 +41449,6 @@
     },
     {
         "faction": "nbn",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -41958,7 +41839,6 @@
     {
         "base_link": 0,
         "faction": "anarch",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "G-mod",
         "minimum_deck_size": 45,
@@ -42591,7 +42471,6 @@
     },
     {
         "faction": "haas-bioroid",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Division",
         "minimum_deck_size": 45,
@@ -43138,7 +43017,6 @@
     },
     {
         "faction": "weyland-consortium",
-        "influence": 0,
         "influence_limit": 15,
         "subtypes": "Corp",
         "minimum_deck_size": 50,
