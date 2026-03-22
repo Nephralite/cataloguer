@@ -43751,6 +43751,7 @@
     },
     {
         "type_code": "identity",
+        "subtypes": "Cyborg",
         "faction": "criminal",
         "minimum_deck_size":45,
         "influence_limit": 15,
@@ -43790,6 +43791,7 @@
     },
     {
         "type_code": "asset",
+        "subtypes": "Advertisement",
         "faction": "haas-bioroid",
         "influence": 3,
         "cost": 2,
@@ -44892,6 +44894,7 @@
     },
     {
         "type_code": "ice",
+        "subtypes": "Code Gate",
         "faction": "nbn",
         "cost": 4,
         "strength": 4,
@@ -44911,6 +44914,7 @@
     },
     {
         "type_code": "ice",
+        "subtypes": "Sentry - Observer",
         "faction": "neutral-corp",
         "cost": 2,
         "influence": 0,
@@ -44929,6 +44933,7 @@
     },
     {
         "type_code": "operation",
+        "subtypes": "Transaction",
         "faction": "neutral-corp",
         "cost": 3,
         "influence": 0,
@@ -45140,6 +45145,7 @@
     }
     ,{
         "type_code": "identity",
+        "subtypes": "Natural",
         "faction": "shaper",
         "influence_limit": 15,
         "minimum_deck_size": 45,
@@ -45159,6 +45165,7 @@
     {
         "type_code": "agenda",
         "faction": "neutral-corp",
+        "subtypes": "Initiative",
         "influence": 1,
         "advancement_cost": 4,
         "agenda_points": 2,
@@ -45925,6 +45932,7 @@
     },
     {
         "type_code": "agenda",
+        "subtypes": "Security",
         "faction": "jinteki",
         "influence": 0,
         "advancement_cost": 4,
