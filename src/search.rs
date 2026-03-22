@@ -251,6 +251,14 @@ fn search_impl<'a>(
             }
             Ok(pool.into_owned())
         }
+        QueryNode::Not(inner_node) => {
+            let inner_results = search_impl(*inner_node, backend, card_pool, depth + 1)?;
+            Ok(card_pool
+                .iter()
+                .filter(|&sp| !inner_results.contains(sp))
+                .copied()
+                .collect())
+        }
         QueryNode::TextFilter(text_filter) => {
             if matches!(text_filter.value, TextValue::Exact(_)) {
                 return Err(SearchError::NotYetImplemented(
@@ -549,15 +557,7 @@ fn search_impl<'a>(
                     .collect(),
             };
 
-            if text_filter.is_negated {
-                Ok(card_pool
-                    .iter()
-                    .filter(|&sp| !results.contains(sp))
-                    .copied()
-                    .collect())
-            } else {
-                Ok(results)
-            }
+            Ok(results)
         }
         QueryNode::NumFilter(num_filter) => {
             let results = match num_filter.key {
@@ -749,15 +749,7 @@ fn search_impl<'a>(
                 IsFilterType::Editorial => inner_search("s:\"black ops\" or s:\"gray ops\" or s:liability", backend, card_pool, depth+1)?
             };
 
-            if is_filter.is_negated {
-                Ok(card_pool
-                    .iter()
-                    .filter(|&sp| !results.contains(sp))
-                    .copied()
-                    .collect())
-            } else {
-                Ok(results)
-            }
+            Ok(results)
         }
     };
 
