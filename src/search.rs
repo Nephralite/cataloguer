@@ -224,6 +224,13 @@ pub(crate) fn do_search<'a>(
                 .collect();
             results.sort_by_key(|sp| (sp.card.strength, &sp.card.type_code, &sp.card.subtypes))
         }
+        SearchOrder::Memory => {
+            results = results
+                .into_iter()
+                .filter(|sp| sp.card.memory_cost.is_some())
+                .collect();
+            results.sort_by_key(|sp| (sp.card.memory_cost, &sp.card.subtypes));
+        }
         SearchOrder::TrashOrBusto => {
             let ranks: Map<String, Value> = serde_json::from_str::<Map<String, Value>>(
                 &std::fs::read_to_string("assets/trashobusto.json").unwrap(),

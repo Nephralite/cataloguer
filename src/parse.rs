@@ -1,4 +1,5 @@
 use pest::{iterators::Pair, Parser};
+
 use pest_derive::Parser;
 use regex::Regex;
 use thiserror::Error;
@@ -302,6 +303,7 @@ pub(crate) enum SearchOrder {
     Set,
     TrashOrBusto,
     Type,
+    Memory,
 }
 impl TryFrom<&str> for SearchOrder {
     type Error = ParseError;
@@ -319,6 +321,7 @@ impl TryFrom<&str> for SearchOrder {
             "set" => Ok(Self::Set),
             "tob" => Ok(Self::TrashOrBusto),
             "type" => Ok(Self::Type),
+            "memory" | "mem" => Ok(Self::Memory),
             _ => Err(ParseError::InvalidFilter(format!(
                 "not a valid search order: '{value}'"
             ))),
