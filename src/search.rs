@@ -233,7 +233,9 @@ pub(crate) fn do_search<'a>(
         }
         SearchOrder::TrashOrBusto => {
             let ranks: Map<String, Value> = serde_json::from_str::<Map<String, Value>>(
-                &std::fs::read_to_string("assets/trashobusto.json").unwrap(),
+                &std::fs::read_to_string("assets/trashobusto.json")
+                    .unwrap()
+                    .to_lowercase(),
             )
             .unwrap();
             results = results
