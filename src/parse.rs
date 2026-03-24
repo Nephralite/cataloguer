@@ -12,6 +12,7 @@ struct QueryParser;
 pub enum QueryNode {
     OrGroup(Vec<Box<QueryNode>>),
     AndGroup(Vec<Box<QueryNode>>),
+    Not(Box<QueryNode>),
     TextFilter(TextFilter),
     NumFilter(NumFilter),
     IsFilter(IsFilter),
@@ -22,7 +23,6 @@ pub struct TextFilter {
     pub key: TextKey,
     pub original_key: String,
     pub value: TextValue,
-    pub is_negated: bool,
 }
 
 #[derive(Debug)]
@@ -196,7 +196,6 @@ impl TryFrom<&str> for NumericComparator {
 #[derive(Debug)]
 pub struct IsFilter {
     pub filter_type: IsFilterType,
-    pub is_negated: bool,
 }
 
 #[derive(Debug)]
@@ -486,6 +485,15 @@ fn parse_query_group(
                 .map(|node| node.map(Box::new))
                 .collect::<Result<Vec<Box<QueryNode>>, ParseError>>()?,
         ))),
+        Rule::negation => {
+            let inner_negated = pair.into_inner().next().ok_or(ParseError::Unreachable("`-` has exactly one inner".to_string()))?;
+            let span = inner_negated.as_str().to_string();
+            match parse_query_group(inner_negated, settings) {
+                Ok(Some(node)) => Ok(Some(QueryNode::Not(Box::new(node)))),
+                Ok(None) => Err(ParseError::InvalidFilter(format!("cannot negate {}", span))),
+                Err(err) => Err(err),
+            }
+        },
         Rule::filter => parse_filter(pair, settings),
         other_rule => Err(ParseError::Unreachable(format!("expected one of `query_group | and_query | bracketed_query | or_query | filter`, got rule `{:?}`", other_rule))),
     }
@@ -517,8 +525,7 @@ fn parse_filter(
                 comparator: NumericComparator::try_from(comparator_str)?,
             })))
         }
-        Rule::negative_filter | Rule::positive_filter => {
-            let is_negated = matches!(the_filter.as_rule(), Rule::negative_filter);
+        Rule::positive_filter => {
             let mut iter = the_filter.into_inner();
             let key_str = iter.next().unwrap().as_str();
             let value_pair = iter.next().unwrap().into_inner().next().unwrap();
@@ -529,7 +536,7 @@ fn parse_filter(
             // `IsFilter`s instead.
             if key_str == "is" || key_str == "not" {
                 // we maybe shouldn't allow -not:xyz? but whatevs
-                let negated = is_negated ^ (key_str == "not");
+                let negated = key_str == "not";
                 if !matches!(
                     value_pair.as_rule(),
                     Rule::unquoted_value | Rule::quoted_value
@@ -538,7 +545,7 @@ fn parse_filter(
                         "cannot use regex/exact values in a '{key_str}:' filter"
                     )));
                 }
-                return Ok(Some(QueryNode::IsFilter(IsFilter {
+                let node = QueryNode::IsFilter(IsFilter {
                     filter_type: match text_value.value() {
                         "advanceable" => IsFilterType::Advanceable,
                         "corp" | "c" => IsFilterType::Corp,
@@ -562,8 +569,12 @@ fn parse_filter(
                             )))
                         }
                     },
-                    is_negated: negated,
-                })));
+                });
+                if negated {
+                    return Ok(Some(QueryNode::Not(Box::new(node))));
+                } else {
+                    return Ok(Some(node));
+                }
             }
 
             // Special case for setting search settings from the query.
@@ -623,11 +634,9 @@ fn parse_filter(
                 },
                 original_key: key_str.to_string(),
                 value: text_value,
-                is_negated,
             })))
         }
-        Rule::negative_value | Rule::positive_value => {
-            let is_negated = matches!(the_filter.as_rule(), Rule::negative_value);
+        Rule::positive_value => {
             let Some(value) = the_filter.into_inner().next() else {
                 return Err(ParseError::Unreachable(
                     "negative_value should always have inner".to_string(),
@@ -648,7 +657,6 @@ fn parse_filter(
                 key: TextKey::Name,
                 original_key: "".to_string(),
                 value: (&inner).try_into()?,
-                is_negated,
             })))
         }
         _ => Err(ParseError::Unreachable(
