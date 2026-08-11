@@ -37,6 +37,27 @@ pub fn faction_order(faction: &str) -> usize {
     }
 }
 
+pub fn type_order(t: &str) -> usize {
+    let order = [
+        "identity",
+        "event",
+        "hardware",
+        "program",
+        "resource",
+        "agenda",
+        "asset",
+        "ice",
+        "operation",
+        "upgrade"
+    ];
+    let answer = order.iter().position(|&r| r == t);
+    if answer.is_some() {
+        answer.unwrap()
+    } else {
+        255
+    }
+}
+
 // Struct used only inside the search.
 #[derive(Clone, Copy, PartialEq, Eq, Hash)]
 struct SearchPrinting<'a> {
@@ -180,14 +201,15 @@ pub(crate) fn do_search<'a>(
                 .into_iter()
                 .filter(|sp| sp.card.cost.is_some())
                 .collect();
-            results.sort_by_key(|sp| (sp.card.cost, &sp.card.type_code, &sp.card.subtypes))
+            results.sort_by_key(|sp| (sp.card.cost, type_order(&sp.card.type_code), &sp.card.subtypes))
         }
-        SearchOrder::Type => results.sort_by_key(|sp| (&sp.card.type_code, &sp.card.subtypes)),
+        SearchOrder::Type => results.sort_by_key(|sp| (type_order(&sp.card.type_code), &sp.card.subtypes)),
         SearchOrder::Faction => results.sort_by_key(|sp| {
             (
                 faction_order(&sp.card.faction),
-                &sp.card.type_code,
+                type_order(&sp.card.type_code),
                 &sp.card.subtypes,
+                &sp.card.stripped_title
             )
         }),
         SearchOrder::Influence => {
@@ -199,7 +221,7 @@ pub(crate) fn do_search<'a>(
                 (
                     sp.card.influence,
                     faction_order(&sp.card.faction),
-                    &sp.card.type_code,
+                    type_order(&sp.card.type_code),
                     &sp.card.subtypes,
                 )
             })
@@ -222,7 +244,7 @@ pub(crate) fn do_search<'a>(
                 .into_iter()
                 .filter(|sp| sp.card.strength.is_some())
                 .collect();
-            results.sort_by_key(|sp| (sp.card.strength, &sp.card.type_code, &sp.card.subtypes))
+            results.sort_by_key(|sp| (sp.card.strength, type_order(&sp.card.type_code), &sp.card.subtypes))
         }
         SearchOrder::Memory => {
             results = results
@@ -444,6 +466,7 @@ fn search_impl<'a>(
                         "j" | "jin" => "jinteki",
                         "n" => "nbn",
                         "w" | "wey" | "weyland" => "weyland-consortium",
+                        "acab" => "sunny-lebeau",
                         other => other,
                     }; //probably could be smarter but this is simple
                     if faction == "neutral" {
@@ -480,6 +503,7 @@ fn search_impl<'a>(
                         "elestartup" => "(cy:lib or cy:sg or cy:ele) -banned:elestartup -o:\"starter game only\"",
                         "neo" => "is:nsg -set:su21 -banned:neo -o:\"starter game only\"",
                         // "rig" | "postgateway" | "librealis" | "twocycle" => "date>=sg -banned:rig -o:\"starter game only\"",
+                        "nro" | "nroneo" => "is:nsg -set:su21 -cy:bor -set:ur -o:\"starter game only\"",
                         "25.12" => "is:nsg -set:vp -set:su21 -banned:25.12 -o:\"starter game only\"",
                         "24.12" => "cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) -banned:24.12 -o:\"starter game only\"",
                         "sunset" => "-banned:sunset -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) or cy:mor",
@@ -641,6 +665,27 @@ fn search_impl<'a>(
                     })
                     .copied()
                     .collect(),
+                NumericKey::NROPoints => {//these are only imported as needed to minimize load on general cataloguer searches, might lower performance for this search though
+                    let string = "assets/nrop.json";
+                    let ranks = serde_json::from_str::<Map<String, Value>>(
+                         &std::fs::read_to_string(string).unwrap().to_lowercase(),
+                    )
+                    .unwrap();
+                    card_pool
+                        .iter()
+                        .filter(|x| {
+                            if ranks.contains_key(&x.card.title) {
+                                num_filter.comparator.as_operator(
+                                    ranks[&x.card.title].as_i64().unwrap(),
+                                    num_filter.value as i64,
+                                )
+                            } else {
+                                false
+                            }
+                        })
+                        .copied()
+                        .collect()
+                }
                 NumericKey::InfluenceCost => card_pool
                     .iter()
                     .filter(|x| {
