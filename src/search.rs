@@ -596,7 +596,14 @@ fn search_impl<'a>(
                         ));
                     };
                     search_impl(node, backend, card_pool, depth + 1)?
-                }
+                },
+                TextKey::Side => {
+                    match text_filter.value.value() {
+                        "runner" | "r" => inner_search("is:runner", backend, card_pool, depth+1)?,
+                        "corp" | "c" => inner_search("is:corp", backend, card_pool, depth+1)?,
+                        _ => return Err(SearchError::QueryError("not a known side".to_owned()))
+                    }
+                },
                 TextKey::Subtype => {
                     //this is garbage code, I plan to remove this when piggy comes out and everyone
                     //forgets about illict
