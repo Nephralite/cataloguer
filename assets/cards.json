@@ -45036,7 +45036,7 @@
         }],
         "title": "Hiram “0mission” Svensson: Shadow of the Past ",
         "stripped_title": "Hiram 0mission Svensson: Shadow of the Past ",
-        "text": "Whenever you install or trash a piece of hardware (from any location), look at the top card of R&D.",
+        "text": "Whenever you install or trash a piece of hardware <i>(from any location)</i>, look at the top card of R&D.",
         "stripped_text": "Whenever you install or trash a piece of hardware (from any location), look at the top card of R&D.",
         "uniqueness": false
     },
@@ -45055,7 +45055,7 @@
         }],
         "title": "Let Them Dream",
         "stripped_title": "Let Them Dream",
-        "text": "When you score this agenda, you may search HQ, R&D, or Archives for 1 agenda and reveal it. (Shuffle R&D after searching it.) Add that card to HQ or the bottom of R&D.\nWhile this agenda is in the Runner's score area, it is worth 1 less agenda point.",
+        "text": "When you score this agenda, you may search HQ, R&D, or Archives for 1 agenda and reveal it. <i>(Shuffle R&D after searching it.)</i> Add that card to HQ or the bottom of R&D.\nWhile this agenda is in the Runner's score area, it is worth 1 less agenda point.",
         "stripped_text": "When you score this agenda, you may search HQ, R&D, or Archives for 1 agenda and reveal it. (Shuffle R&D after searching it.) Add that card to HQ or the bottom of R&D. While this agenda is in the Runner's score area, it is worth 1 less agenda point.",
         "uniqueness": false
     },
@@ -45074,8 +45074,8 @@
         }],
         "title": "Méliès City Luxury Line",
         "stripped_title": "Melies City Luxury Line",
-        "text": "As an additional cost to steal this agenda, the Runner must pay [click].\nWhen you score this agenda, gain [click].",
-        "stripped_text": "As an additional cost to steal this agenda, the Runner must pay [click]. When you score this agenda, gain [click].",
+        "text": "As an additional cost to steal this agenda, the Runner must spend [click].\nWhen you score this agenda, gain [click].",
+        "stripped_text": "As an additional cost to steal this agenda, the Runner must spend [click]. When you score this agenda, gain [click].",
         "uniqueness": false
     },
     {
@@ -45093,8 +45093,8 @@
         }],
         "title": "stick and poke",
         "stripped_title": "stick and poke",
-        "text": "The first time each turn you encounter a piece ice, it gains “[subroutine] Do 1 net damage. The Runner draws 1 card.” before all its printed subroutines for the remainder of the encounter.",
-        "stripped_text": "The first time each turn you encounter a piece ice, it gains “[subroutine] Do 1 net damage. The Runner draws 1 card.” before all its printed subroutines for the remainder of the encounter.",
+        "text": "The first time each turn you encounter a piece ice, it gains “[subroutine] Do 1 net damage. The Runner draws 1 card.” before its other subroutines, for the remainder of the encounter.",
+        "stripped_text": "The first time each turn you encounter a piece ice, it gains “[subroutine] Do 1 net damage. The Runner draws 1 card.” before its other printed subroutines, for the remainder of the encounter.",
         "uniqueness": true
     },
         {
@@ -45113,8 +45113,8 @@
         }],
         "title": "flagship",
         "stripped_title": "flagship",
-        "text": "Runs against this server cannot be declared successful. (This effect does not cause runs to become unsuccessful.)\nPersistent → During each run against this server, the Runner cannot access more than 1 card other than this upgrade.",
-        "stripped_text": "Runs against this server cannot be declared successful. (This effect does not cause runs to become unsuccessful.) Persistent -> During each run against this server, the Runner cannot access more than 1 card other than this upgrade.",
+        "text": "HQ or R&D only.\nRuns against this server cannot be declared successful. <i>(This effect does not cause runs to become unsuccessful.)</i>\nPersistent →  During each run against this server, the Runner cannot access more than 1 card other than this upgrade.",
+        "stripped_text": "HQ or R&D only. Runs against this server cannot be declared successful. (This effect does not cause runs to become unsuccessful.) Persistent -> During each run against this server, the Runner cannot access more than 1 card other than this upgrade.",
         "uniqueness": false
     },
     {
@@ -45131,8 +45131,8 @@
             "img_type": "nro",
             "set": "vp"
         }],
-        "title": "magistrate aurora",
-        "stripped_title": "magistrate aurora",
+        "title": "magistrate revontulet",
+        "stripped_title": "magistrate revontulet",
         "text": "As an additional cost to steal an agenda, the Runner must pay 3[credit].\nWhenever an agenda is scored, the Runner loses 3[credit].",
         "stripped_text": "As an additional cost to steal an agenda, the Runner must pay 3[credit]. Whenever an agenda is scored, the Runner loses 3[credit].",
         "uniqueness": true
@@ -45192,8 +45192,8 @@
         }],
         "title": "tailgate",
         "stripped_title": "tailgate",
-        "text": "This event costs 1[credit] less for each ice protecting HQ.\nRun HQ. If successful, when you breach HQ during this run, access 2 additional cards.",
-        "stripped_text": "This event costs 1[credit] less for each ice protecting HQ. Run HQ. If successful, when you breach HQ during this run, access 2 additional cards.",
+        "text": "The play cost of this event is lowered by 1[credit] for each ice protecting HQ.\nRun HQ. If successful, access 2 additional cards when you breach HQ.",
+        "stripped_text": "The play cost of this event is lowered by 1[credit] for each ice protecting HQ. Run HQ. If successful, access 2 additional cards when you breach HQ.",
         "uniqueness": false
     },
     {
@@ -45251,8 +45251,8 @@
         }],
         "title": "event horizon",
         "stripped_title": "event horizon",
-        "text": "[trash]: End the run. Use this ability only during a run on this server.\n[subroutine] Trash 1 installed program unless the Runner pays 3[credit].\n[subroutine] End the run unless the Runner pays 3[credit].",
-        "stripped_text": "[trash]: End the run. Use this ability only during a run on this server. [subroutine] Trash 1 installed program unless the Runner pays 3[credit]. [subroutine] End the run unless the Runner pays 3[credit].",
+        "text": "[trash]: End the run. Use this ability only during a run against this server.\n[subroutine] Trash 1 installed program unless the Runner pays 3[credit].\n[subroutine] End the run unless the Runner pays 3[credit].",
+        "stripped_text": "[trash]: End the run. Use this ability only during a run against this server. [subroutine] Trash 1 installed program unless the Runner pays 3[credit]. [subroutine] End the run unless the Runner pays 3[credit].",
         "uniqueness": false
     },
     {
@@ -45308,8 +45308,8 @@
         }],
         "title": "beta build",
         "stripped_title": "beta build",
-        "text": "Search your stack for 1 non-virus program and install it, ignoring all costs. Run any server. When that run ends, if that program is still installed, add it to the top of the stack.",
-        "stripped_text": "Search your stack for 1 non-virus program and install it, ignoring all costs. Run any server. When that run ends, if that program is still installed, add it to the top of the stack.",
+        "text": "Search your stack for 1 non-virus program. Install it, ignoring all costs. <i>(Shuffle your stack after searching it.)</i> Run any server. When that run ends, if that program has not been uninstalled, add it to the top of your stack.",
+        "stripped_text": "Search your stack for 1 non-virus program. Install it, ignoring all costs. (Shuffle your stack after searching it.) Run any server. When that run ends, if that program is has not been uninstalled, add it to the top of your stack.",
         "uniqueness": false
     },
     {
@@ -45322,7 +45322,7 @@
             "code": "36013",
             "img_type": "nro",
             "set": "vp",
-            "flavour": "“nice job kid, now lose the tail”"
+            "flavour": "“nice job, kid. Now lose the tail.”"
         }],
         "title": "borrowed goods",
         "stripped_title": "borrowed goods",
@@ -45341,12 +45341,12 @@
             "code": "36021",
             "img_type": "nrdb",
             "set": "vp",
-            "flavour": "I know who I am"
+            "flavour": "I know who I am."
         }],
         "title": "touchstone",
         "stripped_title": "touchstone",
-        "text": "The first time each turn you play an event, place 1[credit] on this hardware.\nUse hosted credits during runs.",
-        "stripped_text": "The first time each turn you play an event, place 1[credit] on this hardware. Use hosted credits during runs.",
+        "text": "The first time each turn you play an event, place 1[credit] on this hardware.\nYou can spend hosted credits during runs.",
+        "stripped_text": "The first time each turn you play an event, place 1[credit] on this hardware. You can spend hosted credits during runs.",
         "uniqueness": true
     },
     {
@@ -45365,8 +45365,8 @@
         }],
         "title": "knowledge seeker",
         "stripped_title": "knowledge seeker",
-        "text": "When an encounter with this ice ends, if there are 3 or more hosted virus counters on it, purge virus counters and derez it.\n[subroutine] Place 1 virus counter on this ice.\n[subroutine] Look at the top 4 cards of R&D and arrange them in any order.\n[subroutine] End the run.",
-        "stripped_text": "When an encounter with this ice ends, if there are 3 or more hosted virus counters on it, purge virus counters and derez it. [subroutine] Place 1 virus counter on this ice. [subroutine] Look at the top 4 cards of R&D and arrange them in any order. [subroutine] End the run.",
+        "text": "When an encounter with this ice ends, if there are 3 or more hosted virus counters, purge virus counters and derez this ice.\n[subroutine] Place 1 virus counter on this ice.\n[subroutine] Look at the top 4 cards of R&D and arrange them in any order.\n[subroutine] End the run.",
+        "stripped_text": "When an encounter with this ice ends, if there are 3 or more hosted virus counters, purge virus counters and derez this ice. [subroutine] Place 1 virus counter on this ice. [subroutine] Look at the top 4 cards of R&D and arrange them in any order. [subroutine] End the run.",
         "uniqueness": false
     },
     {
@@ -45383,8 +45383,8 @@
         }],
         "title": "rotary",
         "stripped_title": "rotary",
-        "text": "+1[mu]\nWhenever you breach HQ or R&D during a successful run, you may take 1 tag to access 1 additional card.\n[click], 2[credit]: Trash this hardware. Only the Corp may use this ability, and only if you are tagged.\nLimit 1 console per player.",
-        "stripped_text": "+1[mu] Whenever you breach HQ or R&D during a successful run, you may take 1 tag to access 1 additional card. [click], 2[credit]: Trash this hardware. Only the Corp may use this ability, and only if you are tagged. Limit 1 console per player.",
+        "text": "+1[mu]\nWhenever you breach HQ or R&D, you may take 1 tag to access 1 additional card.\n[click], 2[credit]: Trash this hardware. Only the Corp can use this ability, and only if you are tagged.\nLimit 1 <strong>console</strong> per player.",
+        "stripped_text": "+1[mu] Whenever you breach HQ or R&D, you may take 1 tag to access 1 additional card. [click], 2[credit]: Trash this hardware. Only the Corp can use this ability, and only if you are tagged. Limit 1 console per player.",
         "uniqueness": true
     },
     {
@@ -45422,8 +45422,8 @@
         }],
         "title": "baker",
         "stripped_title": "baker",
-        "text": "Once per turn → [click]: Run Archives. If that run would be declared successful, you may spend 1[credit] from a stealth card to change the attacked server to HQ or R&D for the remainder of that run.",
-        "stripped_text": "Once per turn -> [click]: Run Archives. If that run would be declared successful, you may spend 1[credit] from a stealth card to change the attacked server to HQ or R&D for the remainder of that run.",
+        "text": "Once per turn →  [click]: Run Archives. When you would approach Archives <i>(after passing all ice)</i>, you may pay 1[credit] to change the attacked server to HQ or R&D and approach that server. Spend credits only from <strong>stealth</strong> cards to pay this cost.",
+        "stripped_text": "Once per turn -> [click]: Run Archives. When you would approach Archives (after passing all ice), you may spend 1[credit] to change the attacked server to HQ or R&D and approach that server. Spend credits only from stealth cards to pay this cost.",
         "uniqueness": false
     },
     {
@@ -45442,8 +45442,8 @@
         }],
         "title": "vertigo",
         "stripped_title": "vertigo",
-        "text": "When the Runner passes this ice, if they have no remaining [click], they cannot steal or trash cards for the remainder of this run.\n[subroutine] The Runner loses [click].",
-        "stripped_text": "When the Runner passes this ice, if they have no remaining [click], they cannot steal or trash cards for the remainder of this run. [subroutine] The Runner loses [click].",
+        "text": "When the Runner passes this ice, if they have no [click] remaining, they cannot steal or trash cards for the remainder of this run.\n[subroutine] The Runner loses [click].",
+        "stripped_text": "When the Runner passes this ice, if they have no [click] remaining, they cannot steal or trash cards for the remainder of this run. [subroutine] The Runner loses [click].",
         "uniqueness": false
     },
     {
@@ -45462,8 +45462,8 @@
         }],
         "title": "tocsin",
         "stripped_title": "tocsin",
-        "text": "[click], 1[credit], reveal and trash this ice from HQ: Search R&D for 1 barrier and 1 sentry. Reveal them and add them to HQ.\n[subroutine] The Runner loses 2[credit].\n[subroutine] End the run.\n[subroutine] End the run.",
-        "stripped_text": "[click], 1[credit], reveal and trash this ice from HQ: Search R&D for 1 barrier and 1 sentry. Reveal them and add them to HQ. [subroutine] The Runner loses 2[credit]. [subroutine] End the run. [subroutine] End the run.",
+        "text": "[click], 1[credit], reveal and trash this ice from HQ: Search R&D for up to 1 barrier and up to 1 sentry and reveal them. <i>(Shuffle R&D after searching it.)</i> Add those cards to HQ.\n[subroutine] The Runner loses 2[credit].\n[subroutine] End the run.\n[subroutine] End the run.",
+        "stripped_text": "[click], 1[credit], reveal and trash this ice from HQ: Search R&D for up to 1 barrier and up to 1 sentry and reveal them. (Shuffle R&D after searching it.) Add those cards to HQ. [subroutine] The Runner loses 2[credit]. [subroutine] End the run. [subroutine] End the run.",
         "uniqueness": false
     },
     {
@@ -45482,8 +45482,8 @@
         }],
         "title": "vicsek",
         "stripped_title": "vicsek",
-        "text": "[subroutine] For each tag the Runner has, do 1 net damage and give them 1 tag.\n[subroutine] Give the Runner 1 tag. Trash this ice.",
-        "stripped_text": "[subroutine] For each tag the Runner has, do 1 net damage and give them 1 tag. [subroutine] Give the Runner 1 tag. Trash this ice.",
+        "text": "[subroutine] Do X net damage and give the Runner X tags. X is equal to the number of tags the Runner has.\n[subroutine] Give the Runner 1 tag. Trash this ice.",
+        "stripped_text": "[subroutine] Do X net damage and give the Runner X tags. X is equal to the number of tags the Runner has. [subroutine] Give the Runner 1 tag. Trash this ice.",
         "uniqueness": false
     },
     {
@@ -45521,8 +45521,8 @@
         }],
         "title": "the red room",
         "stripped_title": "the red room",
-        "text": "Central server only.\nThe first time each turn an agenda is scored or stolen, place 1 power counter on this upgrade.\nHosted power counter: End the run. Use this ability only during a run on another server.",
-        "stripped_text": "Central server only. The first time each turn an agenda is scored or stolen, place 1 power counter on this upgrade. Hosted power counter: End the run. Use this ability only during a run on another server.",
+        "text": "Central server only.\nThe first time each turn an agenda is scored or stolen, place 1 power counter on this upgrade.\nHosted power counter: End the run. Use this ability only during a run against another server.",
+        "stripped_text": "Central server only. The first time each turn an agenda is scored or stolen, place 1 power counter on this upgrade. Hosted power counter: End the run. Use this ability only during a run against another server.",
         "uniqueness": true
     },
     {
@@ -45560,8 +45560,8 @@
         }],
         "title": "ezam",
         "stripped_title": "ezam",
-        "text": "[click]: Swap this ice with another installed ice.\n[subroutine] Look at the top card of R&D. You may add that card to the bottom of R&D.\n[subroutine] Each piece of ice protecting this server gains +1 strength for the remainder of this run.",
-        "stripped_text": "[click]: Swap this ice with another installed ice. [subroutine] Look at the top card of R&D. You may add that card to the bottom of R&D. [subroutine] Each piece of ice protecting this server gains +1 strength for the remainder of this run.",
+        "text": "[click]: Swap this ice with another installed piece of ice.\n[subroutine] Look at the top card of R&D. You may add that card to the bottom of R&D.\n[subroutine] Each piece of ice gets +1 strength for the remainder of this run.",
+        "stripped_text": "[click]: Swap this ice with another installed piece of ice. [subroutine] Look at the top card of R&D. You may add that card to the bottom of R&D. [subroutine] Each piece of ice protecting gets +1 strength for the remainder of this run.",
         "uniqueness": false
     },
     {
@@ -45579,8 +45579,8 @@
         }],
         "title": "read-write share",
         "stripped_title": "read-write share",
-        "text": "When you install this card and when your turn begins, you may host 1 card from your grip on this program facedown. If you do, draw 1 card. Then, if there are 5 or more hosted cards, trash this program.\n[trash]: Shuffle all hosted cards into the stack.",
-        "stripped_text": "When you install this card and when your turn begins, you may host 1 card from your grip on this program facedown. If you do, draw 1 card. Then, if there are 5 or more hosted cards, trash this program. [trash]: Shuffle all hosted cards into the stack.",
+        "text": "Limit 4 hosted cards.\nWhen you install this program and when your turn begins, you may host 1 card from your grip on this program facedown to draw 1 card.\n[trash]: Shuffle all hosted cards into the stack.",
+        "stripped_text": "Limit 4 hosted cards. When you install this program and when your turn begins, you may host 1 card from your grip on this program facedown to draw 1 card. [trash]: Shuffle all hosted cards into the stack.",
         "uniqueness": false
     },
     {
@@ -45597,7 +45597,7 @@
         }],
         "title": "methuselah",
         "stripped_title": "methuselah",
-        "text": "+1[mu]\nWhenever a run begins, you may trash 1 piece of hardware from your grip to place 2[credit] on this hardware.\nYou can spend hosted credits during runs.\nLimit 1 console per player.",
+        "text": "+1[mu]\nWhenever a run begins, you may trash 1 piece of hardware from your grip to place 2[credit] on this hardware.\nYou can spend hosted credits during runs.\nLimit 1 <strong>console</strong> per player.",
         "stripped_text": "+1[mu] Whenever a run begins, you may trash 1 piece of hardware from your grip to place 2[credit] on this hardware. You can spend hosted credits during runs. Limit 1 console per player.",
         "uniqueness": true
     },
@@ -45617,8 +45617,8 @@
         }],
         "title": "grubber",
         "stripped_title": "grubber",
-        "text": "When you rez this ice, take 1 bad publicity if it is protecting a central server.\n[subroutine] End the run unless the Runner pays 3[credit].\n[subroutine] End the run unless the Runner pays 3[credit].",
-        "stripped_text": "When you rez this ice, take 1 bad publicity if it is protecting a central server. [subroutine] End the run unless the Runner pays 3[credit]. [subroutine] End the run unless the Runner pays 3[credit].",
+        "text": "When you rez this ice, if it is protecting a central server, take 1 bad publicity.\n[subroutine] End the run unless the Runner pays 3[credit].\n[subroutine] End the run unless the Runner pays 3[credit].",
+        "stripped_text": "When you rez this ice, if it is protecting a central server, take 1 bad publicity. [subroutine] End the run unless the Run/ner pays 3[credit]. [subroutine] End the run unless the Runner pays 3[credit].",
         "uniqueness": false
     },
     {
@@ -45636,8 +45636,8 @@
         }],
         "title": "hype machine",
         "stripped_title": "hype machine",
-        "text": "This upgrade costs 6[credit] less to rez if an agenda was scored or stolen this turn.\n[trash]: Place 1 advancement counter on a card in the root of this server that can be advanced.",
-        "stripped_text": "This upgrade costs 6[credit] less to rez if an agenda was scored or stolen this turn. [trash]: Place 1 advancement counter on a card in the root of this server that can be advanced.",
+        "text": "As long as an agenda was scored or stolen this turn, the rez cost of this upgrade is lowered by 6[credit].\n[trash]: Place 1 advancement counter on a card you can advance in the root of this server.",
+        "stripped_text": "As long as an agenda was scored or stolen this turn, the rez cost of this upgrade is lowered by 6[credit]. [trash]: Place 1 advancement counter on a card you can advance in the root of this server.",
         "uniqueness": false
     },
     {
@@ -45655,8 +45655,8 @@
         }],
         "title": "retirement plan",
         "stripped_title": "retirement plan",
-        "text": "As an additional cost to play this operation, spend [click].\nInstall 1 non-upgrade card from Archives.",
-        "stripped_text": "As an additional cost to play this operation, spend [click]. Install 1 non-upgrade card from Archives.",
+        "text": "As an additional cost to play this operation, spend [click].\nInstall 1 agenda, asset or peice of ice from Archives.",
+        "stripped_text": "As an additional cost to play this operation, spend [click]. Install 1 agenda asset or peice of ice from Archives.",
         "uniqueness": false
     },
     {
@@ -45666,7 +45666,7 @@
         "influence": 1,
         "cost": 2,
         "printings": [{
-            "artist": "generated",
+            "artist": "Emilio Rodriguez",
             "code": "36006",
             "img_type": "nro",
             "set": "vp",
@@ -45674,8 +45674,8 @@
         }],
         "title": "hackerspace",
         "stripped_title": "hackerspace",
-        "text": "You can install unique (◆) connection and unique (◆) companion resources onto this resource. Each resource installed this way costs 1[credit] less to install.\nIf there is a hosted connection and companion, you get +2 maximum hand size.",
-        "stripped_text": "You can install unique (◆) connection and unique (◆) companion resources onto this resource. Each resource installed this way costs 1[credit] less to install. If there is a hosted connection and companion, you get +2 maximum hand size.",
+        "text": "You can install unique <i>(◆)</i> companion and unique <i>(◆)</i> connection resources onto this resource. Each resource installed this way costs 1[credit] less to install.\nIf there is a hosted connection and a hosted companion, you get +2 maximum hand size.",
+        "stripped_text": "You can install unique <i>(◆)</i> companion and unique <i>(◆)</i> connection resources onto this resource. Each resource installed this way costs 1[credit] less to install. If there is a hosted connection and a hosted companion, you get +2 maximum hand size.",
         "uniqueness": true
     },
     {
@@ -45710,8 +45710,8 @@
         }],
         "title": "perfect recall",
         "stripped_title": "perfect recall",
-        "text": "When an agenda is scored or stolen from this server or its root, place 2 power counters on this upgrade.\nHosted power counter or [trash]: Reveal 1 card from HQ. The Runner cannot trash or steal copies of the revealed card during this run. Use this ability only during a run.",
-        "stripped_text": "When an agenda is scored or stolen from this server or its root, place 2 power counters on this upgrade. Hosted power counter or [trash]: Reveal 1 card from HQ. The Runner cannot trash or steal copies of the revealed card during this run. Use this ability only during a run.",
+        "text": "When you rez this upgrade and whenever an agenda is scored or stolen from this server or its root, place 1 power counter on this upgrade.\n<strong>Hosted power counter</strong>: Reveal 1 card in HQ. The Runner cannot steal or trash copies of that card for the remainder of this run. Use this ability only during a run.",
+        "stripped_text": "When you rez this upgrade and whenever an agenda is scored or stolen from this server or its root, place 1 power counter on this upgrade. Hosted power counter: Reveal 1 card in HQ. The Runner cannot steal or trash copies of that card for the remainder of this run. Use this ability only during a run.",
         "uniqueness": false
     },
     {
@@ -45728,8 +45728,8 @@
         }],
         "title": "aircheck",
         "stripped_title": "aircheck",
-        "text": "Place 4[credit] on this event. While this event is active, you can spend hosted credits, and credits cannot leave your credit pool.\nRun HQ or R&D. When that run ends, if it was successful, you may run a remote server.",
-        "stripped_text": "Place 4[credit] on this event. While this event is active, you can spend hosted credits, and credits cannot leave your credit pool. Run HQ or R&D. When that run ends, if it was successful, you may run a remote server.",
+        "text": "Place 4[credit] on this event. While this event is active, you can spend hosted credits, and you cannot lose or spend credits from your credit pool.\nRun HQ or R&D.\nWhen that run ends, if it was successful, you may run a remote server.",
+        "stripped_text": "Place 4[credit] on this event. While this event is active, you can spend hosted credits, and cyou cannot lose or spend credits from your credit pool. Run HQ or R&D. When that run ends, if it was successful, you may run a remote server.",
         "uniqueness": false
     },
     {
@@ -45743,12 +45743,12 @@
             "code": "36002",
             "img_type": "nro",
             "set": "vp",
-            "flavour": "“The walking flatlined will never know the difference between a syberwall and a Saisentan. Use that fact!”-Cracking Corps for Fun and Profit"
+            "flavour": "“The walking flatlined will never know the difference between a cyberwall and a Saisentan. Use that fact!”-Cracking Corps for Fun and Profit"
         }],
         "title": "take a dive",
         "stripped_title": "take a dive",
-        "text": "Run HQ or R&D. If successful, and a subroutine resolved during this run, the Corp takes 1 bad publicity.\nRemove this event from the game.",
-        "stripped_text": "Run HQ or R&D. If successful, and a subroutine resolved during this run, the Corp takes 1 bad publicity. Remove this event from the game.",
+        "text": "Run HQ or R&D. If successful, and if a subroutine resolved during this run, give the Corp 1 bad publicity.\nRemove this event from the game.",
+        "stripped_text": "Run HQ or R&D. If successful, and if a subroutine resolved during this run, give the Corp 1 bad publicity. Remove this event from the game.",
         "uniqueness": false
     },
     {
@@ -45765,8 +45765,8 @@
         }],
         "title": "the tungsten tailor",
         "stripped_title": "the tungsten tailor",
-        "text": "All ice has -1 strength.\nThe first time each turn you break 1 or more subroutines on a piece of ice with 0 or less strength, gain 1[credit].",
-        "stripped_text": "All ice has -1 strength. The first time each turn you break 1 or more subroutines on a piece of ice with 0 or less strength, gain 1[credit].",
+        "text": "Each peice of ice has -1 strength.\nThe first time each turn you break a subroutine on a piece of ice with 0 or less strength, gain 1[credit].",
+        "stripped_text": "Each peice of ice has -1 strength. The first time each turn you break a subroutine on a piece of ice with 0 or less strength, gain 1[credit].",
         "uniqueness": true
     },
     {
@@ -45784,8 +45784,8 @@
         }],
         "title": "realloc()",
         "stripped_title": "realloc()",
-        "text": "As an additional cost to play this operation, spend [click].\nDerez 2 rezzed pieces of ice. Gain credits equal to their combined printed rez costs.",
-        "stripped_text": "As an additional cost to play this operation, spend [click]. Derez 2 rezzed pieces of ice. Gain credits equal to their combined printed rez costs.",
+        "text": "As an additional cost to play this operation, spend [click].\nChoose 2 rezzed pieces of ice. For each chosen peice of ice, gain credits equal to its printed rez cost, then derez it.",
+        "stripped_text": "As an additional cost to play this operation, spend [click]. Derez 2 rezzed pieces of ice. For each chosen peice of ice, gain credits equal to their printed rez cost, then derez it.",
         "uniqueness": false
     },
     {
@@ -45804,8 +45804,8 @@
         }],
         "title": "reverb",
         "stripped_title": "reverb",
-        "text": "The rez cost of this ice is reduced by 1[credit] for each other unrezzed ice.\n[subroutine] End the run.\n[subroutine] End the run.",
-        "stripped_text": "The rez cost of this ice is reduced by 1[credit] for each other unrezzed ice. [subroutine] End the run. [subroutine] End the run.",
+        "text": "The rez cost of this ice is reduced by 1[credit] for each other unrezzed piece of ice.\n[subroutine] End the run.\n[subroutine] End the run.",
+        "stripped_text": "The rez cost of this ice is reduced by 1[credit] for each other unrezzed piece of ice. [subroutine] End the run. [subroutine] End the run.",
         "uniqueness": false
     },
     {
@@ -45824,8 +45824,8 @@
         }],
         "title": "lotus haze",
         "stripped_title": "lotus haze",
-        "text": "When you score this agenda, place 3 agenda counters on it.\nHosted agenda counter: Move a rezzed upgrade to the root of another server.",
-        "stripped_text": "When you score this agenda, place 3 agenda counters on it. Hosted agenda counter: Move a rezzed upgrade to the root of another server.",
+        "text": "When you score this agenda, place 3 agenda counters on it.\n<strong>Hosted agenda counter:</strong> Move a rezzed upgrade to the root of another server.",
+        "stripped_text": "When you score this agenda, place 3 agenda counters on it. <strong>Hosted agenda counter:</strong> Move a rezzed upgrade to the root of another server.",
         "uniqueness": false
     },
     {
@@ -45844,8 +45844,8 @@
         }],
         "title": "lethe",
         "stripped_title": "lethe",
-        "text": "Whenever the Runner passes this ice after encountering it, if no subroutines resolved during that encounter, give the Runner 1 tag.\n[subroutine] You may add 1 card from Archives to the top or bottom of R&D.\n[subroutine] Add 1 installed Runner card to the grip.",
-        "stripped_text": "Whenever the Runner passes this ice after encountering it, if no subroutines resolved during that encounter, give the Runner 1 tag. [subroutine] You may add 1 card from Archives to the top or bottom of R&D. [subroutine] Add 1 installed Runner card to the grip.",
+        "text": "Whenever the Runner bypasses or fully breaks this ice, give the Runner 1 tag.\n[subroutine] You may add 1 card from Archives to the top or bottom of R&D.\n[subroutine] Add 1 installed Runner card to the grip.",
+        "stripped_text": "Whenever the Runner bypasses or fully breaks this ice, give the Runner 1 tag. [subroutine] You may add 1 card from Archives to the top or bottom of R&D. [subroutine] Add 1 installed Runner card to the grip.",
         "uniqueness": false
     },
     {
@@ -45863,8 +45863,8 @@
         }],
         "title": "reanimation protocol",
         "stripped_title": "reanimation protocol",
-        "text": "Install and rez 1 piece of ice from Archives, paying a total of 10[credit] less.\nIf the rezzed ice is not Liability, take 1 bad publicity.",
-        "stripped_text": "Install and rez 1 piece of ice from Archives, paying a total of 10[credit] less. If the rezzed ice is not Liability, take 1 bad publicity.",
+        "text": "Install and rez 1 piece of ice from Archives, paying a total of 10[credit] less.\nIf you rezzed a peice of non-<strong>liability</strong> ice this way, take 1 bad publicity.",
+        "stripped_text": "Install and rez 1 piece of ice from Archives, paying a total of 10[credit] less. If you rezzed a peice of non-liability ice this way, take 1 bad publicity.",
         "uniqueness": false
     },
     {
@@ -45919,8 +45919,8 @@
         }],
         "title": "luana campos",
         "stripped_title": "luana campos",
-        "text": "When your turn begins, you may move 1 of your bad publicity to this asset. If you do, gain 3[credit] and draw 1 card. (Hosted bad publicity doesn't have any effect.)\nWhen this asset is uninstalled, take all hosted bad publicity.",
-        "stripped_text": "When your turn begins, you may move 1 of your bad publicity to this asset. If you do, gain 3[credit] and draw 1 card. (Hosted bad publicity doesn't have any effect.) When this asset is uninstalled, take all hosted bad publicity.",
+        "text": "When your turn begins, you may host 1 of your bad publicity counters on this asset. <i>(It has no effect while hosted.)</i> If you do, gain 3[credit] and draw 1 card.\n [interrupt] -> When this asset would be uninstalled, take all hosted bad publicity.",
+        "stripped_text": "When your turn begins, you may host 1 of your bad publicity on this asset. (It has no effect while hosted.) If you do, gain 3[credit] and draw 1 card. [interrupt] -> When this asset would be uninstalled, take all hosted bad publicity.",
         "uniqueness": true
     },
     {
@@ -45938,8 +45938,8 @@
         }],
         "title": "nurse hanh",
         "stripped_title": "nurse hanh",
-        "text": "Whenever at least 2 cards in Archives are turned faceup during a run on Archives, draw 2 cards.",
-        "stripped_text": "Whenever at least 2 cards in Archives are turned faceup during a run on Archives, draw 2 cards.",
+        "text": "Whenever 2 or more cards in Archives are turned faceup, draw 2 cards.",
+        "stripped_text": "Whenever 2 or more cards in Archives are turned faceup, draw 2 cards.",
         "uniqueness": true
     },
     {
@@ -45957,8 +45957,8 @@
         }],
         "title": "sipa",
         "stripped_title": "sipa",
-        "text": "The first time each turn you fully break the outermost piece of ice protecting a server, you may swap it with another installed piece of ice.",
-        "stripped_text": "The first time each turn you fully break the outermost piece of ice protecting a server, you may swap it with another installed piece of ice.",
+        "text": "The first time each turn you pass the outermost piece of ice protecting a server after fully breaking this, you may swap it with another installed piece of ice.",
+        "stripped_text": "The first time each turn you pass the outermost piece of ice protecting a server after fully breaking this, you may swap it with another installed piece of ice.",
         "uniqueness": false
     },
     {
@@ -45974,8 +45974,8 @@
         }],
         "title": "word on the street",
         "stripped_title": "word on the street",
-        "text": "As an additional cost for the Corp to score an agenda they installed this turn, the Corp must add this resource to their score area as an agenda worth −1 agenda points with \"You cannot forfeit this agenda.\"\nWhen the Corp scores an agenda they did not install this turn, trash this resource, gain 4[credit], and draw 1 card.",
-        "stripped_text": "As an additional cost for the Corp to score an agenda they installed this turn, the Corp must add this resource to their score area as an agenda worth −1 agenda points with \"You cannot forfeit this agenda.\" When the Corp scores an agenda they did not install this turn, trash this resource, gain 4[credit], and draw 1 card.",
+        "text": "As an additional cost to score an agenda the Corp installed this turn, they must add this resource to their score area as an agenda worth −1 agenda points with \"You cannot forfeit this agenda.\"\nWhen the Corp scores an agenda they did not install this turn, trash this resource, gain 4[credit], and draw 1 card.",
+        "stripped_text": "As an additional cost to score an agenda the Corp installed this turn, they must add this resource to their score area as an agenda worth −1 agenda points with \"You cannot forfeit this agenda.\" When the Corp scores an agenda they did not install this turn, trash this resource, gain 4[credit], and draw 1 card.",
         "uniqueness": true
     },
     {
@@ -46013,8 +46013,8 @@
         }],
         "title": "caveat emptor",
         "stripped_title": "caveat emptor",
-        "text": "Resolve 1 of the following:\n* Gain 5[credit]. The Runner gets −1 allotted [click] for their next turn.\n* Gain 9[credit]. The Runner gets +1 allotted [click] for their next turn.",
-        "stripped_text": "Resolve 1 of the following: * Gain 5[credit]. The Runner gets −1 allotted [click] for their next turn. * Gain 9[credit]. The Runner gets +1 allotted [click] for their next turn.",
+        "text": "Resolve 1 of the following:\n* Gain 6[credit]. The Runner gets −1 allotted [click] for their next turn.\n* Gain 10[credit]. The Runner gets +1 allotted [click] for their next turn.",
+        "stripped_text": "Resolve 1 of the following: * Gain 6[credit]. The Runner gets −1 allotted [click] for their next turn. * Gain 10[credit]. The Runner gets +1 allotted [click] for their next turn.",
         "uniqueness": false
     },
     {
@@ -46071,7 +46071,7 @@
         }],
         "title": "sacrifice zone expansion",
         "stripped_title": "sacrifice zone expansion",
-        "text": "Install only faceup. (This agenda is neither rezzed nor unrezzed.)\nThe first time each turn you advance this agenda, gain 3[credit].\nOnce per turn → Whenever the Runner makes a successful run on another server, you may remove 1 hosted advancement counter to do 1 meat damage.",
+        "text": "Install only faceup. <i>(This agenda is neither rezzed nor unrezzed.)</i>\nThe first time each turn you advance this agenda, gain 3[credit].\nOnce per turn → Whenever the Runner makes a successful run on another server, you may remove 1 hosted advancement counter to do 1 meat damage.",
         "stripped_text": "Install only faceup. (This agenda is neither rezzed nor unrezzed.) The first time each turn you advance this agenda, gain 3[credit]. Once per turn -> Whenever the Runner makes a successful run on another server, you may remove 1 hosted advancement counter to do 1 meat damage.",
         "uniqueness": false
     },
@@ -46091,8 +46091,8 @@
         }],
         "title": "shackleton grid",
         "stripped_title": "shackleton grid",
-        "text": "Once per turn -> When the Runner spends credits from outside their credit pool, you may do 4 meat damage. Use this ability only during runs on this server.\nLimit 1 region per server.",
-        "stripped_text": "Once per turn -> When the Runner spends credits from outside their credit pool, you may do 4 meat damage. Use this ability only during runs on this server. Limit 1 region per server.",
+        "text": "Once per turn -> When the Runner spends credits from outside their credit pool during a run against this server, you may do 4 meat damage.\nLimit 1 region per server.",
+        "stripped_text": "Once per turn -> When the Runner spends credits from outside their credit pool during a run against this server, you may do 4 meat damage. Limit 1 region per server.",
         "uniqueness": false
     }
 ]
