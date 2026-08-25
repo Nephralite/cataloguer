@@ -16313,9 +16313,9 @@
             }
         ],
         "stripped_text": "Before taking your first turn, you may switch this identity with any copy of Jinteki Biotech. [click][click][click]: Flip this identity. Side 1: When you flip this identity, do 2 net damage. Side 2: When you flip this identity, shuffle all cards in Archives into R&D. Side 3: When you flip this identity, place 4 advancement counters on 1 installed card that you can advance.",
-        "stripped_title": "Jinteki Biotech: Life Imagined",
+        "stripped_title": "Jinteki Biotech: Life Imagined / The Brewery: Jinteki Biotech / The Tank: Jinteki Biotech / The Greenhouse: Jinteki Biotech",
         "text": "Before taking your first turn, you may switch this identity with any copy of Jinteki Biotech.\n<strong>[click][click][click]:</strong> Flip this identity.\nSide 1: When you flip this identity, do 2 net damage.\nSide 2: When you flip this identity, shuffle all cards in Archives into R&D.\nSide 3: When you flip this identity, place 4 advancement counters on 1 installed card that you can advance.",
-        "title": "Jinteki Biotech: Life Imagined",
+        "title": "Jinteki Biotech: Life Imagined / The Brewery: Jinteki Biotech / The Tank: Jinteki Biotech / The Greenhouse: Jinteki Biotech",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -33177,10 +33177,10 @@
                 "set": "napd"
             }
         ],
-        "stripped_text": "You draw a starting hand of 10 cards. Before taking your first turn, install up to 5 cards, ignoring all install costs. Rez any number of them, lowering the total rez cost among all cards by 20. Flip this identity. Detective's Bureau: Upholding the Law The first time the Runner initiates a run each turn, force the Runner to lose 1[credit] for each agenda point in his or her score area, then you gain 1[credit] for each credit lost. [click]: Gain 3[credit] or draw 3 cards.",
-        "stripped_title": "Cyber Bureau: Keeping the Peace",
-        "text": "You draw a starting hand of 10 cards.\nBefore taking your first turn, install up to 5 cards, ignoring all install costs. Rez any number of them, lowering the total rez cost among all cards by 20. Flip this identity.\nDetective's Bureau: Upholding the Law\nThe first time the Runner initiates a run each turn, force the Runner to lose 1[credit] for each agenda point in his or her score area, then you gain 1[credit] for each credit lost.\n[click]: Gain 3[credit] or draw 3 cards.",
-        "title": "Cyber Bureau: Keeping the Peace",
+        "stripped_text": "You draw a starting hand of 10 cards. Before taking your first turn, install up to 5 cards, ignoring all install costs. Rez any number of them, lowering the total rez cost among all cards by 20. Flip this identity. Flip Side: Upholding the Law The first time the Runner initiates a run each turn, force the Runner to lose 1[credit] for each agenda point in his or her score area, then you gain 1[credit] for each credit lost. [click]: Gain 3[credit] or draw 3 cards.",
+        "stripped_title": "Cyber Bureau: Keeping the Peace / Detectives Bureau: Upholding the Law",
+        "text": "You draw a starting hand of 10 cards.\nBefore taking your first turn, install up to 5 cards, ignoring all install costs. Rez any number of them, lowering the total rez cost among all cards by 20. Flip this identity.\nFlip Side: Upholding the Law\nThe first time the Runner initiates a run each turn, force the Runner to lose 1[credit] for each agenda point in his or her score area, then you gain 1[credit] for each credit lost.\n[click]: Gain 3[credit] or draw 3 cards.",
+        "title": "Cyber Bureau: Keeping the Peace / Detectives Bureau: Upholding the Law",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -34580,9 +34580,9 @@
             }
         ],
         "stripped_text": "When your turn ends, if you accessed a card this turn, gain 2[credit] and flip this identity. Flip side: When your turn begins, draw 1 card and lose 1[credit]. When your turn ends, if you did not access any cards this turn, flip this identity.",
-        "stripped_title": "Hoshiko Shiro: Untold Protagonist",
+        "stripped_title": "Hoshiko Shiro: Untold Protagonist / Hoshiko Shiro: Mahou Shoujo",
         "text": "When your turn ends, if you accessed a card this turn, gain 2[credit] and flip this identity.\nFlip side:\nWhen your turn begins, draw 1 card and lose 1[credit].\nWhen your turn ends, if you did not access any cards this turn, flip this identity.",
-        "title": "Hoshiko Shiro: Untold Protagonist",
+        "title": "Hoshiko Shiro: Untold Protagonist / Hoshiko Shiro: Mahou Shoujo",
         "pronouns": "she/her",
         "type_code": "identity",
         "uniqueness": false
@@ -35705,9 +35705,9 @@
             }
         ],
         "stripped_text": "Limit 1 remote server. As an additional cost to run HQ, the Runner must pay 1[credit]. [click]: Flip this identity. Flip side: Limit 1 remote server. As an additional cost to run a remote server, the Runner must pay 6[credit]. When the Runner makes a successful run on HQ, flip this identity.",
-        "stripped_title": "Earth Station: SEA Headquarters",
+        "stripped_title": "Earth Station: SEA Headquarters / Earth Station: Ascending to Orbit",
         "text": "Limit 1 remote server.\nAs an additional cost to run HQ, the Runner must pay 1[credit].\n<strong>[click]:</strong> Flip this identity.\nFlip side:\nLimit 1 remote server.\nAs an additional cost to run a remote server, the Runner must pay 6[credit].\nWhen the Runner makes a successful run on HQ, flip this identity.",
-        "title": "Earth Station: SEA Headquarters",
+        "title": "Earth Station: SEA Headquarters / Earth Station: Ascending to Orbit",
         "type_code": "identity",
         "uniqueness": false
     },
@@ -43598,8 +43598,8 @@
             "img_type": "nro",
             "set": "ele"
         }],
-        "title": "Dewi Subrotoputri: Pedagogical Dhalang",
-        "stripped_title": "Dewi Subrotoputri: Pedagogical Dhalang",
+        "title": "Dewi Subrotoputri: Pedagogical Dhalang / Dewi Subrotputri: Shadow Guide",
+        "stripped_title": "Dewi Subrotoputri: Pedagogical Dhalang / Dewi Subrotputri: Shadow Guide",
         "stripped_text": "Whenever you make a successful run, if your mu is full, you may flip this identity and gain 1[credit]. Flip side: Whenever you make a successful run, if you have at least 1 unused mu, you may flip this identity and draw 1 card.",
         "text": "Whenever you make a successful run, if your [mu] is full, you may flip this identity and gain 1[credit].\nFlip side:\nWhenever you make a successful run, if you have at least 1 unused [mu], you may flip this identity and draw 1 card.",
         "uniqueness": false
@@ -43695,8 +43695,8 @@
             "img_type": "nro",
             "set": "ele"
         }],
-        "title": "Nebula Talent Management: Making Stars",
-        "stripped_title": "Nebula Talent Management: Making Stars",
+        "title": "Nebula Talent Management: Making Stars / Gemilang Arena: Burning Bright",
+        "stripped_title": "Nebula Talent Management: Making Stars / Gemilang Arena: Burning Bright",
         "stripped_text": "When your action phase ends, if you played an operation this turn, gain 1[credit] and flip this identity. Flip side: The first time each turn you play an operation, gain [click]. When the Runner makes a successful run on HQ or R&D, flip this identity.",
         "text": "When your action phase ends, if you played an operation this turn, gain 1[credit] and flip this identity.\nFlip side:\nThe first time each turn you play an operation, gain [click].\nWhen the Runner makes a successful run on HQ or R&D, flip this identity.",
         "uniqueness": false,
@@ -44797,8 +44797,8 @@
             "img_type": "nro",
             "set": "vp"
         }],
-        "title": "Méliès U: Only The Brightest",
-        "stripped_title": "Melies U: Only The Brightest",
+        "title": "Méliès U: Only The Brightest / Tenure Floors: Méliès U / Subsurface Labs: Méliès U / Disposal Grounds: Méliès U",
+        "stripped_title": "Melies U: Only The Brightest / Tenure Floors: Melies U / Subsurface Labs: Melies U / Disposal Grounds: Melies U",
         "text": "When your discard phase ends, secretly set your identity to any copy of Méliès U: Only the Brightest.\nWhen the Runner makes a successful run on a central server, flip this identity.\nWhen the Runner’s action phase ends, gain 1[credit].\nFlip side:\nWhen you flip this identity to this side during a run on HQ, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ.\nWhen the Runner’s discard phase ends, flip this identity.\nFlip side:\nWhen you flip this identity to this side during a run on R&D, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ.\nWhen the Runner’s discard phase ends, flip this identity.\nFlip side:\nWhen you flip this identity to this side during a run on Archives, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ.\nWhen the Runner’s discard phase ends, flip this identity.",
         "stripped_text": "When your discard phase ends, secretly set your identity to any copy of Melies U: Only the Brightest. When the Runner makes a successful run on a central server, flip this identity. When the Runner’s action phase ends, gain 1[credit]. Flip side: When you flip this identity to this side during a run on HQ, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ. When the Runner’s discard phase ends, flip this identity. Flip side: When you flip this identity to this side during a run on R&D, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ. When the Runner’s discard phase ends, flip this identity. Flip side: When you flip this identity to this side during a run on Archives, look at the top card of R&D. You may trash that card. If you do, add 1 card from Archives to HQ. When the Runner’s discard phase ends, flip this identity.",
         "uniqueness": false
