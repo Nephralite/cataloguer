@@ -864,7 +864,6 @@ fn search_impl<'a>(
                 IsFilterType::FFG => inner_search("nrdb<24002", backend, card_pool, depth+1)?,
                 IsFilterType::Guest => inner_search("ft:\"Designed by\" -pavilion", backend, card_pool, depth+1)?,
                 IsFilterType::NSG => inner_search("nrdb>26000 -cy:mor -cy:sm", backend, card_pool, depth+1)?,
-                IsFilterType::Nearprinted => card_pool.iter().filter(|x| x.card.nearprint.is_some()).copied().collect(),
                 IsFilterType::Reprint => card_pool.iter().filter(|x| x.card.printings.len()>1).copied().collect(),
                 IsFilterType::Runner => inner_search("f:anarch or f:shaper or f:criminal or f:adam or f:sunny-lebeau or f:apex or f:neutral-runner", backend, card_pool, depth+1)?,
                 IsFilterType::Space => inner_search("o:\"rez cost is lowered\"", backend, card_pool, depth+1)?,
