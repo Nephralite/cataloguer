@@ -4,8 +4,7 @@
         "influence_limit": null,
         "subtypes": "Megacorp",
         "minimum_deck_size": 30,
-        "nearprint": "The Syndicate: Profit over Principle",
-        "printings": [
+                "printings": [
             {
                 "artist": "Sawomir Maniak",
                 "code": "00005",
@@ -27,8 +26,7 @@
         "influence_limit": null,
         "subtypes": "Natural",
         "minimum_deck_size": 30,
-        "nearprint": "The Catalyst: Convention Breaker",
-        "printings": [
+                "printings": [
             {
                 "artist": "Imaginary FS Pte Ltd",
                 "code": "00006",
@@ -389,8 +387,7 @@
         "influence": 1,
         "subtypes": "Virus",
         "memory_cost": 1,
-        "nearprint": "Leech",
-        "printings": [
+                "printings": [
             {
                 "artist": "Chelsea Conlin",
                 "code": "01008",
@@ -444,8 +441,7 @@
         "influence": 3,
         "subtypes": "Virus",
         "memory_cost": 1,
-        "nearprint": "Conduit",
-        "printings": [
+                "printings": [
             {
                 "artist": "Adam S. Doyle",
                 "code": "01010",
@@ -821,8 +817,7 @@
         "cost": 1,
         "faction": "criminal",
         "influence": 2,
-        "nearprint": "Mutual Favor",
-        "printings": [
+                "printings": [
             {
                 "artist": "Kate Niemczyk",
                 "code": "01022",
@@ -2530,8 +2525,7 @@
         "faction": "jinteki",
         "influence": 2,
         "subtypes": "Sentry - AP",
-        "nearprint": "Bathynomus",
-        "printings": [
+                "printings": [
             {
                 "artist": "Isuardi Therianto",
                 "code": "01077",
@@ -2697,8 +2691,7 @@
         "cost": 0,
         "faction": "nbn",
         "influence": 1,
-        "nearprint": "Predictive Planogram",
-        "printings": [
+                "printings": [
             {
                 "artist": "Mike Nesbitt",
                 "code": "01083",
@@ -3214,8 +3207,7 @@
         "faction": "weyland-consortium",
         "influence": 4,
         "subtypes": "Black Ops",
-        "nearprint": "End of the Line",
-        "printings": [
+                "printings": [
             {
                 "artist": "Mark Anthony Taduran",
                 "code": "01099",
@@ -8509,8 +8501,7 @@
         "faction": "nbn",
         "influence": 1,
         "subtypes": "Executive",
-        "nearprint": "Spin Doctor",
-        "printings": [
+                "printings": [
             {
                 "artist": "JuanManuel Tumburus",
                 "code": "04015",
