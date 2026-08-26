@@ -107,6 +107,7 @@ pub enum TextKey {
 #[derive(Debug)]
 pub struct NumFilter {
     pub key: NumericKey,
+    pub original_key: String,
     pub value: i32,
     pub comparator: NumericComparator,
 }
@@ -170,6 +171,7 @@ pub enum NumericKey {
     BoostCost,
     BreakCost,
     BreakNumSubroutines,
+    SimpleBreakerMath,
 }
 impl TryFrom<&str> for NumericKey {
     type Error = ParseError;
@@ -198,6 +200,7 @@ impl TryFrom<&str> for NumericKey {
             "boost_cost" | "boostcost" | "bstc" => Ok(Self::BoostCost),
             "break_cost" | "breakcost" | "brkc" => Ok(Self::BreakCost),
             "break_num_subs" | "breaknumsubs" | "bns" => Ok(Self::BreakNumSubroutines),
+            v if v.starts_with("breaks_") & v.ends_with("_for") => Ok(Self::SimpleBreakerMath),
             _ => Err(ParseError::InvalidFilter(format!(
                 "not a valid numeric filter: '{value}'"
             ))),
@@ -571,6 +574,7 @@ fn parse_filter(
             let value = iter.next().unwrap().as_str().parse().unwrap();
             Ok(Some(QueryNode::NumFilter(NumFilter {
                 key: NumericKey::try_from(key_str)?,
+                original_key: key_str.to_owned(),
                 value,
                 comparator: NumericComparator::try_from(comparator_str)?,
             })))
@@ -660,6 +664,7 @@ fn parse_filter(
                 };
                 return Ok(Some(QueryNode::NumFilter(NumFilter {
                     key: numeric_key,
+                    original_key: key_str.to_owned(),
                     value,
                     comparator: NumericComparator::Eq,
                 })));

@@ -120,6 +120,41 @@ fn breaks(c: &Card) -> Option<(usize, usize)> {
     }
 }
 
+fn simple_breaker_math(c: &Card, ice: &Card) -> Option<usize> {
+    let validity = match (ice.subtypes.as_ref(), c.subtypes.as_ref()) {
+        (_, Some(c)) if c.contains("ai") & c.contains("icebreaker") => true,
+        (Some(i), Some(c)) if i.contains("barrier") & c.contains("fracter") => true,
+        (Some(i), Some(c)) if i.contains("code gate") & c.contains("decoder") => true,
+        (Some(i), Some(c)) if i.contains("sentry") & c.contains("killer") => true,
+        _ => false,
+    };
+    if ice.type_code.contains("ice")
+        & validity
+        & ice.strength.is_some()
+        & c.strength.is_some()
+        & breaks(c).is_some()
+        & num_subs(ice).is_some()
+    {
+        let mut cost = 0;
+        if ice.strength.as_ref().unwrap() > c.strength.as_ref().unwrap() {
+            if boosts(c).is_none() {
+                return None;
+            }
+            cost += ((ice.strength.unwrap() - c.strength.unwrap()) as f64
+                / boosts(c).unwrap().1 as f64)
+                .ceil() as usize
+                * boosts(c).unwrap().0;
+            println!("spent {} on boost with {} - aiming for {} from {}, spending {} to boost {} each time", cost, c.stripped_title, ice.strength.unwrap(), c.strength.unwrap(), boosts(c).unwrap().0, boosts(c).unwrap().1);
+        }
+        cost += (num_subs(ice).unwrap() as f64 / breaks(c).unwrap().1 as f64).ceil() as usize
+            * breaks(c).unwrap().0;
+        println!("final cost for {} is {}", c.stripped_title, cost);
+        Some(cost)
+    } else {
+        None
+    }
+}
+
 // Struct used only inside the search.
 #[derive(Clone, Copy, PartialEq, Eq, Hash)]
 struct SearchPrinting<'a> {
@@ -970,6 +1005,31 @@ fn search_impl<'a>(
                     })
                     .copied()
                     .collect(),
+                NumericKey::SimpleBreakerMath => {
+                    //find what ice we are referencing
+                    let ice_name = num_filter.original_key[7..num_filter.original_key.len() - 4]
+                        .to_owned()
+                        .replace("_", " ");
+                    if let Some(ice) = card_pool.iter().find(|x| x.card.stripped_title == ice_name)
+                    {
+                        card_pool
+                            .iter()
+                            .filter(|x| {
+                                simple_breaker_math(&x.card, &ice.card).is_some_and(|v| {
+                                    num_filter
+                                        .comparator
+                                        .as_operator(v as i32, num_filter.value)
+                                })
+                            })
+                            .copied()
+                            .collect()
+                    } else {
+                        return Err(SearchError::QueryError(format!(
+                            "can't find card with name '{}:' filter",
+                            num_filter.original_key
+                        )));
+                    }
+                }
             };
             Ok(results)
         }
