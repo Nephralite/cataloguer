@@ -165,6 +165,11 @@ pub enum NumericKey {
     TrashCost,
     Tob,
     TobOld,
+    NumSubroutines,
+    BoostStrength,
+    BoostCost,
+    BreakCost,
+    BreakNumSubroutines,
 }
 impl TryFrom<&str> for NumericKey {
     type Error = ParseError;
@@ -176,18 +181,23 @@ impl TryFrom<&str> for NumericKey {
             "ep" => Ok(Self::EternalPoints),
             "nrop" => Ok(Self::NROPoints),
             "i" | "inf" | "influence" => Ok(Self::InfluenceCost),
-            "inf_lim" | "il" => Ok(Self::InfluenceLimit),
+            "inf_lim" | "inflim" | "il" => Ok(Self::InfluenceLimit),
             "l" | "link" => Ok(Self::Link),
             "m" | "mem" | "memory" => Ok(Self::Memory),
             "md" | "min_deck" => Ok(Self::MinDeck),
             "nrdb" => Ok(Self::NRDB),
-            "num_printings" => Ok(Self::NumPrintings),
-            "num_subtypes" | "n_subtypes" => Ok(Self::NumSubtypes),
+            "num_printings" | "numprintings" => Ok(Self::NumPrintings),
+            "num_subtypes" | "n_subtypes" | "numsubtypes" => Ok(Self::NumSubtypes),
+            "num_subs" | "ns" => Ok(Self::NumSubroutines),
             "p" | "v" | "points" => Ok(Self::Points),
             "str" | "strength" => Ok(Self::Strength),
             "trash" | "bin" | "h" => Ok(Self::TrashCost),
             "tob" => Ok(Self::Tob),
             "tobold" => Ok(Self::TobOld),
+            "boost_str" | "booststr" | "bsts" => Ok(Self::BoostStrength),
+            "boost_cost" | "boostcost" | "bstc" => Ok(Self::BoostCost),
+            "break_cost" | "breakcost" | "brkc" => Ok(Self::BreakCost),
+            "break_num_subs" | "breaknumsubs" | "bns" => Ok(Self::BreakNumSubroutines),
             _ => Err(ParseError::InvalidFilter(format!(
                 "not a valid numeric filter: '{value}'"
             ))),

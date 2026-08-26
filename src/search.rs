@@ -58,6 +58,68 @@ pub fn type_order(t: &str) -> usize {
     }
 }
 
+// Traditional Breaker Code (these are cool functions that will help us later)
+fn num_subs(c: &Card) -> Option<usize> {
+    if c.type_code == "ice" {
+        // second clause removes any lines of gains "[subroutine"
+        Some(
+            c.text.as_ref().unwrap().matches("[subroutine]").count()
+                - c.text.as_ref().unwrap().matches("\"[subroutine]").count(),
+        )
+    } else {
+        None
+    }
+}
+
+//only grabs the first boosting option
+fn boosts(c: &Card) -> Option<(usize, usize)> {
+    if c.subtypes
+        .as_ref()
+        .is_some_and(|s| s.contains("icebreaker"))
+    {
+        if let Some(cap) = Regex::new(r"(\d)\[credit\]: \+(\d) strength")
+            .unwrap()
+            .captures(c.stripped_text.as_ref().unwrap())
+        {
+            Some((
+                cap[1].parse::<usize>().unwrap(),
+                cap[2].parse::<usize>().unwrap(),
+            ))
+        } else {
+            None
+        }
+    } else {
+        None
+    }
+}
+
+//only grabs the first breaking options numbers
+fn breaks(c: &Card) -> Option<(usize, usize)> {
+    if c.subtypes
+        .as_ref()
+        .is_some_and(|s| s.contains("icebreaker"))
+    {
+        if let Some(cap) = Regex::new(r"(\d)\[credit\]: break(?: up to)? (\d)")
+            .unwrap()
+            .captures(c.stripped_text.as_ref().unwrap())
+        {
+            Some((
+                cap[1].parse::<usize>().unwrap(),
+                cap[2].parse::<usize>().unwrap(),
+            ))
+        } else if let Some(cap) = Regex::new(r"(\d)\[credit\]: break any")
+            .unwrap()
+            .captures(c.stripped_text.as_ref().unwrap())
+        {
+            Some((cap[1].parse::<usize>().unwrap(), 999))
+        } else {
+            None
+        }
+    } else {
+        None
+    }
+}
+
 // Struct used only inside the search.
 #[derive(Clone, Copy, PartialEq, Eq, Hash)]
 struct SearchPrinting<'a> {
@@ -793,6 +855,17 @@ fn search_impl<'a>(
                     })
                     .copied()
                     .collect(),
+                NumericKey::NumSubroutines => card_pool
+                    .iter()
+                    .filter(|x| {
+                        num_subs(&x.card).is_some_and(|v| {
+                            num_filter
+                                .comparator
+                                .as_operator(v as i32, num_filter.value)
+                        })
+                    })
+                    .copied()
+                    .collect(),
                 NumericKey::Points => card_pool
                     .iter()
                     .filter(|x| {
@@ -853,6 +926,50 @@ fn search_impl<'a>(
                         .copied()
                         .collect()
                 }
+                NumericKey::BoostCost => card_pool
+                    .iter()
+                    .filter(|x| {
+                        boosts(&x.card).is_some_and(|v| {
+                            num_filter
+                                .comparator
+                                .as_operator(v.0 as i32, num_filter.value)
+                        })
+                    })
+                    .copied()
+                    .collect(),
+                NumericKey::BoostStrength => card_pool
+                    .iter()
+                    .filter(|x| {
+                        boosts(&x.card).is_some_and(|v| {
+                            num_filter
+                                .comparator
+                                .as_operator(v.1 as i32, num_filter.value)
+                        })
+                    })
+                    .copied()
+                    .collect(),
+                NumericKey::BreakCost => card_pool
+                    .iter()
+                    .filter(|x| {
+                        breaks(&x.card).is_some_and(|v| {
+                            num_filter
+                                .comparator
+                                .as_operator(v.0 as i32, num_filter.value)
+                        })
+                    })
+                    .copied()
+                    .collect(),
+                NumericKey::BreakNumSubroutines => card_pool
+                    .iter()
+                    .filter(|x| {
+                        breaks(&x.card).is_some_and(|v| {
+                            num_filter
+                                .comparator
+                                .as_operator(v.1 as i32, num_filter.value)
+                        })
+                    })
+                    .copied()
+                    .collect(),
             };
             Ok(results)
         }
@@ -895,7 +1012,12 @@ fn search_impl<'a>(
                 XKey::Strength => card_pool
                     .iter()
                     .filter(|x| {
-                        x.card.strength.is_none() && (x.card.type_code == "ice" || x.card.subtypes.as_ref().is_some_and(|s| s.contains("icebreaker")))
+                        x.card.strength.is_none()
+                            && (x.card.type_code == "ice"
+                                || x.card
+                                    .subtypes
+                                    .as_ref()
+                                    .is_some_and(|s| s.contains("icebreaker")))
                     })
                     .copied()
                     .collect(),
