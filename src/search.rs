@@ -73,19 +73,12 @@ fn num_subs(c: &Card) -> Option<usize> {
 
 //only grabs the first boosting option
 fn boosts(c: &Card) -> Option<(usize, usize)> {
-    if c.subtypes
-        .as_ref()
-        .is_some_and(|s| s.contains("icebreaker"))
-    {
-        if let Some(cap) = Regex::new(r"(\d)\[credit\]: \+(\d) strength")
-            .unwrap()
-            .captures(c.stripped_text.as_ref().unwrap())
-        {
-            Some((
-                cap[1].parse::<usize>().unwrap(),
-                cap[2].parse::<usize>().unwrap(),
-            ))
-        } else {
+    if c.subtypes.as_ref().is_some_and(|s| s.contains("icebreaker")) {
+        if let Some(cap) = Regex::new(r"(\d)\[credit\]: \+(\d) strength").unwrap().captures(c.stripped_text.as_ref().unwrap()) {
+            Some((cap[1].parse::<usize>().unwrap(), cap[2].parse::<usize>().unwrap()))
+        } else if let Some(cap) = Regex::new(r": \+(\d) strength").unwrap().captures(c.stripped_text.as_ref().unwrap()) {
+            Some((0, cap[1].parse::<usize>().unwrap()))
+        } else { 
             None
         }
     } else {
@@ -619,7 +612,7 @@ fn search_impl<'a>(
                         "24.12" => "cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) -banned:24.12 -o:\"starter game only\"",
                         "sunset" => "-banned:sunset -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) or cy:mor",
                         "eternal" => "-banned:eternal -o:\"starter game only\" -set:vp -set:tdc -cy:draft -cy:napd",
-                        "pawnshop" => "-o:\"starter game only\" -set:tdc -cy:draft -cy:napd (is:corp tob>532) or (is:runner tob>442)",
+                        "pawnshop" => "-o:\"starter game only\" -set:tdc -cy:draft -cy:napd (is:corp tob>553) or (is:runner tob>453)",
                         "pawnshopprev" => "-o:\"starter game only\" -set:tdc -cy:draft -cy:napd (is:corp tobold>532) or (is:runner tobold>442)",
                         "throwback" => "-banned:throwback -o:\"starter game only\" -set:tdc -cy:draft -cy:napd",
                         _ => return Err(SearchError::QueryError(format!("not a known format: '{text_value}'"))),
