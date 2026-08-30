@@ -9,10 +9,10 @@ use axum::response::Html;
 use axum::Json;
 use std::collections::HashMap;
 
-pub async fn setspage(State(backend): State<Backend>) -> impl IntoResponse {
+pub async fn setspage(State(backend): State<Backend>, Query(params): Query<SearchForm>) -> impl IntoResponse {
     Templates::SetsPageTemplate(SetsPageTemplate {
         query: "".to_owned(),
-        order: "".to_owned(),
+        order: params.order.unwrap_or_else(|| "".to_owned()),
         dir: "".to_owned(),
         sets: backend.sets,
     })

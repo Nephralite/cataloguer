@@ -3,6 +3,11 @@
 
 {% block content %}
 {% include "search-bar.html" %}
+<form><select id="order" name="order" onchange="this.form.submit()">
+    <option value="" disabled hidden {% if order == "" %}selected{% endif %}>Major Releases</option>
+    <option value="major" {% if order == "major" %}selected{% endif %}>Major Releases</option>
+    <option value="all"  {% if order == "all" %}selected{% endif %}>Everything</option>
+    
 <table class="place-content-center justify-center">     
     <thead>
         <tr>
@@ -14,6 +19,7 @@
     </thead>
     <tbody>
         {% for set in sets %}
+        {% if order == "all" || (order == "" || order == "major") && (set.pt != "supplemental" && set.pt != "old-core") %}
         <tr>
             <th class="text-left"><a href="/?search=set:{{set.code}}">
                 {% if !set.cycle -%}
@@ -25,6 +31,7 @@
             <th>{{set.cards}}</th>
             <th>{{set.date}}</th>
         </tr>
+        {% endif %}
         {% endfor %}
     </tbody>
 </table>

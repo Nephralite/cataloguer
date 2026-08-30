@@ -97,7 +97,7 @@
     "cards": 82,
     "start_num": "31001",
     "end_num": "31082",
-    "pt": "core"
+    "pt": "old-core"
   },
   {
     "code": "sg",
@@ -136,7 +136,7 @@
     "date": "31/12/19",
     "cards": 130,
     "start_num": "26001",
-    "end_num": "26130",
+    "end_num": "27007",
     "pt": "expansion"
   },
   {
@@ -847,7 +847,7 @@
     "cards": 113,
     "start_num": "01001",
     "end_num": "01113",
-    "pt": "old-core"
+    "pt": "first-core"
   },
   {
     "code": "draft",
@@ -857,6 +857,6 @@
     "date": "",
     "start_num": "00005",
     "end_num": "00013",
-    "pt": "draft"
+    "pt": "supplemental"
   }
 ]

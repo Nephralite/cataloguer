@@ -19,6 +19,7 @@ pub struct Set {
     pub cards: u32,
     pub start_num: String,
     pub end_num: String,
+    pub pt: String,
 }
 
 pub struct Legality {
