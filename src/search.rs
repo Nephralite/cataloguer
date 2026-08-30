@@ -72,6 +72,7 @@ fn num_subs(c: &Card) -> Option<usize> {
 
 //only grabs the first boosting option
 fn boosts(c: &Card) -> Option<(usize, usize)> {
+    if &c.stripped_title == "wyrm" { return Some((2, 1))}
     if c.subtypes.as_ref().is_some_and(|s| s.contains("icebreaker")) {
         if let Some(cap) = Regex::new(r"(\d)\[credit\]: \+(\d) strength").unwrap().captures(c.stripped_text.as_ref().unwrap()) {
            return Some((cap[1].parse::<usize>().unwrap(), cap[2].parse::<usize>().unwrap()))
@@ -101,6 +102,11 @@ fn breaks(c: &Card) -> Option<(usize, usize)> {
             .captures(c.stripped_text.as_ref().unwrap())
         {
             return Some((cap[1].parse::<usize>().unwrap(), 999))
+        } else if let Some(cap) = Regex::new(r": break(?: up to)? (\d)")
+            .unwrap()
+            .captures(c.stripped_text.as_ref().unwrap())
+        {
+            return Some((0, cap[1].parse::<usize>().unwrap()))
         }
     }
     return None
@@ -121,12 +127,13 @@ fn simple_breaker_math(c: &Card, ice: &Card) -> Option<i32> {
         & breaks(c).is_some()
         & num_subs(ice).is_some()
     {
+        let strength = if c.assumed_strength.is_some() { c.assumed_strength.unwrap()} else {c.strength.unwrap()};
         let mut cost = 0;
-        if ice.strength.as_ref().unwrap() > c.strength.as_ref().unwrap() {
+        if ice.strength.as_ref().unwrap() > &strength {
             if boosts(c).is_none() {
                 return None
             }
-            cost += ((ice.strength.unwrap() - c.strength.unwrap()) as f64
+            cost += ((ice.strength.unwrap() - strength) as f64
                 / boosts(c).unwrap().1 as f64)
                 .ceil() as usize
                 * boosts(c).unwrap().0;

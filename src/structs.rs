@@ -84,7 +84,7 @@ pub struct Card {
     pub advancement_cost: Option<u8>,
     pub agenda_points: Option<u8>,
     pub eternal_points: Option<u8>,
-    pub nearprint: Option<String>,
+    pub assumed_strength: Option<u8>,
     pub pronouns: Option<String>,
 }
 

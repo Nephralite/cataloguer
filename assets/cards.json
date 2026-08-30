@@ -7761,6 +7761,7 @@
             }
         ],
         "strength": 0,
+        "assumed_strength": 99,
         "stripped_text": "When you install this program, you may pay any number of credits to place that many power counters on it. This program gets +1 strength for each hosted power counter, and it can only interface with ice of exactly equal strength. Interface -> 1[credit]: Break 1 subroutine.",
         "stripped_title": "Atman",
         "text": "When you install this program, you may pay any number of credits to place that many power counters on it.\nThis program gets +1 strength for each hosted power counter, and it can only interface with ice of exactly equal strength.\nInterface \u2192 <strong>1[credit]:</strong> Break 1 subroutine.",
@@ -36425,6 +36426,7 @@
             }
         ],
         "strength": 0,
+        "assumed_strength": 3,
         "stripped_text": "This program gets +1 strength for each installed icebreaker (including this one). Interface -> 1[credit]: Break 1 sentry subroutine. 3[credit]: +2 strength.",
         "stripped_title": "Echelon",
         "text": "This program gets +1 strength for each installed <strong>icebreaker</strong> <em>(including this one)</em>.\nInterface \u2192 <strong>1[credit]:</strong> Break 1 <strong>sentry</strong> subroutine.\n<strong>3[credit]:</strong> +2 strength.",
@@ -37647,6 +37649,7 @@
             }
         ],
         "strength": 2,
+        "assumed_strength": 6,
         "stripped_text": "When you install this program, suffer 1 core damage. This program gets +1 strength for each core damage you have taken this game. Interface -> 1[credit]: Break any number of barrier subroutines.",
         "stripped_title": "Begemot",
         "text": "When you install this program, suffer 1 core damage.\nThis program gets +1 strength for each core damage you have taken this game.\nInterface \u2192 <strong>1[credit]:</strong> Break any number of <strong>barrier</strong> subroutines.",
@@ -43193,6 +43196,7 @@
         "title": "Rising Tide",
         "type_code": "program",
         "uniqueness": false,
+        "assumed_strength": 3,
         "strength": 1,
         "memory_cost": 1
     },
