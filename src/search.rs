@@ -61,29 +61,25 @@ pub fn type_order(t: &str) -> usize {
 // Traditional Breaker Code (these are cool functions that will help us later)
 fn num_subs(c: &Card) -> Option<usize> {
     if c.type_code == "ice" {
-        // second clause removes any lines of gains "[subroutine"
-        Some(
+        // second clause removes any lines of gains "[subroutine]"
+        return Some(
             c.text.as_ref().unwrap().matches("[subroutine]").count()
                 - c.text.as_ref().unwrap().matches("\"[subroutine]").count(),
         )
-    } else {
-        None
     }
+    return None
 }
 
 //only grabs the first boosting option
 fn boosts(c: &Card) -> Option<(usize, usize)> {
     if c.subtypes.as_ref().is_some_and(|s| s.contains("icebreaker")) {
         if let Some(cap) = Regex::new(r"(\d)\[credit\]: \+(\d) strength").unwrap().captures(c.stripped_text.as_ref().unwrap()) {
-            Some((cap[1].parse::<usize>().unwrap(), cap[2].parse::<usize>().unwrap()))
+           return Some((cap[1].parse::<usize>().unwrap(), cap[2].parse::<usize>().unwrap()))
         } else if let Some(cap) = Regex::new(r": \+(\d) strength").unwrap().captures(c.stripped_text.as_ref().unwrap()) {
-            Some((0, cap[1].parse::<usize>().unwrap()))
-        } else { 
-            None
+            return Some((0, cap[1].parse::<usize>().unwrap()))
         }
-    } else {
-        None
     }
+    return None
 }
 
 //only grabs the first breaking options numbers
@@ -96,7 +92,7 @@ fn breaks(c: &Card) -> Option<(usize, usize)> {
             .unwrap()
             .captures(c.stripped_text.as_ref().unwrap())
         {
-            Some((
+            return Some((
                 cap[1].parse::<usize>().unwrap(),
                 cap[2].parse::<usize>().unwrap(),
             ))
@@ -104,16 +100,13 @@ fn breaks(c: &Card) -> Option<(usize, usize)> {
             .unwrap()
             .captures(c.stripped_text.as_ref().unwrap())
         {
-            Some((cap[1].parse::<usize>().unwrap(), 999))
-        } else {
-            None
+            return Some((cap[1].parse::<usize>().unwrap(), 999))
         }
-    } else {
-        None
     }
+    return None
 }
 
-fn simple_breaker_math(c: &Card, ice: &Card) -> Option<usize> {
+fn simple_breaker_math(c: &Card, ice: &Card) -> Option<i32> {
     let validity = match (ice.subtypes.as_ref(), c.subtypes.as_ref()) {
         (_, Some(c)) if c.contains("ai") & c.contains("icebreaker") => true,
         (Some(i), Some(c)) if i.contains("barrier") & c.contains("fracter") => true,
@@ -131,21 +124,18 @@ fn simple_breaker_math(c: &Card, ice: &Card) -> Option<usize> {
         let mut cost = 0;
         if ice.strength.as_ref().unwrap() > c.strength.as_ref().unwrap() {
             if boosts(c).is_none() {
-                return None;
+                return None
             }
             cost += ((ice.strength.unwrap() - c.strength.unwrap()) as f64
                 / boosts(c).unwrap().1 as f64)
                 .ceil() as usize
                 * boosts(c).unwrap().0;
-            println!("spent {} on boost with {} - aiming for {} from {}, spending {} to boost {} each time", cost, c.stripped_title, ice.strength.unwrap(), c.strength.unwrap(), boosts(c).unwrap().0, boosts(c).unwrap().1);
         }
         cost += (num_subs(ice).unwrap() as f64 / breaks(c).unwrap().1 as f64).ceil() as usize
             * breaks(c).unwrap().0;
-        println!("final cost for {} is {}", c.stripped_title, cost);
-        Some(cost)
-    } else {
-        None
+        return Some(cost as i32)
     }
+    return None
 }
 
 // Struct used only inside the search.
@@ -416,7 +406,7 @@ fn search_impl<'a>(
                 hs.extend(results);
             }
             Ok(hs)
-        }
+         }
         QueryNode::AndGroup(inner_nodes) => {
             let mut pool = Cow::Borrowed(card_pool);
             for inner in inner_nodes {
@@ -481,7 +471,7 @@ fn search_impl<'a>(
                     )?
                 }
                 TextKey::Banned => {
-                    let text_value = match text_filter.value {
+                    let mut text_value = match text_filter.value {
                         TextValue::Plain(s) => s,
                         TextValue::Exact(_) => unreachable!(),
                         TextValue::Regex(_) => {
@@ -490,6 +480,9 @@ fn search_impl<'a>(
                                 text_filter.original_key
                             )))
                         }
+                    };
+                    if &text_value == "std" {
+                        text_value = "standard".to_owned()
                     };
                     let Some(banlist_arr) =
                         backend.banlist.get(&text_value).and_then(|a| a.as_array())
@@ -603,12 +596,11 @@ fn search_impl<'a>(
                     };
                     let query_str = match text_value.as_str() {
                         "startup" | "sup" | "vpstartup" => "(set:vp or set:ele or set:sg) -banned:startup -o:\"starter game only\"",
-                        "standard" | "current" | "std" | "vpstandard" | "26.03" => "is:nsg -set:su21 -banned:standard -o:\"starter game only\"",
+                        "standard" | "current" | "std" | "vpstandard" | "26.03" => "is:nsg -banned:standard -o:\"starter game only\"",
                         "elestartup" => "(cy:lib or cy:sg or cy:ele) -banned:elestartup -o:\"starter game only\"",
-                        "neo" => "is:nsg -set:su21 -banned:neo -o:\"starter game only\"",
-                        // "rig" | "postgateway" | "librealis" | "twocycle" => "date>=sg -banned:rig -o:\"starter game only\"",
-                        "nro" | "nroneo" => "is:nsg -set:su21 -cy:bor -set:ur -o:\"starter game only\"",
-                        "25.12" => "is:nsg -set:vp -set:su21 -banned:25.12 -o:\"starter game only\"",
+                        "neo" => "is:nsg -banned:neo -o:\"starter game only\"",
+                        "nro" | "nroneo" => "is:nsg -cy:bor -set:ur -o:\"starter game only\"",
+                        "25.12" => "is:nsg -set:vp -banned:25.12 -o:\"starter game only\"",
                         "24.12" => "cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) -banned:24.12 -o:\"starter game only\"",
                         "sunset" => "-banned:sunset -o:\"starter game only\" cy:kit or cy:rs or (nrdb>26000 -cy:sm -cy:ele) or cy:mor",
                         "eternal" => "-banned:eternal -o:\"starter game only\" -set:vp -set:tdc -cy:draft -cy:napd",
@@ -1033,7 +1025,7 @@ fn search_impl<'a>(
                 IsFilterType::DoubleFaced => inner_search("o:flip", backend, card_pool, depth+1)?,
                 IsFilterType::FFG => inner_search("nrdb<24002", backend, card_pool, depth+1)?,
                 IsFilterType::Guest => inner_search("ft:\"Designed by\" -pavilion", backend, card_pool, depth+1)?,
-                IsFilterType::NSG => inner_search("nrdb>26000 -cy:mor -cy:sm", backend, card_pool, depth+1)?,
+                IsFilterType::NSG => inner_search("nrdb>26000 -cy:su21 -cy:mor -cy:sm", backend, card_pool, depth+1)?,
                 IsFilterType::Reprint => card_pool.iter().filter(|x| x.card.printings.len()>1).copied().collect(),
                 IsFilterType::Runner => inner_search("f:anarch or f:shaper or f:criminal or f:adam or f:sunny-lebeau or f:apex or f:neutral-runner", backend, card_pool, depth+1)?,
                 IsFilterType::Space => inner_search("o:\"rez cost is lowered\"", backend, card_pool, depth+1)?,
