@@ -664,6 +664,14 @@ fn search_impl<'a>(
                         .copied()
                         .collect()
                 }
+                TextKey::ProductType => {
+                    //performance of this sucks so the inverse is faster here
+                    if text_filter.value.matches("base") { inner_search("-pt:supplemental", backend, card_pool, depth + 1)? } else {
+                        let valid_sets: Vec<&Set> = backend.sets.iter().filter(|x| text_filter.value.matches(&x.pt)).collect();
+                        //the and here is booster pack handling because they fuck with my set maths >:(
+                        card_pool.iter().filter(|c| valid_sets.iter().filter(|s| s.code == c.printing.set).count() > 0).copied().collect()
+                    }
+                }
                 TextKey::Pronouns => card_pool
                     .iter()
                     .filter(|x| {
