@@ -34702,17 +34702,17 @@
         "printings": [
             {
                 "artist": "Izzy Pruett",
-                "code": "26072",
-                "flavour": "Friends lift your spirits.",
-                "img_type": "nro",
-                "set": "ur"
-            },
-            {
-                "artist": "Izzy Pruett",
                 "code": "27001",
                 "flavour": "Friends lift your spirits.",
                 "img_type": "nrdb",
                 "set": "urbp"
+            },
+            {
+                "artist": "Izzy Pruett",
+                "code": "26072",
+                "flavour": "Friends lift your spirits.",
+                "img_type": "nro",
+                "set": "ur"
             }
         ],
         "stripped_text": "When your turn begins and whenever you steal an agenda, place 1[credit] on this resource. You can spend hosted credits to play events. When your turn ends, if there are 3 or more hosted credits, you must trash 1 card from your grip at random or trash this resource.",
@@ -34832,19 +34832,19 @@
         "printings": [
             {
                 "artist": "Kira L. Nguyen",
-                "code": "26078",
-                "flavour": "\u201cRed ones go faster.\u201d\n\u2014Ken \u201cExpress\u201d Tenma",
-                "img_type": "nro",
-                "set": "ur"
-            },
-            {
-                "artist": "Kira L. Nguyen",
                 "code": "27002",
                 "flavour": "\u201cRed ones go faster.\u201d\n\u2014Ken \u201cExpress\u201d Tenma",
                 "img_type": "nrdb",
                 "set": "urbp"
+            },
+            {
+                "artist": "Kira L. Nguyen",
+                "code": "26078",
+                "flavour": "\u201cRed ones go faster.\u201d\n\u2014Ken \u201cExpress\u201d Tenma",
+                "img_type": "nro",
+                "set": "ur"
             }
-        ],
+                    ],
         "stripped_text": "+1[mu] The first time each turn you play a run event, gain [click]. Limit 1 console per player.",
         "stripped_title": "Swift",
         "text": "+1[mu]\nThe first time each turn you play a <strong>run</strong> event, gain [click].\nLimit 1 <strong>console</strong> per player.",
@@ -35098,18 +35098,18 @@
         "printings": [
             {
                 "artist": "Owen Sinodov",
-                "code": "26091",
-                "flavour": "He\u2019s nice enough, but not when there are 5,187 of him.",
-                "img_type": "nro",
-                "set": "ur"
-            },
-            {
-                "artist": "Owen Sinodov",
                 "code": "27003",
                 "flavour": "He\u2019s nice enough, but not when there are 5,187 of him.",
                 "img_type": "nrdb",
                 "set": "urbp"
-            }
+            },
+            {
+                "artist": "Owen Sinodov",
+                "code": "26091",
+                "flavour": "He\u2019s nice enough, but not when there are 5,187 of him.",
+                "img_type": "nro",
+                "set": "ur"
+            }            
         ],
         "stripped_text": "+1[link] Whenever you install a non-AI icebreaker, that icebreaker gets +2 strength for the remainder of the turn.",
         "stripped_title": "Cybertrooper Talut",
@@ -35187,18 +35187,18 @@
         "printings": [
             {
                 "artist": "Krembler",
-                "code": "26096",
-                "flavour": "\u201cWin Hard or Lose Hard. All that matters is they\u2019re talking about you and not the competition.\u201d\n\u2014Tan \u201cNitro\u201d Nyugen, Toretto-Extreme Team Manager",
-                "img_type": "nro",
-                "set": "ur"
-            },
-            {
-                "artist": "Krembler",
                 "code": "27004",
                 "flavour": "\u201cWin Hard or Lose Hard. All that matters is they\u2019re talking about you and not the competition.\u201d\n\u2014Tan \u201cNitro\u201d Nyugen, Toretto-Extreme Team Manager",
                 "img_type": "nrdb",
                 "set": "urbp"
-            }
+            },
+            {
+                "artist": "Krembler",
+                "code": "26096",
+                "flavour": "\u201cWin Hard or Lose Hard. All that matters is they\u2019re talking about you and not the competition.\u201d\n\u2014Tan \u201cNitro\u201d Nyugen, Toretto-Extreme Team Manager",
+                "img_type": "nro",
+                "set": "ur"
+            }            
         ],
         "stripped_text": "When you score this agenda, if there is another copy of Megaprix Qualifier in either player's score area, place 1 agenda counter on this agenda. While this agenda has a hosted agenda counter, it is worth 1 more agenda point.",
         "stripped_title": "Megaprix Qualifier",
@@ -35515,19 +35515,19 @@
         "printings": [
             {
                 "artist": "Eirik H. Kiil",
-                "code": "26112",
-                "flavour": "Some slums of New Angeles are so worn down, City Hall calls the acres of windowless clone barracks \u201cgentrification\u201d with a straight face.",
-                "img_type": "nro",
-                "set": "ur"
-            },
-            {
-                "artist": "Eirik H. Kiil",
                 "code": "27005",
                 "flavour": "Some slums of New Angeles are so worn down, City Hall calls the acres of windowless clone barracks \u201cgentrification\u201d with a straight face.",
                 "img_type": "nrdb",
                 "set": "urbp"
+            },
+            {
+                "artist": "Eirik H. Kiil",
+                "code": "26112",
+                "flavour": "Some slums of New Angeles are so worn down, City Hall calls the acres of windowless clone barracks \u201cgentrification\u201d with a straight face.",
+                "img_type": "nro",
+                "set": "ur"
             }
-        ],
+                    ],
         "stripped_text": "Remote server only. When your turn begins, place 1 advancement counter on a card in the root of this server. Limit 1 region per server.",
         "stripped_title": "La Costa Grid",
         "text": "Remote server only.\nWhen your turn begins, place 1 advancement counter on a card in the root of this server.\nLimit 1 <strong>region</strong> per server.",
@@ -35629,15 +35629,15 @@
         "printings": [
             {
                 "artist": "Krembler",
-                "code": "26117",
-                "img_type": "nro",
-                "set": "ur"
-            },
-            {
-                "artist": "Krembler",
                 "code": "27006",
                 "img_type": "nrdb",
                 "set": "urbp"
+            },
+            {
+                "artist": "Krembler",
+                "code": "26117",
+                "img_type": "nro",
+                "set": "ur"
             }
         ],
         "stripped_text": "Play only if the Runner did not make a successful run on HQ during their last turn. Search R&D for 1 agenda and reveal it. (Shuffle R&D after searching it.) Add that agenda to HQ. You may install 1 card from HQ in the root of a remote server. You cannot score agendas for the remainder of the turn.",
@@ -35828,19 +35828,19 @@
         "printings": [
             {
                 "artist": "Kira L. Nguyen",
-                "code": "26127",
-                "flavour": "The Apu spirits of the great mountains bridge this world and the realm above.",
-                "img_type": "nro",
-                "set": "ur"
-            },
-            {
-                "artist": "Kira L. Nguyen",
                 "code": "27007",
                 "flavour": "The Apu spirits of the great mountains bridge this world and the realm above.",
                 "img_type": "nrdb",
                 "set": "urbp"
+            },
+            {
+                "artist": "Kira L. Nguyen",
+                "code": "26127",
+                "flavour": "The Apu spirits of the great mountains bridge this world and the realm above.",
+                "img_type": "nro",
+                "set": "ur"
             }
-        ],
+                    ],
         "stripped_text": "When your turn begins, place 1 advancement counter on a piece of ice protecting this server. Whenever the Runner approaches this server, end the run unless they pay 2[credit] for each advanced piece of ice protecting this server. Limit 1 region per server.",
         "stripped_title": "Cayambe Grid",
         "text": "When your turn begins, place 1 advancement counter on a piece of ice protecting this server.\nWhenever the Runner approaches this server, end the run unless they pay 2[credit] for each advanced piece of ice protecting this server.\nLimit 1 <strong>region</strong> per server.",
