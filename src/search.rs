@@ -602,6 +602,7 @@ fn search_impl<'a>(
                         }
                     };
                     let query_str = match text_value.as_str() {
+                        "core" => "set:sg or set:ele",
                         "startup" | "sup" | "vpstartup" => "(set:vp or set:ele or set:sg) -banned:startup -o:\"starter game only\"",
                         "standard" | "current" | "std" | "vpstandard" | "26.03" => "is:nsg -banned:standard -o:\"starter game only\"",
                         "elestartup" => "(cy:lib or cy:sg or cy:ele) -banned:elestartup -o:\"starter game only\"",
